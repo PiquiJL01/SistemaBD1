@@ -600,6 +600,8 @@ pre code {
   width: 100%;
   padding-right: 0.75rem;
   padding-left: 0.75rem;
+    top: -24px;
+    left: 0px;
 }
 
 .col {

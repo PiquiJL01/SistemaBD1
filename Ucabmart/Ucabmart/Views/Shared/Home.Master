@@ -33,28 +33,18 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">      
                    <!-- Topbar Search -->
-                        <form
-                            class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-                            <div class="input-group">
-                                <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
-                                    aria-label="Search" aria-describedby="basic-addon2">
-                                <div class="input-group-append">
-                                    <button class="btn btn-primary" type="button">
-                                        <i class="fas fa-search fa-sm"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
+                       
                     <ul class="navbar-nav text-uppercase ml-auto">
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Services</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#team">Team</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
+                        <li class="nav-item"> <a class="nav-item">      </a>     </li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Categorías</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Tiendas</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">Notimart</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#team">Contáctanos</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Ayuda</a></li>
                          <!-- Nav Item - User Information -->
                         <li class="nav-item"><a class="nav-link " href="#">Registrarse</a></li>
                         <li class="nav-item"><a class="nav-link " href="#">Iniciar Sesión </a></li>
-                    </ul>              
+                    </ul>  
                 </div>
             </div>
         </nav>
