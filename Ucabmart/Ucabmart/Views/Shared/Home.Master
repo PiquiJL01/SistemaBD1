@@ -36,11 +36,11 @@
                        
                     <ul class="navbar-nav text-uppercase ml-auto">
                         <li class="nav-item"> <a class="nav-item">      </a>     </li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Categorías</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Tiendas</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">Notimart</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#team">Contáctanos</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Ayuda</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#categorias">Categorías</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#tiendas">Tiendas</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#notimart">Notimart</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contáctanos</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#ayuda">Ayuda</a></li>
                          <!-- Nav Item - User Information -->
                         <li class="nav-item"><a class="nav-link " href="#">Registrarse</a></li>
                         <li class="nav-item"><a class="nav-link " href="#">Iniciar Sesión </a></li>
