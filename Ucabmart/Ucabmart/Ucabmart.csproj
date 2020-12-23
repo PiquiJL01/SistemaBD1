@@ -1777,6 +1777,7 @@
     <Content Include="Views\IniciarSesion.aspx" />
     <Content Include="Views\Inicio.aspx" />
     <Content Include="Views\OlvidoPassword.aspx" />
+    <Content Include="Views\User\RegistrarNatural.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -1812,6 +1813,13 @@
     </Compile>
     <Compile Include="Views\Shared\Home.Master.designer.cs">
       <DependentUpon>Home.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Views\User\RegistrarNatural.aspx.cs">
+      <DependentUpon>RegistrarNatural.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\User\RegistrarNatural.aspx.designer.cs">
+      <DependentUpon>RegistrarNatural.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -1977,7 +1985,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
     <Folder Include="Views\Admin\" />
-    <Folder Include="Views\User\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
