@@ -13,5 +13,10 @@ namespace Ucabmart.Views
         {
 
         }
+        protected void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('La persona ha sido registrado exitosamente');" +
+                                 "window.location ='RegistrarNatural.aspx';", true);
+        }
     }
 }

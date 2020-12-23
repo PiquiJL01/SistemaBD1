@@ -13,6 +13,5 @@ namespace Ucabmart.Views.User
         {
 
         }
-        
     }
 }
