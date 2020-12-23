@@ -10,6 +10,6 @@
 namespace Ucabmart.Views {
     
     
-    public partial class CrearCuenta {
+    public partial class CrearCuenta1 {
     }
 }
