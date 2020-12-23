@@ -24,10 +24,10 @@
 
         </header>
         <!-- Categorias-->
-        <section class="page-section" id="categorias">
+        <section class="page-section" id="categorias" >
             <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Categorías</h2>
+                <div class="text-center" >
+                    <h2 class="section-heading text-uppercase"> Categorías</h2>
                     <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
                 </div>
                 <div class="row text-center">
