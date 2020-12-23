@@ -5,10 +5,9 @@
     <!-- Masthead-->
         <header class="masthead">
             <div class="container">
-                <div class="masthead-subheading">¡Bienvenido a Ucabmart!</div>
-                <div class="masthead-heading text-uppercase">It's Nice To Meet You</div>
-                <form
-                            class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                <%--<div class="masthead-subheading">¡Bienvenido a Ucabmart!</div>--%>
+                <div class="masthead-heading text-uppercase">¡Bienvenido a Ucabmart!</div>
+                <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                             <div class="input-group" style="width:700px;">
                                 <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
                                     aria-label="Search" aria-describedby="basic-addon2">
@@ -18,7 +17,7 @@
                                     </button>
                                 </div>
                             </div>
-                        </form>
+                 </form>
                 <%--<a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>--%>
             </div>
 
