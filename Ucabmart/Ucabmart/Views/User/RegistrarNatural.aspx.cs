@@ -13,5 +13,9 @@ namespace Ucabmart.Views.User
         {
 
         }
+        protected void btnRegistrar_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }
