@@ -5,15 +5,13 @@
     <!-- Masthead-->
         <header class="masthead">
             <div class="container">
-                <div class="masthead-subheading">¡Bienvenido a Ucabmart!</div>
-                <div class="masthead-heading text-uppercase">It's Nice To Meet You</div>
-                <form
-                    class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search" runat="server">
-                        <div class="input-group" style="width:700px;">
-                            <asp:TextBox ID="txtBuscar" runat="server" type="text" name="name" data-parsley-trigger="change" 
+                 <div class="masthead-heading text-uppercase">¡Bienvenido a Ucabmart!</div>
+                <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search" runat="server">
+                    <div class="input-group" style="width:700px;">
+                        <asp:TextBox ID="txtBuscar" runat="server" type="text" name="name" data-parsley-trigger="change" 
                                  placeholder="Buscar" autocomplete="off" class="form-control">
-                            </asp:TextBox>    
-                            <asp:Button ID="btnBuscar" runat="server" class="btn btn-space btn-primary ml-1" Text="Buscar" OnClick="btnBuscar_Click" Width="87px" />
+                        </asp:TextBox>    
+                        <asp:Button ID="btnBuscar" runat="server" class="btn btn-space btn-primary ml-1" Text="Buscar" OnClick="btnBuscar_Click" Width="87px" />
                            <%-- <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
                                 aria-label="Search" aria-describedby="basic-addon2">
                             <div class="input-group-append">
@@ -21,7 +19,7 @@
                                     <i class="fas fa-search fa-sm" ></i>
                                 </button>
                             </div>--%>
-                        </div>
+                    </div>
                  </form>
                 <%--<a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>--%>
             </div>
@@ -66,7 +64,7 @@
         <section class="page-section bg-light" id="tiendas">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Portfolio</h2>
+                    <h2 class="section-heading text-uppercase">Tiendas</h2>
                     <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
                 </div>
                 <div class="row">
