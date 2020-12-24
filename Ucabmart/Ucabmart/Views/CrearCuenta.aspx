@@ -27,7 +27,7 @@
                     </div>
                     <div class="col-lg-4 col-sm-6 mb-4">
                         <div class="tiendas-item">
-                            <a class="tiendas-link" data-toggle="modal" href="#tiendasModal2">
+                            <a class="tiendas-link" href="RegistrarJuridica.aspx">
                                 <div class="tiendas-hover">
                                     <div class="tiendas-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
