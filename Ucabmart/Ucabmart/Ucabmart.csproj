@@ -1778,6 +1778,7 @@
     <Content Include="Views\IniciarSesion.aspx" />
     <Content Include="Views\Inicio.aspx" />
     <Content Include="Views\OlvidoPassword.aspx" />
+    <Content Include="Views\RegistrarJuridica.aspx" />
     <Content Include="Views\User\RegistrarNatural.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -1814,6 +1815,13 @@
     </Compile>
     <Compile Include="Views\OlvidoPassword.aspx.designer.cs">
       <DependentUpon>OlvidoPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RegistrarJuridica.aspx.cs">
+      <DependentUpon>RegistrarJuridica.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\RegistrarJuridica.aspx.designer.cs">
+      <DependentUpon>RegistrarJuridica.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Shared\Home.Master.cs">
       <DependentUpon>Home.Master</DependentUpon>
