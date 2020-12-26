@@ -1974,7 +1974,7 @@ pre code {
     font-weight: 400;
     line-height: 1.5;
     color: #495057;
-    box-shadow: 1.5px 6px 5px #443939;
+    box-shadow: 1.5px 1px 5px #443939;
     background-color: #fff;
     background-clip: padding-box;
     border: 1px solid #ced4da;
@@ -2443,7 +2443,7 @@ fieldset:disabled a.btn {
     color: #fff;
     background-color: #2E29C2;
     border-color: #2E29C2;
-    box-shadow: 1.5px 6px 5px #443939;
+    box-shadow: 1.5px 1px 5px #443939;
 }
 .btn-primary:hover {
     color: #f8f9fa;

@@ -1780,6 +1780,7 @@
     <Content Include="Views\OlvidoPassword.aspx" />
     <Content Include="Views\RegistrarJuridica.aspx" />
     <Content Include="Views\User\RegistrarNatural.aspx" />
+    <Content Include="Views\ForgotPassword.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -1836,6 +1837,13 @@
     </Compile>
     <Compile Include="Views\User\RegistrarNatural.aspx.designer.cs">
       <DependentUpon>RegistrarNatural.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ForgotPassword.aspx.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ForgotPassword.aspx.designer.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
