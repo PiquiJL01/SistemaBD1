@@ -73,7 +73,7 @@
                                         <a class="small" href="OlvidoPassword.aspx">Olvidé mi contraseña</a>
                                     </div>
                                     <div class="text-center">
-                                        <a class="small" href="register.html">Crear Cuenta</a>
+                                        <a class="small" href="CrearCuenta.aspx">Crear Cuenta</a>
                                     </div>
                                 </div>
                             </div>
