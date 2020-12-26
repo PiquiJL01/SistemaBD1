@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Ucabmart.Views
 {
-    public partial class IniciarSesion : System.Web.UI.Page
+    public partial class IniciarSesionPrueba : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

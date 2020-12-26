@@ -10,6 +10,6 @@
 namespace Ucabmart.Views {
     
     
-    public partial class IniciarSesion {
+    public partial class IniciarSesionPrueba {
     }
 }

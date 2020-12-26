@@ -1,8 +1,6 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="IniciarSesion.aspx.cs" Inherits="Ucabmart.Views.IniciarSesion" %>
-
-<!DOCTYPE html>
-<html lang="es">
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Home.Master" AutoEventWireup="true" CodeBehind="IniciarSesion.aspx.cs" Inherits="Ucabmart.Views.IniciarSesionPrueba" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    
 <head>
 
     <meta charset="utf-8">
@@ -24,10 +22,18 @@
 
 </head>
 
-<body class="bg-gradient-primary">
+</asp:Content>
+
+
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <body class="bg-gradient-primary">
 
     <div class="container">
-
+        <br>
+        <br>
+        <br>
+        <br>
+       
         <!-- Outer Row -->
         <div class="row justify-content-center">
 
@@ -94,5 +100,4 @@
     <script src="../Content/js/sb-admin-2.min.js"></script>
 
 </body>
-
-</html>
+</asp:Content>
