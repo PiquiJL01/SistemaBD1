@@ -1,7 +1,5 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="OlvidoPassword.aspx.cs" Inherits="Ucabmart.Views.OlvidoPassword" %>
-
-<!DOCTYPE html>
-<html lang="es">
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Home.Master" AutoEventWireup="true" CodeBehind="ForgotPassword.aspx.cs" Inherits="Ucabmart.Views.WebForm1" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
 <head>
 
@@ -22,7 +20,11 @@
     <!-- Custom styles for this template-->
     <link href="../Content/css/sb-admin-2.min.css" rel="stylesheet">
 
-</head>
+<head>
+
+</asp:Content>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
 <body class="bg-gradient-primary">
 
@@ -31,6 +33,7 @@
         <br>
         <br>
         <br>
+
 
         <!-- Outer Row -->
         <div class="row justify-content-center">
@@ -49,15 +52,18 @@
                                         <p class="mb-4">Ingrese su dirección de correo electrónico a continuación
                                             y le enviaremos un enlace para restablecer su contraseña</p>
                                     </div>
-                                    <form class="user">
+
+                                    <form class="user" runat="server">
+                                        
+                                        <%--<Campo de texto del Email >--%> 
                                         <div class="form-group">
-                                            <input type="email" class="form-control form-control-user"
-                                                id="exampleInputEmail" aria-describedby="emailHelp"
-                                                placeholder="Ingrese su correo electrónico">
+                                              <asp:TextBox ID="Email" runat="server" type="text" name="name" data-parsley-trigger="change"  
+                                                    placeholder="Introduzca su correo electrónico" autocomplete="off" class="form-control form-control-user" style="text-align: center">
+                                               </asp:TextBox>
                                         </div>
-                                        <a href="Inicio.aspx" class="btn btn-primary btn-user btn-block">
-                                            Reestablecer Contraseña
-                                        </a>
+
+                                        <asp:Button ID="PaswordRecovery" runat="server" class="btn btn-primary btn-user btn-block" Text="Reestablecer Contraseña" OnClick="btnRegistrar_Click"/>
+                                        <hr>
                                     </form>
                                     <hr>
                                     <div class="text-center">
@@ -90,4 +96,4 @@
 
 </body>
 
-</html>
+</asp:Content>
