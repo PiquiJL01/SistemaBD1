@@ -37,7 +37,7 @@
                     <ul class="navbar-nav text-uppercase ml-auto">
                         <li class="nav-item"> <a class="nav-item">      </a>     </li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../Views/Categorias.aspx">Categorías</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#tiendas">Tiendas</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../Views/Tiendas.aspx">Tiendas</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#notimart">Notimart</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contáctanos</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#ayuda">Ayuda</a></li>
