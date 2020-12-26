@@ -26,7 +26,7 @@
 
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <body class="bg-gradient-primary">
+ <body class="bg-gradient-primary">
 
     <div class="container">
         <br>
@@ -49,25 +49,23 @@
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">Bienvenido a Ucabmart</h1>
                                     </div>
-                                    <form class="user">
+                                    <form class="user" runat="server">
+
+                                        <%--<Campo de texto del Email >--%> 
                                         <div class="form-group">
-                                            <input type="email" class="form-control form-control-user"
-                                                id="exampleInputEmail" aria-describedby="emailHelp"
-                                                placeholder="Introduzca su correo electrónico">
+                                              <asp:TextBox ID="Email" runat="server" type="text" name="name" data-parsley-trigger="change"  
+                                                    placeholder="Introduzca su correo electrónico" autocomplete="off" class="form-control form-control-user" style="text-align: center">
+                                               </asp:TextBox>
                                         </div>
+
+                                        <%--<Campo de texto de la Contraseña >--%> 
                                         <div class="form-group">
-                                            <input type="password" class="form-control form-control-user"
-                                                id="exampleInputPassword" placeholder="Contraseña">
+                                               <asp:TextBox ID="Password" runat="server" type="text" name="name" data-parsley-trigger="change"  
+                                                    placeholder="Contraseña" autocomplete="off" class="form-control form-control-user" style="text-align: center">
+                                               </asp:TextBox>
                                         </div>
-                                        <div class="form-group">
-                                            <div class="custom-control custom-checkbox small">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck">
-                                                <label class="custom-control-label" for="customCheck">Recordarme</label>
-                                            </div>
-                                        </div>
-                                        <a href="Inicio.aspx" class="btn btn-primary btn-user btn-block">
-                                            Iniciar Sesión
-                                        </a>
+
+                                        <asp:Button ID="InitialSesion" runat="server" class="btn btn-primary btn-user btn-block" Text="Iniciar Sesión" OnClick="btnRegistrar_Click"/>
                                         <hr>
                                     </form>
                                     <hr>
