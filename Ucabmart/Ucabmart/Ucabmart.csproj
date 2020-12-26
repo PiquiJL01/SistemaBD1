@@ -1776,7 +1776,6 @@
     <Content Include="Content\js\scripts.js" />
     <Content Include="Views\CrearCuenta.aspx" />
     <Content Include="Views\IniciarSesion.aspx" />
-    <Content Include="Views\IniciarSesionPrueba.aspx" />
     <Content Include="Views\Inicio.aspx" />
     <Content Include="Views\OlvidoPassword.aspx" />
     <Content Include="Views\RegistrarJuridica.aspx" />
@@ -1802,13 +1801,6 @@
     </Compile>
     <Compile Include="Views\IniciarSesion.aspx.designer.cs">
       <DependentUpon>IniciarSesion.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\IniciarSesionPrueba.aspx.cs">
-      <DependentUpon>IniciarSesionPrueba.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\IniciarSesionPrueba.aspx.designer.cs">
-      <DependentUpon>IniciarSesionPrueba.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Inicio.aspx.cs">
       <DependentUpon>Inicio.aspx</DependentUpon>
