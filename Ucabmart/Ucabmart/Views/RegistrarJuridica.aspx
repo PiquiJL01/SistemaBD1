@@ -24,7 +24,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     
-    <body>
+    <body class="bg-gradient-primary">
 
     <div class="container">
         <br>
@@ -160,9 +160,10 @@
                                         </asp:TextBox>
                                     </div>
                                 </div>
-                                <hr>
+                               
                                 <asp:Button ID="btnRegistrar" runat="server" class="btn btn-primary btn-user btn-block" Text="Registrar Cuenta" OnClick="btnRegistrar_Click" />
                             </form>
+                            <hr>
                             <hr>
                             <div class="text-center">
                                 <a class="small" href="OlvidoPassword.aspx">Olvidé mi contraseña</a>

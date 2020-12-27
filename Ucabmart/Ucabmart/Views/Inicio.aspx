@@ -22,7 +22,7 @@
                                <%-- <button class="btn btn-primary " type="button" >
                                     <i class="fas fa-search fa-sm" ></i>
                                 </button>--%>
-                            </div>
+                        <%--    </div>--%>
                     </div>
                  </form>
                 <%--<a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>--%>
