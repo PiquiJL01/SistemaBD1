@@ -13,14 +13,16 @@
                         <asp:TextBox ID="txtBuscar" runat="server" type="text" name="name" data-parsley-trigger="change" 
                                  placeholder="Buscar" autocomplete="off" class="form-control">
                         </asp:TextBox>    
-                        <asp:Button ID="btnBuscar" runat="server" class="btn btn-space btn-primary ml-1" Text="Buscar" OnClick="btnBuscar_Click" Width="87px" />
-                           <%-- <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                        
+                        <asp:ImageButton id="imagebutton1" runat="server"  style="width:55px;" class="btn btn-primary search" AlternateText="Buscar" ImageAlign="left" ImageUrl="../Content/assets/img/Lupa.png" OnClick="btnBuscar_Click"/>
+                        
+                        <%--      <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
                                 aria-label="Search" aria-describedby="basic-addon2">
-                            <div class="input-group-append">
-                                <button class="btn btn-primary" type="button" >
+                            <di<%--v class="input-group-append">--%>
+                               <%-- <button class="btn btn-primary " type="button" >
                                     <i class="fas fa-search fa-sm" ></i>
                                 </button>
-                            </div>--%>
+                            </div>                                   --%>
                     </div>
                  </form>
                 <%--<a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>--%>
