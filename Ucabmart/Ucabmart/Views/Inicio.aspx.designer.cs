@@ -7,11 +7,13 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace Ucabmart.Views {
-    
-    
-    public partial class Inicio {
-        
+namespace Ucabmart.Views
+{
+
+
+    public partial class Inicio
+    {
+
         /// <summary>
         /// Control txtBuscar.
         /// </summary>
@@ -20,7 +22,7 @@ namespace Ucabmart.Views {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtBuscar;
-        
+
         /// <summary>
         /// Control imagebutton1.
         /// </summary>
