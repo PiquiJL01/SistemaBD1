@@ -1778,7 +1778,6 @@
     <Content Include="Views\CrearCuenta.aspx" />
     <Content Include="Views\IniciarSesion.aspx" />
     <Content Include="Views\Inicio.aspx" />
-    <Content Include="Views\OlvidoPassword.aspx" />
     <Content Include="Views\RegistrarJuridica.aspx" />
     <Content Include="Views\User\RegistrarNatural.aspx" />
     <Content Include="Views\ForgotPassword.aspx" />
@@ -1817,13 +1816,6 @@
     </Compile>
     <Compile Include="Views\Inicio.aspx.designer.cs">
       <DependentUpon>Inicio.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\OlvidoPassword.aspx.cs">
-      <DependentUpon>OlvidoPassword.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\OlvidoPassword.aspx.designer.cs">
-      <DependentUpon>OlvidoPassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\RegistrarJuridica.aspx.cs">
       <DependentUpon>RegistrarJuridica.aspx</DependentUpon>
