@@ -11,7 +11,7 @@
             <div class="container cuadro">
                 <div class="text-center">
                     <br>
-                    <h2 class="section-heading text-uppercase">Crear Cuenta</h2>
+                    <h2 class="section-heading text-uppercase" style="border: 8px outset">Crear Cuenta</h2>
                     <br>
                     <br>
                 </div>

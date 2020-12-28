@@ -9878,7 +9878,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .text-muted {
-  color: #6c757d !important;
+    color: #212529 !important;
 }
 
 .text-black-50 {
@@ -10220,6 +10220,8 @@ header.masthead {
     opacity: 0;
     transition: opacity ease-in-out 0.25s;
 }
+
+
 #tiendas .tiendas-item .tiendas-link .tiendas-hover .tiendas-hover-content {
     font-size: 1.25rem;
     color: white;
