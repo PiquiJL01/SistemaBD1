@@ -504,6 +504,12 @@ mark,
    height: 280px;
 }
 
+.img-fluid2 {
+    max-width: 375px;
+    height: 280px;
+}
+
+
 .img-thumbnail {
   padding: 0.25rem;
   background-color: #fff;
