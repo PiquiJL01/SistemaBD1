@@ -97,6 +97,7 @@
     <Content Include="Content\assets\img\team\1.jpg" />
     <Content Include="Content\assets\img\team\2.jpg" />
     <Content Include="Content\assets\img\team\3.jpg" />
+    <Content Include="Content\assets\img\undraw_profile.svg" />
     <Content Include="Content\assets\mail\contact_me.js" />
     <Content Include="Content\assets\mail\contact_me.php" />
     <Content Include="Content\assets\mail\jqBootstrapValidation.js" />
@@ -1780,6 +1781,7 @@
     <Content Include="Views\Inicio.aspx" />
     <Content Include="Views\RegistrarJuridica.aspx" />
     <Content Include="Views\Tiendas.aspx" />
+    <Content Include="Views\User\InicioUsuario.aspx" />
     <Content Include="Views\User\RegistrarNatural.aspx" />
     <Content Include="Views\ForgotPassword.aspx" />
     <Content Include="Web.config" />
@@ -1832,12 +1834,26 @@
     <Compile Include="Views\Shared\Home.Master.designer.cs">
       <DependentUpon>Home.Master</DependentUpon>
     </Compile>
+    <Compile Include="Views\Shared\User.Master.cs">
+      <DependentUpon>User.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\User.Master.designer.cs">
+      <DependentUpon>User.Master</DependentUpon>
+    </Compile>
     <Compile Include="Views\Tiendas.aspx.cs">
       <DependentUpon>Tiendas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Views\Tiendas.aspx.designer.cs">
       <DependentUpon>Tiendas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\User\InicioUsuario.aspx.cs">
+      <DependentUpon>InicioUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\User\InicioUsuario.aspx.designer.cs">
+      <DependentUpon>InicioUsuario.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\User\RegistrarNatural.aspx.cs">
       <DependentUpon>RegistrarNatural.aspx</DependentUpon>
@@ -2006,6 +2022,7 @@
     <Content Include="Content\vendor\jquery\jquery.slim.min.map" />
     <None Include="packages.config" />
     <Content Include="Views\Shared\Home.Master" />
+    <Content Include="Views\Shared\User.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

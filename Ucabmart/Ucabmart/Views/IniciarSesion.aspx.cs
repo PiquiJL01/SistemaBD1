@@ -13,10 +13,12 @@ namespace Ucabmart.Views
         {
 
         }
-
+        
         protected void btnRegistrar_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Inicio.aspx", false);
+            string loginUsuario = Email.Text;
+            Session["NombreLogin"] = loginUsuario;
+            Response.Redirect("/Views/User/InicioUsuario.aspx", false);
         }
 
 
