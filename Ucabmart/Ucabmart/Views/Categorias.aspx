@@ -21,10 +21,10 @@
                                 <div class="categorias-hover">
                                     <div class="categorias-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="../../Content/assets/img/portfolio/01-thumbnail.jpg" alt="" />
+                                <img class="img-fluid2" src="../../Content/assets/img/Categories/Refrigerados.jpg" alt="" />
                             </a>
                             <div class="categorias-caption" style="margin-right:-68px; background-color:#fed136">
-                                <div class="categorias-caption-heading">Alimentos</div>
+                                <div class="categorias-caption-heading">Refrigerados</div>
                                 <div class="categorias-caption-subheading text-muted">Pollo, pavos, embutidos, chocolates...</div>
                             </div>
                         </div>
@@ -35,10 +35,10 @@
                                 <div class="categorias-hover">
                                     <div class="categorias-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="../../Content/assets/img/portfolio/02-thumbnail.jpg" alt="" />
+                                <img class="img-fluid2" src="../../Content/assets/img/Categories/Limpieza.jpg" alt="" />
                             </a>
                             <div class="categorias-caption" style="margin-right:-188px; background-color:#fed136">
-                                <div class="categorias-caption-heading">Productos de Limpieza</div>
+                                <div class="categorias-caption-heading">Limpieza</div>
                                 <div class="categorias-caption-subheading text-muted">Cloro, jabón, lavaplatos...</div>
                             </div>
                         </div>
@@ -49,10 +49,10 @@
                                 <div class="categorias-hover">
                                     <div class="categorias-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="../../Content/assets/img/portfolio/04-thumbnail.jpg" alt="" />
+                                <img class="img-fluid2" src="../../Content/assets/img/Categories/Lenceria.jpg" alt="" />
                             </a>
                             <div class="categorias-caption" style="margin-right:-44px; background-color:#4e73dfd1">
-                                <div class="categorias-caption-heading">Artículos de Oficina</div>
+                                <div class="categorias-caption-heading">Lenceria</div>
                                 <div class="categorias-caption-subheading text-muted">Papelería, escritorios, mesas, sillas, mesas...</div>
                             </div>
                         </div>
@@ -63,11 +63,81 @@
                                 <div class="categorias-hover">
                                     <div class="categorias-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="../../Content/assets/img/portfolio/03-thumbnail.jpg" alt="" />
+                                <img class="img-fluid2" src="../../Content/assets/img/Categories/Accesorios.jpg" alt="" />
                             </a>
                             <div class="categorias-caption" style="margin-right:-68px; background-color:#4e73dfd1">
-                                <div class="categorias-caption-heading">Accesorios y Otros</div>
+                                <div class="categorias-caption-heading">Accesorios</div>
                                 <div class="categorias-caption-subheading text-muted">Lencerías, toallas, colchones, cauchos para vehículos...</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4" style="box-sizing: initial">
+                        <div class="categorias-item">
+                            <a class="categorias-link" href="#">
+                                <div class="categorias-hover">
+                                    <div class="categorias-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid2" src="../../Content/assets/img/Categories/Papeleria.jpg" alt="" />
+                            </a>
+                            <div class="categorias-caption" style="margin-right:-44px; background-color:#fed136">
+                                <div class="categorias-caption-heading">Papeleria</div>
+                                <div class="categorias-caption-subheading text-muted">Papelería, escritorios, mesas, sillas, mesas...</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4" style="margin-left: 100px">
+                        <div class="categorias-item">
+                            <a class="categorias-link" href="#">
+                                <div class="categorias-hover">
+                                    <div class="categorias-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid2" src="../../Content/assets/img/Categories/Mobilario.jpg" alt="" />
+                            </a>
+                            <div class="categorias-caption" style="margin-right:-68px; background-color:#fed136">
+                                <div class="categorias-caption-heading">Mobilario</div>
+                                <div class="categorias-caption-subheading text-muted">Lencerías, toallas, colchones, cauchos para vehículos...</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4" style="box-sizing: initial">
+                        <div class="categorias-item">
+                            <a class="categorias-link" href="#">
+                                <div class="categorias-hover">
+                                    <div class="categorias-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid2" src="../../Content/assets/img/Categories/Empaquetado.jpg" alt="" />
+                            </a>
+                            <div class="categorias-caption" style="margin-right:-44px; background-color:#4e73dfd1">
+                                <div class="categorias-caption-heading">Empaquetado</div>
+                                <div class="categorias-caption-subheading text-muted">Papelería, escritorios, mesas, sillas, mesas...</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4" style="margin-left: 100px">
+                        <div class="categorias-item">
+                            <a class="categorias-link" href="#">
+                                <div class="categorias-hover">
+                                    <div class="categorias-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid2" src="../../Content/assets/img/Categories/Electrodomesticos.png" alt="" />
+                            </a>
+                            <div class="categorias-caption" style="margin-right:-68px; background-color:#4e73dfd1">
+                                <div class="categorias-caption-heading">Electrodoméstico</div>
+                                <div class="categorias-caption-subheading text-muted">Lencerías, toallas, colchones, cauchos para vehículos...</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4" style="box-sizing: initial">
+                        <div class="categorias-item">
+                            <a class="categorias-link" href="#">
+                                <div class="categorias-hover">
+                                    <div class="categorias-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid2" src="../../Content/assets/img/Categories/Repuestos.jpg" alt="" />
+                            </a>
+                            <div class="categorias-caption" style="margin-right:-44px; background-color:#fed136">
+                                <div class="categorias-caption-heading">Repuestos</div>
+                                <div class="categorias-caption-subheading text-muted">Papelería, escritorios, mesas, sillas, mesas...</div>
                             </div>
                         </div>
                     </div>
