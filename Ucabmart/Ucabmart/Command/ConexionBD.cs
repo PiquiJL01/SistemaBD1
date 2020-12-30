@@ -8,16 +8,16 @@ namespace Ucabmart.Command
 {
     public class ConexionBD
     {      
-        public TaskEventHandler Conectar()
+        public void Conectar()
         {
-            var connectionString = "Host = localhost; User Id = postgres; Password = 1234; Database = postgres";
+            var connectionString = "Host = labs-dbservices01.ucab.edu.ve; User Id = jlgil18; Password = inmunda01; Database = testconnectionjlgz";
             
             var conexion = new NpgsqlConnection(connectionString);
 
-            // conexion.ConnectionString = "Server = localhost; User Id = postgres; Password = 1234; Database = postgres";
+ 
             conexion.Open();
 
-            return null;
+            conexion.Close();
         }
 
     }
