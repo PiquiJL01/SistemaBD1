@@ -1841,6 +1841,41 @@
       <DependentUpon>PruebaBD.aspx</DependentUpon>
     </Compile>
     <Compile Include="Controller\Class1.cs" />
+    <Compile Include="Engine\Almacen.cs" />
+    <Compile Include="Engine\Asistencia.cs" />
+    <Compile Include="Engine\Beneficio.cs" />
+    <Compile Include="Engine\Canje.cs" />
+    <Compile Include="Engine\Cargo.cs" />
+    <Compile Include="Engine\Cheque.cs" />
+    <Compile Include="Engine\Cliente.cs" />
+    <Compile Include="Engine\CorreoElectronico.cs" />
+    <Compile Include="Engine\Departamento.cs" />
+    <Compile Include="Engine\Descuento.cs" />
+    <Compile Include="Engine\Dominios.cs" />
+    <Compile Include="Engine\Efectivo.cs" />
+    <Compile Include="Engine\Empleado.cs" />
+    <Compile Include="Engine\Estatus.cs" />
+    <Compile Include="Engine\Horario.cs" />
+    <Compile Include="Engine\ImagenProducto.cs" />
+    <Compile Include="Engine\Juridico.cs" />
+    <Compile Include="Engine\Lugar.cs" />
+    <Compile Include="Engine\Marca.cs" />
+    <Compile Include="Engine\MetodoDePago.cs" />
+    <Compile Include="Engine\Moneda.cs" />
+    <Compile Include="Engine\Natural.cs" />
+    <Compile Include="Engine\Pasillo.cs" />
+    <Compile Include="Engine\Pedido.cs" />
+    <Compile Include="Engine\PeriodoVacional.cs" />
+    <Compile Include="Engine\Permiso.cs" />
+    <Compile Include="Engine\PersonaContacto.cs" />
+    <Compile Include="Engine\Producto.cs" />
+    <Compile Include="Engine\Proveedor.cs" />
+    <Compile Include="Engine\Punto.cs" />
+    <Compile Include="Engine\Rol.cs" />
+    <Compile Include="Engine\Tarjeta.cs" />
+    <Compile Include="Engine\Telefono.cs" />
+    <Compile Include="Engine\Tienda.cs" />
+    <Compile Include="Engine\Zona.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
