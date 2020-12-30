@@ -25,19 +25,19 @@
                             </a>
                             <div class="categorias-caption" style="margin-right:-68px; background-color:#fed136">
                                 <div class="categorias-caption-heading">Refrigerados</div>
-                                <div class="categorias-caption-subheading text-muted">Pollo, pavos, embutidos, chocolates...</div>
+                                <div class="categorias-caption-subheading text-muted">Pollo, Pavo, Queso, Pescado...</div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-sm-6 mb-4">
-                        <div class="categorias-item" style="margin-left: 120px">
+                    <div class="col-lg-4 col-sm-6 mb-4" style="margin-left: 120px">
+                        <div class="categorias-item">
                             <a class="categorias-link" href="#">
                                 <div class="categorias-hover">
                                     <div class="categorias-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
                                 <img class="img-fluid2" src="../../Content/assets/img/Categories/Limpieza.jpg" alt="" />
                             </a>
-                            <div class="categorias-caption" style="margin-right:-188px; background-color:#fed136">
+                            <div class="categorias-caption" style="margin-right:-69px; background-color:#fed136">
                                 <div class="categorias-caption-heading">Limpieza</div>
                                 <div class="categorias-caption-subheading text-muted">Cloro, jabón, lavaplatos...</div>
                             </div>
@@ -53,7 +53,7 @@
                             </a>
                             <div class="categorias-caption" style="margin-right:-44px; background-color:#4e73dfd1">
                                 <div class="categorias-caption-heading">Lenceria</div>
-                                <div class="categorias-caption-subheading text-muted">Papelería, escritorios, mesas, sillas, mesas...</div>
+                                <div class="categorias-caption-subheading text-muted">Toallas, Camisas, Pantalones...</div>
                             </div>
                         </div>
                     </div>
@@ -67,7 +67,7 @@
                             </a>
                             <div class="categorias-caption" style="margin-right:-68px; background-color:#4e73dfd1">
                                 <div class="categorias-caption-heading">Accesorios</div>
-                                <div class="categorias-caption-subheading text-muted">Lencerías, toallas, colchones, cauchos para vehículos...</div>
+                                <div class="categorias-caption-subheading text-muted">Cartera, Lente, Collar, Reloj...</div>
                             </div>
                         </div>
                     </div>
@@ -81,7 +81,7 @@
                             </a>
                             <div class="categorias-caption" style="margin-right:-44px; background-color:#fed136">
                                 <div class="categorias-caption-heading">Papeleria</div>
-                                <div class="categorias-caption-subheading text-muted">Papelería, escritorios, mesas, sillas, mesas...</div>
+                                <div class="categorias-caption-subheading text-muted">Borra, Lapiz, Sacapuntas, Tijera...</div>
                             </div>
                         </div>
                     </div>
@@ -95,7 +95,7 @@
                             </a>
                             <div class="categorias-caption" style="margin-right:-68px; background-color:#fed136">
                                 <div class="categorias-caption-heading">Mobilario</div>
-                                <div class="categorias-caption-subheading text-muted">Lencerías, toallas, colchones, cauchos para vehículos...</div>
+                                <div class="categorias-caption-subheading text-muted">Mesas, Sillas, Colchones, Vitrinas...</div>
                             </div>
                         </div>
                     </div>
@@ -109,7 +109,7 @@
                             </a>
                             <div class="categorias-caption" style="margin-right:-44px; background-color:#4e73dfd1">
                                 <div class="categorias-caption-heading">Empaquetado</div>
-                                <div class="categorias-caption-subheading text-muted">Papelería, escritorios, mesas, sillas, mesas...</div>
+                                <div class="categorias-caption-subheading text-muted">Dorito, Chocolate, Avena, Aceite, Gelatina...</div>
                             </div>
                         </div>
                     </div>
@@ -123,7 +123,7 @@
                             </a>
                             <div class="categorias-caption" style="margin-right:-68px; background-color:#4e73dfd1">
                                 <div class="categorias-caption-heading">Electrodoméstico</div>
-                                <div class="categorias-caption-subheading text-muted">Lencerías, toallas, colchones, cauchos para vehículos...</div>
+                                <div class="categorias-caption-subheading text-muted">Nevera, Cocina, Licuadora, Televisor...</div>
                             </div>
                         </div>
                     </div>
@@ -137,7 +137,7 @@
                             </a>
                             <div class="categorias-caption" style="margin-right:-44px; background-color:#fed136">
                                 <div class="categorias-caption-heading">Repuestos</div>
-                                <div class="categorias-caption-subheading text-muted">Papelería, escritorios, mesas, sillas, mesas...</div>
+                                <div class="categorias-caption-subheading text-muted">Cauchos, Amortiguador, Arranque, Boquilla...</div>
                             </div>
                         </div>
                     </div>
