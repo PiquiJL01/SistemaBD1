@@ -35,7 +35,7 @@ namespace Ucabmart.Engine
                     Tipo = "Maestro";
                     break;
                 case TipoTarjeta.MasterCard:
-                    Tpo = "MasterCard";
+                    Tipo = "MasterCard";
                     break;
                 case TipoTarjeta.Visa:
                     Tipo = "Visa";
