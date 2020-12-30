@@ -101,7 +101,12 @@
     <Content Include="Content\assets\mail\contact_me.js" />
     <Content Include="Content\assets\mail\contact_me.php" />
     <Content Include="Content\assets\mail\jqBootstrapValidation.js" />
+    <Content Include="Content\css\Clientes.css" />
+    <Content Include="Content\css\Nomina.css" />
+    <Content Include="Content\css\Tiendas.css" />
+    <Content Include="Content\css\Proveedores.css" />
     <Content Include="Content\css\sb-admin-2.min.css" />
+    <Content Include="Content\css\Admin.css" />
     <Content Include="Content\css\styles.css" />
     <Content Include="Content\js\sb-admin-2.min.js" />
     <Content Include="Content\vendor\bootstrap\js\bootstrap.bundle.js" />
@@ -1778,12 +1783,17 @@
     <Content Include="Views\CrearCuenta.aspx" />
     <Content Include="Views\IniciarSesion.aspx" />
     <Content Include="Views\Inicio.aspx" />
+    <Content Include="Views\Tiendas-Admin.aspx" />
     <Content Include="Views\RegistrarJuridica.aspx" />
     <Content Include="Views\Tiendas.aspx" />
     <Content Include="Views\Categorias.aspx" />
     <Content Include="Views\User\InicioUsuario.aspx" />
     <Content Include="Views\User\RegistrarNatural.aspx" />
     <Content Include="Views\ForgotPassword.aspx" />
+    <Content Include="Views\Inicio_Admin.aspx" />
+    <Content Include="Views\Proveedores.aspx" />
+    <Content Include="Views\Clientes_Admin.aspx" />
+    <Content Include="Views\Nomina_Admin.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -1813,6 +1823,13 @@
     <Compile Include="Views\Inicio.aspx.designer.cs">
       <DependentUpon>Inicio.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\Tiendas-Admin.aspx.cs">
+      <DependentUpon>Tiendas-Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Tiendas-Admin.aspx.designer.cs">
+      <DependentUpon>Tiendas-Admin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\RegistrarJuridica.aspx.cs">
       <DependentUpon>RegistrarJuridica.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1826,6 +1843,13 @@
     </Compile>
     <Compile Include="Views\Shared\Home.Master.designer.cs">
       <DependentUpon>Home.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
     </Compile>
     <Compile Include="Views\Shared\User.Master.cs">
       <DependentUpon>User.Master</DependentUpon>
@@ -1868,6 +1892,34 @@
     </Compile>
     <Compile Include="Views\ForgotPassword.aspx.designer.cs">
       <DependentUpon>ForgotPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Inicio_Admin.aspx.cs">
+      <DependentUpon>Inicio_Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Inicio_Admin.aspx.designer.cs">
+      <DependentUpon>Inicio_Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Proveedores.aspx.cs">
+      <DependentUpon>Proveedores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Proveedores.aspx.designer.cs">
+      <DependentUpon>Proveedores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Clientes_Admin.aspx.cs">
+      <DependentUpon>Clientes_Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Clientes_Admin.aspx.designer.cs">
+      <DependentUpon>Clientes_Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Nomina_Admin.aspx.cs">
+      <DependentUpon>Nomina_Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Nomina_Admin.aspx.designer.cs">
+      <DependentUpon>Nomina_Admin.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -2023,6 +2075,7 @@
     <None Include="packages.config" />
     <Content Include="Views\Shared\Home.Master" />
     <Content Include="Views\Shared\User.Master" />
+    <Content Include="Views\Shared\Admin.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
