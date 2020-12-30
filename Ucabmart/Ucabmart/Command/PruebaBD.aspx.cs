@@ -18,7 +18,7 @@ namespace Ucabmart.Command
         {
            // try { 
                 ConexionBD conectandose = new ConexionBD();
-                conectandose.conectar();
+                conectandose.Conectar();
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('Todo Bien');", true);
             //}
              //catch (Exception ex)

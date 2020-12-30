@@ -7,18 +7,17 @@ using Npgsql;
 namespace Ucabmart.Command
 {
     public class ConexionBD
-    {
-        
-
-        NpgsqlConnection conexion = new NpgsqlConnection("Server = localhost; User Id = postgres; Password = 1234; Database = postgres");
-
-      
-        public void conectar()
+    {      
+        public TaskEventHandler Conectar()
         {
-           // conexion.ConnectionString = "Server = localhost; User Id = postgres; Password = 1234; Database = postgres";
-            conexion.Open();
+            var connectionString = "Host = localhost; User Id = postgres; Password = 1234; Database = postgres";
             
+            var conexion = new NpgsqlConnection(connectionString);
 
+            // conexion.ConnectionString = "Server = localhost; User Id = postgres; Password = 1234; Database = postgres";
+            conexion.Open();
+
+            return null;
         }
 
     }
