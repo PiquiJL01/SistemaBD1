@@ -1,6 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Tiendas-Admin.aspx.cs" Inherits="Ucabmart.Views.WebForm8" %>
-
-<!DOCTYPE html>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Productos_Admin.aspx.cs" Inherits="Ucabmart.Views.WebForm6" %>
 
 
 <!DOCTYPE html>
@@ -19,7 +17,7 @@
         <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="../../Content/css/Tiendas.css" rel="stylesheet" />
+        <link href="../../Content/css/Productos.css" rel="stylesheet" />
     </head>
 
       <body id="page-top" class="bg-gradient-primary">
@@ -36,7 +34,7 @@
                    <!-- Topbar Search -->
                        
                     <ul class="navbar-nav text-uppercase ml-auto">
-                        <li class="nav-item"> <a class="nav-item"></a></li>
+                        <li class="nav-item"> <a class="nav-item">      </a>     </li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/Views/Clientes_Admin.aspx">Clientes</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/Views/Tiendas-Admin.aspx">Tiendas</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/Views/Productos_Admin.aspx">Productos</a></li>
@@ -54,8 +52,8 @@
                   <li class="li-1"></li>
                   <li class="li-2">
                       <ul class="Ordened">
-                          <li class="li-4" >TIENDAS-UCABMART</li>
-                          <li><img src="../Content/assets/img/Store/Icono-Store2.png" height="80px"/>  </li>
+                          <li class="li-4" >PRODUCTOS-UCABMART</li>
+                          <li><img src="../Content/assets/img/Product/Product-Icon.png" height="80px"/>  </li>
                       </ul>
                   </li>
                   <li class="li-3"></li>
@@ -80,8 +78,8 @@
                                 <img class="img-fluid2" src="../Content/assets/img/Provider/Add-Provider.jpg" alt="" />
                             </a>
                             <div class="categorias-caption" style="margin-right:-68px; background-color:#4e73dfd1">
-                                <div class="categorias-caption-heading">Agregar Tienda</div>
-                                <div class="categorias-caption-subheading text-muted">Permite registrar las nuevas sucursales...</div>
+                                <div class="categorias-caption-heading">Agregar Producto</div>
+                                <div class="categorias-caption-subheading text-muted">Permite registrar los nuevos productos en el sistema...</div>
                             </div>
                         </div>
                     </div>
@@ -94,8 +92,8 @@
                                 <img class="img-fluid2" src="../Content/assets/img/Provider/Consulting-Provider.jpg" alt="" />
                             </a>
                             <div class="categorias-caption" style="margin-right:-69px; background-color:#4e73dfd1">
-                                <div class="categorias-caption-heading">Consultar Tienda</div>
-                                <div class="categorias-caption-subheading text-muted">Permite revisar los tiendas registradas......</div>
+                                <div class="categorias-caption-heading">Consultar Producto</div>
+                                <div class="categorias-caption-subheading text-muted">Permite revisar los productos registrados......</div>
                             </div>
                         </div>
                     </div>
@@ -108,8 +106,8 @@
                                 <img class="img-fluid2" src="../Content/assets/img/Provider/Update-Provider.jpg" alt="" />
                             </a>
                             <div class="categorias-caption" style="margin-right:-44px; background-color:#4e73dfd1">
-                                <div class="categorias-caption-heading">Modificar Tienda</div>
-                                <div class="categorias-caption-subheading text-muted">Permite cambiar los datos de las tiendas......</div>
+                                <div class="categorias-caption-heading">Modificar Producto</div>
+                                <div class="categorias-caption-subheading text-muted">Permite cambiar los datos de los productos......</div>
                             </div>
                         </div>
                     </div>
@@ -122,8 +120,8 @@
                                 <img class="img-fluid2" src="../Content/assets/img/Provider/Delete-Provider.jpg" alt="" />
                             </a>
                             <div class="categorias-caption" style="margin-right:-68px; background-color:#4e73dfd1">
-                                <div class="categorias-caption-heading">Eliminar Tienda</div>
-                                <div class="categorias-caption-subheading text-muted">Permite eliminar las sucursales que ya no estan operativas......</div>
+                                <div class="categorias-caption-heading">Eliminar Producto</div>
+                                <div class="categorias-caption-subheading text-muted">Permite eliminar los productos con los que ya no cuenta la empresa......</div>
                             </div>
                         </div>
                     </div>
@@ -161,4 +159,5 @@
         <!-- Core theme JS-->
         <script src="../../Content/js/scripts.js"></script>
     </body>
+</html>
 </html>
