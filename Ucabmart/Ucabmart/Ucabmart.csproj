@@ -137,6 +137,7 @@
     <Content Include="Content\assets\mail\contact_me.php" />
     <Content Include="Content\assets\mail\jqBootstrapValidation.js" />
     <Content Include="Content\css\Clientes.css" />
+    <Content Include="Content\css\Productos.css" />
     <Content Include="Content\css\Nomina.css" />
     <Content Include="Content\css\Tiendas.css" />
     <Content Include="Content\css\Proveedores.css" />
@@ -1829,6 +1830,7 @@
     <Content Include="Views\Proveedores.aspx" />
     <Content Include="Views\Clientes_Admin.aspx" />
     <Content Include="Views\Nomina_Admin.aspx" />
+    <Content Include="Views\Productos_Admin.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -1963,6 +1965,13 @@
     </Compile>
     <Compile Include="Views\Nomina_Admin.aspx.designer.cs">
       <DependentUpon>Nomina_Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Productos_Admin.aspx.cs">
+      <DependentUpon>Productos_Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Productos_Admin.aspx.designer.cs">
+      <DependentUpon>Productos_Admin.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
