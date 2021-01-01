@@ -1,9 +1,6 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="RegistrarNatural.aspx.cs" Inherits="Ucabmart.Views.User.RegistrarNatural" %>
-
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Home.Master" AutoEventWireup="true" CodeBehind="RegistrarNatural.aspx.cs" Inherits="Ucabmart.Views.User.RegistrarNatural1" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <head>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,10 +21,16 @@
 
 </head>
 
+</asp:Content>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    
 <body class="bg-gradient-primary">
 
     <div class="container">
-
+        <br>
+        <br>
+        <br>
         <div class="card o-hidden border-0 shadow-lg my-5">
             <div class="card-body p-0">
                 <!-- Nested Row within Card Body -->
@@ -156,5 +159,4 @@
     <script src="../../Content/js/sb-admin-2.min.js"></script>
 
 </body>
-
-</html>
+</asp:Content>

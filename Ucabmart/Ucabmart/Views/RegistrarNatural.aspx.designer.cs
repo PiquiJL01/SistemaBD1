@@ -10,7 +10,7 @@
 namespace Ucabmart.Views.User {
     
     
-    public partial class RegistrarNatural {
+    public partial class RegistrarNatural1 {
         
         /// <summary>
         /// Control form1.

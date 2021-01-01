@@ -7,11 +7,9 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace Ucabmart.Views
-{
-
-
-    public partial class WebForm6
-    {
+namespace Ucabmart.Views {
+    
+    
+    public partial class WebForm6 {
     }
 }

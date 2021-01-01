@@ -549,3 +549,32 @@ C:\Users\Jose\Documents\GitHub\SistemaBD1\Ucabmart\Ucabmart\bin\System.Threading
 C:\Users\Jose\Documents\GitHub\SistemaBD1\Ucabmart\Ucabmart\bin\System.Threading.Tasks.Extensions.xml
 C:\Users\Jose\Documents\GitHub\SistemaBD1\Ucabmart\Ucabmart\bin\System.ValueTuple.xml
 >>>>>>> main
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.Data.SqlClient.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.Identity.Client.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.IdentityModel.Logging.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Newtonsoft.Json.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.Data.SqlClient.pdb
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.Data.SqlClient.xml
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.Identity.Client.xml
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.IdentityModel.Logging.xml
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.IdentityModel.Protocols.xml
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.IdentityModel.Protocols.OpenIdConnect.xml
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.IdentityModel.Tokens.xml
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Newtonsoft.Json.xml
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\de\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\es\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\fr\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\it\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\ja\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\ko\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\pt-BR\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\ru\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\zh-Hans\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\zh-Hant\Microsoft.Data.SqlClient.resources.dll

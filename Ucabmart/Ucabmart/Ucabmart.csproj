@@ -1855,7 +1855,9 @@
     <Content Include="Views\Tiendas.aspx" />
     <Content Include="Views\Categorias.aspx" />
     <Content Include="Views\User\InicioUsuario.aspx" />
-    <Content Include="Views\User\RegistrarNatural.aspx" />
+    <Content Include="Views\RegistrarNatural.aspx">
+      <BrowseToURL>~/Views/User/RegistrarNatural.aspx</BrowseToURL>
+    </Content>
     <Content Include="Views\ForgotPassword.aspx" />
     <Content Include="Views\Inicio_Admin.aspx" />
     <Content Include="Views\Proveedores.aspx" />
@@ -1990,11 +1992,11 @@
     <Compile Include="Views\User\InicioUsuario.aspx.designer.cs">
       <DependentUpon>InicioUsuario.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Views\User\RegistrarNatural.aspx.cs">
+    <Compile Include="Views\RegistrarNatural.aspx.cs">
       <DependentUpon>RegistrarNatural.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Views\User\RegistrarNatural.aspx.designer.cs">
+    <Compile Include="Views\RegistrarNatural.aspx.designer.cs">
       <DependentUpon>RegistrarNatural.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\ForgotPassword.aspx.cs">

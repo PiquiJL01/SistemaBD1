@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Ucabmart - Registra Persona Natural</title>
+    <title>Ucabmart - Registra Persona Jurídica</title>
 
     <!-- Custom fonts for this template-->
     <link href="../../Content/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
