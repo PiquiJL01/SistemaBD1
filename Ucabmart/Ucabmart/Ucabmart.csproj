@@ -1847,9 +1847,11 @@
     <Content Include="Content\vendor\jquery\jquery.slim.min.js" />
     <Content Include="Global.asax" />
     <Content Include="Content\js\scripts.js" />
+    <Content Include="Views\AgregarCliente.aspx" />
     <Content Include="Views\CrearCuenta.aspx" />
     <Content Include="Views\IniciarSesion.aspx" />
     <Content Include="Views\Inicio.aspx" />
+    <Content Include="Views\RegistrarClienteNatural.aspx" />
     <Content Include="Views\Tiendas-Admin.aspx" />
     <Content Include="Views\RegistrarJuridica.aspx" />
     <Content Include="Views\Tiendas.aspx" />
@@ -1915,6 +1917,13 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\AgregarCliente.aspx.cs">
+      <DependentUpon>AgregarCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\AgregarCliente.aspx.designer.cs">
+      <DependentUpon>AgregarCliente.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\CrearCuenta.aspx.cs">
       <DependentUpon>CrearCuenta.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1935,6 +1944,13 @@
     </Compile>
     <Compile Include="Views\Inicio.aspx.designer.cs">
       <DependentUpon>Inicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RegistrarClienteNatural.aspx.cs">
+      <DependentUpon>RegistrarClienteNatural.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\RegistrarClienteNatural.aspx.designer.cs">
+      <DependentUpon>RegistrarClienteNatural.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Tiendas-Admin.aspx.cs">
       <DependentUpon>Tiendas-Admin.aspx</DependentUpon>

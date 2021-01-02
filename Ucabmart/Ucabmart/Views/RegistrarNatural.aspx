@@ -58,6 +58,7 @@
                                  <asp:Label ID="lblRif" runat="server" Text="Rif"></asp:Label>
                                  <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <br >
                                         <div class="input-group mb-3"><span class="input-group-prepend"><span class="input-group-text"><i class="fas fa-user-times"></i></span></span>
                                             <asp:DropDownList ID="DropDownList1" runat="server" style="padding:10px 50px 10px 50px; text-align: left;" class="input-group-prepend be-addon">
                                                 <asp:ListItem>V</asp:ListItem>
@@ -67,6 +68,7 @@
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
+                                        <br >
                                         <asp:TextBox ID="txtRif" runat="server" type="text" name="name" data-parsley-trigger="change"  
                                             placeholder="Ingrese su número de Rif " autocomplete="off" class="form-control">
                                          </asp:TextBox>
@@ -76,6 +78,7 @@
                                 <asp:Label ID="lblCedula" runat="server" Text="Cédula"></asp:Label>
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <br >
                                         <div class="input-group mb-3"><span class="input-group-prepend"><span class="input-group-text"><i class="fas fa-user-times"></i></span></span>
                                             <asp:DropDownList ID="DropDownList2" runat="server" style="padding:10px 50px 10px 50px; text-align: left;" class="input-group-prepend be-addon">
                                                 <asp:ListItem>V</asp:ListItem>
@@ -85,6 +88,7 @@
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
+                                        <br >
                                         <asp:TextBox ID="txtCedula" runat="server" type="text" name="name" data-parsley-trigger="change"  
                                             placeholder="Ingrese su cédula " autocomplete="off" class="form-control">
                                         </asp:TextBox>
@@ -97,6 +101,7 @@
                                      </asp:TextBox>
                                 </div>
                                  <%--<Campo de texto de los telefonos >--%>
+                                <br >
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
                                         <asp:TextBox ID="txtTelefono1" runat="server" type="text" name="name" data-parsley-trigger="change"  
@@ -117,7 +122,8 @@
                                             placeholder="" autocomplete="off" class="form-control" Height="87px" Width="361px"></asp:TextBox>
                                     </div>
                                 </div>
-
+                                 <%--<Campo de la contraseña >--%>
+                                <br >
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
                                         <asp:TextBox ID="txtContraseña" runat="server" type="password" name="name" data-parsley-trigger="change"  
