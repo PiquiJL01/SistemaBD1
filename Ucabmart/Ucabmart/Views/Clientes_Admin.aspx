@@ -37,6 +37,7 @@
                         <li class="nav-item"> <a class="nav-item">      </a>     </li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/Views/Clientes_Admin.aspx">Clientes</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/Views/Tiendas-Admin.aspx">Tiendas</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/Views/Productos_Admin.aspx">Productos</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/Views/Proveedores.aspx">Proveedores</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/Views/Nomina_Admin.aspx">Nomina</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/Views/Inicio_Admin.aspx">Inicio</a></li>
@@ -70,7 +71,7 @@
             <div class="row" style="padding-left: 150px;">
                     <div class="col-lg-4 col-sm-6 mb-4">
                         <div class="categorias-item">
-                            <a class="categorias-link" href="#">
+                            <a class="categorias-link" href="AgregarCliente.aspx">
                                 <div class="categorias-hover">
                                     <div class="categorias-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
