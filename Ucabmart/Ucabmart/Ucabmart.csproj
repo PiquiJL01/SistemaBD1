@@ -170,6 +170,7 @@
     <Content Include="Content\css\Clientes.css" />
     <Content Include="Content\css\Productos.css" />
     <Content Include="Content\css\Nomina.css" />
+    <Content Include="Content\css\RegistroCliente.css" />
     <Content Include="Content\css\Tiendas.css" />
     <Content Include="Content\css\Proveedores.css" />
     <Content Include="Content\css\sb-admin-2.min.css" />
@@ -1851,6 +1852,7 @@
     <Content Include="Views\CrearCuenta.aspx" />
     <Content Include="Views\IniciarSesion.aspx" />
     <Content Include="Views\Inicio.aspx" />
+    <Content Include="Views\RegistrarClienteJuridico.aspx" />
     <Content Include="Views\RegistrarClienteNatural.aspx" />
     <Content Include="Views\Tiendas-Admin.aspx" />
     <Content Include="Views\RegistrarJuridica.aspx" />
@@ -1944,6 +1946,13 @@
     </Compile>
     <Compile Include="Views\Inicio.aspx.designer.cs">
       <DependentUpon>Inicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RegistrarClienteJuridico.aspx.cs">
+      <DependentUpon>RegistrarClienteJuridico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\RegistrarClienteJuridico.aspx.designer.cs">
+      <DependentUpon>RegistrarClienteJuridico.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\RegistrarClienteNatural.aspx.cs">
       <DependentUpon>RegistrarClienteNatural.aspx</DependentUpon>

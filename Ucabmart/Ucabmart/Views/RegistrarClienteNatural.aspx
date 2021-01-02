@@ -169,7 +169,6 @@
                                 <hr>
                                 <asp:Button ID="btnRegistrar" runat="server" class="btn btn-primary btn-user btn-block" Text="Registrar Cuenta" OnClick="btnRegistrar_Click" />
                             </form>
-                           
                         </div>
                     </div>
                 </div>
@@ -178,8 +177,6 @@
 
     </div>
 
-           <br>
-           <br>
         <!-- Footer-->
         <footer class="footer py-4">
             <div class="container">
