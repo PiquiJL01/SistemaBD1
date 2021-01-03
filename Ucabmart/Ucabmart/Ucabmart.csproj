@@ -1849,10 +1849,12 @@
     <Content Include="Global.asax" />
     <Content Include="Content\js\scripts.js" />
     <Content Include="Views\AgregarCliente.aspx" />
+    <Content Include="Views\ConsultarCliente.aspx" />
     <Content Include="Views\ConsultarClienteNatural.aspx" />
     <Content Include="Views\CrearCuenta.aspx" />
     <Content Include="Views\IniciarSesion.aspx" />
     <Content Include="Views\Inicio.aspx" />
+    <Content Include="Views\ModificarCliente.aspx" />
     <Content Include="Views\RegistrarClienteJuridico.aspx" />
     <Content Include="Views\RegistrarClienteNatural.aspx" />
     <Content Include="Views\Tiendas-Admin.aspx" />
@@ -1889,6 +1891,7 @@
     <Compile Include="Engine\Cheque.cs" />
     <Compile Include="Engine\Cliente.cs" />
     <Compile Include="Engine\CorreoElectronico.cs" />
+    <Compile Include="Engine\DBConnection.cs" />
     <Compile Include="Engine\Departamento.cs" />
     <Compile Include="Engine\Descuento.cs" />
     <Compile Include="Engine\Dominios.cs" />
@@ -1927,6 +1930,13 @@
     <Compile Include="Views\AgregarCliente.aspx.designer.cs">
       <DependentUpon>AgregarCliente.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\ConsultarCliente.aspx.cs">
+      <DependentUpon>ConsultarCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ConsultarCliente.aspx.designer.cs">
+      <DependentUpon>ConsultarCliente.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\ConsultarClienteNatural.aspx.cs">
       <DependentUpon>ConsultarClienteNatural.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1954,6 +1964,13 @@
     </Compile>
     <Compile Include="Views\Inicio.aspx.designer.cs">
       <DependentUpon>Inicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ModificarCliente.aspx.cs">
+      <DependentUpon>ModificarCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ModificarCliente.aspx.designer.cs">
+      <DependentUpon>ModificarCliente.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\RegistrarClienteJuridico.aspx.cs">
       <DependentUpon>RegistrarClienteJuridico.aspx</DependentUpon>
