@@ -1889,6 +1889,7 @@
     <Compile Include="Engine\Cheque.cs" />
     <Compile Include="Engine\Cliente.cs" />
     <Compile Include="Engine\CorreoElectronico.cs" />
+    <Compile Include="Engine\DBConnection.cs" />
     <Compile Include="Engine\Departamento.cs" />
     <Compile Include="Engine\Descuento.cs" />
     <Compile Include="Engine\Dominios.cs" />
