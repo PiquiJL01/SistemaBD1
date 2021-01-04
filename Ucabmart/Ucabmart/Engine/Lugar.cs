@@ -11,9 +11,9 @@ namespace Ucabmart.Engine
         public string Nombre { get; set; }
         public string Tipo { get; set; }
         public string Descripcion { get; set; }
-        public string Ubicacion { get; set; }
+        public string CodigoUbicacion { get; set; }
 
-        public Lugar(string codigo, string nombre, TipoLugar tipo, string descripcion, string ubicacion)
+        public Lugar(string codigo, string nombre, TipoLugar tipo, string descripcion, Lugar ubicacion = null)
         {
             Codigo = codigo;
             Nombre = nombre;
@@ -39,7 +39,14 @@ namespace Ucabmart.Engine
                     break;
             }
             Descripcion = descripcion;
-            Ubicacion = ubicacion;
+            if (ubicacion == null)
+            {
+                CodigoUbicacion = null;
+            }
+            else
+            {
+                CodigoUbicacion = ubicacion.Codigo;
+            }
         }
     }
 }

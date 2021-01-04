@@ -26,7 +26,7 @@ namespace Ucabmart.Engine
                     Tipo = "Debito";
                     break;
                 case TipoTarjeta.DinersClub:
-                    Tipo = "Diner's Club";
+                    Tipo = "Diner´s Club";
                     break;
                 case TipoTarjeta.Discovery:
                     Tipo = "Discovery";
