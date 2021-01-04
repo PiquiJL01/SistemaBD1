@@ -72,21 +72,46 @@
                                 <h1 class="h4 text-gray-900 mb-4">Registrar Cliente - Persona Natural</h1>
                             </div>
                             <form id="form1" runat="server">
+
                                  <%--<Campo de texto del nombre >--%>
-                                <div class="form-group">
-                                    <asp:TextBox ID="txtNombre" runat="server" type="text" name="name" data-parsley-trigger="change"  
-                                          placeholder="Ingrese Primer y Segundo Nombre " autocomplete="off" class="form-control">
-                                     </asp:TextBox>
+
+                                <br/>
+                                 <div class="form-group row">
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                         <asp:Label ID="Nombre" runat="server" Text="Nombres"></asp:Label>
+                                        <asp:TextBox ID="Nombre1" runat="server" type="name" name="name" data-parsley-trigger="change"  
+                                            placeholder="Ingrese su 1er Nombre" autocomplete="off" class="form-control">
+                                        </asp:TextBox>
+                                    </div>
+                                    <div class="col-sm-6" style="margin-top:24px">
+                                       <asp:TextBox ID="Nombre2" runat="server" type="name" name="name" data-parsley-trigger="change"  
+                                            placeholder="Ingrese su 2do Nombre" autocomplete="off" class="form-control">
+                                        </asp:TextBox>
+                                    </div>
                                 </div>
+
+
                                  <%--<Campo de texto del apellido >--%>
-                                <div class="form-group">
-                                    <asp:TextBox ID="txtApellido" runat="server" type="text" name="name" data-parsley-trigger="change"  
-                                         placeholder="Ingrese Primer y Segundo Apellido " autocomplete="off" class="form-control">
-                                    </asp:TextBox>
+
+                                 <div class="form-group row" style="margin-bottom:-10px">
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                         <asp:Label ID="Apellido" runat="server" Text="Apellidos"></asp:Label>
+                                        <asp:TextBox ID="Apellido1" runat="server" type="name" name="name" data-parsley-trigger="change"  
+                                            placeholder="Ingrese su 1er Apellido" autocomplete="off" class="form-control">
+                                        </asp:TextBox>
+                                    </div>
+                                    <div class="col-sm-6" style="margin-top:24px">
+                                       <asp:TextBox ID="Apellido2" runat="server" type="name" name="name" data-parsley-trigger="change"  
+                                            placeholder="Ingrese su 2do Apellido" autocomplete="off" class="form-control">
+                                        </asp:TextBox>
+                                    </div>
                                 </div>
+
+
+
                                  <%--<Campo de texto del Rif >--%>
                                  <asp:Label ID="lblRif" runat="server" Text="Rif"></asp:Label>
-                                 <div class="form-group row">
+                                 <div class="form-group row" style="margin-bottom:-10px">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
                                         <br >
                                         <div class="input-group mb-3"><span class="input-group-prepend"><span class="input-group-text"><i class="fas fa-user-times"></i></span></span>
@@ -96,17 +121,17 @@
                                                 <asp:ListItem>P</asp:ListItem>
                                               </asp:DropDownList>
                                         </div>
-                                    </div>
+                                     </div>
                                     <div class="col-sm-6">
                                         <br >
                                         <asp:TextBox ID="txtRif" runat="server" type="text" name="name" data-parsley-trigger="change"  
-                                            placeholder="Ingrese nº de Rif " autocomplete="off" class="form-control">
+                                            placeholder="Ingrese nº de Rif " autocomplete="off" class="form-control" style="height: 45px;width: 330px;margin-left: -70px;">
                                          </asp:TextBox>
                                     </div>
                                 </div>
                                 <%--<Campo de texto de la cédula>--%>
                                 <asp:Label ID="lblCedula" runat="server" Text="Cédula"></asp:Label>
-                                <div class="form-group row">
+                                <div class="form-group row" style="margin-bottom:-10px">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
                                         <br >
                                         <div class="input-group mb-3"><span class="input-group-prepend"><span class="input-group-text"><i class="fas fa-user-times"></i></span></span>
@@ -120,12 +145,13 @@
                                     <div class="col-sm-6">
                                         <br >
                                         <asp:TextBox ID="txtCedula" runat="server" type="text" name="name" data-parsley-trigger="change"  
-                                            placeholder="Ingrese su cédula " autocomplete="off" class="form-control">
+                                            placeholder="Ingrese su cédula " autocomplete="off" class="form-control" style="height: 45px;width: 330px;margin-left: -70px;">
                                         </asp:TextBox>
                                     </div>
                                 </div>
                                 <%--<Campo de texto del correo >--%>
                                 <div class="form-group">
+                                    <asp:Label ID="Label14" runat="server" Text="Correo Electrónico"></asp:Label>
                                     <asp:TextBox ID="txtCorreo" runat="server" type="text" name="name" data-parsley-trigger="change"  
                                           placeholder="Ingrese su correo electrónico" autocomplete="off" class="form-control">
                                      </asp:TextBox>
@@ -134,11 +160,12 @@
                                 <br >
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <asp:Label ID="Label1" runat="server" Text="Telefonos"></asp:Label>
                                         <asp:TextBox ID="txtTelefono1" runat="server" type="text" name="name" data-parsley-trigger="change"  
                                             placeholder="Teléfono 1 " autocomplete="off" class="form-control">
                                         </asp:TextBox>
                                     </div>
-                                    <div class="col-sm-6">
+                                    <div class="col-sm-6" style="margin-top:24px">
                                         <asp:TextBox ID="txtTelefono2" runat="server" type="text" name="name" data-parsley-trigger="change"  
                                             placeholder="Teléfono 2" autocomplete="off" class="form-control">
                                         </asp:TextBox>
@@ -149,18 +176,19 @@
                                     <asp:Label ID="Label6" for="txtDireccion" runat="server" Text="Dirección"></asp:Label>
                                     <div class="input-group mb-3"><span class="input-group-prepend"><span class="input-group-text"><i class="fa fa-user"></i></span></span>
                                         <asp:TextBox ID="txtDireccion" runat="server" type="text" name="name" data-parsley-trigger="change"  
-                                            placeholder="" autocomplete="off" class="form-control" Height="87px" Width="361px"></asp:TextBox>
+                                            placeholder="Ingrese su dirección" autocomplete="off" class="form-control" Height="87px" Width="361px"></asp:TextBox>
                                     </div>
                                 </div>
                                  <%--<Campo de la contraseña >--%>
                                 <br >
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
+                                         <asp:Label ID="Label12" runat="server" Text="Contraseña"></asp:Label>
                                         <asp:TextBox ID="txtContraseña" runat="server" type="password" name="name" data-parsley-trigger="change"  
                                             placeholder="Ingrese contraseña " autocomplete="off" class="form-control">
                                         </asp:TextBox>
                                     </div>
-                                    <div class="col-sm-6">
+                                    <div class="col-sm-6" style="margin-top:24px">
                                        <asp:TextBox ID="txtRepetirContraseña" runat="server" type="password" name="name" data-parsley-trigger="change"  
                                             placeholder="Repetir Contraseña " autocomplete="off" class="form-control">
                                         </asp:TextBox>
@@ -168,11 +196,6 @@
                                 </div>
                                 <hr>
                                 <asp:Button ID="btnRegistrar" runat="server" class="btn btn-primary btn-user btn-block" Text="Registrar Cuenta" OnClick="btnRegistrar_Click" />
-                            <%--<div>
-                                <img runat="server" id="imgCtrl"/>
-                            </div>--%>
-                            
-                            
                             </form>
                         </div>
                     </div>
