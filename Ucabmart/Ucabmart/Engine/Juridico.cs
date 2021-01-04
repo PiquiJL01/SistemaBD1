@@ -14,9 +14,9 @@ namespace Ucabmart.Engine
         public string DireccionFisica { get; set; }
         public string DireccionFiscal { get; set; }
 
-        public Juridico(string codigo, string rif, string email, int tienda, string denominacionComercial,
+        public Juridico(string codigo, string rif, CorreoElectronico correo, Tienda tienda, string denominacionComercial,
             string razonSocial, float capital, string paginaWeb, string direccionFisica, string direccionFiscal)
-            : base(codigo, rif, email, tienda)
+            : base(codigo, rif, correo, tienda)
         {
             DenominacionComercial = denominacionComercial;
             RazonSocial = razonSocial;

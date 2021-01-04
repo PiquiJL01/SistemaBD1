@@ -9,8 +9,6 @@ namespace Ucabmart.Engine
     {
         public string Codigo { get; set; }
         public string Nombre { get; set; }
-        public float TasaDeCambio { get; set; }
-        public DateTime FechaImplementacion { get; set; }
         public string Descripcion { get; set; }
 
         public Moneda(string codigo, string nombre, float tasaDeCambio, DateTime fechaImplementacion, string descripcion)

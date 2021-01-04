@@ -13,10 +13,11 @@ namespace Ucabmart.Engine
         public float Precio { get; set; }
         public string Calidad { get; set; }
         public string Descripcion { get; set; }
-        public int Marca { get; set; }
+        public int CodigoMarca { get; set; }
+        public int CodigoClasificacion { get; set; }
 
         public Producto(string codigo, string nombre, bool esAlimenticio, float precio, TipoCalidad calidad, 
-            string descrpcion, int marca)
+            string descrpcion, Marca marca, Clasificacion clasificacion)
         {
             Codigo = codigo;
             Nombre = nombre;
@@ -38,7 +39,8 @@ namespace Ucabmart.Engine
                     break;
             }
             Descripcion = descrpcion;
-            Marca = marca;
+            CodigoMarca = marca.Codigo;
+            CodigoClasificacion = clasificacion.Codigo;
         }
     }
 }

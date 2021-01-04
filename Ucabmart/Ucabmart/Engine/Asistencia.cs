@@ -11,15 +11,31 @@ namespace Ucabmart.Engine
         public DateTime Fecha { get; set; }
         public TimeSpan HoraEntradaSalida { get; set; }
         public DayOfWeek Dia { get; set; }
-        public int Empleado { get; set; }
+        public int CodigoEmpleado { get; set; }
+        public int CodigoHorario { get; set; }
 
-        public Asistencia(int codigo, DateTime fecha, TimeSpan horaEntradaSalida, DayOfWeek dia, int empleado)
+        public Asistencia(int codigo, DateTime fecha, TimeSpan horaEntradaSalida, DayOfWeek dia, Empleado empleado, Horario horario)
         {
             Codigo = codigo;
             Fecha = fecha;
             HoraEntradaSalida = horaEntradaSalida;
             Dia = dia;
-            Empleado = empleado;
+            CodigoEmpleado = empleado.Codigo;
+            CodigoHorario = horario.Codigo;
+        }
+
+        public Empleado Empleado()
+        {
+            DBConnection connection = new DBConnection();
+            Empleado empleado= null;
+            return empleado;
+        }
+
+        public Horario Horario()
+        {
+            DBConnection connection = new DBConnection();
+            Horario horario = null;
+            return horario;
         }
     }
 }

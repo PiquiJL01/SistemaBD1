@@ -1887,6 +1887,7 @@
     <Compile Include="Engine\Canje.cs" />
     <Compile Include="Engine\Cargo.cs" />
     <Compile Include="Engine\Cheque.cs" />
+    <Compile Include="Engine\Clasificacion.cs" />
     <Compile Include="Engine\Cliente.cs" />
     <Compile Include="Engine\CorreoElectronico.cs" />
     <Compile Include="Engine\DBConnection.cs" />
@@ -1914,6 +1915,7 @@
     <Compile Include="Engine\Punto.cs" />
     <Compile Include="Engine\Rol.cs" />
     <Compile Include="Engine\Tarjeta.cs" />
+    <Compile Include="Engine\TasaDeCambio.cs" />
     <Compile Include="Engine\Telefono.cs" />
     <Compile Include="Engine\Tienda.cs" />
     <Compile Include="Engine\Zona.cs" />

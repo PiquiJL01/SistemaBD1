@@ -21,7 +21,7 @@ namespace Ucabmart.Engine
         /// </summary>
         public DBConnection()
         {
-            ConnectionString = "Host = labs-dbservices01.ucab.edu.ve; User Id = jlgil18; Password = inmunda01; Database = testconnectionjlgz";
+            ConnectionString = "Host = labs-dbservices01.ucab.edu.ve; User Id = jlgil18; Password = inmunda01; Database = grupo5db";
 
             Connection = new NpgsqlConnection("Host = labs-dbservices01.ucab.edu.ve; User Id = jlgil18; Password = inmunda01; Database = testconnectionjlgz");
         }

@@ -7,12 +7,19 @@ namespace Ucabmart.Engine
 {
     public class Efectivo : MetodoDePago
     {
-        public int Moneda { get; set; }
+        public string CodigoMoneda { get; set; }
 
-        public Efectivo(int codigo, string nombre, string descripcion, DateTime fecha, int moneda)
+        public Efectivo(int codigo, string nombre, string descripcion, DateTime fecha, Moneda moneda)
             : base(codigo, nombre, descripcion, fecha)
         {
-            Moneda = moneda;
+            CodigoMoneda = moneda.Codigo;
+        }
+
+        public Moneda Moneda()
+        {
+            DBConnection connection = new DBConnection();
+            Moneda moneda = null;
+            return moneda;
         }
     }
 }

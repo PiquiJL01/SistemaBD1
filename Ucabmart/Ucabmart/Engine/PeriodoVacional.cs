@@ -12,12 +12,12 @@ namespace Ucabmart.Engine
         public DateTime FechaFinal { get; set; }
         public int Empleado { get; set; }
 
-        public PeriodoVacional(string codigo, DateTime fechaInicio, DateTime fechaFinal, int empleado)
+        public PeriodoVacional(string codigo, DateTime fechaInicio, DateTime fechaFinal, Empleado empleado)
         {
             Codigo = codigo;
             FechaInicio = fechaInicio;
             FechaFinal = fechaFinal;
-            Empleado = empleado;
+            Empleado = empleado.Codigo;
         }
     }
 }

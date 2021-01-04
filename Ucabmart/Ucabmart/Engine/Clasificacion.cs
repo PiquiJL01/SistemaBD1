@@ -5,17 +5,17 @@ using System.Web;
 
 namespace Ucabmart.Engine
 {
-    public class Estatus
+    public class Clasificacion
     {
         public int Codigo { get; set; }
-        public string Tipo { get; set; }
+        public string Nombre { get; set; }
         public string Descripcion { get; set; }
 
-        public Estatus(int codigo, string tipo, string descripcion)
+        public Clasificacion(int codigo, string nombre, string descripción)
         {
             Codigo = codigo;
-            Tipo = tipo;
-            Descripcion = descripcion;
+            Nombre = nombre;
+            Descripcion = descripción;
         }
     }
 }

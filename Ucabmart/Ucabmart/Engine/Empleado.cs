@@ -14,10 +14,10 @@ namespace Ucabmart.Engine
         public string Nombre2 { get; set; }
         public string Apellido1 { get; set; }
         public string Apellido2 { get; set; }
-        public int Departamento { get; set; }
-        public int Tienda { get; set; }
-        public int Jefe { get; set; }
-        public string Direccion { get; set; }
+        public int CodigoDepartamento { get; set; }
+        public int CodigoTienda { get; set; }
+        public int CodigoJefe { get; set; }
+        public string CodigoDireccion { get; set; }
 
         public Empleado(int codigo, string rif, string cedula, string nombre1, string nombre2, string apellido1, string apellido2,
             int departamento, int tienda, int jefe, string direccion)
@@ -28,10 +28,38 @@ namespace Ucabmart.Engine
             Nombre2 = nombre2;
             Apellido1 = apellido1;
             Apellido2 = apellido2;
-            Departamento = departamento;
-            Tienda = tienda;
-            Jefe = jefe;
-            Direccion = direccion;
+            CodigoDepartamento = departamento;
+            CodigoTienda = tienda;
+            CodigoJefe = jefe;
+            CodigoDireccion = direccion;
+        }
+
+        public Departamento Departamento()
+        {
+            DBConnection connection = new DBConnection();
+            Departamento departamento = null;
+            return departamento;
+        }
+
+        public Tienda Tienda()
+        {
+            DBConnection connection = new DBConnection();
+            Tienda tienda = null;
+            return tienda;
+        }
+
+        public Empleado Jefe()
+        {
+            DBConnection connection = new DBConnection();
+            Empleado jefe = null;
+            return jefe;
+        }
+
+        public Lugar Direccion()
+        {
+            DBConnection connection = new DBConnection();
+            Lugar direccion = null;
+            return direccion;
         }
     }
 }

@@ -9,15 +9,29 @@ namespace Ucabmart.Engine
     {
         public string Codigo { get; set; }
         public string RIF { get; set; }
-        public string Email { get; set; }
-        public int Tienda { get; set; }
+        public string CodigoCorreoElectronico { get; set; }
+        public int CodigoTienda { get; set; }
 
-        public Cliente(string codigo, string rif, string email, int tienda)
+        public Cliente(string codigo, string rif, CorreoElectronico correo, Tienda tienda)
         {
             Codigo = codigo;
             RIF = rif;
-            Email = email;
-            Tienda = tienda;
+            CodigoCorreoElectronico = correo.Codigo;
+            CodigoTienda = tienda.Codigo;
+        }
+
+        public CorreoElectronico CorreoElectronico()
+        {
+            DBConnection connection = new DBConnection();
+            CorreoElectronico correo = null;
+            return correo;
+        }
+
+        public Tienda Tienda()
+        {
+            DBConnection connection = new DBConnection();
+            Tienda tienda = null;
+            return tienda;
         }
     }
 }

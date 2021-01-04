@@ -11,17 +11,24 @@ namespace Ucabmart.Engine
         public int Numero { get; set; }
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
-        public int Tienda { get; set; }
-        public int Empleado { get; set; }
+        public int CodigoTienda { get; set; }
+        public int CodigoEmpleado { get; set; }
 
-        public Pasillo(int codigo, int numero, string nombre, string descripcion, int tienda, int empleado)
+        public Pasillo(int codigo, int numero, string nombre, string descripcion, Tienda tienda, Empleado empleado)
         {
             Codigo = codigo;
             Numero = numero;
             Nombre = nombre;
             Descripcion = descripcion;
-            Tienda = tienda;
-            Empleado = empleado;
+            CodigoTienda = tienda.Codigo;
+            CodigoEmpleado = empleado.Codigo;
+        }
+
+        public Tienda Tienda()
+        {
+            DBConnection connection = new DBConnection();
+            Tienda tienda = null;
+            return tienda;
         }
     }
 }

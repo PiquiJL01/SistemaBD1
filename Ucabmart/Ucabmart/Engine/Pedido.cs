@@ -8,10 +8,10 @@ namespace Ucabmart.Engine
     public class Pedido
     {
         public string Codigo { get; set; }
-        public string Cliente { get; set; }
         public float MontoTotal { get; set; }
         public DateTime Fecha { get; set; }
         public bool EstaAprovado { get; set; }
+        public string CodigoCliente { get; set; }
         public bool EsEnLinea { get; set; }
         public int MetodoDePago { get; set; }
         public string Proveedor { get; set; }
@@ -21,7 +21,7 @@ namespace Ucabmart.Engine
             int metodoDePago, string proveedor, int cajero)
         {
             Codigo = codigo;
-            Cliente = cliente;
+            CodigoCliente = cliente;
             MontoTotal = montoTotal;
             Fecha = fecha;
             EstaAprovado = estaAprovado;
