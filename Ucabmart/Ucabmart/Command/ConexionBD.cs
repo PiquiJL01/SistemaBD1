@@ -6,6 +6,7 @@ using Npgsql;
 
 namespace Ucabmart.Command
 {
+    /*
     public class ConexionBD
     {      
         public void Conectar()
@@ -21,4 +22,5 @@ namespace Ucabmart.Command
         }
 
     }
+    */
 }
