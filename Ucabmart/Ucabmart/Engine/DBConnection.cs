@@ -108,8 +108,8 @@ namespace Ucabmart.Engine
                     // ejemplo para la consola
                     //Console.WriteLine($"{rdr.GetInt32(0),-4} {rdr.GetString(1),-10} {rdr.GetInt32(2),10}");
 
-                    Almacen almacen = new Almacen(Reader.GetInt32(0));
-                    lista.Add(almacen);
+                   // Almacen almacen = new Almacen(Reader.GetInt32(0));
+                 //   lista.Add(almacen);
                 }
             }
             catch (Exception e)
@@ -138,10 +138,10 @@ namespace Ucabmart.Engine
                 Script.Parameters.AddWithValue("valor", 1654);
                 NpgsqlDataReader rdr = Script.ExecuteReader();
 
-                if (rdr.Read())
-                {
-                    almacen = new Almacen(rdr.GetInt32(0));
-                }
+                //if (rdr.Read())
+                //{
+                //    almacen = new Almacen(rdr.GetInt32(0));
+                //}
 
                 CloseConnection();
             }

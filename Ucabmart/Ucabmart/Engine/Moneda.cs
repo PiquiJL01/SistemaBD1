@@ -15,8 +15,8 @@ namespace Ucabmart.Engine
         {
             Codigo = codigo;
             Nombre = nombre;
-            TasaDeCambio = tasaDeCambio;
-            FechaImplementacion = fechaImplementacion;
+           // TasaDeCambio = tasaDeCambio;
+            //FechaImplementacion = fechaImplementacion;
             Descripcion = descripcion;
         }
     }
