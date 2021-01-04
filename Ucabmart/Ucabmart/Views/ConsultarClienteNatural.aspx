@@ -69,7 +69,20 @@
                             </div>
                             
                             <form id="form1" runat="server">
-                                <div class="table-responsive">
+                                <div class="form-group">
+                                    <div class="input-group mb-3"><span class="input-group-prepend"><span class="input-group-text"><i class="fa fa-user"></i></span></span> 
+                                        <asp:DropDownList ID="dplTipoCliente" runat="server" style="padding:10px 50px 10px 50px; text-align: left;" class="input-group-prepend be-addon">
+                                            <asp:ListItem>Natural</asp:ListItem>
+                                            <asp:ListItem>Jurídico</asp:ListItem>
+                                        </asp:DropDownList>   
+                                        <asp:Button ID="btnBuscar" runat="server" class="btn btn-space btn-primary ml-1" Text="Buscar" OnClick="btnBuscar_Click" Width="87px" />
+                                    </div>
+                                </div>
+
+                                <div class="table-responsive" id="listaPersonaTabla" runat="server">
+                                </div>
+
+                               <%-- <div class="table-responsive">
                                     <table class="table table-striped table-sm">
                                         <thead>
                                             <tr>
@@ -212,7 +225,7 @@
 
                                         </tbody>
                                     </table>
-                                </div>
+                                </div>--%>
                             </form>
                         </div>
                     </div>

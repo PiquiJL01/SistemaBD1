@@ -163,7 +163,7 @@ namespace Ucabmart.Engine
             if (!(BuscarAlmacen(almacen.Codigo)==null))
             {
                 OpenConnection();
-                string
+               // string
             }
         }
         #endregion
