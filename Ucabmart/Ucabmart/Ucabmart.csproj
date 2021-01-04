@@ -45,6 +45,9 @@
     <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MessagingToolkit.QRCode, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MessagingToolkit.QRCode.1.3.0\lib\MessagingToolkit.QRCode.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.1.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
@@ -195,7 +198,7 @@
     <Content Include="Content\assets\img\Provider\Consulting-Provider.jpg" />
     <Content Include="Content\assets\img\Provider\Delete-Provider.jpg" />
     <Content Include="Content\assets\img\Provider\Update-Provider.jpg" />
-    <Content Include="Content\assets\img\Register-Provider.jpeg" />
+    <Content Include="Content\assets\img\Register-Provider2.jpeg" />
     <Content Include="Content\assets\img\seguridad.jpg" />
     <Content Include="Content\assets\img\Shop.jpg" />
     <Content Include="Content\assets\img\Store\Icono-Store.png" />

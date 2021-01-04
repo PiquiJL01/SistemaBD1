@@ -115,7 +115,7 @@
                                     <div class="col-sm-6 mb-3 mb-sm-0">
                                         <br >
                                         <div class="input-group mb-3"><span class="input-group-prepend"><span class="input-group-text"><i class="fas fa-user-times"></i></span></span>
-                                            <asp:DropDownList ID="DropDownList1" runat="server" style="padding:10px 50px 10px 50px; text-align: left;" class="input-group-prepend be-addon">
+                                            <asp:DropDownList ID="dplRif" runat="server" style="padding:10px 50px 10px 50px; text-align: left;" class="input-group-prepend be-addon">
                                                 <asp:ListItem>V</asp:ListItem>
                                                 <asp:ListItem>E</asp:ListItem>
                                                 <asp:ListItem>P</asp:ListItem>
@@ -135,7 +135,7 @@
                                     <div class="col-sm-6 mb-3 mb-sm-0">
                                         <br >
                                         <div class="input-group mb-3"><span class="input-group-prepend"><span class="input-group-text"><i class="fas fa-user-times"></i></span></span>
-                                            <asp:DropDownList ID="DropDownList2" runat="server" style="padding:10px 50px 10px 50px; text-align: left;" class="input-group-prepend be-addon">
+                                            <asp:DropDownList ID="dplCedula" runat="server" style="padding:10px 50px 10px 50px; text-align: left;" class="input-group-prepend be-addon">
                                                 <asp:ListItem>V</asp:ListItem>
                                                 <asp:ListItem>E</asp:ListItem>
                                                 <asp:ListItem>P</asp:ListItem>
@@ -196,6 +196,11 @@
                                 </div>
                                 <hr>
                                 <asp:Button ID="btnRegistrar" runat="server" class="btn btn-primary btn-user btn-block" Text="Registrar Cuenta" OnClick="btnRegistrar_Click" />
+
+                                <div>
+                                    <img runat="server" id ="imgCtrl"/>
+                                </div>                            
+                            
                             </form>
                         </div>
                     </div>
