@@ -135,18 +135,46 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Command\PruebaBD.aspx" />
+    <Content Include="Content\assets\img\2d3df70c02d57dcc9dba05810822c1bd.jpg" />
     <Content Include="Content\assets\img\about\1.jpg" />
     <Content Include="Content\assets\img\about\2.jpg" />
     <Content Include="Content\assets\img\about\3.jpg" />
     <Content Include="Content\assets\img\about\4.jpg" />
+    <Content Include="Content\assets\img\Admin-2.jpg" />
+    <Content Include="Content\assets\img\Admin.png" />
+    <Content Include="Content\assets\img\adobestock.jpg" />
+    <Content Include="Content\assets\img\banking.jpg" />
+    <Content Include="Content\assets\img\Business-Create.jpg" />
+    <Content Include="Content\assets\img\business.jpg" />
+    <Content Include="Content\assets\img\Categories\Accesorios.jpg" />
+    <Content Include="Content\assets\img\Categories\Electrodomesticos.png" />
+    <Content Include="Content\assets\img\Categories\Empaquetado.jpg" />
+    <Content Include="Content\assets\img\Categories\Lenceria.jpg" />
+    <Content Include="Content\assets\img\Categories\Limpieza.jpg" />
+    <Content Include="Content\assets\img\Categories\Mobilario.jpg" />
+    <Content Include="Content\assets\img\Categories\Papeleria.jpg" />
+    <Content Include="Content\assets\img\Categories\Refrigerados.jpg" />
+    <Content Include="Content\assets\img\Categories\Repuestos.jpg" />
+    <Content Include="Content\assets\img\Client\Client-Icono.png" />
+    <Content Include="Content\assets\img\Client\Cover-Page2.jpg" />
     <Content Include="Content\assets\img\close-icon.svg" />
+    <Content Include="Content\assets\img\Employees\business-productivity.jpg" />
+    <Content Include="Content\assets\img\Employees\Employee-Icon.png" />
+    <Content Include="Content\assets\img\Employees\images.png" />
+    <Content Include="Content\assets\img\Employees\iStock-1163919598.jpg" />
+    <Content Include="Content\assets\img\Employees\Productivity.jpg" />
     <Content Include="Content\assets\img\favicon.ico" />
     <Content Include="Content\assets\img\header-bg.jpg" />
+    <Content Include="Content\assets\img\icono-distribucion.png" />
+    <Content Include="Content\assets\img\Icono-Proveedor.png" />
     <Content Include="Content\assets\img\logos\creative-market.jpg" />
     <Content Include="Content\assets\img\logos\designmodo.jpg" />
     <Content Include="Content\assets\img\logos\envato.jpg" />
     <Content Include="Content\assets\img\logos\themeforest.jpg" />
+    <Content Include="Content\assets\img\Lupa.png" />
+    <Content Include="Content\assets\img\Lupa.svg" />
     <Content Include="Content\assets\img\map-image.png" />
+    <Content Include="Content\assets\img\Natural-Create.jpg" />
     <Content Include="Content\assets\img\navbar-logo.svg" />
     <Content Include="Content\assets\img\portfolio\01-full.jpg" />
     <Content Include="Content\assets\img\portfolio\01-thumbnail.jpg" />
@@ -160,17 +188,38 @@
     <Content Include="Content\assets\img\portfolio\05-thumbnail.jpg" />
     <Content Include="Content\assets\img\portfolio\06-full.jpg" />
     <Content Include="Content\assets\img\portfolio\06-thumbnail.jpg" />
+    <Content Include="Content\assets\img\Product\Product-Icon.png" />
+    <Content Include="Content\assets\img\Product\Product.jpg" />
+    <Content Include="Content\assets\img\Proveedores.jpg" />
+    <Content Include="Content\assets\img\Provider\Add-Provider.jpg" />
+    <Content Include="Content\assets\img\Provider\Consulting-Provider.jpg" />
+    <Content Include="Content\assets\img\Provider\Delete-Provider.jpg" />
+    <Content Include="Content\assets\img\Provider\Update-Provider.jpg" />
+    <Content Include="Content\assets\img\Register-Provider.jpeg" />
+    <Content Include="Content\assets\img\seguridad.jpg" />
+    <Content Include="Content\assets\img\Shop.jpg" />
+    <Content Include="Content\assets\img\Store\Icono-Store.png" />
+    <Content Include="Content\assets\img\Store\Icono-Store2.png" />
+    <Content Include="Content\assets\img\Store\Store.jpg" />
+    <Content Include="Content\assets\img\super-market.jpg" />
     <Content Include="Content\assets\img\team\1.jpg" />
     <Content Include="Content\assets\img\team\2.jpg" />
     <Content Include="Content\assets\img\team\3.jpg" />
+    <Content Include="Content\assets\img\Ucabmart-Logo.ico" />
+    <Content Include="Content\assets\img\Ucabmart-Logo.png" />
+    <Content Include="Content\assets\img\Ucabmart-Logo.svg" />
     <Content Include="Content\assets\img\undraw_profile.svg" />
+    <Content Include="Content\assets\img\unnamed %281%29.jpg" />
+    <Content Include="Content\assets\img\unnamed.jpg" />
     <Content Include="Content\assets\mail\contact_me.js" />
     <Content Include="Content\assets\mail\contact_me.php" />
     <Content Include="Content\assets\mail\jqBootstrapValidation.js" />
     <Content Include="Content\css\Clientes.css" />
     <Content Include="Content\css\Productos.css" />
     <Content Include="Content\css\Nomina.css" />
+    <Content Include="Content\css\RegistrarClienteJuridico.css" />
     <Content Include="Content\css\RegistroCliente.css" />
+    <Content Include="Content\css\RegistroProveedores.css" />
     <Content Include="Content\css\Tiendas.css" />
     <Content Include="Content\css\Proveedores.css" />
     <Content Include="Content\css\sb-admin-2.min.css" />
@@ -1857,6 +1906,7 @@
     <Content Include="Views\ModificarCliente.aspx" />
     <Content Include="Views\RegistrarClienteJuridico.aspx" />
     <Content Include="Views\RegistrarClienteNatural.aspx" />
+    <Content Include="Views\RegistroProveedores.aspx" />
     <Content Include="Views\Tiendas-Admin.aspx" />
     <Content Include="Views\RegistrarJuridica.aspx" />
     <Content Include="Views\Tiendas.aspx" />
@@ -1987,6 +2037,13 @@
     </Compile>
     <Compile Include="Views\RegistrarClienteNatural.aspx.designer.cs">
       <DependentUpon>RegistrarClienteNatural.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RegistroProveedores.aspx.cs">
+      <DependentUpon>RegistroProveedores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\RegistroProveedores.aspx.designer.cs">
+      <DependentUpon>RegistroProveedores.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Tiendas-Admin.aspx.cs">
       <DependentUpon>Tiendas-Admin.aspx</DependentUpon>
