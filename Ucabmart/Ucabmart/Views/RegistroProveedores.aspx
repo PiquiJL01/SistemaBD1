@@ -69,7 +69,7 @@
                     <div class="col-lg-7">
                         <div class="p-5">
                             <div class="text-center">
-                                <h1 class="h4 text-gray-900 mb-4">Crear Cuenta</h1>
+                                <h1 class="h4 text-gray-900 mb-4">Registrar Proveedor</h1>
                             </div>
                             <form id="form1" runat="server">
                                  <%--<Campo de texto del Rif >--%>
