@@ -6,72 +6,39 @@ using Npgsql;
 
 namespace Ucabmart.Engine
 {
-    public class DBConnection
+    public abstract class ConexionBD<Tipo, Codigo>
     {
-
-        private string ConnectionString;
-        private string Command;
-        private NpgsqlCommand Script;
-        private NpgsqlDataReader Reader;
-        private NpgsqlConnection Connection;
-
-        #region Private Methods
-        /// <summary>
-        /// <c>Clase</c> para la conexion con la BD
-        /// </summary>
-        public DBConnection()
-        {
-            ConnectionString = "Host = labs-dbservices01.ucab.edu.ve; User Id = grupo5bd1; Password = 123456789; Database = grupo5db";
-
-            Connection = new NpgsqlConnection(ConnectionString);
-        }
-
-        /// <summary>
-        /// Abre la conexion con la <c>BD</c>
-        /// </summary>
-        private void OpenConnection()
-        {
-            Connection.Open();
-        }
-
-
-        /// <summary>
-        /// Cierra la conexion con la <c>BD</c>
-        /// </summary>
-        private void CloseConnection()
-        {
-            Connection.Close();
-
-        }
-        #endregion
+        /**/
+        private const string ConnectionString = "Host = labs-dbservices01.ucab.edu.ve; User Id = grupo5bd1; Password = 123456789; Database = grupo5db";
+        private string Comando;
+        public NpgsqlCommand Script;
+        public NpgsqlDataReader Reader;
+        public NpgsqlConnection Conexion = new NpgsqlConnection(ConnectionString);
 
         /// <summary>
         /// Prueba de conexion de la base de datos
         /// </summary>
         public void Test()
         {
-            Lugar lugar = new Lugar("1", "Test", TipoLugar.Pais, "Test");
-            InsertarLugar(lugar);
+
         }
 
         #region CRUDs
 
-        #region Alamcenes
+
         /// <summary>
-        /// Inserta en la <c>BD</c>
+        /// Inserta en la base de datos
         /// </summary>
-        /// <param name="almacen">Objeto a insertar</param>
-        public void InsertarAlmacen(Almacen almacen)
+        /// <param name="objeto"></param>
+        public void Insertar()
         {
             try
             {
-                OpenConnection();
 
-                Command = "INSERT INTO alamcen(codigo, tienda) VALUES(@codigo, @tienda)";
-                Script = new NpgsqlCommand(Command, Connection);
+                ConnectOpenConnection();
 
-                Script.Parameters.AddWithValue("codigo", almacen.Codigo);
-                Script.Parameters.AddWithValue("tienda", almacen.codigoTienda);
+                Script = ScriptInsertar();
+                
                 Script.Prepare();
 
                 Script.ExecuteNonQuery();
@@ -80,10 +47,29 @@ namespace Ucabmart.Engine
             }
             catch (Exception e)
             {
-
+                throw e;
             }
         }
 
+        public abstract void ScriptInsertar();
+
+        /// <summary>
+        /// Busca en la Base de Datos
+        /// </summary>
+        /// <returns>Lista con todos los objetos de la tabla de la <typeparamref name="Clase"/></returns>
+        public abstract List<Tipo> Todos();
+
+        /// <summary>
+        /// Busca especificamente en la base de datos
+        /// </summary>
+        /// <param name="codigo">Codigo para la busqueda</param>
+        /// <returns></returns>
+        public abstract Tipo Leer(Codigo codigo);
+
+
+        /* CRUDs Originales
+        #region Alamcenes
+        
         /// <summary>
         /// Obtiene una lista con todos los alamcenes
         /// </summary>
@@ -166,7 +152,7 @@ namespace Ucabmart.Engine
         /// <summary>
         /// Inserta en la <c>BD</c>
         /// </summary>
-        /// <param name="almacen">Objeto a insertar</param>
+        /// <param name="lugar">Objeto a insertar</param>
         public void InsertarLugar(Lugar lugar)
         {
             try
@@ -237,9 +223,11 @@ namespace Ucabmart.Engine
             }
             catch (Exception e)
             {
+                CloseConnection();
                 throw e;
             }
 
+            CloseConnection();
             return lista;
         }
 
@@ -290,7 +278,7 @@ namespace Ucabmart.Engine
             }
         }
         #endregion
-
+        */
         #endregion
     }
 }

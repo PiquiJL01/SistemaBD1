@@ -12,9 +12,8 @@ namespace Ucabmart.Engine
         public string CodigoCorreoElectronico { get; set; }
         public int CodigoTienda { get; set; }
 
-        public Cliente(string codigo, string rif, CorreoElectronico correo, Tienda tienda)
+        public Cliente(string rif, CorreoElectronico correo, Tienda tienda)
         {
-            Codigo = codigo;
             RIF = rif;
             CodigoCorreoElectronico = correo.Codigo;
             CodigoTienda = tienda.Codigo;
