@@ -52,4 +52,11 @@ namespace Ucabmart.Engine
         Vespertino,
         Nocturno
     }
+
+    public enum TipoZona
+    {
+        Congelador,
+        General,
+        Refrigerador
+    }
 }

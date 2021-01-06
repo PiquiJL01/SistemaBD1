@@ -72,5 +72,31 @@ namespace Ucabmart.Engine
         /// </summary>
         public abstract void Eliminar();
         #endregion
+
+        #region Lectura con el Reader
+        public string ReadString(int posicion)
+        {
+            try
+            {
+                return Reader.GetString(posicion);
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
+        }
+
+        public int ReadInt(int posicion)
+        {
+            try
+            {
+                return Reader.GetInt32(posicion);
+            }
+            catch (Exception e)
+            {
+                return 0;
+            }
+        }
+        #endregion
     }
 }

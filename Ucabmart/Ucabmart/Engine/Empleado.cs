@@ -33,33 +33,5 @@ namespace Ucabmart.Engine
             CodigoJefe = jefe;
             CodigoDireccion = direccion;
         }
-
-        public Departamento Departamento()
-        {
-            DBConnection connection = new DBConnection();
-            Departamento departamento = null;
-            return departamento;
-        }
-
-        public Tienda Tienda()
-        {
-            DBConnection connection = new DBConnection();
-            Tienda tienda = null;
-            return tienda;
-        }
-
-        public Empleado Jefe()
-        {
-            DBConnection connection = new DBConnection();
-            Empleado jefe = null;
-            return jefe;
-        }
-
-        public Lugar Direccion()
-        {
-            DBConnection connection = new DBConnection();
-            Lugar direccion = null;
-            return direccion;
-        }
     }
 }

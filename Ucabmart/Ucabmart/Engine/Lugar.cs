@@ -24,7 +24,7 @@ namespace Ucabmart.Engine
             switch (tipo)
             {
                 case TipoLugar.Direccion:
-                    Tipo = "Dirección";
+                    Tipo = "Direccion";
                     break;
                 case TipoLugar.Estado:  
                     Tipo = "Estado";
@@ -33,7 +33,7 @@ namespace Ucabmart.Engine
                     Tipo = "Municipio";
                     break;
                 case TipoLugar.Pais:
-                    Tipo = "País";
+                    Tipo = "Pais";
                     break;
                 case TipoLugar.Parroquia:
                     Tipo = "Parroquia";
@@ -56,11 +56,14 @@ namespace Ucabmart.Engine
         public Lugar(int codigo)
         {
             Lugar lugar = Leer(codigo);
-            Codigo = lugar.Codigo;
-            Nombre = lugar.Nombre;
-            Tipo = lugar.Tipo;
-            Descripcion = lugar.Descripcion;
-            CodigoUbicacion = lugar.CodigoUbicacion;
+            if (!(lugar == null))
+            {
+                Codigo = lugar.Codigo;
+                Nombre = lugar.Nombre;
+                Tipo = lugar.Tipo;
+                Descripcion = lugar.Descripcion;
+                CodigoUbicacion = lugar.CodigoUbicacion;
+            }
         }
 
         private Lugar(int codigo, string nombre, string tipo, string descripcion, int ubicacion)
@@ -78,7 +81,7 @@ namespace Ucabmart.Engine
         {
             if (CodigoUbicacion == 0)
             {
-                string Comando = "INSERT INTO lugar (lu_nombre, lu_tipo, lu_descripcion) VALUES (@codigo, @nombre, @tipo, @descripcion)";
+                string Comando = "INSERT INTO lugar (lu_nombre, lu_tipo, lu_descripcion) VALUES (@nombre, @tipo, @descripcion)";
                 Script = new NpgsqlCommand(Comando, Conexion);
 
                 Script.Parameters.AddWithValue("nombre", Nombre);
@@ -106,15 +109,15 @@ namespace Ucabmart.Engine
             {
                 Conexion.Open();
 
-                string Comando = "SELECT * FROM alamacenes WHERE codigo=@valor";
+                string Comando = "SELECT * FROM lugar WHERE lu_codigo=@codigo";
                 Script = new NpgsqlCommand(Comando, Conexion);
 
-                Script.Parameters.AddWithValue("valor", 1654);
-                NpgsqlDataReader rdr = Script.ExecuteReader();
+                Script.Parameters.AddWithValue("codigo", codigo);
+                Reader = Script.ExecuteReader();
 
-                if (rdr.Read())
+                if (Reader.Read())
                 {
-                    lugar = new Lugar(Reader.GetInt32(0), Reader.GetString(1), Reader.GetString(2), Reader.GetString(3), Reader.GetInt32(4));
+                    lugar = new Lugar(ReadInt(0), ReadString(1), ReadString(2), ReadString(3), ReadInt(4));
                 }
 
                 Conexion.Close();
@@ -150,7 +153,8 @@ namespace Ucabmart.Engine
 
                 while (Reader.Read())
                 {
-                    Lugar lugar = new Lugar(Reader.GetInt32(0), Reader.GetString(1), Reader.GetString(2), Reader.GetString(3), Reader.GetInt32(4));
+                    Lugar lugar = new Lugar(ReadInt(0), ReadString(1), ReadString(2), ReadString(3), ReadInt(4));
+
                     lista.Add(lugar);
                 }
             }

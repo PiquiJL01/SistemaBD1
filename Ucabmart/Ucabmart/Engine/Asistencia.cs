@@ -23,19 +23,5 @@ namespace Ucabmart.Engine
             CodigoEmpleado = empleado.Codigo;
             CodigoHorario = horario.Codigo;
         }
-
-        public Empleado Empleado()
-        {
-            DBConnection connection = new DBConnection();
-            Empleado empleado= null;
-            return empleado;
-        }
-
-        public Horario Horario()
-        {
-            DBConnection connection = new DBConnection();
-            Horario horario = null;
-            return horario;
-        }
     }
 }

@@ -18,10 +18,7 @@ namespace Ucabmart.Engine
 
         public Tienda Tienda()
         {
-            DBConnection connection = new DBConnection();
-            Tienda tienda = null; //connection.BuscarTienda(codigoTienda);
-
-            return tienda;
+            return new Tienda(codigoTienda);
         }
     }
 }

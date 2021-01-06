@@ -13,7 +13,7 @@ namespace Ucabmart.Engine
         public string Nombre2 { get; set; }
         public string Apellido1 { get; set; }
         public string Apellido2 { get; set; }
-        public string CodigoClienteJuridico { get; set; }
+        public string RifClienteJuridico { get; set; }
         public string RifProveedor { get; set; }
 
         public PersonaContacto(string codigo, string cedula, string nombre1, string nombre2,
@@ -25,7 +25,7 @@ namespace Ucabmart.Engine
             Nombre2 = nombre2;
             Apellido1 = apellido1;
             Apellido2 = apellido2;
-            CodigoClienteJuridico = cliente.Codigo;
+            RifClienteJuridico = cliente.RIF;
             RifProveedor = null;
         }
 
@@ -38,15 +38,8 @@ namespace Ucabmart.Engine
             Nombre2 = nombre2;
             Apellido1 = apellido1;
             Apellido2 = apellido2;
-            CodigoClienteJuridico = null;
+            RifClienteJuridico = null;
             RifProveedor = proveedor.RIF;
-        }
-
-        public Juridico Juridico()
-        {
-            DBConnection connection = new DBConnection();
-            Juridico juridico = null;
-            return juridico;
         }
     }
 }
