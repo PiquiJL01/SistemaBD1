@@ -18,8 +18,9 @@ namespace Ucabmart.Engine
         /// Inserta en la base de datos
         /// </summary>
         /// <param name="objeto"></param>
-        public void Insertar()
-        {
+        public abstract void Insertar();
+        //Codigo Viejo
+        /*{
             try
             {
                 Conexion.Open();
@@ -44,9 +45,9 @@ namespace Ucabmart.Engine
                 }
                 throw e;
             }
-        }
+        }*/
 
-        public abstract void ScriptInsertar();
+        //public abstract void ScriptInsertar();
 
         /// <summary>
         /// Busca en la Base de Datos

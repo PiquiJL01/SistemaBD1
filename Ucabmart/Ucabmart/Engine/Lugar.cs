@@ -16,7 +16,6 @@ namespace Ucabmart.Engine
 
 
         #region Declaraciones
-
         public Lugar(int codigo, string nombre, TipoLugar tipo, string descripcion, Lugar ubicacion = null)
         {
             Codigo = codigo;
@@ -27,6 +26,41 @@ namespace Ucabmart.Engine
                     Tipo = "Direccion";
                     break;
                 case TipoLugar.Estado:  
+                    Tipo = "Estado";
+                    break;
+                case TipoLugar.Municipio:
+                    Tipo = "Municipio";
+                    break;
+                case TipoLugar.Pais:
+                    Tipo = "Pais";
+                    break;
+                case TipoLugar.Parroquia:
+                    Tipo = "Parroquia";
+                    break;
+                default:
+                    Tipo = null;
+                    break;
+            }
+            Descripcion = descripcion;
+            if (ubicacion == null)
+            {
+                CodigoUbicacion = 0;
+            }
+            else
+            {
+                CodigoUbicacion = ubicacion.Codigo;
+            }
+        }
+
+        public Lugar(string nombre, TipoLugar tipo, string descripcion, Lugar ubicacion = null)
+        {
+            Nombre = nombre;
+            switch (tipo)
+            {
+                case TipoLugar.Direccion:
+                    Tipo = "Direccion";
+                    break;
+                case TipoLugar.Estado:
                     Tipo = "Estado";
                     break;
                 case TipoLugar.Municipio:
@@ -77,27 +111,45 @@ namespace Ucabmart.Engine
         #endregion
 
         #region CRUDs
-        public override void ScriptInsertar()
+        public override void Insertar()
         {
-            if (CodigoUbicacion == 0)
+            try
             {
-                string Comando = "INSERT INTO lugar (lu_nombre, lu_tipo, lu_descripcion) VALUES (@nombre, @tipo, @descripcion)";
-                Script = new NpgsqlCommand(Comando, Conexion);
+                Conexion.Open();
+                string Comando;
+                if (CodigoUbicacion == 0)
+                {
+                    Comando = "INSERT INTO lugar (lu_nombre, lu_tipo, lu_descripcion) VALUES (@nombre, @tipo, @descripcion) RETURNING lu_codigo";
+                    Script = new NpgsqlCommand(Comando, Conexion);
 
-                Script.Parameters.AddWithValue("nombre", Nombre);
-                Script.Parameters.AddWithValue("tipo", Tipo);
-                Script.Parameters.AddWithValue("descripcion", Descripcion);
+                    Script.Parameters.AddWithValue("nombre", Nombre);
+                    Script.Parameters.AddWithValue("tipo", Tipo);
+                    Script.Parameters.AddWithValue("descripcion", Descripcion);
+                }
+                else
+                {
+                    string Command = "INSERT INTO lugar (lu_nombre, lu_tipo, lu_descripcion, lugar_lu_codigo) " +
+                        "VALUES (@nombre, @tipo, @descripcion, @lugar) returning lu_codigo";
+                    Script = new NpgsqlCommand(Command, Conexion);
+
+                    Script.Parameters.AddWithValue("nombre", Nombre);
+                    Script.Parameters.AddWithValue("tipo", Tipo);
+                    Script.Parameters.AddWithValue("descripcion", Descripcion);
+                    Script.Parameters.AddWithValue("lugar", CodigoUbicacion);
+                }
+
+                Reader = Script.ExecuteReader();
+
+                if (Reader.Read())
+                {
+                    Codigo = ReadInt(0);
+                }
+
+                Conexion.Close();
             }
-            else
+            catch (Exception e)
             {
-                string Command = "INSERT INTO lugar (lu_codigo, lu_nombre, lu_tipo, lu_descripcion, lugar_lu_codigo) " +
-                    "VALUES (@codigo, @nombre, @tipo, @descripcion, @lugar)";
-                Script = new NpgsqlCommand(Command, Conexion);
-
-                Script.Parameters.AddWithValue("nombre", Nombre);
-                Script.Parameters.AddWithValue("tipo", Tipo);
-                Script.Parameters.AddWithValue("descripcion", Descripcion);
-                Script.Parameters.AddWithValue("lugar", CodigoUbicacion);
+                Conexion.Close();
             }
         }
 

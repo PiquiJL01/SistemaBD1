@@ -17,10 +17,10 @@ namespace Ucabmart.Command
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-           try {
-                Lugar test = new Lugar(1);
-                test.Eliminar();
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('Todo Bien');", true);
+           try 
+           {
+                Lugar test = new Lugar("nombre", TipoLugar.Pais, "test2");
+                test.Insertar();
            }
            catch (Exception ex)
            {
