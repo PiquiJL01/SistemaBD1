@@ -17,6 +17,7 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="../Content/css/RegistroCliente.css" rel="stylesheet" />
+        
     </head>
 
     <body id="page-top" class="bg-gradient-primary">
@@ -58,7 +59,7 @@
                 <li class="li-3"></li>
             </ul>
         </div>
-        
+      <form id="form1" runat="server">  
         <div class="container">
             <div class="card o-hidden border-0 shadow-lg my-5">
                 <div class="card-body p-0">
@@ -68,7 +69,7 @@
                                 <h1 class="h4 text-gray-900 mb-4">Consultar Cliente - Persona Natural</h1>
                             </div>
                             
-                            <form id="form1" runat="server">
+                            <%--<form id="form1" runat="server">--%>
                                 <div class="form-group">
                                     <div class="input-group mb-3"><span class="input-group-prepend"><span class="input-group-text"><i class="fa fa-user"></i></span></span> 
                                         <asp:DropDownList ID="dplTipoCliente" runat="server" style="padding:10px 50px 10px 50px; text-align: left;" class="input-group-prepend be-addon">
@@ -76,10 +77,19 @@
                                             <asp:ListItem>Jurídico</asp:ListItem>
                                         </asp:DropDownList>   
                                         <asp:Button ID="btnBuscar" runat="server" class="btn btn-space btn-primary ml-1" Text="Buscar" OnClick="btnBuscar_Click" Width="87px" />
+                                        
                                     </div>
                                 </div>
 
-                                <div class="table-responsive" id="listaPersonaTabla" runat="server">
+                                <div class="table-responsive"  runat="server">
+                                    <div class="text-center">
+                                        <asp:Table ID="listaPersonaTabla" GridLines="Both" HorizontalAlign="Center" 
+                                            runat="server" class="table table-striped table-bordered second"
+                                            style ="width:100%" text-align ="center">
+                                        </asp:Table>
+
+                                        
+                                    </div>
                                 </div>
 
                                <%-- <div class="table-responsive">
@@ -226,7 +236,7 @@
                                         </tbody>
                                     </table>
                                 </div>--%>
-                            </form>
+                            <%--</form>--%>
                         </div>
                     </div>
                 </div>
@@ -250,6 +260,43 @@
                 </div>
             </div>
         </footer>
+
+        <!-- Modal 1-->
+        <div class="tiendas-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-dismiss="modal"><img src="../Content/assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project Details Go Here-->
+                                    <h2 class="text-uppercase">Vista Carnet</h2>
+                                    <img  runat="server" id ="imgCtrl" />
+                                    <div>
+                                        <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
+                                    </div>
+                                    <div>
+                                        <asp:Label ID="Label2" runat="server" Text=""></asp:Label>
+                                    </div>
+                                    <div>
+                                        <asp:Label ID="Label3" runat="server" Text=""></asp:Label>
+                                    </div> 
+                                    <div>
+                                        <asp:Label ID="Label4" runat="server" Text=""></asp:Label>
+                                    </div>
+                                    <div>
+                                        <asp:Label ID="Label5" runat="server" Text=""></asp:Label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</form>
         <!-- Bootstrap core JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>

@@ -196,10 +196,11 @@
                                 </div>
                                 <hr>
                                 <asp:Button ID="btnRegistrar" runat="server" class="btn btn-primary btn-user btn-block" Text="Registrar Cuenta" OnClick="btnRegistrar_Click" />
-
-                                <div>
+                                
+                                <%--muestra el codigo qr  --%>
+                               <%-- <div>
                                     <img runat="server" id ="imgCtrl"/>
-                                </div>                            
+                                </div>   --%>                         
                             
                             </form>
                         </div>

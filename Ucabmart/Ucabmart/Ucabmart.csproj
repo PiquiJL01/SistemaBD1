@@ -1936,6 +1936,7 @@
       <DependentUpon>PruebaBD.aspx</DependentUpon>
     </Compile>
     <Compile Include="Controller\Class1.cs" />
+    <Compile Include="Controller\VerQrNatural.cs" />
     <Compile Include="Engine\Almacen.cs" />
     <Compile Include="Engine\Asistencia.cs" />
     <Compile Include="Engine\Beneficio.cs" />
