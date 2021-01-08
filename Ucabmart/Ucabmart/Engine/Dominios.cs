@@ -5,6 +5,13 @@ using System.Web;
 
 namespace Ucabmart.Engine
 {
+    public enum TipoAlmacen
+    {
+        Congelador,
+        General,
+        Refrigerador
+    }
+
     public enum TipoCalidad
     {
         Alta,
@@ -44,5 +51,12 @@ namespace Ucabmart.Engine
         Matutino,
         Vespertino,
         Nocturno
+    }
+
+    public enum TipoZona
+    {
+        Congelador,
+        General,
+        Refrigerador
     }
 }

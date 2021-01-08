@@ -11,7 +11,7 @@ namespace Ucabmart.Engine
         public int CodigoArea { get; set; }
         public int Numero { get; set; }
         public string Tipo { get; set; }
-        public string CodigoCliente { get; set; }
+        public string RifCliente { get; set; }
         public string CodigoPersonaContacto { get; set; }
         public string RifProveedor { get; set; }
         public int CodigoEmpleado { get; set; }
@@ -34,7 +34,7 @@ namespace Ucabmart.Engine
                     Tipo = null;
                     break;
             }
-            CodigoCliente = cliente.Codigo;
+            RifCliente = cliente.RIF;
             CodigoPersonaContacto = personaContacto.Codigo;
             RifProveedor = proveedor.RIF;
             CodigoEmpleado = empleado.Codigo;
@@ -58,7 +58,7 @@ namespace Ucabmart.Engine
                     Tipo = null;
                     break;
             }
-            CodigoCliente = cliente.Codigo;
+            RifCliente = cliente.RIF;
             CodigoPersonaContacto = null;
             RifProveedor = null;
             CodigoEmpleado = -1;
@@ -82,7 +82,7 @@ namespace Ucabmart.Engine
                     Tipo = null;
                     break;
             }
-            CodigoCliente = null;
+            RifCliente = null;
             CodigoPersonaContacto = personaContacto.Codigo;
             RifProveedor = null;
             CodigoEmpleado = -1;
@@ -106,7 +106,7 @@ namespace Ucabmart.Engine
                     Tipo = null;
                     break;
             }
-            CodigoCliente = null;
+            RifCliente = null;
             CodigoPersonaContacto = null;
             RifProveedor = proveedor.RIF;
             CodigoEmpleado = -1;
@@ -130,38 +130,10 @@ namespace Ucabmart.Engine
                     Tipo = null;
                     break;
             }
-            CodigoCliente = null;
+            RifCliente = null;
             CodigoPersonaContacto = null;
             RifProveedor = null;
             CodigoEmpleado = empleado.Codigo;
-        }
-
-        public Cliente Cliente()
-        {
-            DBConnection connection = new DBConnection();
-            Cliente cliente = null;
-            return cliente;
-        }
-
-        public PersonaContacto PersonaContacto()
-        {
-            DBConnection connection = new DBConnection();
-            PersonaContacto personaContacto = null;
-            return personaContacto;
-        }
-
-        public Proveedor Proveedor()
-        {
-            DBConnection connection = new DBConnection();
-            Proveedor proveedor = null;
-            return proveedor;
-        }
-
-        public Empleado Empleado()
-        {
-            DBConnection connection = new DBConnection();
-            Empleado empleado = null;
-            return empleado;
         }
     }
 }

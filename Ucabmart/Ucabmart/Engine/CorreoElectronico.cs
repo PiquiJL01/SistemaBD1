@@ -35,12 +35,5 @@ namespace Ucabmart.Engine
             RifProveedor = proveedor.RIF;
             CodigoEmpleado = 0;
         }
-
-        public Proveedor Proveedor()
-        {
-            DBConnection connection = new DBConnection();
-            Proveedor proveedor = null;
-            return proveedor;
-        }
     }
 }

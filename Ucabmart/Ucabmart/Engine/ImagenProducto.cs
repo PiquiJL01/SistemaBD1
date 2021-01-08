@@ -21,12 +21,5 @@ namespace Ucabmart.Engine
             Descripcion = descripcion;
             CodigoProducto = productoAsociado.Codigo;
         }
-
-        public Producto Producto()
-        {
-            DBConnection connection = new DBConnection();
-            Producto producto = null;
-            return producto;
-        }
     }
 }

@@ -23,12 +23,5 @@ namespace Ucabmart.Engine
             CodigoTienda = tienda.Codigo;
             CodigoEmpleado = empleado.Codigo;
         }
-
-        public Tienda Tienda()
-        {
-            DBConnection connection = new DBConnection();
-            Tienda tienda = null;
-            return tienda;
-        }
     }
 }

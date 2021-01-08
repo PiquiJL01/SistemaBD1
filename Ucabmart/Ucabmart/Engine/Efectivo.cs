@@ -14,12 +14,5 @@ namespace Ucabmart.Engine
         {
             CodigoMoneda = moneda.Codigo;
         }
-
-        public Moneda Moneda()
-        {
-            DBConnection connection = new DBConnection();
-            Moneda moneda = null;
-            return moneda;
-        }
     }
 }

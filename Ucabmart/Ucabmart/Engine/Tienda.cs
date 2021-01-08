@@ -19,5 +19,10 @@ namespace Ucabmart.Engine
             Descripcion = descripcion;
             Direccion = direccion;
         }
+
+        public Tienda(int codigo) 
+        {
+            
+        }
     }
 }
