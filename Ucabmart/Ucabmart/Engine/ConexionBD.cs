@@ -71,6 +71,7 @@ namespace Ucabmart.Engine
         public abstract void Eliminar();
         #endregion
 
+        
         #region Lectura con el Reader
         public string ReadString(int posicion)
         {
