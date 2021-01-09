@@ -7,33 +7,18 @@ namespace Ucabmart.Engine
 {
     public class CorreoElectronico
     {
-        public string Codigo { get; set; }
+        public int Codigo { get; set; }
         public string Direccion { get; set; }
-        public string RifProveedor { get; set; }
-        public int CodigoEmpleado { get; set; }
 
-        public CorreoElectronico(string codigo, string direccion, Proveedor proveedor, Empleado empleado)
+        public CorreoElectronico(int codigo, string direccion)
         {
             Codigo = codigo;
             Direccion = direccion;
-            RifProveedor = proveedor.RIF;
-            CodigoEmpleado = empleado.Codigo;
         }
 
-        public CorreoElectronico(string codigo, string direccion, Empleado empleado)
+        public CorreoElectronico(string direccion)
         {
-            Codigo = codigo;
             Direccion = direccion;
-            RifProveedor = null;
-            CodigoEmpleado = empleado.Codigo;
-        }
-
-        public CorreoElectronico(string codigo, string direccion, Proveedor proveedor)
-        {
-            Codigo = codigo;
-            Direccion = direccion;
-            RifProveedor = proveedor.RIF;
-            CodigoEmpleado = 0;
         }
     }
 }

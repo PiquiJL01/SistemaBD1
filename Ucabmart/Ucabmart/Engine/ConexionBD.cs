@@ -9,18 +9,17 @@ namespace Ucabmart.Engine
     public abstract class ConexionBD<Tipo, Codigo>
     {
         private const string ConnectionString = "Host = labs-dbservices01.ucab.edu.ve; User Id = grupo5bd1; Password = 123456789; Database = grupo5db";
+        //private const string ConnectionString = "Host = labs-dbservices01.ucab.edu.ve; User Id = jlgil18; Password = inmunda01; Database = testconnection ";
         public NpgsqlCommand Script;
         public NpgsqlDataReader Reader;
         public NpgsqlConnection Conexion = new NpgsqlConnection(ConnectionString);
 
         #region CRUDs
         /// <summary>
-        /// Inserta en la base de datos
+        /// Inserta en la BD
         /// </summary>
-        /// <param name="objeto"></param>
         public abstract void Insertar();
-        //Codigo Viejo
-        /*{
+        /*{ //Codigo Viejo
             try
             {
                 Conexion.Open();
@@ -46,8 +45,6 @@ namespace Ucabmart.Engine
                 throw e;
             }
         }*/
-
-        //public abstract void ScriptInsertar();
 
         /// <summary>
         /// Busca en la Base de Datos
@@ -96,6 +93,42 @@ namespace Ucabmart.Engine
             catch (Exception e)
             {
                 return 0;
+            }
+        }
+
+        public float ReadFloat(int posicion)
+        {
+            try
+            {
+                return Reader.GetFloat(posicion);
+            }
+            catch (Exception e)
+            {
+                return 0;
+            }
+        }
+
+        public DateTime ReadDate(int posicion)
+        {
+            try
+            {
+                return Reader.GetDateTime(posicion);
+            }
+            catch (Exception)
+            {
+                return new DateTime();
+            }
+        }
+
+        public TimeSpan ReadTime(int posicion)
+        {
+            try
+            {
+                return Reader.GetTimeSpan(posicion);
+            }
+            catch (Exception)
+            {
+                return new TimeSpan();
             }
         }
         #endregion
