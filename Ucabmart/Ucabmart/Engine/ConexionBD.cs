@@ -8,8 +8,8 @@ namespace Ucabmart.Engine
 {
     public abstract class ConexionBD<Tipo, Codigo>
     {
-        private const string ConnectionString = "Host = labs-dbservices01.ucab.edu.ve; User Id = grupo5bd1; Password = 123456789; Database = grupo5db";
-        //private const string ConnectionString = "Host = labs-dbservices01.ucab.edu.ve; User Id = jlgil18; Password = inmunda01; Database = testconnection ";
+        private const string ConnectionString = "Host = labs-dbservices01.ucab.edu.ve; User Id = grupo5bd1; Password = 123456789; Database = grupo5db"; //conexion a la bd del proyecto
+        //private const string ConnectionString = "Host = labs-dbservices01.ucab.edu.ve; User Id = jlgil18; Password = inmunda01; Database = testconnection "; //conexion de pruebas
         public NpgsqlCommand Script;
         public NpgsqlDataReader Reader;
         public NpgsqlConnection Conexion = new NpgsqlConnection(ConnectionString);

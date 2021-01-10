@@ -16,42 +16,6 @@ namespace Ucabmart.Engine
 
 
         #region Declaraciones
-        public Lugar(int codigo, string nombre, TipoLugar tipo, string descripcion, Lugar ubicacion = null)
-        {
-            Codigo = codigo;
-            Nombre = nombre;
-            switch (tipo)
-            {
-                case TipoLugar.Direccion:
-                    Tipo = "Direccion";
-                    break;
-                case TipoLugar.Estado:  
-                    Tipo = "Estado";
-                    break;
-                case TipoLugar.Municipio:
-                    Tipo = "Municipio";
-                    break;
-                case TipoLugar.Pais:
-                    Tipo = "Pais";
-                    break;
-                case TipoLugar.Parroquia:
-                    Tipo = "Parroquia";
-                    break;
-                default:
-                    Tipo = null;
-                    break;
-            }
-            Descripcion = descripcion;
-            if (ubicacion == null)
-            {
-                CodigoUbicacion = 0;
-            }
-            else
-            {
-                CodigoUbicacion = ubicacion.Codigo;
-            }
-        }
-
         public Lugar(string nombre, TipoLugar tipo, string descripcion, Lugar ubicacion = null)
         {
             Nombre = nombre;

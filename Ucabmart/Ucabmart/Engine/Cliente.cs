@@ -10,16 +10,16 @@ namespace Ucabmart.Engine
     {
         #region Atributos
         public string RIF { get; set; }
+        public string Password { get; set; }
         public int CodigoCorreoElectronico { get; set; }
         public int CodigoTienda { get; set; }
         #endregion
 
         #region Declaraciones
-        public Cliente() { }
-
-        public Cliente(string rif, CorreoElectronico correo, Tienda tienda = null)
+        public Cliente(string rif, string password, CorreoElectronico correo, Tienda tienda = null)
         {
             RIF = rif;
+            Password = password;
             CodigoCorreoElectronico = correo.Codigo;
             if (tienda == null)
             {
@@ -31,9 +31,10 @@ namespace Ucabmart.Engine
             }
         }
 
-        public Cliente(string rif, int correo, int tienda = 0)
+        private Cliente(string rif, string password, int correo, int tienda = 0)
         {
             RIF = rif;
+            Password = password;
             CodigoCorreoElectronico = correo;
             CodigoTienda = tienda;
         }
@@ -41,10 +42,16 @@ namespace Ucabmart.Engine
         public Cliente(string rif)
         {
             Cliente cliente = Leer(rif);
-            RIF = cliente.RIF;
-            CodigoTienda = cliente.CodigoTienda;
-            CodigoCorreoElectronico = cliente.CodigoCorreoElectronico;
+            if (!(cliente == null))
+            {
+                RIF = cliente.RIF;
+                Password = cliente.Password;
+                CodigoTienda = cliente.CodigoTienda;
+                CodigoCorreoElectronico = cliente.CodigoCorreoElectronico;
+            }
         }
+
+        public Cliente() { }
         #endregion
 
         #region CRUDs
@@ -56,22 +63,24 @@ namespace Ucabmart.Engine
 
                 if (CodigoTienda == 0)
                 {
-                    string Comando = "INSERT INTO cliente (cl_rif, correo_electronico_ce_codigo) " +
-                    "VALUES (@rif, @correo)";
+                    string Comando = "INSERT INTO cliente (cl_rif, correo_electronico_ce_codigo, cl_password) " +
+                    "VALUES (@rif, @correo, @password)";
                     Script = new NpgsqlCommand(Comando, Conexion);
 
                     Script.Parameters.AddWithValue("rif", RIF);
                     Script.Parameters.AddWithValue("correo", CodigoCorreoElectronico);
+                    Script.Parameters.AddWithValue("password", Password);
                 }
                 else
                 {
-                    string Comando = "INSERT INTO cliente (cl_rif, tienda_ti_codigo, correo_electronico_ce_codigo) " +
-                    "VALUES (@rif, @tienda, @correo)";
+                    string Comando = "INSERT INTO cliente (cl_rif, tienda_ti_codigo, correo_electronico_ce_codigo, cl_password) " +
+                    "VALUES (@rif, @tienda, @correo, @password)";
                     Script = new NpgsqlCommand(Comando, Conexion);
 
                     Script.Parameters.AddWithValue("rif", RIF);
                     Script.Parameters.AddWithValue("tienda", CodigoTienda);
                     Script.Parameters.AddWithValue("correo", CodigoCorreoElectronico);
+                    Script.Parameters.AddWithValue("password", Password);
                 }
 
                 Script.Prepare();
@@ -95,12 +104,12 @@ namespace Ucabmart.Engine
                 string Comando = "SELECT * FROM cliente WHERE cl_rif=@rif";
                 Script = new NpgsqlCommand(Comando, Conexion);
 
-                Script.Parameters.AddWithValue("rif", RIF);
+                Script.Parameters.AddWithValue("rif", rif);
                 Reader = Script.ExecuteReader();
 
                 if (Reader.Read())
                 {
-                    return new Cliente(ReadString(0), ReadInt(1), ReadInt(2));
+                    return new Cliente(ReadString(0), ReadString(3), ReadInt(1), ReadInt(2));
                 }
 
                 Conexion.Close();
@@ -135,7 +144,7 @@ namespace Ucabmart.Engine
 
                 while (Reader.Read())
                 {
-                    Cliente cliente= new Cliente(ReadString(0), ReadInt(1), ReadInt(2));
+                    Cliente cliente= new Cliente(ReadString(0), ReadString(3), ReadInt(1), ReadInt(2));
 
                     lista.Add(cliente);
                 }

@@ -15,10 +15,10 @@ namespace Ucabmart.Engine
         public int DireccionFisica { get; set; }
         public int DireccionFiscal { get; set; }
 
-        #region
-        public Juridico(string rif, CorreoElectronico correo, Tienda tienda, string denominacionComercial,
-            string razonSocial, float capital, string paginaWeb, Lugar direccionFisica, Lugar direccionFiscal)
-            : base(rif, correo, tienda)
+        #region Declaraciones
+        public Juridico(string rif, string password, CorreoElectronico correo, string denominacionComercial,
+            string razonSocial, float capital, string paginaWeb, Lugar direccionFisica, Lugar direccionFiscal, Tienda tienda = null)
+            : base(rif, password, correo, tienda)
         {
             DenominacionComercial = denominacionComercial;
             RazonSocial = razonSocial;
@@ -28,21 +28,8 @@ namespace Ucabmart.Engine
             DireccionFiscal = direccionFiscal.Codigo;
         }
 
-        public Juridico(string rif, int correo, int tienda, string denominacionComercial,
-            string razonSocial, float capital, string paginaWeb, int direccionFisica, int direccionFiscal)
-            : base(rif, correo, tienda)
-        {
-            DenominacionComercial = denominacionComercial;
-            RazonSocial = razonSocial;
-            Capital = capital;
-            PaginaWeb = paginaWeb;
-            DireccionFisica = direccionFisica;
-            DireccionFiscal = direccionFiscal;
-        }
-
-        public Juridico(string rif, string denominacionComercial, string razonSocial, float capital, 
-            string paginaWeb, int direccionFisica, int direccionFiscal)
-            : base(rif)
+        private Juridico(string rif, string denominacionComercial, string razonSocial, float capital, 
+            string paginaWeb, int direccionFisica, int direccionFiscal) : base(rif)
         {
             DenominacionComercial = denominacionComercial;
             RazonSocial = razonSocial;
@@ -103,9 +90,9 @@ namespace Ucabmart.Engine
             }
         }
 
-        public Juridico LeerJuridico(string codigo)
+        public Juridico LeerJuridico(string rif)
         {
-            string rif = null;
+            string clave = null;
             string denominacionComercial = null;
             string razonSocial = null;
             float  capital = 0;
@@ -119,12 +106,12 @@ namespace Ucabmart.Engine
                 string Comando = "SELECT * FROM juridico WHERE cl_rif = @rif";
                 Script = new NpgsqlCommand(Comando, Conexion);
 
-                Script.Parameters.AddWithValue("rif", RIF);
+                Script.Parameters.AddWithValue("rif", rif);
                 Reader = Script.ExecuteReader();
 
                 if (Reader.Read())
                 {
-                    rif = ReadString(0);
+                    clave = ReadString(0);
                     denominacionComercial = ReadString(1);
                     razonSocial = ReadString(2);
                     capital = ReadFloat(3);
@@ -148,7 +135,7 @@ namespace Ucabmart.Engine
                 return null;
             }
 
-            Juridico juridico = new Juridico(rif, denominacionComercial, razonSocial, capital, paginaWeb, direccionFisica, direccionFiscal);
+            Juridico juridico = new Juridico(clave, denominacionComercial, razonSocial, capital, paginaWeb, direccionFisica, direccionFiscal);
             return juridico;
         }
 

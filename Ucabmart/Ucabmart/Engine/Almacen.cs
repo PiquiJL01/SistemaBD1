@@ -14,7 +14,7 @@ namespace Ucabmart.Engine
         #endregion
 
         #region Declaraciones
-        public Almacen(int codigo, int tienda)
+        private Almacen(int codigo, int tienda)
         {
             Codigo = codigo;
             CodigoTienda = tienda;
@@ -79,7 +79,7 @@ namespace Ucabmart.Engine
                 string Comando = "SELECT * FROM almacen WHERE al_codigo = @codigo";
                 Script = new NpgsqlCommand(Comando, Conexion);
 
-                Script.Parameters.AddWithValue("codigo", Codigo);
+                Script.Parameters.AddWithValue("codigo", codigo);
                 Reader = Script.ExecuteReader();
 
                 if (Reader.Read())

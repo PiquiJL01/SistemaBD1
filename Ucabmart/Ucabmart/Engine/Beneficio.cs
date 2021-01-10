@@ -21,7 +21,7 @@ namespace Ucabmart.Engine
             Descripcion = descripcion;
         }
 
-        public Beneficio(int codigo, string nombre, string descripcion)
+        private Beneficio(int codigo, string nombre, string descripcion)
         {
             Codigo = codigo;
             Nombre = nombre;

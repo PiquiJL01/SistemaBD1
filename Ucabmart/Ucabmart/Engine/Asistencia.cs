@@ -20,7 +20,7 @@ namespace Ucabmart.Engine
 
 
         #region Declaraciones
-        public Asistencia(int codigo, DateTime fecha, TimeSpan horaEntrada, TimeSpan horaSalida, string dia, int empleado, int horario)
+        private Asistencia(int codigo, DateTime fecha, TimeSpan horaEntrada, TimeSpan horaSalida, string dia, int empleado, int horario)
         {
             Codigo = codigo;
             Fecha = fecha;

@@ -8,17 +8,19 @@ namespace Ucabmart.Engine
 {
     public class Natural : Cliente
     {
+        #region Atributos
         public string Cedula { get; set; }
         public string Nombre1 { get; set; }
         public string Nombre2 { get; set; }
         public string Apellido1 { get; set; }
         public string Apellido2 { get; set; }
         public string Direccion { get; set; }
+        #endregion
 
         #region Declaraciones
-        public Natural(string rif, CorreoElectronico email, Tienda tienda, string cedula,
-            string nombre1, string nombre2, string apellido1, string apellido2, string direccion)
-            : base(rif, email, tienda)
+        public Natural(string rif, string password, CorreoElectronico email, string cedula,
+            string nombre1, string nombre2, string apellido1, string apellido2, string direccion, Tienda tienda = null)
+            : base(rif, password, email, tienda)
         {
             Cedula = cedula;
             Nombre1 = nombre1;
@@ -28,21 +30,9 @@ namespace Ucabmart.Engine
             Direccion = direccion;
         }
 
-        public Natural(string rif, string cedula,
+        private Natural(string rif, string cedula,
             string nombre1, string nombre2, string apellido1, string apellido2, string direccion)
             : base(rif)
-        {
-            Cedula = cedula;
-            Nombre1 = nombre1;
-            Nombre2 = nombre2;
-            Apellido1 = apellido1;
-            Apellido2 = apellido2;
-            Direccion = direccion;
-        }
-
-        public Natural(string rif, int email, int tienda, string cedula,
-            string nombre1, string nombre2, string apellido1, string apellido2, string direccion) 
-            : base(rif, email, tienda)
         {
             Cedula = cedula;
             Nombre1 = nombre1;
@@ -103,9 +93,9 @@ namespace Ucabmart.Engine
             }
         }
 
-        public Natural LeerNatural(string codigo)
+        public Natural LeerNatural(string rif)
         {
-            string rif = null;
+            string clave = null;
             string cedula = null;
             string nombre1 = null;
             string nombre2 = null;
@@ -119,12 +109,12 @@ namespace Ucabmart.Engine
                 string Comando = "SELECT * FROM naturales WHERE cl_rif=@rif";
                 Script = new NpgsqlCommand(Comando, Conexion);
 
-                Script.Parameters.AddWithValue("rif", RIF);
+                Script.Parameters.AddWithValue("rif", rif);
                 Reader = Script.ExecuteReader();
 
                 if (Reader.Read())
                 {
-                    rif = ReadString(0);
+                    clave = ReadString(0);
                     cedula = ReadString(1);
                     nombre1 = ReadString(2);
                     nombre2 = ReadString(3);
@@ -148,7 +138,7 @@ namespace Ucabmart.Engine
                 return null;
             }
 
-            Natural natural = new Natural(rif, cedula, nombre1, nombre2, apellido1, apellido2, direccion);
+            Natural natural = new Natural(clave, cedula, nombre1, nombre2, apellido1, apellido2, direccion);
             return null;
         }
 

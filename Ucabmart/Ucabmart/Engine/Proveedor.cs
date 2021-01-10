@@ -91,10 +91,10 @@ namespace Ucabmart.Engine
             {
                 Conexion.Open();
 
-                string Comando = "SELECT * FROM proveedor WHERE pr_rif =@rif";
+                string Comando = "SELECT * FROM proveedor WHERE pr_rif = @rif";
                 Script = new NpgsqlCommand(Comando, Conexion);
 
-                Script.Parameters.AddWithValue("rif", RIF);
+                Script.Parameters.AddWithValue("rif", rif);
                 Reader = Script.ExecuteReader();
 
                 if (Reader.Read())
