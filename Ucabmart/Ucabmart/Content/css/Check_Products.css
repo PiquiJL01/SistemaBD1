@@ -70,6 +70,30 @@ body {
     outline: 0 !important
 }
 
+.Checklist td input {
+    width: 25px;
+    height: 20px;
+}
+
+.Checklist td label {
+    font-size: 25px;
+}
+
+td .ColorChangeBlue {
+    background-color: cornflowerblue;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 300px;
+}
+
+td .ColorChangeYellow {
+    background-color: #fed136;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 300px;
+}
+
+
 hr {
     box-sizing: content-box;
     height: 0;

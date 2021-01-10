@@ -411,8 +411,6 @@ C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\obj\Debug\U
 C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\obj\Debug\Ucabmart.pdb
 >>>>>>> main
 C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\MessagingToolkit.QRCode.dll
-<<<<<<< Updated upstream
-=======
 C:\Users\Jose\Documents\GitHub\SistemaBD1\Ucabmart\Ucabmart\bin\Ucabmart.dll.config
 C:\Users\Jose\Documents\GitHub\SistemaBD1\Ucabmart\Ucabmart\bin\Ucabmart.dll
 C:\Users\Jose\Documents\GitHub\SistemaBD1\Ucabmart\Ucabmart\bin\Ucabmart.pdb
@@ -617,4 +615,3 @@ C:\Users\Jose\Documents\GitHub\SistemaBD1\Ucabmart\Ucabmart\obj\Debug\Ucabmart.d
 C:\Users\Jose\Documents\GitHub\SistemaBD1\Ucabmart\Ucabmart\obj\Debug\Ucabmart.pdb
 >>>>>>> Stashed changes
 C:\Users\Jose\Documents\GitHub\SistemaBD1\Ucabmart\Ucabmart\bin\MessagingToolkit.QRCode.dll
->>>>>>> Stashed changes
