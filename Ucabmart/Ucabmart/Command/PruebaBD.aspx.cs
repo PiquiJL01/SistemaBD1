@@ -21,6 +21,7 @@ namespace Ucabmart.Command
            {
                 Lugar test = new Lugar("nombre", TipoLugar.Pais, "test2");
                 test.Insertar();
+                Natural natural = new Natural("V25561714");
            }
            catch (Exception ex)
            {

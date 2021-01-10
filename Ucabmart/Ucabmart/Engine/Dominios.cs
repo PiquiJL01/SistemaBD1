@@ -5,6 +5,13 @@ using System.Web;
 
 namespace Ucabmart.Engine
 {
+    public enum NumeroTelefono
+    {
+        Pais,
+        Area,
+        Numero
+    }
+
     public enum TipoAlmacen
     {
         Congelador,

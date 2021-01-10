@@ -31,7 +31,7 @@ namespace Ucabmart.Engine
             }
         }
 
-        private Cliente(string rif, string password, int correo, int tienda = 0)
+        public Cliente(string rif, string password, int correo, int tienda = 0)
         {
             RIF = rif;
             Password = password;

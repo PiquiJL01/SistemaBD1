@@ -5,23 +5,25 @@ using System.Web;
 
 namespace Ucabmart.Engine
 {
-    public class Telefono
+    public class Telefono : ConexionBD<Telefono, Dictionary<NumeroTelefono, int>>
     {
-        public int CodigoPais { get; set; }
-        public int CodigoArea { get; set; }
-        public int Numero { get; set; }
+        #region Atributos
+        public Dictionary<NumeroTelefono, int> Numero = null;
         public string Tipo { get; set; }
         public string RifCliente { get; set; }
         public int CodigoPersonaContacto { get; set; }
         public string RifProveedor { get; set; }
         public int CodigoEmpleado { get; set; }
+        #endregion
 
+        #region Declaraciones
         public Telefono(int codigoPais, int codigoArea, int numero, TipoTelefono tipo, 
             Cliente cliente)
         {
-            CodigoPais = codigoPais;
-            CodigoArea = codigoArea;
-            Numero = numero;
+            Numero = new Dictionary<NumeroTelefono, int>();
+            Numero.Add(NumeroTelefono.Pais, codigoPais);
+            Numero.Add(NumeroTelefono.Area, codigoArea);
+            Numero.Add(NumeroTelefono.Numero, numero);
             switch (tipo)
             {
                 case TipoTelefono.Fijo:
@@ -35,41 +37,18 @@ namespace Ucabmart.Engine
                     break;
             }
             RifCliente = cliente.RIF;
-            CodigoPersonaContacto = ;
-            RifProveedor = proveedor.RIF;
-            CodigoEmpleado = empleado.Codigo;
-        }
-
-        public Telefono(int codigoPais, int codigoArea, int numero, TipoTelefono tipo,
-            Cliente cliente)
-        {
-            CodigoPais = codigoPais;
-            CodigoArea = codigoArea;
-            Numero = numero;
-            switch (tipo)
-            {
-                case TipoTelefono.Fijo:
-                    Tipo = "Fijo";
-                    break;
-                case TipoTelefono.Movil:
-                    Tipo = "Movil";
-                    break;
-                default:
-                    Tipo = null;
-                    break;
-            }
-            RifCliente = cliente.RIF;
-            CodigoPersonaContacto = null;
+            CodigoPersonaContacto = 0;
             RifProveedor = null;
-            CodigoEmpleado = -1;
+            CodigoEmpleado = 0;
         }
 
         public Telefono(int codigoPais, int codigoArea, int numero, TipoTelefono tipo,
             PersonaContacto personaContacto)
         {
-            CodigoPais = codigoPais;
-            CodigoArea = codigoArea;
-            Numero = numero;
+            Numero = new Dictionary<NumeroTelefono, int>();
+            Numero.Add(NumeroTelefono.Pais, codigoPais);
+            Numero.Add(NumeroTelefono.Area, codigoArea);
+            Numero.Add(NumeroTelefono.Numero, numero);
             switch (tipo)
             {
                 case TipoTelefono.Fijo:
@@ -85,15 +64,16 @@ namespace Ucabmart.Engine
             RifCliente = null;
             CodigoPersonaContacto = personaContacto.Codigo;
             RifProveedor = null;
-            CodigoEmpleado = -1;
+            CodigoEmpleado = 0;
         }
 
         public Telefono(int codigoPais, int codigoArea, int numero, TipoTelefono tipo,
             Proveedor proveedor)
         {
-            CodigoPais = codigoPais;
-            CodigoArea = codigoArea;
-            Numero = numero;
+            Numero = new Dictionary<NumeroTelefono, int>();
+            Numero.Add(NumeroTelefono.Pais, codigoPais);
+            Numero.Add(NumeroTelefono.Area, codigoArea);
+            Numero.Add(NumeroTelefono.Numero, numero);
             switch (tipo)
             {
                 case TipoTelefono.Fijo:
@@ -107,9 +87,9 @@ namespace Ucabmart.Engine
                     break;
             }
             RifCliente = null;
-            CodigoPersonaContacto = null;
+            CodigoPersonaContacto = 0;
             RifProveedor = proveedor.RIF;
-            CodigoEmpleado = -1;
+            CodigoEmpleado = 0;
         }
 
         public Telefono(int codigoPais, int codigoArea, int numero, TipoTelefono tipo,
@@ -131,9 +111,17 @@ namespace Ucabmart.Engine
                     break;
             }
             RifCliente = null;
-            CodigoPersonaContacto = null;
+            CodigoPersonaContacto = 0;
             RifProveedor = null;
-            CodigoEmpleado = empleado.Codigo;
+            CodigoEmpleado = 0;
+        }
+
+        public Telefono(int codigoPais, int codigoArea, int numero)
+        {
+            Dictionary<NumeroTelefono, int> diccionario = new Dictionary<NumeroTelefono, int>();
+            diccionario.Add(NumeroTelefono.Pais, codigoPais);
+            diccionario.Add()
+            Telefono telefono = Leer(diccionario);
         }
     }
 }
