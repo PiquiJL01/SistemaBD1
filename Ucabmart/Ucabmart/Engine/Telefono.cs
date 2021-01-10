@@ -12,12 +12,12 @@ namespace Ucabmart.Engine
         public int Numero { get; set; }
         public string Tipo { get; set; }
         public string RifCliente { get; set; }
-        public string CodigoPersonaContacto { get; set; }
+        public int CodigoPersonaContacto { get; set; }
         public string RifProveedor { get; set; }
         public int CodigoEmpleado { get; set; }
 
         public Telefono(int codigoPais, int codigoArea, int numero, TipoTelefono tipo, 
-            Cliente cliente, PersonaContacto personaContacto, Proveedor proveedor, Empleado empleado)
+            Cliente cliente)
         {
             CodigoPais = codigoPais;
             CodigoArea = codigoArea;
@@ -35,7 +35,7 @@ namespace Ucabmart.Engine
                     break;
             }
             RifCliente = cliente.RIF;
-            CodigoPersonaContacto = personaContacto.Codigo;
+            CodigoPersonaContacto = ;
             RifProveedor = proveedor.RIF;
             CodigoEmpleado = empleado.Codigo;
         }

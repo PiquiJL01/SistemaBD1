@@ -7,7 +7,7 @@ namespace Ucabmart.Engine
 {
     public class PersonaContacto
     {
-        public string Codigo { get; set; }
+        public int Codigo { get; set; }
         public string Cedula { get; set; }
         public string Nombre1 { get; set; }
         public string Nombre2 { get; set; }

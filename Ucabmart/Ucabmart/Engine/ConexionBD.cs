@@ -71,7 +71,6 @@ namespace Ucabmart.Engine
         public abstract void Eliminar();
         #endregion
 
-        
         #region Lectura con el Reader
         public string ReadString(int posicion)
         {
@@ -130,6 +129,18 @@ namespace Ucabmart.Engine
             catch (Exception)
             {
                 return new TimeSpan();
+            }
+        }
+
+        public bool ReadBool(int posicion)
+        {
+            try
+            {
+                return Reader.GetBoolean(posicion);
+            }
+            catch (Exception e)
+            {
+                return false;
             }
         }
         #endregion

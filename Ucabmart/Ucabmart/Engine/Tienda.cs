@@ -1,28 +1,212 @@
-﻿using System;
+﻿using Npgsql;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
 namespace Ucabmart.Engine
 {
-    public class Tienda
+    public class Tienda : ConexionBD<Tienda, int>
     {
+        #region Atributos
         public int Codigo { get; set; }
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
-        public string Direccion { get; set; }
+        public int CodigoDireccion { get; set; }
+        #endregion
 
-        public Tienda(int codigo, string nombre, string descripcion, string direccion)
+        #region Declaraciones
+        public Tienda(string nombre, string descripcion, Lugar direccion)
         {
-            Codigo = codigo;
             Nombre = nombre;
             Descripcion = descripcion;
-            Direccion = direccion;
+            CodigoDireccion = direccion.Codigo;
         }
 
         public Tienda(int codigo) 
         {
-            
+            Tienda tienda = Leer(codigo);
+            if (!(tienda == null))
+            {
+                Codigo = tienda.Codigo;
+                Nombre = tienda.Nombre;
+                Descripcion = tienda.Descripcion;
+                CodigoDireccion = tienda.CodigoDireccion;
+            }
         }
+
+        private Tienda(int codigo, string nombre, string descripcion, int direccon)
+        {
+            Codigo = codigo;
+            Nombre = nombre;
+            Descripcion = descripcion;
+            CodigoDireccion = direccon;
+        }
+        #endregion
+
+        #region CRUDs
+        public override void Insertar()
+        {
+            try
+            {
+                Conexion.Open();
+
+                string Comando = "INSERT INTO tienda (ti_nombre, ti_descripcion, lugar_lu_codigo) " +
+                    "VALUES (@nombre, @descripcion, @direccion) RETURNING ti_codigo";
+                Script = new NpgsqlCommand(Comando, Conexion);
+
+                Script.Parameters.AddWithValue("nombre", Nombre);
+                Script.Parameters.AddWithValue("descripcion", Descripcion);
+                Script.Parameters.AddWithValue("direccion", CodigoDireccion);
+
+                Reader = Script.ExecuteReader();
+
+                if (Reader.Read())
+                {
+                    Codigo = ReadInt(0);
+                }
+
+                Conexion.Close();
+            }
+            catch (Exception e)
+            {
+                Conexion.Close();
+            }
+        }
+
+        public override Tienda Leer(int codigo)
+        {
+            try
+            {
+                Conexion.Open();
+
+                string Comando = "SELECT * FROM tienda WHERE ti_codigo = @codigo";
+                Script = new NpgsqlCommand(Comando, Conexion);
+
+                Script.Parameters.AddWithValue("codigo", codigo);
+                Reader = Script.ExecuteReader();
+
+                if (Reader.Read())
+                {
+                    return new Tienda(ReadInt(0), ReadString(1), ReadString(2), ReadInt(3));
+                }
+
+                Conexion.Close();
+            }
+            catch (Exception e)
+            {
+                try
+                {
+                    Conexion.Close();
+                }
+                catch (Exception f)
+                {
+
+                }
+            }
+
+            return null;
+        }
+
+        public override List<Tienda> Todos()
+        {
+            List<Tienda> lista = new List<Tienda>();
+
+            try
+            {
+                Conexion.Open();
+
+                string Command = "SELECT * FROM tienda";
+                NpgsqlCommand Script = new NpgsqlCommand(Command, Conexion);
+
+                Reader = Script.ExecuteReader();
+
+                while (Reader.Read())
+                {
+                    Tienda tienda = new Tienda(ReadInt(0), ReadString(1), ReadString(2), ReadInt(3));
+
+                    lista.Add(tienda);
+                }
+            }
+            catch (Exception e)
+            {
+                try
+                {
+                    Conexion.Close();
+                }
+                catch (Exception f)
+                {
+
+                }
+                return null;
+            }
+
+            return lista;
+        }
+
+        public override void Actualizar()
+        {
+            try
+            {
+                Conexion.Open();
+
+                string Comando = "UPDATE tienda SET ti_nombre = qnombre, ti_descripcion = @descripcion, " +
+                    "lugar_lu_codigo = @direccion WHERE ti_codigo = @codigo";
+                Script = new NpgsqlCommand(Comando, Conexion);
+
+                Script.Parameters.AddWithValue("codigo", Codigo);
+                Script.Parameters.AddWithValue("nombre", Nombre);
+                Script.Parameters.AddWithValue("descripcion", Descripcion);
+                Script.Parameters.AddWithValue("direccion", CodigoDireccion);
+
+                Script.Prepare();
+
+                Script.ExecuteNonQuery();
+
+                Conexion.Close();
+            }
+            catch (Exception e)
+            {
+                try
+                {
+                    Conexion.Close();
+                }
+                catch (Exception f)
+                {
+
+                }
+            }
+        }
+
+        public override void Eliminar()
+        {
+            try
+            {
+                Conexion.Open();
+
+                string Commando = "DELETE FROM tienda WHERE ti_codigo = @codigo";
+                Script = new NpgsqlCommand(Commando, Conexion);
+
+                Script.Parameters.AddWithValue("codigo", Codigo);
+
+                Script.Prepare();
+
+                Script.ExecuteNonQuery();
+
+                Conexion.Close();
+            }
+            catch (Exception e)
+            {
+                try
+                {
+                    Conexion.Close();
+                }
+                catch (Exception f)
+                {
+
+                }
+            }
+        }
+        #endregion
     }
 }
