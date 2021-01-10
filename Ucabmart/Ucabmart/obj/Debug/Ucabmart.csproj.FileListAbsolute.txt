@@ -203,9 +203,6 @@ C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\obj
 <<<<<<< HEAD
 C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\obj\Debug\Ucabmart.csprojAssemblyReference.cache
 =======
-<<<<<<< HEAD
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\MessagingToolkit.QRCode.dll
-=======
 C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Gma.QrCodeNet.Encoding.dll
 C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Gma.QrCodeNet.Encoding.pdb
 C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Gma.QrCodeNet.Encoding.xml
@@ -413,4 +410,3 @@ C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\obj\Debug\U
 C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\obj\Debug\Ucabmart.pdb
 >>>>>>> main
 C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\MessagingToolkit.QRCode.dll
->>>>>>> main

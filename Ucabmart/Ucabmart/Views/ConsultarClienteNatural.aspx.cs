@@ -84,34 +84,10 @@ namespace Ucabmart.Views
                         r.Cells.Add(c);                        
                     }
                     listaPersonaTabla.Rows.Add(r);
-
-
-                    int rowCounter = 0;
-                    TableRow[] myRowArray = null;
-                    TableCell[] myCellArray = null;
-                    StringBuilder tb = new StringBuilder();
-
-                    // Copy the Rows collection to an array.
-                    listaPersonaTabla.Rows.CopyTo(myRowArray, 0);
-
-                    tb.Append("The copied items from the table are: \n");
-
-                    // Iterate through the TableRows in the array.
-                    foreach (TableRow rw in myRowArray)
-                    {
-                        // Copy the Cells collection of a row to an array.
-                        listaPersonaTabla.Rows[rowCounter].Cells.CopyTo(myCellArray, 0);
-
-                        // Iterate through the cell array 
-                        // and display its contents.
-                        foreach (TableCell cell in myCellArray)
-                            tb.Append(cell.Text + ", ");
-
-                        Label6.Text = tb.ToString();
-                        rowCounter++;
-                    }
-
+                    
                 }
+
+                
 
             }
             else
