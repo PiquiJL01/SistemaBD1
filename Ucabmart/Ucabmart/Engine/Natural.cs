@@ -40,17 +40,17 @@ namespace Ucabmart.Engine
             Direccion = direccion;
         }
 
-        public Natural(string rif, int email, int tienda, string cedula,
-            string nombre1, string nombre2, string apellido1, string apellido2, string direccion, string password) 
-            : base(rif, password, email, tienda)
-        {
-            Cedula = cedula;
-            Nombre1 = nombre1;
-            Nombre2 = nombre2;
-            Apellido1 = apellido1;
-            Apellido2 = apellido2;
-            Direccion = direccion;
-        }
+        //public Natural(string rif, int email, int tienda, string cedula,
+        //    string nombre1, string nombre2, string apellido1, string apellido2, string direccion, string password) 
+        //    : base(rif, password, email, tienda)
+        //{
+        //    Cedula = cedula;
+        //    Nombre1 = nombre1;
+        //    Nombre2 = nombre2;
+        //    Apellido1 = apellido1;
+        //    Apellido2 = apellido2;
+        //    Direccion = direccion;
+        //}
 
         public Natural(string rif)
         {

@@ -11,7 +11,7 @@ namespace Ucabmart.Engine
         public string Nombre { get; set; }
         public string Ubicacion { get; set; }
         public string Descripcion { get; set; }
-        public string CodigoProducto { get; set; }
+        public int CodigoProducto { get; set; }
 
         public ImagenProducto(string codigo, string nombre, string ubicacion, string descripcion, Producto productoAsociado)
         {

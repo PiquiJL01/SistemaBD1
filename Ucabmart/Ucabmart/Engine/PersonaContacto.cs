@@ -7,7 +7,7 @@ namespace Ucabmart.Engine
 {
     public class PersonaContacto
     {
-        public string Codigo { get; set; }
+        public int Codigo { get; set; }
         public string Cedula { get; set; }
         public string Nombre1 { get; set; }
         public string Nombre2 { get; set; }
@@ -16,7 +16,7 @@ namespace Ucabmart.Engine
         public string RifClienteJuridico { get; set; }
         public string RifProveedor { get; set; }
 
-        public PersonaContacto(string codigo, string cedula, string nombre1, string nombre2,
+        public PersonaContacto(int codigo, string cedula, string nombre1, string nombre2,
             string apellido1, string apellido2, Juridico cliente)
         {
             Codigo = codigo;
@@ -29,7 +29,7 @@ namespace Ucabmart.Engine
             RifProveedor = null;
         }
 
-        public PersonaContacto(string codigo, string cedula, string nombre1, string nombre2,
+        public PersonaContacto(int codigo, string cedula, string nombre1, string nombre2,
             string apellido1, string apellido2, Proveedor proveedor)
         {
             Codigo = codigo;

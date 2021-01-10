@@ -222,6 +222,7 @@
     <Content Include="Content\css\Nomina.css" />
     <Content Include="Content\css\RegistrarClienteJuridico.css" />
     <Content Include="Content\css\RegistroCliente.css" />
+    <Content Include="Content\css\Check_Products.css" />
     <Content Include="Content\css\RegistroProveedores.css" />
     <Content Include="Content\css\Tiendas.css" />
     <Content Include="Content\css\Proveedores.css" />
@@ -1901,6 +1902,7 @@
     <Content Include="Global.asax" />
     <Content Include="Content\js\scripts.js" />
     <Content Include="Views\AgregarCliente.aspx" />
+    <Content Include="Views\Check_Products.aspx" />
     <Content Include="Views\ConsultarCliente.aspx" />
     <Content Include="Views\ConsultarClienteNatural.aspx" />
     <Content Include="Views\CrearCuenta.aspx" />
@@ -1985,6 +1987,13 @@
     </Compile>
     <Compile Include="Views\AgregarCliente.aspx.designer.cs">
       <DependentUpon>AgregarCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Check_Products.aspx.cs">
+      <DependentUpon>Check_Products.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Check_Products.aspx.designer.cs">
+      <DependentUpon>Check_Products.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\ConsultarCliente.aspx.cs">
       <DependentUpon>ConsultarCliente.aspx</DependentUpon>
