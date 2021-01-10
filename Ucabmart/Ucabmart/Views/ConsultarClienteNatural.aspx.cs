@@ -84,6 +84,9 @@ namespace Ucabmart.Views
                         r.Cells.Add(c);                        
                     }
                     listaPersonaTabla.Rows.Add(r);
+<<<<<<< Updated upstream
+                    
+=======
 
 
                     int rowCounter = 0;
@@ -107,11 +110,14 @@ namespace Ucabmart.Views
                         foreach (TableCell cell in myCellArray)
                             tb.Append(cell.Text + ", ");
 
-                        Label6.Text = tb.ToString();
+                        //Label6.Text = tb.ToString();
                         rowCounter++;
                     }
 
+>>>>>>> Stashed changes
                 }
+
+                
 
             }
             else

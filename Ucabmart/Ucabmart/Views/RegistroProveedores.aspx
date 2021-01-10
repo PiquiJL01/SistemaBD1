@@ -27,7 +27,6 @@
             <div class="container">
                 <a class="navbar-brand js-scroll-trigger" href="#page-top"><img class="Icon" src="../../Content/assets/img/Ucabmart-Logo.png" alt="" /></a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
                     <i class="fas fa-bars ml-1"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">      
@@ -128,9 +127,16 @@
                                                 <asp:ListItem Value="+58">Venezuela</asp:ListItem>
                                         </asp:DropDownList>
                                      </div>
+
+                                    <div class="col-sm-6 mb-3 mb-sm-0" style="margin-left: 180px; margin-top: -30px;">
+                                        <asp:TextBox ID="CodAre" runat="server" type="text" name="name" data-parsley-trigger="change"  
+                                            placeholder="Codigo Area" autocomplete="off" class="form-control" style="width: 130px; margin-left: -40px;">
+                                        </asp:TextBox>
+                                    </div>
+
                                     <div class="col-sm-6 mb-3 mb-sm-0" style="margin-left: 180px; margin-top: -30px;">
                                         <asp:TextBox ID="txtTelefono1" runat="server" type="text" name="name" data-parsley-trigger="change"  
-                                            placeholder="Teléfono 1 " autocomplete="off" class="form-control" style="width: 350px;">
+                                            placeholder="Teléfono 1 " autocomplete="off" class="form-control" style="width: 240px; margin-left: 110px; margin-top: -8px;">
                                         </asp:TextBox>
                                     </div>
 
@@ -146,9 +152,15 @@
                                         </asp:DropDownList>
                                      </div>
 
+                                    <div class="col-sm-6 mb-3 mb-sm-0" style="margin-left: 180px; margin-top: -30px;">
+                                        <asp:TextBox ID="CodAre2" runat="server" type="text" name="name" data-parsley-trigger="change"  
+                                            placeholder="Codigo Area" autocomplete="off" class="form-control" style="width: 130px; margin-left: -40px;">
+                                        </asp:TextBox>
+                                    </div>
+
                                     <div class="col-sm-6" style="margin-top: -30px; margin-left: 180px;">
                                         <asp:TextBox ID="txtTelefono2" runat="server" type="text" name="name" data-parsley-trigger="change"  
-                                            placeholder="Teléfono 2" autocomplete="off" class="form-control" style="width: 350px;">
+                                            placeholder="Teléfono 2" autocomplete="off" class="form-control" style="width: 240px; margin-left: 110px; margin-top: -8px;">
                                         </asp:TextBox>
                                     </div>
                                 </div>
@@ -209,7 +221,7 @@
                                     </div>
                                 </div>
 
-                                 <%--<Campo de texto para los nombres de la Persona de Contacto Nº2 >--%>
+                                 <%--<Campo de texto para los apellidos de la Persona de Contacto Nº1 >--%>
                                 
                                  <div class="form-group row" style="margin-bottom:-10px">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
@@ -227,7 +239,7 @@
                                 <br/>
                                 <%--<Campo de texto de los telefonos de las personas de contacto1>--%>
 
-                              <div class="form-group row" style="margin-left: 5px;">
+                                  <div class="form-group row" style="margin-left: 5px;">
                                     <asp:Label ID="Label5" runat="server" Text="Telefonos"></asp:Label>
                                      <div class="input-group mb-3">
                                         <asp:DropDownList ID="DropDownList5" runat="server" style="padding-bottom: 15px; margin-top: 10px; background-color: #0f136bd6;color: white;" class="input-group-prepend be-addon">
@@ -240,9 +252,16 @@
                                                 <asp:ListItem Value="+58">Venezuela</asp:ListItem>
                                         </asp:DropDownList>
                                      </div>
+
                                     <div class="col-sm-6 mb-3 mb-sm-0" style="margin-left: 180px; margin-top: -30px;">
                                         <asp:TextBox ID="TextBox1" runat="server" type="text" name="name" data-parsley-trigger="change"  
-                                            placeholder="Teléfono 1 " autocomplete="off" class="form-control" style="width: 350px;">
+                                            placeholder="Codigo Area" autocomplete="off" class="form-control" style="width: 130px; margin-left: -40px;">
+                                        </asp:TextBox>
+                                    </div>
+
+                                    <div class="col-sm-6 mb-3 mb-sm-0" style="margin-left: 180px; margin-top: -30px;">
+                                        <asp:TextBox ID="TextBox2" runat="server" type="text" name="name" data-parsley-trigger="change"  
+                                            placeholder="Teléfono 1 " autocomplete="off" class="form-control" style="width: 240px; margin-left: 110px; margin-top: -8px;">
                                         </asp:TextBox>
                                     </div>
 
@@ -258,9 +277,15 @@
                                         </asp:DropDownList>
                                      </div>
 
+                                    <div class="col-sm-6 mb-3 mb-sm-0" style="margin-left: 180px; margin-top: -30px;">
+                                        <asp:TextBox ID="TextBox9" runat="server" type="text" name="name" data-parsley-trigger="change"  
+                                            placeholder="Codigo Area" autocomplete="off" class="form-control" style="width: 130px; margin-left: -40px;">
+                                        </asp:TextBox>
+                                    </div>
+
                                     <div class="col-sm-6" style="margin-top: -30px; margin-left: 180px;">
-                                        <asp:TextBox ID="TextBox2" runat="server" type="text" name="name" data-parsley-trigger="change"  
-                                            placeholder="Teléfono 2" autocomplete="off" class="form-control" style="width: 350px;">
+                                        <asp:TextBox ID="TextBox10" runat="server" type="text" name="name" data-parsley-trigger="change"  
+                                            placeholder="Teléfono 2" autocomplete="off" class="form-control" style="width: 240px; margin-left: 110px; margin-top: -8px;">
                                         </asp:TextBox>
                                     </div>
                                 </div>
@@ -271,7 +296,7 @@
                                   <asp:Label ID="Label6" runat="server" Text="Contacto Nº2"></asp:Label>
                                 </div>
                                 <br/>
-                                <%--<Campo de texto para los nombres de la Persona de Contacto Nº1 >--%>
+                                <%--<Campo de texto para los nombres de la Persona de Contacto Nº2 >--%>
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
                                          <asp:Label ID="Label7" runat="server" Text="Nombres"></asp:Label>
@@ -286,7 +311,7 @@
                                     </div>
                                 </div>
 
-                                 <%--<Campo de texto para los nombres de la Persona de Contacto Nº2 >--%>
+                                 <%--<Campo de texto para los apellidos de la Persona de Contacto Nº2 >--%>
                                 
                                  <div class="form-group row" style="margin-bottom:-10px">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
@@ -317,9 +342,16 @@
                                                 <asp:ListItem Value="+58">Venezuela</asp:ListItem>
                                         </asp:DropDownList>
                                      </div>
+
                                     <div class="col-sm-6 mb-3 mb-sm-0" style="margin-left: 180px; margin-top: -30px;">
                                         <asp:TextBox ID="TextBox7" runat="server" type="text" name="name" data-parsley-trigger="change"  
-                                            placeholder="Teléfono 1 " autocomplete="off" class="form-control" style="width: 350px;">
+                                            placeholder="Codigo Area" autocomplete="off" class="form-control" style="width: 130px; margin-left: -40px;">
+                                        </asp:TextBox>
+                                    </div>
+
+                                    <div class="col-sm-6 mb-3 mb-sm-0" style="margin-left: 180px; margin-top: -30px;">
+                                        <asp:TextBox ID="TextBox8" runat="server" type="text" name="name" data-parsley-trigger="change"  
+                                            placeholder="Teléfono 1 " autocomplete="off" class="form-control" style="width: 240px; margin-left: 110px; margin-top: -8px;">
                                         </asp:TextBox>
                                     </div>
 
@@ -335,9 +367,15 @@
                                         </asp:DropDownList>
                                      </div>
 
+                                    <div class="col-sm-6 mb-3 mb-sm-0" style="margin-left: 180px; margin-top: -30px;">
+                                        <asp:TextBox ID="TextBox11" runat="server" type="text" name="name" data-parsley-trigger="change"  
+                                            placeholder="Codigo Area" autocomplete="off" class="form-control" style="width: 130px; margin-left: -40px;">
+                                        </asp:TextBox>
+                                    </div>
+
                                     <div class="col-sm-6" style="margin-top: -30px; margin-left: 180px;">
-                                        <asp:TextBox ID="TextBox8" runat="server" type="text" name="name" data-parsley-trigger="change"  
-                                            placeholder="Teléfono 2" autocomplete="off" class="form-control" style="width: 350px;">
+                                        <asp:TextBox ID="TextBox12" runat="server" type="text" name="name" data-parsley-trigger="change"  
+                                            placeholder="Teléfono 2" autocomplete="off" class="form-control" style="width: 240px; margin-left: 110px; margin-top: -8px;">
                                         </asp:TextBox>
                                     </div>
                                 </div>
@@ -355,7 +393,7 @@
                                         </div>
                                 </div>
                                  <%--<Campo de texto para la contraseña>--%>
-                                <asp:Label ID="lblContraseña" runat="server" Text="Contraseña"></asp:Label>
+<%--                                <asp:Label ID="lblContraseña" runat="server" Text="Contraseña"></asp:Label>
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
                                         <br>
@@ -369,8 +407,8 @@
                                             placeholder="Repetir Contraseña " autocomplete="off" class="form-control">
                                         </asp:TextBox>
                                     </div>
-                                </div>
-                               
+                                </div>--%>
+                               <br/>
                                 <asp:Button ID="btnRegistrar" runat="server" class="btn btn-primary btn-user btn-block" Text="Registrar Cuenta" OnClick="btnRegistrar_Click" />
                             </form>
                         </div>
