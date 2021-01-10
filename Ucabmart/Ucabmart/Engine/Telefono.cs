@@ -5,7 +5,7 @@ using System.Web;
 
 namespace Ucabmart.Engine
 {
-    public class Telefono : ConexionBD<Telefono, Dictionary<NumeroTelefono, int>>
+    public class Telefono // : ConexionBD<Telefono, Dictionary<NumeroTelefono, int>>
     {
         #region Atributos
         public Dictionary<NumeroTelefono, int> Numero = null;
@@ -95,9 +95,10 @@ namespace Ucabmart.Engine
         public Telefono(int codigoPais, int codigoArea, int numero, TipoTelefono tipo,
             Empleado empleado)
         {
-            CodigoPais = codigoPais;
-            CodigoArea = codigoArea;
-            Numero = numero;
+            Numero = new Dictionary<NumeroTelefono, int>();
+            Numero.Add(NumeroTelefono.Pais, codigoPais);
+            Numero.Add(NumeroTelefono.Area, codigoArea);
+            Numero.Add(NumeroTelefono.Numero, numero);
             switch (tipo)
             {
                 case TipoTelefono.Fijo:
@@ -120,8 +121,9 @@ namespace Ucabmart.Engine
         {
             Dictionary<NumeroTelefono, int> diccionario = new Dictionary<NumeroTelefono, int>();
             diccionario.Add(NumeroTelefono.Pais, codigoPais);
-            diccionario.Add()
-            Telefono telefono = Leer(diccionario);
+            ///diccionario.Add();
+            // Telefono telefono = Leer(diccionario);
         }
+        #endregion
     }
 }

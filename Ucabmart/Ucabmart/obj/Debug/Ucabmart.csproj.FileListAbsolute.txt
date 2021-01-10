@@ -203,7 +203,6 @@ C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\obj
 C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\obj\Debug\Ucabmart.csprojAssemblyReference.cache
 <<<<<<< HEAD
 =======
-=======
 C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Gma.QrCodeNet.Encoding.dll
 C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Gma.QrCodeNet.Encoding.pdb
 C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Gma.QrCodeNet.Encoding.xml
@@ -615,4 +614,3 @@ C:\Users\Jose\Documents\GitHub\SistemaBD1\Ucabmart\Ucabmart\obj\Debug\Ucabmart.d
 C:\Users\Jose\Documents\GitHub\SistemaBD1\Ucabmart\Ucabmart\obj\Debug\Ucabmart.pdb
 >>>>>>> Stashed changes
 C:\Users\Jose\Documents\GitHub\SistemaBD1\Ucabmart\Ucabmart\bin\MessagingToolkit.QRCode.dll
->>>>>>> main

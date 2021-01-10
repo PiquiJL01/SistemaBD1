@@ -119,7 +119,7 @@ namespace Ucabmart.Engine
                 string Comando = "SELECT * FROM naturales WHERE cl_rif=@rif";
                 Script = new NpgsqlCommand(Comando, Conexion);
 
-                Script.Parameters.AddWithValue("rif", RIF);
+                Script.Parameters.AddWithValue("rif", codigo);
                 Reader = Script.ExecuteReader();
 
                 if (Reader.Read())
