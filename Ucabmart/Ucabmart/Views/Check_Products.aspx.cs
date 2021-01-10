@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Ucabmart.Engine;
 
 namespace Ucabmart.Views
 {
@@ -18,27 +19,25 @@ namespace Ucabmart.Views
 
         protected void Add_Items(object sender, EventArgs e)
         {
-            List<String> items = new List<String>();
-            items.Add("Limon");
-            items.Add("Pera");
-            items.Add("Manzana");
-            items.Add("Coco");
-            items.Add("Frambuesa");
 
-            //Options.Items.Add(new ListItem("Limon", "Limon"));
-            foreach (String item in items)
+            Producto p1 = new Producto();
+
+            List <Producto> lista = new List<Producto>();
+            lista = p1.Todos();
+
+            foreach (Producto item in lista)
             {
                 if (Options.Items.Count == 0 | Options.Items.Count % 2 == 0)
                 {
 
-                   ListItem ChckItem = new ListItem(item);
+                   ListItem ChckItem = new ListItem(item.Nombre);
                    ChckItem.Attributes.Add("class", "ColorChangeBlue");
                    Options.Items.Insert(Options.Items.Count,ChckItem);
 
                 }
                 else
                 {
-                    ListItem ChckItem = new ListItem(item);
+                    ListItem ChckItem = new ListItem(item.Nombre);
                     ChckItem.Attributes.Add("class", "ColorChangeYellow");
                     Options.Items.Insert(Options.Items.Count, ChckItem);
 

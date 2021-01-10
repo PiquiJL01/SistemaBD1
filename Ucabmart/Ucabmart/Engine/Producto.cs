@@ -76,6 +76,12 @@ namespace Ucabmart.Engine
         }
         #endregion
 
+        public Producto()
+        {
+
+        }
+
+
         #region CRUDs
         public override void Insertar()
         {
