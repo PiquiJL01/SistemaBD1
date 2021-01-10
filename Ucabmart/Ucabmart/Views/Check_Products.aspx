@@ -1,7 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Proveedores.aspx.cs" Inherits="Ucabmart.Views.WebForm4" %>
-
-<!DOCTYPE html>
-
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Check_Products.aspx.cs" Inherits="Ucabmart.Views.Check_Products" %>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -10,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Ucabmart</title>
+        <title>Ucabmart - Registrar Cliente Jurídico</title>
         <link rel="icon" type="image/x-icon" href="../../Content/assets/img/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
@@ -19,17 +16,17 @@
         <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="../../Content/css/Proveedores.css" rel="stylesheet" />
+        <link href="../Content/css/Check_Products.css" rel="stylesheet" />
     </head>
 
       <body id="page-top" class="bg-gradient-primary">
+
 
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
             <div class="container">
                 <a class="navbar-brand js-scroll-trigger" href="#page-top"><img class="Icon" src="../../Content/assets/img/Ucabmart-Logo.png" alt="" /></a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
                     <i class="fas fa-bars ml-1"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">      
@@ -61,78 +58,34 @@
                   <li class="li-3"></li>
               </ul>
           </div>
+        
+    <div class="container">
+        <div class="card o-hidden border-0 shadow-lg my-5">
+            <div class="card-body p-0">
+                <!-- Nested Row within Card Body -->
+                <div class="row">
+                    <div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
+                    <div class="col-lg-7">
+                        <div class="p-5">     
+                            <div class="text-center">
+                                <h1 class="h4 text-gray-900 mb-4">Seleccion de Productos</h1>
+                            </div>
 
-          <header class="masthead" style="margin-top: -14px; margin-bottom: 40px;">
-          </header>
+                             <form id="form1" runat="server"> 
+                                 <asp:CheckBoxList ID="Options" CssClass="Checklist" runat ="server" OnLoad="Add_Items">
 
-       <!-- Options -->
-           <div class="option">Opciones</div>
+                                </asp:CheckBoxList>
+                                 <br />
+                                <asp:Button ID="btnRegistrar" runat="server" class="btn btn-primary btn-user btn-block" Text="Completar Registro" PostBackUrl="~/Views/Proveedores.aspx"/>
+                             </form>
 
-      <section class="page-section" id="categorias">
-         <div class="container cuadro" style="margin-top: -150px; padding-top: 80px;">
-            <div class="row" style="padding-left: 150px;">
-                    <div class="col-lg-4 col-sm-6 mb-4">
-                        <div class="categorias-item">
-                            <a class="categorias-link" href="RegistroProveedores.aspx">
-                                <div class="categorias-hover">
-                                    <div class="categorias-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid2" src="../Content/assets/img/Provider/Add-Provider.jpg" alt="" />
-                            </a>
-                            <div class="categorias-caption" style="margin-right:-68px; background-color:#4e73dfd1">
-                                <div class="categorias-caption-heading">Agregar Proveedor</div>
-                                <div class="categorias-caption-subheading text-muted">Permite registrar a los nuevos proveedores...</div>
-                            </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-sm-6 mb-4" style="margin-left: 120px">
-                        <div class="categorias-item">
-                            <a class="categorias-link" href="#">
-                                <div class="categorias-hover">
-                                    <div class="categorias-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid2" src="../Content/assets/img/Provider/Consulting-Provider.jpg" alt="" />
-                            </a>
-                            <div class="categorias-caption" style="margin-right:-69px; background-color:#4e73dfd1">
-                                <div class="categorias-caption-heading">Consultar Proveedor</div>
-                                <div class="categorias-caption-subheading text-muted">Permite revisar los proveedores registrados......</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 mb-4" style="box-sizing: initial">
-                        <div class="categorias-item">
-                            <a class="categorias-link" href="#">
-                                <div class="categorias-hover">
-                                    <div class="categorias-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid2" src="../Content/assets/img/Provider/Update-Provider.jpg" alt="" />
-                            </a>
-                            <div class="categorias-caption" style="margin-right:-44px; background-color:#4e73dfd1">
-                                <div class="categorias-caption-heading">Modificar Proveedor</div>
-                                <div class="categorias-caption-subheading text-muted">Permite cambiar los datos de los proveedores......</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 mb-4" style="margin-left: 100px">
-                        <div class="categorias-item">
-                            <a class="categorias-link" href="#">
-                                <div class="categorias-hover">
-                                    <div class="categorias-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid2" src="../Content/assets/img/Provider/Delete-Provider.jpg" alt="" />
-                            </a>
-                            <div class="categorias-caption" style="margin-right:-68px; background-color:#4e73dfd1">
-                                <div class="categorias-caption-heading">Eliminar Proveedor</div>
-                                <div class="categorias-caption-subheading text-muted">Permite eliminar los proveedores que ya no le prestan servicios a la empresa......</div>
-                            </div>
-                        </div>
-                    </div>
+                </div>
             </div>
-          </div>
-        </section>
+        </div>
 
-           <br>
-           <br>
+    </div>
         <!-- Footer-->
         <footer class="footer py-4">
             <div class="container">
@@ -162,3 +115,4 @@
         <script src="../../Content/js/scripts.js"></script>
     </body>
 </html>
+

@@ -409,7 +409,7 @@
                                     </div>
                                 </div>--%>
                                <br/>
-                                <asp:Button ID="btnRegistrar" runat="server" class="btn btn-primary btn-user btn-block" Text="Registrar Cuenta" OnClick="btnRegistrar_Click" />
+                                <asp:Button ID="btnRegistrar" runat="server" class="btn btn-primary btn-user btn-block" Text="Siguiente" OnClick="btnRegistrar_Click" PostBackUrl="~/Views/Check_Products.aspx"/>
                             </form>
                         </div>
                     </div>

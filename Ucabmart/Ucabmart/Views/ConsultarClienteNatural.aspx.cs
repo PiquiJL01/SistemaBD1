@@ -84,9 +84,6 @@ namespace Ucabmart.Views
                         r.Cells.Add(c);                        
                     }
                     listaPersonaTabla.Rows.Add(r);
-<<<<<<< Updated upstream
-                    
-=======
 
 
                     int rowCounter = 0;
@@ -114,7 +111,6 @@ namespace Ucabmart.Views
                         rowCounter++;
                     }
 
->>>>>>> Stashed changes
                 }
 
                 
