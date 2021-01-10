@@ -24,6 +24,7 @@ namespace Ucabmart.Views
         protected void btnRegistrar_Click(object sender, EventArgs e)
         {
             try {
+                
                 Cliente clienteCtrl = new Cliente();
 
 

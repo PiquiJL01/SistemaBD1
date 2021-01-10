@@ -81,12 +81,12 @@
                                     </div>
                                 </div>
 
-                                <div class="table-responsive"  runat="server">
+                                <div class="table-responsive" ID="listaPersonaTabla" runat="server">
                                     <div class="text-center">
-                                        <asp:Table ID="listaPersonaTabla" GridLines="Both" HorizontalAlign="Center" 
+                                       <%-- <asp:Table ID="listaPersonaTabla" GridLines="Both" HorizontalAlign="Center" 
                                             runat="server" class="table table-striped table-bordered second"
                                             style ="width:100%" text-align ="center">
-                                        </asp:Table>
+                                        </asp:Table>--%>
 
                                         
                                     </div>
