@@ -15,7 +15,8 @@ namespace Ucabmart.Views
     {
         public string tabla; // para contruir y mostrar la tabla con html 
         public string cadena;
-        public Natural ctrlConsulta = new Natural(null);
+        public Natural ctrlConsultaNatural = new Natural(null);
+        public Juridico ctrlConsultaJuridico = new Juridico(null);
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -45,12 +46,11 @@ namespace Ucabmart.Views
                 tabla += "</thead>";
 
                 tabla += "<tbody>";
+                                
+                List<Natural> listaNatural = new List<Natural>();
+                listaNatural = ctrlConsultaNatural.TodosNaturales();
 
-                
-                List<Natural> lista = new List<Natural>();
-                lista = ctrlConsulta.TodosNaturales();
-
-                foreach (Natural item in lista) {
+                foreach (Natural item in listaNatural) {
                     /// cuerpo o contenido de la tabla
 
                     tabla += "<tr>";
@@ -68,15 +68,6 @@ namespace Ucabmart.Views
                     tabla += "</tr>";
                 }
            
-                //tabla += "<tr>";
-                //tabla += "<td>Hola</td>";
-                //tabla += "<td> qué tal?</td>";
-                //tabla += "<td>todo bien?</td>";
-                //tabla += "<td> esta es una </td>";
-                //tabla += "<td>tabla natural</td>";
-                //tabla += "<td><a class=" + "portfolio - link" + " data-toggle=" + "modal" + " href=" + "#portfolioModal1" + "> Ver Carnet </a></td>";
-                //tabla += "</tr>";
-
                 tabla += "</tbody>";
                 tabla += "</table>";
 
@@ -89,57 +80,6 @@ namespace Ucabmart.Views
                 cadena += Label1.Text + "\n"+ Label2.Text + "\n" + Label3.Text + "\n" + Label4.Text + "\n" + Label4.Text + "\n";
                 VerQrNatural carnet = new VerQrNatural();
                 imgCtrl = carnet.GenerarQr(imgCtrl, cadena);
-
-
-                //int numrows = 3;
-                //int numcells = 2;
-                //for (int j = 0; j < numrows; j++)
-                //{
-                //    TableRow r = new TableRow();
-                //    for (int i = 0; i < numcells; i++)
-                //    {
-                //        TableCell c = new TableCell();
-                //        TableHeaderCell columnaHeader = new TableHeaderCell();
-                                               
-                //        c.Controls.Add(new LiteralControl("row "
-                //            + j.ToString() + ", cell " + i.ToString()));
-                //        if (j == 0) {
-                //            columnaHeader.Controls.Add(new LiteralControl("row "
-                //           + j.ToString() + ", cell " + i.ToString()));
-                //            r.Cells.Add(columnaHeader);
-                //        }
-                //        else
-                //        r.Cells.Add(c);                        
-                //    }
-                //    listaPersonaTabla.Rows.Add(r);
-
-
-                //    int rowCounter = 0;
-                //    TableRow[] myRowArray = null;
-                //    TableCell[] myCellArray = null;
-                //    StringBuilder tb = new StringBuilder();
-
-                //    // Copy the Rows collection to an array.
-                //    listaPersonaTabla.Rows.CopyTo(myRowArray, 0);
-
-                //    tb.Append("The copied items from the table are: \n");
-
-                //    // Iterate through the TableRows in the array.
-                //    foreach (TableRow rw in myRowArray)
-                //    {
-                //        // Copy the Cells collection of a row to an array.
-                //        listaPersonaTabla.Rows[rowCounter].Cells.CopyTo(myCellArray, 0);
-
-                //        // Iterate through the cell array 
-                //        // and display its contents.
-                //        foreach (TableCell cell in myCellArray)
-                //            tb.Append(cell.Text + ", ");
-
-                //        //Label6.Text = tb.ToString();
-                //        rowCounter++;
-                //    }
-
-                //}
                 
             }
             else
@@ -147,32 +87,43 @@ namespace Ucabmart.Views
                 tabla += "<table id='example' class='table table-striped table-bordered second' style='width: 100%'>";
                 tabla += "<thead>";
                 tabla += "<tr>";
-                tabla += "<th>ID</th>";
-                tabla += "<th>T. De Documento</th>";
-                tabla += "<th>Nro. Cédula</th>";
-                tabla += "<th>Nombre o Razón Social</th>";
-                tabla += "<th>Sexo</th>";
-                tabla += "<th>Edad</th>";
-                tabla += "<th>Direccion</th>";
+                tabla += "<th>DenominacionComercial</th>";
+                tabla += "<th>RazonSocial</th>";
+                tabla += "<th>Capital</th>";
+                tabla += "<th>PaginaWeb</th>";
+                tabla += "<th>DireccionFisica</th>";
+                tabla += "<th>DireccionFiscal</th>";
+                tabla += "<th>RIF</th>";
+                tabla += "<th>Password</th>";
+                tabla += "<th>CodigoCorreoElectronico</th>";
+                tabla += "<th>CodigoTienda</th>";
                 tabla += "</tr>";
                 tabla += "</thead>";
 
                 tabla += "<tbody>";
 
-                /// cuerpo o contenido de la tabla
+                List<Juridico> listaJuridico = new List<Juridico>();
+                listaJuridico = ctrlConsultaJuridico.TodosJuridicos();
 
-                tabla += "<tr>";
-                tabla += "<td> Hola </td>";
-                tabla += "<td> qué tal?</td>";
-                tabla += "<td>todo bien?</td>";
-                tabla += "<td> esta es una </td>";
-                tabla += "<td>tabla juridica</td>";
-                tabla += "<td>Aprende menor!</td>";
-                tabla += "<td>JAJAJA</td>";
-                tabla += "</tr>";
+                foreach (Juridico item in listaJuridico)
+                {
+                    /// cuerpo o contenido de la tabla
+                    tabla += "<tr>";
+                    tabla += "<td>" + item.DenominacionComercial + "</td>";
+                    tabla += "<td>" + item.RazonSocial + "</td>";
+                    tabla += "<td>" + item.Capital + "</td>";
+                    tabla += "<td>" + item.PaginaWeb + "</td>";
+                    tabla += "<td>" + item.DireccionFisica + "</td>";
+                    tabla += "<td>" + item.DireccionFiscal + "</td>";
+                    tabla += "<td>" + item.RIF + "</td>";
+                    tabla += "<td>" + item.Password + "</td>";
+                    tabla += "<td>" + item.CodigoCorreoElectronico + "</td>";
+                    tabla += "<td>" + item.CodigoTienda + "</td>";
+                    tabla += "<td><a class=" + "portfolio - link" + " data-toggle=" + "modal" + " href=" + "#portfolioModal1" + "> Ver Carnet </a></td>";
+                    tabla += "</tr>";
+                }
 
                 tabla += "</tbody>";
-
                 tabla += "</table>";
             }
             listaPersonaTabla.InnerHtml = tabla;

@@ -60,6 +60,7 @@ namespace Ucabmart.Engine
                 RIF = natural.RIF;
                 CodigoCorreoElectronico = natural.CodigoCorreoElectronico;
                 CodigoTienda = natural.CodigoTienda;
+                Password = natural.Password;
                 Cedula = natural.Cedula;
                 Nombre1 = natural.Nombre1;
                 Nombre2 = natural.Nombre2;

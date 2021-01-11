@@ -47,6 +47,7 @@ namespace Ucabmart.Engine
                 RIF = juridico.RIF;
                 CodigoCorreoElectronico = juridico.CodigoCorreoElectronico;
                 CodigoTienda = juridico.CodigoTienda;
+                Password = juridico.Password;
                 DenominacionComercial = juridico.DenominacionComercial;
                 RazonSocial = juridico.RazonSocial;
                 Capital = juridico.Capital;
