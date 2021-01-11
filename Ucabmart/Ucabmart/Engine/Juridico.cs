@@ -39,14 +39,11 @@ namespace Ucabmart.Engine
             DireccionFiscal = direccionFiscal;
         }
 
-        public Juridico(string rif)
+        public Juridico(string rif) : base(rif)
         {
             Juridico juridico = LeerJuridico(rif);
             if (!(juridico == null))
             {
-                RIF = juridico.RIF;
-                CodigoCorreoElectronico = juridico.CodigoCorreoElectronico;
-                CodigoTienda = juridico.CodigoTienda;
                 DenominacionComercial = juridico.DenominacionComercial;
                 RazonSocial = juridico.RazonSocial;
                 Capital = juridico.Capital;
