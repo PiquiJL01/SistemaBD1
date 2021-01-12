@@ -18,17 +18,17 @@ namespace Ucabmart.Views
             Lugar lugar = new Lugar(2);
             Lugar lugar2 = new Lugar(3);
             
-            CorreoElectronico correo = new CorreoElectronico(CorreoElectrónico.Text);
+            CorreoElectronico correo = new CorreoElectronico(txtCorreo.Text);
             correo.Insertar();
             
-            Proveedor proveedor = new Proveedor(dplRif.SelectedValue, RazónSocial.Text,DenominacionComercial.Text,PaginaWeb.Text,2,3,correo.Codigo);
+            Proveedor proveedor = new Proveedor(dplRif.SelectedValue + txtRif.Text, RazónSocial.Text,DenominacionComercial.Text,PaginaWeb.Text,2,3,correo.Codigo);
             Telefono telefono1 = new Telefono(int.Parse(CodigoPais1.SelectedValue), int.Parse(CodAre.Text), int.Parse(txtTelefono1.Text), TipoTelf.Text, proveedor);
             telefono1.Insertar();
             Telefono telefono2 = new Telefono(int.Parse(CodigoPais2.SelectedValue), int.Parse(CodAre2.Text), int.Parse(txtTelefono2.Text), TipoTelf2.Text, proveedor);
             telefono2.Insertar();
             proveedor.Insertar();
 
-            PersonaContacto personaContacto1 = new PersonaContacto(CedulaDrop.SelectedValue + txtCedula, Nombre1.Text, Nombre2.Text, Apellido1.Text, Apellido2.Text, proveedor);
+            PersonaContacto personaContacto1 = new PersonaContacto(CedulaDrop.SelectedValue + txtCedula.Text, Nombre1.Text, Nombre2.Text, Apellido1.Text, Apellido2.Text, proveedor);
             Telefono telefono3 = new Telefono(int.Parse(CodigoPais3.SelectedValue), int.Parse(CodAre3.Text), int.Parse(txtTelefono3.Text), TipoTelf3.Text,personaContacto1);
             telefono3.Insertar();
             Telefono telefono4 = new Telefono(int.Parse(CodigoPais4.SelectedValue), int.Parse(CodAre4.Text), int.Parse(txtTelefono4.Text), TipoTelf4.Text,personaContacto1);
