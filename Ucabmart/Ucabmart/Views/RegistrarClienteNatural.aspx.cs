@@ -100,15 +100,59 @@ namespace Ucabmart.Views
         protected void btnRegistrar_Click(object sender, EventArgs e)
         {
             try {
-                CorreoElectronico ctrlCorreo = new CorreoElectronico(0);
-
-                ctrlCorreo.Direccion = txtCorreo.Text;
+                CorreoElectronico ctrlCorreo = new CorreoElectronico(txtCorreo.Text);
                 ctrlCorreo.Insertar();
+             //   List<CorreoElectronico> listaCorreo = new List<CorreoElectronico>();
+             //   int codigoCorreo = -1; 
+             //   foreach (CorreoElectronico item in listaCorreo)   //Busca obtener el codigo de correo que se acaba de agregar
+             //   {
+             //       if (item.Direccion == txtCorreo.Text)
+             //           codigoCorreo = item.Codigo;
+             //   }
 
+                Cliente datosCliente = new Cliente(dplRif.SelectedValue + txtRif.Text, txtContraseña.Text, ctrlCorreo,null);
+             //   datosCliente.RIF = dplRif.SelectedValue + txtRif.Text;
+             //   datosCliente.Password = txtContraseña.Text;
+             //   datosCliente.CodigoCorreoElectronico = codigoCorreo;
+             //   datosCliente.CodigoTienda = 0;
+                datosCliente.Insertar();
 
+                Natural datosNatural = new Natural();
+                datosNatural.RIF = dplRif.SelectedValue + txtRif.Text;
+                datosNatural.Nombre1 = Nombre1.Text;
+                datosNatural.Nombre2 = Nombre2.Text;
+                datosNatural.Apellido1 = Apellido1.Text;
+                datosNatural.Apellido2 = Apellido2.Text;
+                datosNatural.Cedula = dplCedula.SelectedValue + txtCedula.Text;
 
+                // buscamos el codigo de los lugares para hallar el codigo de la parroquia y guardarla
+                List<Lugar> listaLugar2 = new List<Lugar>();
+                listaLugar2 = nombreLugar.Todos();
+                int codigoParroquia = -1;
 
+                foreach (Lugar item in listaLugar2)
+                {
+                    if (dplEstado.SelectedValue == item.Nombre && item.CodigoUbicacion == 1)
+                        codigoEstado = item.Codigo;
+                }
+                foreach (Lugar item in listaLugar2)
+                {
+                    if (dplMunicipio.SelectedValue == item.Nombre && codigoEstado == item.CodigoUbicacion)
+                        codigoMunicipio = item.Codigo;
+                }
+                foreach (Lugar item in listaLugar2)
+                {
+                    if (dplParroquia.SelectedValue == item.Nombre && item.Tipo == "Parroquia" && codigoMunicipio == item.CodigoUbicacion)
+                        codigoParroquia= item.Codigo;
+                }
 
+                datosNatural.Direccion = codigoParroquia;
+                datosNatural.Insertar();
+
+                Telefono telefono1 = new Telefono(int.Parse(CodigoPais1.SelectedValue), int.Parse(CodAre.Text), int.Parse(txtTelefono1.Text), TipoTelf.Text, datosCliente);
+                telefono1.Insertar();
+                Telefono telefono2 = new Telefono(int.Parse(CodigoPais2.SelectedValue), int.Parse(CodAre2.Text), int.Parse(txtTelefono2.Text), TipoTelf2.Text, datosCliente);
+                telefono2.Insertar();
             }
             catch (Exception ex)
             {
