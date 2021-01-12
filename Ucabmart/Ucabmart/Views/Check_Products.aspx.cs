@@ -55,6 +55,8 @@ namespace Ucabmart.Views
         protected void btn_Click(object sender, EventArgs e)
         {
             String ProveedorRif = Session["ProveedorRif"].ToString();
+            Proveedor proveedor = new Proveedor(ProveedorRif);
+
             List<String> elements = new List<string>();
 
             foreach (ListItem item in Options.Items)
@@ -68,13 +70,12 @@ namespace Ucabmart.Views
             Producto prod1 = new Producto();
             List<int> CodigosProduct = prod1.ProductosCod(elements);
 
+            foreach (int codigo in CodigosProduct)
+            {
+                proveedor.AgregarProducto(new Producto(codigo));
+            }
 
-
-
-
-
-
-
+            Response.Redirect("/Views/Proveedores.aspx", false);
 
         }
 

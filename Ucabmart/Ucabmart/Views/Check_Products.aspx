@@ -76,7 +76,7 @@
 
                                 </asp:CheckBoxList>
                                  <br />
-                                <asp:Button ID="btnRegistrar" runat="server" class="btn btn-primary btn-user btn-block" Text="Completar Registro" PostBackUrl="~/Views/Proveedores.aspx"/>
+                                <asp:Button ID="btnRegistrar" runat="server" class="btn btn-primary btn-user btn-block" Text="Completar Registro" OnClick="btn_Click" />
                              </form>
 
                         </div>

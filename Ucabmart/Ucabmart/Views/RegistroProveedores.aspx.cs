@@ -15,13 +15,13 @@ namespace Ucabmart.Views
         }
         protected void btnRegistrar_Click(object sender, EventArgs e)
         {
-            Lugar lugar = new Lugar(10);
-            Lugar lugar2 = new Lugar(20);
+            Lugar lugar = new Lugar(2);
+            Lugar lugar2 = new Lugar(3);
             
             CorreoElectronico correo = new CorreoElectronico(CorreoElectrónico.Text);
             correo.Insertar();
             
-            Proveedor proveedor = new Proveedor(dplRif.SelectedValue, RazónSocial.Text,DenominacionComercial.Text,PaginaWeb.Text,40,45,correo.Codigo);
+            Proveedor proveedor = new Proveedor(dplRif.SelectedValue, RazónSocial.Text,DenominacionComercial.Text,PaginaWeb.Text,2,3,correo.Codigo);
             Telefono telefono1 = new Telefono(int.Parse(CodigoPais1.SelectedValue), int.Parse(CodAre.Text), int.Parse(txtTelefono1.Text), TipoTelf.Text, proveedor);
             telefono1.Insertar();
             Telefono telefono2 = new Telefono(int.Parse(CodigoPais2.SelectedValue), int.Parse(CodAre2.Text), int.Parse(txtTelefono2.Text), TipoTelf2.Text, proveedor);
