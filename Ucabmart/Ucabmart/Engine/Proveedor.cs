@@ -66,7 +66,7 @@ namespace Ucabmart.Engine
             {
                 Conexion.Open();
 
-                string Comando = "INSERT INTO proveedor (pr_rif, pr_razon_social, pr_denominacion_social, pr_pag_web, Lugar_lu_codigo, lugar_lu_codigo1, correo_electronico_ce_codigo) " +
+                string Comando = "INSERT INTO proveedor (pr_rif, pr_razon_social, pr_denominacion_comercial, pr_pag_web, Lugar_lu_codigo, lugar_lu_codigo1, correo_electronico_ce_codigo) " +
                     "VALUES (@rif, @razon, @denominacion, @web, @fisica, @fiscal, @correo)";
                 
                 Script = new NpgsqlCommand(Comando, Conexion);
