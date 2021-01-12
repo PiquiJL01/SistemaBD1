@@ -27,6 +27,7 @@ namespace Ucabmart.Engine
         /// </summary>
         /// <returns>Lista con todos los objetos de la tabla de la <typeparamref name="Tipo"/></returns>
         public abstract List<Tipo> Todos();
+        
 
         /// <summary>
         /// Busca especificamente <typeparamref name="Tipo"/> en la base de datos

@@ -37,7 +37,6 @@ namespace Ucabmart.Views
                 tabla += "<th>Nombre2</th>";
                 tabla += "<th>Apellido1</th>";
                 tabla += "<th>Apellido2</th>";
-                tabla += "<th>Direccion</th>";
                 tabla += "<th>RIF</th>";
                 tabla += "<th>Password</th>";
                 tabla += "<th>CodigoCorreoElectronico</th>";
@@ -59,7 +58,6 @@ namespace Ucabmart.Views
                     tabla += "<td>" + item.Nombre2 + "</td>";
                     tabla += "<td>" + item.Apellido1 + "</td>";
                     tabla += "<td>" + item.Apellido2 + "</td>";
-                    tabla += "<td>" + item.Direccion + "</td>";
                     tabla += "<td>" + item.RIF + "</td>";
                     tabla += "<td>" + item.Password + "</td>";
                     tabla += "<td>" + item.CodigoCorreoElectronico + "</td>";
@@ -129,5 +127,6 @@ namespace Ucabmart.Views
             listaPersonaTabla.InnerHtml = tabla;
             
         }
+        
     }
 }

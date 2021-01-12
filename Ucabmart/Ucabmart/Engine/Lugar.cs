@@ -72,9 +72,14 @@ namespace Ucabmart.Engine
             Descripcion = descripcion;
             CodigoUbicacion = ubicacion;
         }
+
+        private Lugar( string nombre)
+        {
+            Nombre = nombre;
+        }
         #endregion
 
-        
+
         #region CRUDs
         public override void Insertar()
         {

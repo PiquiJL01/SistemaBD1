@@ -14,9 +14,19 @@ namespace Ucabmart.Views
 {
     public partial class RegistrarClienteNatural : System.Web.UI.Page
     {
+        Lugar nombreLugar = new Lugar(0);
+        List<Lugar> listaLugar = new List<Lugar>();
+
         protected void Page_Load(object sender, EventArgs e)
         {
+            listaLugar = nombreLugar.Todos();
 
+            foreach(Lugar item in listaLugar)
+            {
+                if (item.Tipo == "Estado")
+                    dplEstado.Items.Add(item.Nombre);
+            }
+            
         }
 
         public string cadena;
@@ -24,12 +34,10 @@ namespace Ucabmart.Views
         protected void btnRegistrar_Click(object sender, EventArgs e)
         {
             try {
-                
-                Cliente clienteCtrl = new Cliente();
+                CorreoElectronico ctrlCorreo = new CorreoElectronico(0);
 
-
-                clienteCtrl.RIF = dplRif.Text + txtRif.Text;
-                clienteCtrl.Insertar();
+                ctrlCorreo.Direccion = txtCorreo.Text;
+                ctrlCorreo.Insertar();
 
 
 
@@ -43,6 +51,16 @@ namespace Ucabmart.Views
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('NO DEBE HABER CAMPOS VACÍOS');", true);
             }
             
+        }
+
+        protected void dplEstado_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            dplMunicipio.Items.Add("Hola");
+        }
+
+        protected void dplMunicipio_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            dplParroquia.Items.Add("Hola");
         }
     }
 }
