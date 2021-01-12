@@ -41,6 +41,10 @@ namespace Ucabmart.Views
             Telefono telefono6 = new Telefono(int.Parse(CodigoPais6.SelectedValue), int.Parse(CodAre6.Text), int.Parse(txtTelefono6.Text), TipoTelf6.Text, personaContacto2);
             telefono6.Insertar();
             personaContacto2.Insertar();
+
+            Session["ProveedorRif"] = proveedor.RIF;
+            Response.Redirect("/Views/Check_Products.aspx", false);
+
         }
     }
 }
