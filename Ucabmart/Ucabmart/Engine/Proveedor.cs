@@ -66,7 +66,7 @@ namespace Ucabmart.Engine
             {
                 Conexion.Open();
 
-                string Comando = "INSERT INTO proveedor (pr_rif, pr_razon_social, pr_denominacion_social, pr_pag_web, Lugar_lu_codigo, lugar_lu_codigo1, correo_electronico_ce_codigo) " +
+                string Comando = "INSERT INTO proveedor (pr_rif, pr_razon_social, pr_denominacion_comercial, pr_pag_web, Lugar_lu_codigo, lugar_lu_codigo2, correo_electronico_ce_codigo) " +
                     "VALUES (@rif, @razon, @denominacion, @web, @fisica, @fiscal, @correo)";
                 
                 Script = new NpgsqlCommand(Comando, Conexion);
@@ -166,8 +166,8 @@ namespace Ucabmart.Engine
             {
                 Conexion.Open();
 
-                string Comando = "UPDATE proveedor SET pr_razon_social = @razon, pr_denominacion_social = @denominacion, " +
-                    "pr_pag_web = @web, Lugar_lu_codigo = @fisica, lugar_lu_codigo1 = @fiscal, correo_electronico_ce_codigo = @correo " +
+                string Comando = "UPDATE proveedor SET pr_razon_social = @razon, pr_denominacion_comercial = @denominacion, " +
+                    "pr_pag_web = @web, lugar_lu_codigo = @fisica, lugar_lu_codigo2 = @fiscal, correo_electronico_ce_codigo = @correo " +
                     "WHERE pr_rif = @rif ";
                 Script = new NpgsqlCommand(Comando, Conexion);
 
