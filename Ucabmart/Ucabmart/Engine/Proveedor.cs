@@ -228,5 +228,57 @@ namespace Ucabmart.Engine
             }
         }
         #endregion
+
+        #region Metodos Entidades Muchos-A-Muchos
+        public void AgregarProducto(Producto producto)
+        {
+            try
+            {
+                Conexion.Open();
+
+                string Comando = "INSERT INTO pr_pr (producto_pr_codigo, proveedor_pr_rif) " +
+                    "VALUES (@producto, @proveedor)";
+                Script = new NpgsqlCommand(Comando, Conexion);
+
+                Script.Parameters.AddWithValue("producto", producto.Codigo);
+                Script.Parameters.AddWithValue("proveedor", RIF);
+
+                Script.Prepare();
+
+                Script.ExecuteNonQuery();
+
+                Conexion.Close();
+            }
+            catch (Exception e)
+            {
+                Conexion.Close();
+            }
+        }
+
+        public void EliminarProducto(Producto producto)
+        {
+            try
+            {
+                Conexion.Open();
+
+                string Comando = "DELETE FROM pr_pr " +
+                    "WHERE ((producto_pr_codigo = @producto) AND (proveedor_pr_rif = @proveedor))";
+                Script = new NpgsqlCommand(Comando, Conexion);
+
+                Script.Parameters.AddWithValue("producto", producto.Codigo);
+                Script.Parameters.AddWithValue("proveedor", RIF);
+
+                Script.Prepare();
+
+                Script.ExecuteNonQuery();
+
+                Conexion.Close();
+            }
+            catch (Exception e)
+            {
+                Conexion.Close();
+            }
+        }
+        #endregion
     }
 }
