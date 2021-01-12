@@ -47,6 +47,7 @@ namespace Ucabmart.Engine
             Natural natural = LeerNatural(rif);
             if (!(natural == null))
             {
+
                 Cedula = natural.Cedula;
                 Nombre1 = natural.Nombre1;
                 Nombre2 = natural.Nombre2;
@@ -54,6 +55,10 @@ namespace Ucabmart.Engine
                 Apellido2 = natural.Apellido2;
                 Direccion = natural.Direccion;
             }
+        }
+
+        public Natural()
+        {
         }
         #endregion
 
@@ -142,7 +147,14 @@ namespace Ucabmart.Engine
         public List<Natural> TodosNaturales()
         {
             List<Natural> lista = new List<Natural>();
-
+            string rif = null;
+            string cedula = null;
+            string nombre1 = null;
+            string nombre2 = null;
+            string apellido1 = null;
+            string apellido2 = null;
+            int direccion = 0;
+         List<Natural> listaNatural = new List<Natural>();
             try
             {
                 Conexion.Open();
@@ -153,33 +165,38 @@ namespace Ucabmart.Engine
                 Reader = Script.ExecuteReader();
 
 
-                List<string> Claves = new List<string>();
+               
                 while (Reader.Read())
                 {
-                    Claves.Add(ReadString(0));
+                    // Claves.Add(ReadString(0));
+                    rif = ReadString(0);
+                    cedula = ReadString(1);
+                    nombre1 = ReadString(2);
+                    nombre2 = ReadString(3);
+                    apellido1 = ReadString(4);
+                    apellido2 = ReadString(5);
+                    direccion = ReadInt(6);
+                    Natural natural = new Natural(rif, cedula, nombre1, nombre2, apellido1, apellido2, direccion);
+                    listaNatural.Add(natural);
                 }
+                
 
-                Conexion.Close();
 
-                foreach (string clave in Claves)
-                {
-                    lista.Add(new Natural(clave));
-                }
+                //foreach (string clave in Claves)
+                //{
+                //    lista.Add(new Natural(clave));
+                //}
             }
             catch (Exception e)
+            {                                             
+                throw new Exception("Ha ocurrido un error en la base de datos",e);
+            }
+            finally
             {
-                try
-                {
-                    Conexion.Close();
-                }
-                catch (Exception f)
-                {
-
-                }
-                return null;
+                Conexion.Close();
             }
 
-            return lista;
+            return listaNatural;
         }
 
         public override void Actualizar()

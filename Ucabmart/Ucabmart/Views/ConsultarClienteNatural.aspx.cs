@@ -15,12 +15,11 @@ namespace Ucabmart.Views
     {
         public string tabla; // para contruir y mostrar la tabla con html 
         public string cadena;
-        public Natural ctrlConsultaNatural = new Natural(null);
+        public Natural ctrlConsultaNatural;
         public Juridico ctrlConsultaJuridico = new Juridico(null);
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
         }
 
         protected void btnBuscar_Click(object sender, EventArgs e)
@@ -47,6 +46,8 @@ namespace Ucabmart.Views
                 tabla += "<tbody>";
                                 
                 List<Natural> listaNatural = new List<Natural>();
+                ctrlConsultaNatural = new Natural();
+
                 listaNatural = ctrlConsultaNatural.TodosNaturales();
 
                 foreach (Natural item in listaNatural) {

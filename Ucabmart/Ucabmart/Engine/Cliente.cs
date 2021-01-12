@@ -31,6 +31,11 @@ namespace Ucabmart.Engine
             }
         }
 
+        public Cliente()
+        {
+
+        }
+
         private Cliente(string rif, string password, int correo, int tienda)
         {
             RIF = rif;
@@ -107,7 +112,7 @@ namespace Ucabmart.Engine
 
                 if (Reader.Read())
                 {
-                    return new Cliente(ReadString(0), ReadString(3), ReadInt(1), ReadInt(2));
+                    return new Cliente(ReadString(0), ReadString(3), ReadInt(2), ReadInt(1));
                 }
 
                 Conexion.Close();
