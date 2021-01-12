@@ -157,13 +157,22 @@ namespace Ucabmart.Views {
         protected global::System.Web.UI.WebControls.Label Telefonos;
         
         /// <summary>
-        /// Control dplTelefono1.
+        /// Control CodigoPais1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList dplTelefono1;
+        protected global::System.Web.UI.WebControls.DropDownList CodigoPais1;
+        
+        /// <summary>
+        /// Control TipoTelf.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList TipoTelf;
         
         /// <summary>
         /// Control CodAre.
@@ -184,13 +193,22 @@ namespace Ucabmart.Views {
         protected global::System.Web.UI.WebControls.TextBox txtTelefono1;
         
         /// <summary>
-        /// Control dplTelefono2.
+        /// Control CodigoPais2.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList dplTelefono2;
+        protected global::System.Web.UI.WebControls.DropDownList CodigoPais2;
+        
+        /// <summary>
+        /// Control TipoTelf2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList TipoTelf2;
         
         /// <summary>
         /// Control CodAre2.
@@ -209,6 +227,15 @@ namespace Ucabmart.Views {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtTelefono2;
+        
+        /// <summary>
+        /// Control Label1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
         /// Control Label2.

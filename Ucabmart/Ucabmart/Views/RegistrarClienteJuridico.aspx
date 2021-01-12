@@ -118,69 +118,140 @@
                                 <div class="form-group row" style="margin-left: 5px;">
                                     <asp:Label ID="Telefonos" runat="server" Text="Telefonos"></asp:Label>
                                      <div class="input-group mb-3">
-                                        <asp:DropDownList ID="DropDownList1" runat="server" style="padding-bottom: 15px; margin-top: 10px; background-color: #0f136bd6;color: white;" class="input-group-prepend be-addon">
+                                        <asp:DropDownList ID="CodigoPais1" runat="server" style="padding-bottom: 15px; margin-top: 10px; margin-bottom: 50px; background-color: #0f136bd6;color: white; width: 180px;" class="input-group-prepend be-addon">
                                                 <asp:ListItem Value="">Codigo de País</asp:ListItem>
-                                                <asp:ListItem Value="+54">Argentina</asp:ListItem>
-                                                <asp:ListItem Value="+55">Brasil</asp:ListItem>
-                                                <asp:ListItem Value="+57">Colombia</asp:ListItem>
-                                                <asp:ListItem Value="+593">Ecuador</asp:ListItem>
-                                                <asp:ListItem Value="+66">Tailandia</asp:ListItem>
-                                                <asp:ListItem Value="+58">Venezuela</asp:ListItem>
+                                                <asp:ListItem Value="54">Argentina</asp:ListItem>
+                                                <asp:ListItem Value="55">Brasil</asp:ListItem>
+                                                <asp:ListItem Value="57">Colombia</asp:ListItem>
+                                                <asp:ListItem Value="593">Ecuador</asp:ListItem>
+                                                <asp:ListItem Value="66">Tailandia</asp:ListItem>
+                                                <asp:ListItem Value="58">Venezuela</asp:ListItem>
+                                        </asp:DropDownList>
+                                     </div>
+                                    <br />
+
+                                     <div class="input-group mb-3">
+                                        <asp:DropDownList ID="TipoTelf" runat="server" style="padding-bottom: 15px; margin-top: -105px; margin-bottom: 80px; margin-left: 200px; background-color: #0f136bd6;color: white; width: 180px;" class="input-group-prepend be-addon">
+                                                <asp:ListItem Value="">Tipo de Telefono</asp:ListItem>
+                                                <asp:ListItem Value="Movil">Movil</asp:ListItem>
+                                                <asp:ListItem Value="Fijo">Fijo</asp:ListItem>
                                         </asp:DropDownList>
                                      </div>
 
                                     <div class="col-sm-6 mb-3 mb-sm-0" style="margin-left: 180px; margin-top: -30px;">
-                                        <asp:TextBox ID="CodAre" runat="server" type="text" name="name" data-parsley-trigger="change"  
-                                            placeholder="Codigo Area" autocomplete="off" class="form-control" style="width: 130px; margin-left: -40px;">
+                                        <asp:TextBox ID="CodAre" runat="server" type="text" name="number" data-parsley-trigger="change"  
+                                            placeholder="Codigo Area" autocomplete="off" class="form-control" style="width: 140px; margin-top: -81px; margin-left: 210px;">
                                         </asp:TextBox>
                                     </div>
 
                                     <div class="col-sm-6 mb-3 mb-sm-0" style="margin-left: 180px; margin-top: -30px;">
                                         <asp:TextBox ID="txtTelefono1" runat="server" type="text" name="name" data-parsley-trigger="change"  
-                                            placeholder="Teléfono 1 " autocomplete="off" class="form-control" style="width: 240px; margin-left: 110px; margin-top: -8px;">
+                                            placeholder="Teléfono 1 " autocomplete="off" class="form-control" style="width: 540px; margin-left: -190px; margin-top: -20px;">
                                         </asp:TextBox>
                                     </div>
 
                                     <div class="input-group mb-3">
-                                        <asp:DropDownList ID="DropDownList2" runat="server" style="padding-bottom: 15px; margin-top: 10px; background-color: #0f136bd6;color: white;" class="input-group-prepend be-addon">
+                                        <asp:DropDownList ID="CodigoPais2" runat="server" style="padding-bottom: 15px; margin-top: 10px; margin-bottom: 50px; background-color: #0f136bd6;color: white; width: 180px;" class="input-group-prepend be-addon">
                                                 <asp:ListItem Value="">Codigo de País</asp:ListItem>
-                                                <asp:ListItem Value="+54">Argentina</asp:ListItem>
-                                                <asp:ListItem Value="+55">Brasil</asp:ListItem>
-                                                <asp:ListItem Value="+57">Colombia</asp:ListItem>
-                                                <asp:ListItem Value="+593">Ecuador</asp:ListItem>
-                                                <asp:ListItem Value="+66">Tailandia</asp:ListItem>
-                                                <asp:ListItem Value="+58">Venezuela</asp:ListItem>
+                                                <asp:ListItem Value="54">Argentina</asp:ListItem>
+                                                <asp:ListItem Value="55">Brasil</asp:ListItem>
+                                                <asp:ListItem Value="57">Colombia</asp:ListItem>
+                                                <asp:ListItem Value="593">Ecuador</asp:ListItem>
+                                                <asp:ListItem Value="66">Tailandia</asp:ListItem>
+                                                <asp:ListItem Value="58">Venezuela</asp:ListItem>
+                                        </asp:DropDownList>
+                                     </div>
+
+                                     <div class="input-group mb-3">
+                                        <asp:DropDownList ID="TipoTelf2" runat="server" style="padding-bottom: 15px; margin-top: -105px; margin-bottom: 80px; margin-left: 200px; background-color: #0f136bd6;color: white; width: 180px;" class="input-group-prepend be-addon">
+                                                <asp:ListItem Value="">Tipo de Telefono</asp:ListItem>
+                                                <asp:ListItem Value="Movil">Movil</asp:ListItem>
+                                                <asp:ListItem Value="Fijo">Fijo</asp:ListItem>
                                         </asp:DropDownList>
                                      </div>
 
                                     <div class="col-sm-6 mb-3 mb-sm-0" style="margin-left: 180px; margin-top: -30px;">
                                         <asp:TextBox ID="CodAre2" runat="server" type="text" name="name" data-parsley-trigger="change"  
-                                            placeholder="Codigo Area" autocomplete="off" class="form-control" style="width: 130px; margin-left: -40px;">
+                                            placeholder="Codigo Area" autocomplete="off" class="form-control" style="width: 140px; margin-top: -81px; margin-left: 210px;">
                                         </asp:TextBox>
                                     </div>
 
                                     <div class="col-sm-6" style="margin-top: -30px; margin-left: 180px;">
                                         <asp:TextBox ID="txtTelefono2" runat="server" type="text" name="name" data-parsley-trigger="change"  
-                                            placeholder="Teléfono 2" autocomplete="off" class="form-control" style="width: 240px; margin-left: 110px; margin-top: -8px;">
+                                            placeholder="Teléfono 2" autocomplete="off" class="form-control" style="width: 540px; margin-left: -190px; margin-top: -20px;">
                                         </asp:TextBox>
                                     </div>
                                 </div>
                                  <%--<Campo de texto de la dirección fiscal >--%>
+                                
+                                <hr>
+                                <asp:Label ID="Label1" runat="server" Text="Dirección Fiscal"  style="font-size:25px;"></asp:Label>
+                                <br />
+                                <br />
+                                <asp:Label ID="Label11" runat="server" Text="Estado"></asp:Label>
                                 <div class="form-group">
-                                    <asp:Label ID="Label1" for="txtDireccionFiscal" runat="server" Text="Dirección Físcal"></asp:Label>
-                                    <div class="input-group mb-3"><span class="input-group-prepend"><span class="input-group-text"><i class="fa fa-user"></i></span></span>
-                                        <asp:TextBox ID="txtDireccionFiscal" runat="server" type="text" name="name" data-parsley-trigger="change"  
-                                            placeholder="Ingrese su dirección fiscal" autocomplete="off" class="form-control" Height="87px" Width="361px"></asp:TextBox>
-                                    </div>
+                                        <div class="input-group mb-3"><span class="input-group-prepend"><span class="input-group-text"><i class="fas fa-user"></i></span></span>
+                                            <asp:DropDownList ID="dplEstado" runat="server" style="padding:10px 50px 10px 50px; text-align: left;" class="input-group-prepend be-addon"  AutoPostBack="True" OnSelectedIndexChanged="dplEstado_SelectedIndexChanged">
+                                                
+                                            </asp:DropDownList>
+                                        </div>
                                 </div>
-                                <%--<Campo de texto de la dirección fisica principal>--%>
+                                <asp:Label ID="Label12" runat="server" Text="Municipio"></asp:Label>
                                 <div class="form-group">
+                                        <div class="input-group mb-3"><span class="input-group-prepend"><span class="input-group-text"><i class="fas fa-user"></i></span></span>
+                                            <asp:DropDownList ID="dplMunicipio" runat="server" style="padding:10px 50px 10px 50px; text-align: left;" class="input-group-prepend be-addon" AutoPostBack="True" OnSelectedIndexChanged="dplMunicipio_SelectedIndexChanged">
+                                                
+                                            </asp:DropDownList>
+                                        </div>
+                                     </div>
+
+                                <asp:Label ID="Label13" runat="server" Text="Parroquia"></asp:Label>
+                                <div class="form-group">
+                                        <div class="input-group mb-3"><span class="input-group-prepend"><span class="input-group-text"><i class="fas fa-user"></i></span></span>
+                                            <asp:DropDownList ID="dplParroquia" runat="server" style="padding:10px 50px 10px 50px; text-align: left;" class="input-group-prepend be-addon">
+                                                
+                                            </asp:DropDownList>
+                                        </div>
+                                     </div>
+                                <%--<Campo de texto de la dirección fisica principal>--%>
+                                <hr>
+                                <asp:Label ID="Label2" runat="server" Text="Dirección Fisica Principal"  style="font-size:25px;"></asp:Label>
+                                <br />
+                                <br />
+                                <asp:Label ID="Label14" runat="server" Text="Estado"></asp:Label>
+                                <div class="form-group">
+                                        <div class="input-group mb-3"><span class="input-group-prepend"><span class="input-group-text"><i class="fas fa-user"></i></span></span>
+                                            <asp:DropDownList ID="dplEstado2" runat="server" style="padding:10px 50px 10px 50px; text-align: left;" class="input-group-prepend be-addon" AutoPostBack="True" OnSelectedIndexChanged="dplEstado2_SelectedIndexChanged">
+                                                
+                                            </asp:DropDownList>
+                                        </div>
+                                </div>
+                                <asp:Label ID="Label15" runat="server" Text="Municipio"></asp:Label>
+                                <div class="form-group">
+                                        <div class="input-group mb-3"><span class="input-group-prepend"><span class="input-group-text"><i class="fas fa-user"></i></span></span>
+                                            <asp:DropDownList ID="dplMunicipio2" runat="server" style="padding:10px 50px 10px 50px; text-align: left;" class="input-group-prepend be-addon" AutoPostBack="True" OnSelectedIndexChanged="dplMunicipio2_SelectedIndexChanged" >
+                                                
+                                            </asp:DropDownList>
+                                        </div>
+                                     </div>
+
+                                <asp:Label ID="Label16" runat="server" Text="Parroquia"></asp:Label>
+                                <div class="form-group">
+                                        <div class="input-group mb-3"><span class="input-group-prepend"><span class="input-group-text"><i class="fas fa-user"></i></span></span>
+                                            <asp:DropDownList ID="dplParroquia2" runat="server" style="padding:10px 50px 10px 50px; text-align: left;" class="input-group-prepend be-addon">
+                                                
+                                            </asp:DropDownList>
+                                        </div>
+                                     </div>
+
+                               <%-- <div class="form-group">
                                     <asp:Label ID="Label2" for="txtDireccionFisica" runat="server" Text="Dirección Física Principal"></asp:Label>
                                     <div class="input-group mb-3"><span class="input-group-prepend"><span class="input-group-text"><i class="fa fa-user"></i></span></span>
                                         <asp:TextBox ID="txtDireccionFisica" runat="server" type="text" name="name" data-parsley-trigger="change"  
                                             placeholder="Ingrese su dirección fisica principal" autocomplete="off" class="form-control" Height="87px" Width="361px"></asp:TextBox>
                                     </div>
-                                </div>
+                                </div>--%>
+
                                   <%--<Campo de texto de la pagina web >--%>
                                 <div class="form-group">
                                     <asp:Label ID="PaginaWeb" runat="server" Text="Pagina Web"></asp:Label>
@@ -241,53 +312,70 @@
                                 <br/>
                                 <%--<Campo de texto de los telefonos de las personas de contacto1>--%>
 
-                                  <div class="form-group row" style="margin-left: 5px;">
+                                <div class="form-group row" style="margin-left: 5px;">
                                     <asp:Label ID="Label5" runat="server" Text="Telefonos"></asp:Label>
                                      <div class="input-group mb-3">
-                                        <asp:DropDownList ID="DropDownList5" runat="server" style="padding-bottom: 15px; margin-top: 10px; background-color: #0f136bd6;color: white;" class="input-group-prepend be-addon">
+                                        <asp:DropDownList ID="DropDownList1" runat="server" style="padding-bottom: 15px; margin-top: 10px; margin-bottom: 50px; background-color: #0f136bd6;color: white; width: 180px;" class="input-group-prepend be-addon">
                                                 <asp:ListItem Value="">Codigo de País</asp:ListItem>
-                                                <asp:ListItem Value="+54">Argentina</asp:ListItem>
-                                                <asp:ListItem Value="+55">Brasil</asp:ListItem>
-                                                <asp:ListItem Value="+57">Colombia</asp:ListItem>
-                                                <asp:ListItem Value="+593">Ecuador</asp:ListItem>
-                                                <asp:ListItem Value="+66">Tailandia</asp:ListItem>
-                                                <asp:ListItem Value="+58">Venezuela</asp:ListItem>
+                                                <asp:ListItem Value="54">Argentina</asp:ListItem>
+                                                <asp:ListItem Value="55">Brasil</asp:ListItem>
+                                                <asp:ListItem Value="57">Colombia</asp:ListItem>
+                                                <asp:ListItem Value="593">Ecuador</asp:ListItem>
+                                                <asp:ListItem Value="66">Tailandia</asp:ListItem>
+                                                <asp:ListItem Value="58">Venezuela</asp:ListItem>
+                                        </asp:DropDownList>
+                                     </div>
+                                    <br />
+
+                                     <div class="input-group mb-3">
+                                        <asp:DropDownList ID="DropDownList2" runat="server" style="padding-bottom: 15px; margin-top: -105px; margin-bottom: 80px; margin-left: 200px; background-color: #0f136bd6;color: white; width: 180px;" class="input-group-prepend be-addon">
+                                                <asp:ListItem Value="">Tipo de Telefono</asp:ListItem>
+                                                <asp:ListItem Value="Movil">Movil</asp:ListItem>
+                                                <asp:ListItem Value="Fijo">Fijo</asp:ListItem>
                                         </asp:DropDownList>
                                      </div>
 
                                     <div class="col-sm-6 mb-3 mb-sm-0" style="margin-left: 180px; margin-top: -30px;">
-                                        <asp:TextBox ID="TextBox1" runat="server" type="text" name="name" data-parsley-trigger="change"  
-                                            placeholder="Codigo Area" autocomplete="off" class="form-control" style="width: 130px; margin-left: -40px;">
+                                        <asp:TextBox ID="TextBox1" runat="server" type="text" name="number" data-parsley-trigger="change"  
+                                            placeholder="Codigo Area" autocomplete="off" class="form-control" style="width: 140px; margin-top: -81px; margin-left: 210px;">
                                         </asp:TextBox>
                                     </div>
 
                                     <div class="col-sm-6 mb-3 mb-sm-0" style="margin-left: 180px; margin-top: -30px;">
                                         <asp:TextBox ID="TextBox2" runat="server" type="text" name="name" data-parsley-trigger="change"  
-                                            placeholder="Teléfono 1 " autocomplete="off" class="form-control" style="width: 240px; margin-left: 110px; margin-top: -8px;">
+                                            placeholder="Teléfono 1 " autocomplete="off" class="form-control" style="width: 540px; margin-left: -190px; margin-top: -20px;">
                                         </asp:TextBox>
                                     </div>
 
                                     <div class="input-group mb-3">
-                                        <asp:DropDownList ID="DropDownList6" runat="server" style="padding-bottom: 15px; margin-top: 10px; background-color: #0f136bd6;color: white;" class="input-group-prepend be-addon">
+                                        <asp:DropDownList ID="DropDownList5" runat="server" style="padding-bottom: 15px; margin-top: 10px; margin-bottom: 50px; background-color: #0f136bd6;color: white; width: 180px;" class="input-group-prepend be-addon">
                                                 <asp:ListItem Value="">Codigo de País</asp:ListItem>
-                                                <asp:ListItem Value="+54">Argentina</asp:ListItem>
-                                                <asp:ListItem Value="+55">Brasil</asp:ListItem>
-                                                <asp:ListItem Value="+57">Colombia</asp:ListItem>
-                                                <asp:ListItem Value="+593">Ecuador</asp:ListItem>
-                                                <asp:ListItem Value="+66">Tailandia</asp:ListItem>
-                                                <asp:ListItem Value="+58">Venezuela</asp:ListItem>
+                                                <asp:ListItem Value="54">Argentina</asp:ListItem>
+                                                <asp:ListItem Value="55">Brasil</asp:ListItem>
+                                                <asp:ListItem Value="57">Colombia</asp:ListItem>
+                                                <asp:ListItem Value="593">Ecuador</asp:ListItem>
+                                                <asp:ListItem Value="66">Tailandia</asp:ListItem>
+                                                <asp:ListItem Value="58">Venezuela</asp:ListItem>
+                                        </asp:DropDownList>
+                                     </div>
+
+                                     <div class="input-group mb-3">
+                                        <asp:DropDownList ID="DropDownList6" runat="server" style="padding-bottom: 15px; margin-top: -105px; margin-bottom: 80px; margin-left: 200px; background-color: #0f136bd6;color: white; width: 180px;" class="input-group-prepend be-addon">
+                                                <asp:ListItem Value="">Tipo de Telefono</asp:ListItem>
+                                                <asp:ListItem Value="Movil">Movil</asp:ListItem>
+                                                <asp:ListItem Value="Fijo">Fijo</asp:ListItem>
                                         </asp:DropDownList>
                                      </div>
 
                                     <div class="col-sm-6 mb-3 mb-sm-0" style="margin-left: 180px; margin-top: -30px;">
                                         <asp:TextBox ID="TextBox9" runat="server" type="text" name="name" data-parsley-trigger="change"  
-                                            placeholder="Codigo Area" autocomplete="off" class="form-control" style="width: 130px; margin-left: -40px;">
+                                            placeholder="Codigo Area" autocomplete="off" class="form-control" style="width: 140px; margin-top: -81px; margin-left: 210px;">
                                         </asp:TextBox>
                                     </div>
 
                                     <div class="col-sm-6" style="margin-top: -30px; margin-left: 180px;">
                                         <asp:TextBox ID="TextBox10" runat="server" type="text" name="name" data-parsley-trigger="change"  
-                                            placeholder="Teléfono 2" autocomplete="off" class="form-control" style="width: 240px; margin-left: 110px; margin-top: -8px;">
+                                            placeholder="Teléfono 2" autocomplete="off" class="form-control" style="width: 540px; margin-left: -190px; margin-top: -20px;">
                                         </asp:TextBox>
                                     </div>
                                 </div>
@@ -330,54 +418,71 @@
                                 </div>
                                 <br/>
                                 <%--<Campo de texto de los telefonos de las personas de contacto2>--%>
-
-                                 <div class="form-group row" style="margin-left: 5px;">
+<%--<Campo de texto de los telefonos >--%>
+                                <div class="form-group row" style="margin-left: 5px;">
                                     <asp:Label ID="Label9" runat="server" Text="Telefonos"></asp:Label>
                                      <div class="input-group mb-3">
-                                        <asp:DropDownList ID="DropDownList3" runat="server" style="padding-bottom: 15px; margin-top: 10px; background-color: #0f136bd6;color: white;" class="input-group-prepend be-addon">
+                                        <asp:DropDownList ID="DropDownList3" runat="server" style="padding-bottom: 15px; margin-top: 10px; margin-bottom: 50px; background-color: #0f136bd6;color: white; width: 180px;" class="input-group-prepend be-addon">
                                                 <asp:ListItem Value="">Codigo de País</asp:ListItem>
-                                                <asp:ListItem Value="+54">Argentina</asp:ListItem>
-                                                <asp:ListItem Value="+55">Brasil</asp:ListItem>
-                                                <asp:ListItem Value="+57">Colombia</asp:ListItem>
-                                                <asp:ListItem Value="+593">Ecuador</asp:ListItem>
-                                                <asp:ListItem Value="+66">Tailandia</asp:ListItem>
-                                                <asp:ListItem Value="+58">Venezuela</asp:ListItem>
+                                                <asp:ListItem Value="54">Argentina</asp:ListItem>
+                                                <asp:ListItem Value="55">Brasil</asp:ListItem>
+                                                <asp:ListItem Value="57">Colombia</asp:ListItem>
+                                                <asp:ListItem Value="593">Ecuador</asp:ListItem>
+                                                <asp:ListItem Value="66">Tailandia</asp:ListItem>
+                                                <asp:ListItem Value="58">Venezuela</asp:ListItem>
+                                        </asp:DropDownList>
+                                     </div>
+                                    <br />
+
+                                     <div class="input-group mb-3">
+                                        <asp:DropDownList ID="DropDownList4" runat="server" style="padding-bottom: 15px; margin-top: -105px; margin-bottom: 80px; margin-left: 200px; background-color: #0f136bd6;color: white; width: 180px;" class="input-group-prepend be-addon">
+                                                <asp:ListItem Value="">Tipo de Telefono</asp:ListItem>
+                                                <asp:ListItem Value="Movil">Movil</asp:ListItem>
+                                                <asp:ListItem Value="Fijo">Fijo</asp:ListItem>
                                         </asp:DropDownList>
                                      </div>
 
                                     <div class="col-sm-6 mb-3 mb-sm-0" style="margin-left: 180px; margin-top: -30px;">
-                                        <asp:TextBox ID="TextBox7" runat="server" type="text" name="name" data-parsley-trigger="change"  
-                                            placeholder="Codigo Area" autocomplete="off" class="form-control" style="width: 130px; margin-left: -40px;">
+                                        <asp:TextBox ID="TextBox7" runat="server" type="text" name="number" data-parsley-trigger="change"  
+                                            placeholder="Codigo Area" autocomplete="off" class="form-control" style="width: 140px; margin-top: -81px; margin-left: 210px;">
                                         </asp:TextBox>
                                     </div>
 
                                     <div class="col-sm-6 mb-3 mb-sm-0" style="margin-left: 180px; margin-top: -30px;">
                                         <asp:TextBox ID="TextBox8" runat="server" type="text" name="name" data-parsley-trigger="change"  
-                                            placeholder="Teléfono 1 " autocomplete="off" class="form-control" style="width: 240px; margin-left: 110px; margin-top: -8px;">
+                                            placeholder="Teléfono 1 " autocomplete="off" class="form-control" style="width: 540px; margin-left: -190px; margin-top: -20px;">
                                         </asp:TextBox>
                                     </div>
 
                                     <div class="input-group mb-3">
-                                        <asp:DropDownList ID="DropDownList4" runat="server" style="padding-bottom: 15px; margin-top: 10px; background-color: #0f136bd6;color: white;" class="input-group-prepend be-addon">
+                                        <asp:DropDownList ID="DropDownList7" runat="server" style="padding-bottom: 15px; margin-top: 10px; margin-bottom: 50px; background-color: #0f136bd6;color: white; width: 180px;" class="input-group-prepend be-addon">
                                                 <asp:ListItem Value="">Codigo de País</asp:ListItem>
-                                                <asp:ListItem Value="+54">Argentina</asp:ListItem>
-                                                <asp:ListItem Value="+55">Brasil</asp:ListItem>
-                                                <asp:ListItem Value="+57">Colombia</asp:ListItem>
-                                                <asp:ListItem Value="+593">Ecuador</asp:ListItem>
-                                                <asp:ListItem Value="+66">Tailandia</asp:ListItem>
-                                                <asp:ListItem Value="+58">Venezuela</asp:ListItem>
+                                                <asp:ListItem Value="54">Argentina</asp:ListItem>
+                                                <asp:ListItem Value="55">Brasil</asp:ListItem>
+                                                <asp:ListItem Value="57">Colombia</asp:ListItem>
+                                                <asp:ListItem Value="593">Ecuador</asp:ListItem>
+                                                <asp:ListItem Value="66">Tailandia</asp:ListItem>
+                                                <asp:ListItem Value="58">Venezuela</asp:ListItem>
+                                        </asp:DropDownList>
+                                     </div>
+
+                                     <div class="input-group mb-3">
+                                        <asp:DropDownList ID="DropDownList8" runat="server" style="padding-bottom: 15px; margin-top: -105px; margin-bottom: 80px; margin-left: 200px; background-color: #0f136bd6;color: white; width: 180px;" class="input-group-prepend be-addon">
+                                                <asp:ListItem Value="">Tipo de Telefono</asp:ListItem>
+                                                <asp:ListItem Value="Movil">Movil</asp:ListItem>
+                                                <asp:ListItem Value="Fijo">Fijo</asp:ListItem>
                                         </asp:DropDownList>
                                      </div>
 
                                     <div class="col-sm-6 mb-3 mb-sm-0" style="margin-left: 180px; margin-top: -30px;">
                                         <asp:TextBox ID="TextBox11" runat="server" type="text" name="name" data-parsley-trigger="change"  
-                                            placeholder="Codigo Area" autocomplete="off" class="form-control" style="width: 130px; margin-left: -40px;">
+                                            placeholder="Codigo Area" autocomplete="off" class="form-control" style="width: 140px; margin-top: -81px; margin-left: 210px;">
                                         </asp:TextBox>
                                     </div>
 
                                     <div class="col-sm-6" style="margin-top: -30px; margin-left: 180px;">
                                         <asp:TextBox ID="TextBox12" runat="server" type="text" name="name" data-parsley-trigger="change"  
-                                            placeholder="Teléfono 2" autocomplete="off" class="form-control" style="width: 240px; margin-left: 110px; margin-top: -8px;">
+                                            placeholder="Teléfono 2" autocomplete="off" class="form-control" style="width: 540px; margin-left: -190px; margin-top: -20px;">
                                         </asp:TextBox>
                                     </div>
                                 </div>
