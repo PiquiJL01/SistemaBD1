@@ -10,8 +10,6 @@ namespace Ucabmart.Views
 {
     public partial class Check_Products : System.Web.UI.Page
     {
-        public string Check;
-
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -19,7 +17,7 @@ namespace Ucabmart.Views
 
         protected void Add_Items(object sender, EventArgs e)
         {
-            Producto p1 = new Producto(0);
+            Producto p1 = new Producto();
 
             List<Producto> lista = new List<Producto>();
             lista = p1.Todos();
@@ -56,7 +54,31 @@ namespace Ucabmart.Views
 
         protected void btn_Click(object sender, EventArgs e)
         {
+            String ProveedorRif = Session["ProveedorRif"].ToString();
+            List<String> elements = new List<string>();
+
+            foreach (ListItem item in Options.Items)
+            {
+                if (item.Selected)
+                {
+                    elements.Add(item.Value);
+                }
+            }
+
+            Producto prod1 = new Producto();
+            List<int> CodigosProduct = prod1.ProductosCod(elements);
+
+
+
+
+
+
+
+
+
         }
 
-     }
+
+    }
+
 }

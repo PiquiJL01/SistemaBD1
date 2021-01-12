@@ -62,8 +62,13 @@ namespace Ucabmart.Engine
             }
         }
 
+        public Producto()
+        {
+        }
+
+
         private Producto(int codigo, string nombre, bool esAlimenticio, float precio, 
-            string calidad, string descripcion, int marca, int clasificacion)
+        string calidad, string descripcion, int marca, int clasificacion)
         {
             Codigo = codigo;
             Nombre = nombre;
@@ -75,6 +80,26 @@ namespace Ucabmart.Engine
             CodigoClasificacion = clasificacion;
         }
         #endregion
+
+        public List<int> ProductosCod(List<String> items)
+        {
+            Producto p1 = new Producto();
+        
+            List<Producto> productos = new List<Producto>();
+            productos = p1.Todos();
+            List<int> lista = new List<int>();
+
+            foreach (Producto producto in productos)
+            {
+                if (items.Contains(producto.Nombre))
+                {
+                    lista.Add(producto.Codigo);
+                }
+            }
+
+            return lista;
+
+        }
 
         #region CRUDs
         public override void Insertar()
