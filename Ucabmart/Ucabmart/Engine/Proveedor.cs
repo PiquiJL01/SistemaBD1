@@ -15,11 +15,12 @@ namespace Ucabmart.Engine
         public string PaginaWeb { get; set; }
         public int DireccionFisica { get; set; }
         public int DireccionFiscal { get; set; }
+        public int CodigoCorreoElectronico { get; set; }
         #endregion
 
         #region Declaraciones
         public Proveedor(string rif, string razonSocial, string denominacionComercial, string paginaWeb,
-            Lugar direccionFisica, Lugar direccionFiscal)
+            Lugar direccionFisica, Lugar direccionFiscal, CorreoElectronico correoElectronico)
         {
             RIF = rif;
             RazonSocial = razonSocial;
@@ -27,10 +28,11 @@ namespace Ucabmart.Engine
             PaginaWeb = paginaWeb;
             DireccionFisica = direccionFisica.Codigo;
             DireccionFiscal = direccionFiscal.Codigo;
+            CodigoCorreoElectronico = correoElectronico.Codigo;
         }
 
         public Proveedor(string rif, string razonSocial, string denominacionComercial, string paginaWeb,
-            int direccionFisica, int direccionFiscal)
+            int direccionFisica, int direccionFiscal, int correo)
         {
             RIF = rif;
             RazonSocial = razonSocial;
@@ -38,6 +40,7 @@ namespace Ucabmart.Engine
             PaginaWeb = paginaWeb;
             DireccionFisica = direccionFisica;
             DireccionFiscal = direccionFiscal;
+            CodigoCorreoElectronico = correo;
         }
 
         public Proveedor(string rif)
@@ -51,6 +54,7 @@ namespace Ucabmart.Engine
                 RazonSocial = proveedor.RazonSocial;
                 DireccionFisica = proveedor.DireccionFisica;
                 DireccionFiscal = proveedor.DireccionFiscal;
+                CodigoCorreoElectronico = proveedor.CodigoCorreoElectronico;
             }
         }
         #endregion
@@ -62,8 +66,8 @@ namespace Ucabmart.Engine
             {
                 Conexion.Open();
 
-                string Comando = "INSERT INTO proveedor (pr_rif, pr_razon_social, pr_denominacion_social, pr_pag_web, Lugar_lu_codigo, lugar_lu_codigo1) " +
-                    "VALUES (@rif, @razon, @denominacion, @web, @fisica, @fiscal)";
+                string Comando = "INSERT INTO proveedor (pr_rif, pr_razon_social, pr_denominacion_social, pr_pag_web, Lugar_lu_codigo, lugar_lu_codigo1, correo_electronico_ce_codigo) " +
+                    "VALUES (@rif, @razon, @denominacion, @web, @fisica, @fiscal, @correo)";
                 
                 Script = new NpgsqlCommand(Comando, Conexion);
 
@@ -73,6 +77,7 @@ namespace Ucabmart.Engine
                 Script.Parameters.AddWithValue("web", PaginaWeb);
                 Script.Parameters.AddWithValue("fisica", DireccionFisica);
                 Script.Parameters.AddWithValue("fiscal", DireccionFiscal);
+                Script.Parameters.AddWithValue("correo", CodigoCorreoElectronico);
 
                 Script.Prepare();
 
@@ -99,7 +104,7 @@ namespace Ucabmart.Engine
 
                 if (Reader.Read())
                 {
-                    return new Proveedor(ReadString(0), ReadString(1), ReadString(2), ReadString(3), ReadInt(4), ReadInt(5));
+                    return new Proveedor(ReadString(0), ReadString(1), ReadString(2), ReadString(3), ReadInt(4), ReadInt(5),ReadInt(6));
                 }
 
                 Conexion.Close();
@@ -134,7 +139,7 @@ namespace Ucabmart.Engine
 
                 while (Reader.Read())
                 {
-                    Proveedor proveedor = new Proveedor(ReadString(0), ReadString(1), ReadString(2), ReadString(3), ReadInt(4), ReadInt(5));
+                    Proveedor proveedor = new Proveedor(ReadString(0), ReadString(1), ReadString(2), ReadString(3), ReadInt(4), ReadInt(5), ReadInt(6));
 
                     lista.Add(proveedor);
                 }
@@ -161,7 +166,8 @@ namespace Ucabmart.Engine
             {
                 Conexion.Open();
 
-                string Comando = "UPDATE proveedor SET pr_razon_social = @razon, pr_denominacion_social = @denominacion, pr_pag_web = @web, Lugar_lu_codigo = @fisica, lugar_lu_codigo1 = @fiscal " +
+                string Comando = "UPDATE proveedor SET pr_razon_social = @razon, pr_denominacion_social = @denominacion, " +
+                    "pr_pag_web = @web, Lugar_lu_codigo = @fisica, lugar_lu_codigo1 = @fiscal, correo_electronico_ce_codigo = @correo " +
                     "WHERE pr_rif = @rif ";
                 Script = new NpgsqlCommand(Comando, Conexion);
 
@@ -171,6 +177,7 @@ namespace Ucabmart.Engine
                 Script.Parameters.AddWithValue("web", PaginaWeb);
                 Script.Parameters.AddWithValue("fisica", DireccionFisica);
                 Script.Parameters.AddWithValue("fiscal", DireccionFiscal);
+                Script.Parameters.AddWithValue("correo", CodigoCorreoElectronico);
 
                 Script.Prepare();
 
