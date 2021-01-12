@@ -15,7 +15,6 @@ namespace Ucabmart.Views
     public partial class RegistrarClienteNatural : System.Web.UI.Page
     {
         Lugar nombreLugar = new Lugar(0);
-        
         int  codigoEstado = -1, codigoMunicipio = -1;
 
         public void cargarPagina(Boolean flag) {
@@ -36,8 +35,6 @@ namespace Ucabmart.Views
                         codigoEstado = item.Codigo;
                       //almacena el codigo del estado
                 }
-
-               // contador = 0;
 
                 foreach (Lugar item in listaLugar)
                 {
@@ -94,7 +91,6 @@ namespace Ucabmart.Views
 
         protected void Page_Load(object sender, EventArgs e)
         {
-           
             cargarPagina(true);
 
         }
