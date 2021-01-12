@@ -182,21 +182,65 @@
                                     </div>
                                 </div>
                                  <%--<Campo de texto de la dirección fiscal >--%>
-                                <div class="form-group">
-                                    <asp:Label ID="Label1" for="txtDireccionFiscal" runat="server" Text="Dirección Físcal"></asp:Label>
-                                    <div class="input-group mb-3"><span class="input-group-prepend"><span class="input-group-text"><i class="fa fa-user"></i></span></span>
-                                        <asp:TextBox ID="txtDireccionFiscal" runat="server" type="text" name="name" data-parsley-trigger="change"  
-                                            placeholder="Ingrese su dirección fiscal" autocomplete="off" class="form-control" Height="87px" Width="361px"></asp:TextBox>
-                                    </div>
+                                <div class="PC">
+                                <asp:Label ID="Label1" runat="server" Text="Dirección Fiscal"></asp:Label>
                                 </div>
+                                <br />
+                                <asp:Label ID="Label11" runat="server" Text="Estado"></asp:Label>
+                                <div class="form-group">
+                                        <div class="input-group mb-3"><span class="input-group-prepend"><span class="input-group-text"><i class="fas fa-user"></i></span></span>
+                                            <asp:DropDownList ID="dplEstado" runat="server" style="padding:10px 50px 10px 50px; text-align: left;" class="input-group-prepend be-addon"  AutoPostBack="True" OnSelectedIndexChanged="dplEstado_SelectedIndexChanged">
+                                                
+                                            </asp:DropDownList>
+                                        </div>
+                                </div>
+                                <asp:Label ID="Label12" runat="server" Text="Municipio"></asp:Label>
+                                <div class="form-group">
+                                        <div class="input-group mb-3"><span class="input-group-prepend"><span class="input-group-text"><i class="fas fa-user"></i></span></span>
+                                            <asp:DropDownList ID="dplMunicipio" runat="server" style="padding:10px 50px 10px 50px; text-align: left;" class="input-group-prepend be-addon" AutoPostBack="True" OnSelectedIndexChanged="dplMunicipio_SelectedIndexChanged">
+                                                
+                                            </asp:DropDownList>
+                                        </div>
+                                 </div>
+                                <asp:Label ID="Label13" runat="server" Text="Parroquia"></asp:Label>
+                                <div class="form-group">
+                                        <div class="input-group mb-3"><span class="input-group-prepend"><span class="input-group-text"><i class="fas fa-user"></i></span></span>
+                                            <asp:DropDownList ID="dplParroquia" runat="server" style="padding:10px 50px 10px 50px; text-align: left;" class="input-group-prepend be-addon">
+                                                
+                                            </asp:DropDownList>
+                                        </div>
+                                </div>
+
                                 <%--<Campo de texto de la dirección fisica principal>--%>
-                                <div class="form-group">
-                                    <asp:Label ID="Label2" for="txtDireccionFisica" runat="server" Text="Dirección Física Principal"></asp:Label>
-                                    <div class="input-group mb-3"><span class="input-group-prepend"><span class="input-group-text"><i class="fa fa-user"></i></span></span>
-                                        <asp:TextBox ID="txtDireccionFisica" runat="server" type="text" name="name" data-parsley-trigger="change"  
-                                            placeholder="Ingrese su dirección fisica principal" autocomplete="off" class="form-control" Height="87px" Width="361px"></asp:TextBox>
-                                    </div>
+                                <div class="PC">
+                                <asp:Label ID="Label2" runat="server" Text="Dirección Fisica Principal"></asp:Label>
                                 </div>
+                                <br />
+                                <asp:Label ID="Label14" runat="server" Text="Estado"></asp:Label>
+                                <div class="form-group">
+                                        <div class="input-group mb-3"><span class="input-group-prepend"><span class="input-group-text"><i class="fas fa-user"></i></span></span>
+                                            <asp:DropDownList ID="dplEstado2" runat="server" style="padding:10px 50px 10px 50px; text-align: left;" class="input-group-prepend be-addon" AutoPostBack="True" OnSelectedIndexChanged="dplEstado2_SelectedIndexChanged">
+                                                
+                                            </asp:DropDownList>
+                                        </div>
+                                </div>
+                                <asp:Label ID="Label15" runat="server" Text="Municipio"></asp:Label>
+                                <div class="form-group">
+                                        <div class="input-group mb-3"><span class="input-group-prepend"><span class="input-group-text"><i class="fas fa-user"></i></span></span>
+                                            <asp:DropDownList ID="dplMunicipio2" runat="server" style="padding:10px 50px 10px 50px; text-align: left;" class="input-group-prepend be-addon" AutoPostBack="True" OnSelectedIndexChanged="dplMunicipio2_SelectedIndexChanged" >
+                                                
+                                            </asp:DropDownList>
+                                        </div>
+                                     </div>
+
+                                <asp:Label ID="Label16" runat="server" Text="Parroquia"></asp:Label>
+                                <div class="form-group">
+                                        <div class="input-group mb-3"><span class="input-group-prepend"><span class="input-group-text"><i class="fas fa-user"></i></span></span>
+                                            <asp:DropDownList ID="dplParroquia2" runat="server" style="padding:10px 50px 10px 50px; text-align: left;" class="input-group-prepend be-addon">
+                                                
+                                            </asp:DropDownList>
+                                        </div>
+                                     </div>
                                   <%--<Campo de texto de la pagina web >--%>
                                 <div class="form-group">
                                     <asp:Label ID="PaginaWeb" runat="server" Text="Pagina Web"></asp:Label>
@@ -474,7 +518,7 @@
                                 <hr />
 
                                 <%--<Campo de seleccion para medios de pagos>--%>
-                                <asp:Label ID="lblPagos" runat="server" Text="Medios de Pago"></asp:Label>
+<%--                                <asp:Label ID="lblPagos" runat="server" Text="Medios de Pago"></asp:Label>
                                 <div class="form-group">
                                         <div class="input-group mb-3"><span class="input-group-prepend"><span class="input-group-text"><i class="fas fa-user-times"></i></span></span>
                                             <asp:DropDownList ID="dplPago" runat="server" style="padding:10px 50px 10px 50px; text-align: left;" class="input-group-prepend be-addon">
@@ -482,7 +526,7 @@
                                                 <asp:ListItem>Tarjeta de Crédito</asp:ListItem>
                                             </asp:DropDownList>
                                         </div>
-                                </div>
+                                </div>--%>
                                  <%--<Campo de texto para la contraseña>--%>
 <%--                                <asp:Label ID="lblContraseña" runat="server" Text="Contraseña"></asp:Label>
                                 <div class="form-group row">
