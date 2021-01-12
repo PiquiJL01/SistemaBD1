@@ -18,7 +18,7 @@ namespace Ucabmart.Engine
         #endregion
 
         #region Declaraciones
-        public Telefono(int codigoPais, int codigoArea, int numero, TipoTelefono tipo, 
+        public Telefono(int codigoPais, int codigoArea, int numero, String tipo, 
             Cliente cliente)
         {
             Numero = new Dictionary<NumeroTelefono, int>
@@ -27,25 +27,15 @@ namespace Ucabmart.Engine
                 { NumeroTelefono.Area, codigoArea },
                 { NumeroTelefono.Numero, numero }
             };
-            switch (tipo)
-            {
-                case TipoTelefono.Fijo:
-                    Tipo = "Fijo";
-                    break;
-                case TipoTelefono.Movil:
-                    Tipo = "Movil";
-                    break;
-                default:
-                    Tipo = null;
-                    break;
-            }
+
+            Tipo = tipo;
             RifCliente = cliente.RIF;
             CodigoPersonaContacto = 0;
             RifProveedor = null;
             CodigoEmpleado = 0;
         }
 
-        public Telefono(int codigoPais, int codigoArea, int numero, TipoTelefono tipo,
+        public Telefono(int codigoPais, int codigoArea, int numero, String tipo,
             PersonaContacto personaContacto)
         {
             Numero = new Dictionary<NumeroTelefono, int>
@@ -54,25 +44,15 @@ namespace Ucabmart.Engine
                 { NumeroTelefono.Area, codigoArea },
                 { NumeroTelefono.Numero, numero }
             };
-            switch (tipo)
-            {
-                case TipoTelefono.Fijo:
-                    Tipo = "Fijo";
-                    break;
-                case TipoTelefono.Movil:
-                    Tipo = "Movil";
-                    break;
-                default:
-                    Tipo = null;
-                    break;
-            }
+            
+            Tipo = tipo;
             RifCliente = null;
             CodigoPersonaContacto = personaContacto.Codigo;
             RifProveedor = null;
             CodigoEmpleado = 0;
         }
 
-        public Telefono(int codigoPais, int codigoArea, int numero, TipoTelefono tipo,
+        public Telefono(int codigoPais, int codigoArea, int numero, String tipo,
             Proveedor proveedor)
         {
             Numero = new Dictionary<NumeroTelefono, int>
@@ -81,25 +61,15 @@ namespace Ucabmart.Engine
                 { NumeroTelefono.Area, codigoArea },
                 { NumeroTelefono.Numero, numero }
             };
-            switch (tipo)
-            {
-                case TipoTelefono.Fijo:
-                    Tipo = "Fijo";
-                    break;
-                case TipoTelefono.Movil:
-                    Tipo = "Movil";
-                    break;
-                default:
-                    Tipo = null;
-                    break;
-            }
+
+            Tipo = tipo;
             RifCliente = null;
             CodigoPersonaContacto = 0;
             RifProveedor = proveedor.RIF;
             CodigoEmpleado = 0;
         }
 
-        public Telefono(int codigoPais, int codigoArea, int numero, TipoTelefono tipo,
+        public Telefono(int codigoPais, int codigoArea, int numero, String tipo,
             Empleado empleado)
         {
             Numero = new Dictionary<NumeroTelefono, int>
@@ -108,18 +78,8 @@ namespace Ucabmart.Engine
                 { NumeroTelefono.Area, codigoArea },
                 { NumeroTelefono.Numero, numero }
             };
-            switch (tipo)
-            {
-                case TipoTelefono.Fijo:
-                    Tipo = "Fijo";
-                    break;
-                case TipoTelefono.Movil:
-                    Tipo = "Movil";
-                    break;
-                default:
-                    Tipo = null;
-                    break;
-            }
+
+            Tipo = tipo;
             RifCliente = null;
             CodigoPersonaContacto = 0;
             RifProveedor = null;

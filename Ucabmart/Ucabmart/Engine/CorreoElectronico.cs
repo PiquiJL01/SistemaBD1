@@ -12,6 +12,7 @@ namespace Ucabmart.Engine
         public int Codigo { get; set; }
         public string Direccion { get; set; }
         #endregion
+        public string RifProveedor { get; set; }
 
         #region Declaraciones
         private CorreoElectronico(int codigo, string direccion)
@@ -35,6 +36,12 @@ namespace Ucabmart.Engine
             Direccion = direccion;
         }
         #endregion
+
+        public CorreoElectronico(string direccion, Proveedor proveedor)
+        {
+            Direccion = direccion;
+            RifProveedor = proveedor.RIF;
+        }
 
         #region CRUDs
         public override void Insertar()

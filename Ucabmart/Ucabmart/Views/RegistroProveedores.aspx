@@ -112,12 +112,12 @@
                                           placeholder="Ingrese su correo electrónico" autocomplete="off" class="form-control"  style="text-align: center">
                                      </asp:TextBox>
                                 </div>
-                                <br >
+
                                  <%--<Campo de texto de los telefonos >--%>
                                 <div class="form-group row" style="margin-left: 5px;">
                                     <asp:Label ID="Telefonos" runat="server" Text="Telefonos"></asp:Label>
                                      <div class="input-group mb-3">
-                                        <asp:DropDownList ID="CodigoPais1" runat="server" style="padding-bottom: 15px; margin-top: 10px; background-color: #0f136bd6;color: white;" class="input-group-prepend be-addon">
+                                        <asp:DropDownList ID="CodigoPais1" runat="server" style="padding-bottom: 15px; margin-top: 10px; margin-bottom: 50px; background-color: #0f136bd6;color: white; width: 180px;" class="input-group-prepend be-addon">
                                                 <asp:ListItem Value="">Codigo de País</asp:ListItem>
                                                 <asp:ListItem Value="54">Argentina</asp:ListItem>
                                                 <asp:ListItem Value="55">Brasil</asp:ListItem>
@@ -125,23 +125,32 @@
                                                 <asp:ListItem Value="593">Ecuador</asp:ListItem>
                                                 <asp:ListItem Value="66">Tailandia</asp:ListItem>
                                                 <asp:ListItem Value="58">Venezuela</asp:ListItem>
+                                        </asp:DropDownList>
+                                     </div>
+                                    <br />
+
+                                     <div class="input-group mb-3">
+                                        <asp:DropDownList ID="TipoTelf" runat="server" style="padding-bottom: 15px; margin-top: -105px; margin-bottom: 80px; margin-left: 200px; background-color: #0f136bd6;color: white; width: 180px;" class="input-group-prepend be-addon">
+                                                <asp:ListItem Value="">Tipo de Telefono</asp:ListItem>
+                                                <asp:ListItem Value="Movil">Movil</asp:ListItem>
+                                                <asp:ListItem Value="Fijo">Fijo</asp:ListItem>
                                         </asp:DropDownList>
                                      </div>
 
                                     <div class="col-sm-6 mb-3 mb-sm-0" style="margin-left: 180px; margin-top: -30px;">
                                         <asp:TextBox ID="CodAre" runat="server" type="text" name="number" data-parsley-trigger="change"  
-                                            placeholder="Codigo Area" autocomplete="off" class="form-control" style="width: 130px; margin-left: -40px;">
+                                            placeholder="Codigo Area" autocomplete="off" class="form-control" style="width: 140px; margin-top: -81px; margin-left: 210px;">
                                         </asp:TextBox>
                                     </div>
 
                                     <div class="col-sm-6 mb-3 mb-sm-0" style="margin-left: 180px; margin-top: -30px;">
-                                        <asp:TextBox ID="txtTelefono1" runat="server" type="number" name="name" data-parsley-trigger="change"  
-                                            placeholder="Teléfono 1 " autocomplete="off" class="form-control" style="width: 240px; margin-left: 110px; margin-top: -8px;">
+                                        <asp:TextBox ID="txtTelefono1" runat="server" type="text" name="name" data-parsley-trigger="change"  
+                                            placeholder="Teléfono 1 " autocomplete="off" class="form-control" style="width: 540px; margin-left: -190px; margin-top: -20px;">
                                         </asp:TextBox>
                                     </div>
 
                                     <div class="input-group mb-3">
-                                        <asp:DropDownList ID="CodigoPais2" runat="server" style="padding-bottom: 15px; margin-top: 10px; background-color: #0f136bd6;color: white;" class="input-group-prepend be-addon">
+                                        <asp:DropDownList ID="CodigoPais2" runat="server" style="padding-bottom: 15px; margin-top: 10px; margin-bottom: 50px; background-color: #0f136bd6;color: white; width: 180px;" class="input-group-prepend be-addon">
                                                 <asp:ListItem Value="">Codigo de País</asp:ListItem>
                                                 <asp:ListItem Value="54">Argentina</asp:ListItem>
                                                 <asp:ListItem Value="55">Brasil</asp:ListItem>
@@ -152,15 +161,23 @@
                                         </asp:DropDownList>
                                      </div>
 
+                                     <div class="input-group mb-3">
+                                        <asp:DropDownList ID="TipoTelf2" runat="server" style="padding-bottom: 15px; margin-top: -105px; margin-bottom: 80px; margin-left: 200px; background-color: #0f136bd6;color: white; width: 180px;" class="input-group-prepend be-addon">
+                                                <asp:ListItem Value="">Tipo de Telefono</asp:ListItem>
+                                                <asp:ListItem Value="Movil">Movil</asp:ListItem>
+                                                <asp:ListItem Value="Fijo">Fijo</asp:ListItem>
+                                        </asp:DropDownList>
+                                     </div>
+
                                     <div class="col-sm-6 mb-3 mb-sm-0" style="margin-left: 180px; margin-top: -30px;">
-                                        <asp:TextBox ID="CodAre2" runat="server" type="number" name="name" data-parsley-trigger="change"  
-                                            placeholder="Codigo Area" autocomplete="off" class="form-control" style="width: 130px; margin-left: -40px;">
+                                        <asp:TextBox ID="CodAre2" runat="server" type="text" name="name" data-parsley-trigger="change"  
+                                            placeholder="Codigo Area" autocomplete="off" class="form-control" style="width: 140px; margin-top: -81px; margin-left: 210px;">
                                         </asp:TextBox>
                                     </div>
 
                                     <div class="col-sm-6" style="margin-top: -30px; margin-left: 180px;">
-                                        <asp:TextBox ID="txtTelefono2" runat="server" type="number" name="name" data-parsley-trigger="change"  
-                                            placeholder="Teléfono 2" autocomplete="off" class="form-control" style="width: 240px; margin-left: 110px; margin-top: -8px;">
+                                        <asp:TextBox ID="txtTelefono2" runat="server" type="text" name="name" data-parsley-trigger="change"  
+                                            placeholder="Teléfono 2" autocomplete="off" class="form-control" style="width: 540px; margin-left: -190px; margin-top: -20px;">
                                         </asp:TextBox>
                                     </div>
                                 </div>
@@ -263,7 +280,7 @@
                                   <div class="form-group row" style="margin-left: 5px;">
                                     <asp:Label ID="Label5" runat="server" Text="Telefonos"></asp:Label>
                                      <div class="input-group mb-3">
-                                        <asp:DropDownList ID="DropDownList5" runat="server" style="padding-bottom: 15px; margin-top: 10px; background-color: #0f136bd6;color: white;" class="input-group-prepend be-addon">
+                                        <asp:DropDownList ID="CodigoPais3" runat="server" style="padding-bottom: 15px; margin-top: 10px; margin-bottom: 50px; background-color: #0f136bd6;color: white; width: 180px;" class="input-group-prepend be-addon">
                                                 <asp:ListItem Value="">Codigo de País</asp:ListItem>
                                                 <asp:ListItem Value="54">Argentina</asp:ListItem>
                                                 <asp:ListItem Value="55">Brasil</asp:ListItem>
@@ -274,20 +291,28 @@
                                         </asp:DropDownList>
                                      </div>
 
+                                     <div class="input-group mb-3">
+                                        <asp:DropDownList ID="TipoTelf3" runat="server" style="padding-bottom: 15px; margin-top: -105px; margin-bottom: 80px; margin-left: 200px; background-color: #0f136bd6;color: white; width: 180px;" class="input-group-prepend be-addon">
+                                                <asp:ListItem Value="">Tipo de Telefono</asp:ListItem>
+                                                <asp:ListItem Value="Movil">Movil</asp:ListItem>
+                                                <asp:ListItem Value="Fijo">Fijo</asp:ListItem>
+                                        </asp:DropDownList>
+                                     </div>
+
                                     <div class="col-sm-6 mb-3 mb-sm-0" style="margin-left: 180px; margin-top: -30px;">
-                                        <asp:TextBox ID="TextBox1" runat="server" type="text" name="name" data-parsley-trigger="change"  
-                                            placeholder="Codigo Area" autocomplete="off" class="form-control" style="width: 130px; margin-left: -40px;">
+                                        <asp:TextBox ID="CodAre3" runat="server" type="text" name="name" data-parsley-trigger="change"  
+                                            placeholder="Codigo Area" autocomplete="off" class="form-control" style="width: 140px; margin-top: -81px; margin-left: 210px;">
                                         </asp:TextBox>
                                     </div>
 
                                     <div class="col-sm-6 mb-3 mb-sm-0" style="margin-left: 180px; margin-top: -30px;">
-                                        <asp:TextBox ID="TextBox2" runat="server" type="text" name="name" data-parsley-trigger="change"  
-                                            placeholder="Teléfono 1 " autocomplete="off" class="form-control" style="width: 240px; margin-left: 110px; margin-top: -8px;">
+                                        <asp:TextBox ID="txtTelefono3" runat="server" type="text" name="name" data-parsley-trigger="change"  
+                                            placeholder="Teléfono 1 " autocomplete="off" class="form-control" style="width: 540px; margin-left: -190px; margin-top: -20px;">
                                         </asp:TextBox>
                                     </div>
 
                                     <div class="input-group mb-3">
-                                        <asp:DropDownList ID="DropDownList6" runat="server" style="padding-bottom: 15px; margin-top: 10px; background-color: #0f136bd6;color: white;" class="input-group-prepend be-addon">
+                                        <asp:DropDownList ID="CodigoPais4" runat="server" style="padding-bottom: 15px; margin-top: 10px; margin-bottom: 50px; background-color: #0f136bd6;color: white; width: 180px;" class="input-group-prepend be-addon">
                                                 <asp:ListItem Value="">Codigo de País</asp:ListItem>
                                                 <asp:ListItem Value="54">Argentina</asp:ListItem>
                                                 <asp:ListItem Value="55">Brasil</asp:ListItem>
@@ -298,15 +323,23 @@
                                         </asp:DropDownList>
                                      </div>
 
+                                     <div class="input-group mb-3">
+                                        <asp:DropDownList ID="TipoTelf4" runat="server" style="padding-bottom: 15px; margin-top: -105px; margin-bottom: 80px; margin-left: 200px; background-color: #0f136bd6;color: white; width: 180px;" class="input-group-prepend be-addon">
+                                                <asp:ListItem Value="">Tipo de Telefono</asp:ListItem>
+                                                <asp:ListItem Value="Movil">Movil</asp:ListItem>
+                                                <asp:ListItem Value="Fijo">Fijo</asp:ListItem>
+                                        </asp:DropDownList>
+                                     </div>
+
                                     <div class="col-sm-6 mb-3 mb-sm-0" style="margin-left: 180px; margin-top: -30px;">
-                                        <asp:TextBox ID="TextBox9" runat="server" type="text" name="name" data-parsley-trigger="change"  
-                                            placeholder="Codigo Area" autocomplete="off" class="form-control" style="width: 130px; margin-left: -40px;">
+                                        <asp:TextBox ID="CodAre4" runat="server" type="text" name="name" data-parsley-trigger="change"  
+                                            placeholder="Codigo Area" autocomplete="off" class="form-control" style="width: 140px; margin-top: -81px; margin-left: 210px;">
                                         </asp:TextBox>
                                     </div>
 
                                     <div class="col-sm-6" style="margin-top: -30px; margin-left: 180px;">
-                                        <asp:TextBox ID="TextBox10" runat="server" type="text" name="name" data-parsley-trigger="change"  
-                                            placeholder="Teléfono 2" autocomplete="off" class="form-control" style="width: 240px; margin-left: 110px; margin-top: -8px;">
+                                        <asp:TextBox ID="txtTelefono4" runat="server" type="text" name="name" data-parsley-trigger="change"  
+                                            placeholder="Teléfono 2" autocomplete="off" class="form-control" style="width: 540px; margin-left: -190px; margin-top: -20px;">
                                         </asp:TextBox>
                                     </div>
                                 </div>
@@ -342,12 +375,12 @@
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
                                          <asp:Label ID="Label7" runat="server" Text="Nombres"></asp:Label>
-                                        <asp:TextBox ID="TextBox3" runat="server" type="name" name="name" data-parsley-trigger="change"  
+                                        <asp:TextBox ID="Nombre3" runat="server" type="name" name="name" data-parsley-trigger="change"  
                                             placeholder="Ingrese su 1er Nombre" autocomplete="off" class="form-control">
                                         </asp:TextBox>
                                     </div>
                                     <div class="col-sm-6" style="margin-top:24px">
-                                       <asp:TextBox ID="TextBox4" runat="server" type="name" name="name" data-parsley-trigger="change"  
+                                       <asp:TextBox ID="Nombre4" runat="server" type="name" name="name" data-parsley-trigger="change"  
                                             placeholder="Ingrese su 2do Nombre" autocomplete="off" class="form-control">
                                         </asp:TextBox>
                                     </div>
@@ -358,12 +391,12 @@
                                  <div class="form-group row" style="margin-bottom:-10px">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
                                          <asp:Label ID="Label8" runat="server" Text="Apellidos"></asp:Label>
-                                        <asp:TextBox ID="TextBox5" runat="server" type="name" name="name" data-parsley-trigger="change"  
+                                        <asp:TextBox ID="Apellido3" runat="server" type="name" name="name" data-parsley-trigger="change"  
                                             placeholder="Ingrese su 1er Apellido" autocomplete="off" class="form-control">
                                         </asp:TextBox>
                                     </div>
                                     <div class="col-sm-6" style="margin-top:24px">
-                                       <asp:TextBox ID="TextBox6" runat="server" type="name" name="name" data-parsley-trigger="change"  
+                                       <asp:TextBox ID="Apellido4" runat="server" type="name" name="name" data-parsley-trigger="change"  
                                             placeholder="Ingrese su 2do Apellido" autocomplete="off" class="form-control">
                                         </asp:TextBox>
                                     </div>
@@ -374,7 +407,7 @@
                                  <div class="form-group row" style="margin-left: 5px;">
                                     <asp:Label ID="Label9" runat="server" Text="Telefonos"></asp:Label>
                                      <div class="input-group mb-3">
-                                        <asp:DropDownList ID="DropDownList3" runat="server" style="padding-bottom: 15px; margin-top: 10px; background-color: #0f136bd6;color: white;" class="input-group-prepend be-addon">
+                                        <asp:DropDownList ID="CodigoPais5" runat="server" style="padding-bottom: 15px; margin-top: 10px; margin-bottom: 50px; background-color: #0f136bd6;color: white; width: 180px;" class="input-group-prepend be-addon">
                                                 <asp:ListItem Value="">Codigo de País</asp:ListItem>
                                                 <asp:ListItem Value="54">Argentina</asp:ListItem>
                                                 <asp:ListItem Value="55">Brasil</asp:ListItem>
@@ -385,20 +418,28 @@
                                         </asp:DropDownList>
                                      </div>
 
+                                     <div class="input-group mb-3">
+                                        <asp:DropDownList ID="TipoTelf5" runat="server" style="padding-bottom: 15px; margin-top: -105px; margin-bottom: 80px; margin-left: 200px; background-color: #0f136bd6;color: white; width: 180px;" class="input-group-prepend be-addon">
+                                                <asp:ListItem Value="">Tipo de Telefono</asp:ListItem>
+                                                <asp:ListItem Value="Movil">Movil</asp:ListItem>
+                                                <asp:ListItem Value="Fijo">Fijo</asp:ListItem>
+                                        </asp:DropDownList>
+                                     </div>
+
                                     <div class="col-sm-6 mb-3 mb-sm-0" style="margin-left: 180px; margin-top: -30px;">
-                                        <asp:TextBox ID="TextBox7" runat="server" type="text" name="name" data-parsley-trigger="change"  
-                                            placeholder="Codigo Area" autocomplete="off" class="form-control" style="width: 130px; margin-left: -40px;">
+                                        <asp:TextBox ID="CodAre5" runat="server" type="text" name="name" data-parsley-trigger="change"  
+                                            placeholder="Codigo Area" autocomplete="off" class="form-control" style="width: 140px; margin-top: -81px; margin-left: 210px;">
                                         </asp:TextBox>
                                     </div>
 
                                     <div class="col-sm-6 mb-3 mb-sm-0" style="margin-left: 180px; margin-top: -30px;">
-                                        <asp:TextBox ID="TextBox8" runat="server" type="text" name="name" data-parsley-trigger="change"  
-                                            placeholder="Teléfono 1 " autocomplete="off" class="form-control" style="width: 240px; margin-left: 110px; margin-top: -8px;">
+                                        <asp:TextBox ID="txtTelefono5" runat="server" type="text" name="name" data-parsley-trigger="change"  
+                                            placeholder="Teléfono 1 " autocomplete="off" class="form-control" style="width: 540px; margin-left: -190px; margin-top: -20px;">
                                         </asp:TextBox>
                                     </div>
 
                                     <div class="input-group mb-3">
-                                        <asp:DropDownList ID="DropDownList4" runat="server" style="padding-bottom: 15px; margin-top: 10px; background-color: #0f136bd6;color: white;" class="input-group-prepend be-addon">
+                                        <asp:DropDownList ID="CodigoPais6" runat="server" style="padding-bottom: 15px; margin-top: 10px; margin-bottom: 50px; background-color: #0f136bd6;color: white; width: 180px;" class="input-group-prepend be-addon">
                                                 <asp:ListItem Value="">Codigo de País</asp:ListItem>
                                                 <asp:ListItem Value="54">Argentina</asp:ListItem>
                                                 <asp:ListItem Value="55">Brasil</asp:ListItem>
@@ -409,15 +450,23 @@
                                         </asp:DropDownList>
                                      </div>
 
+                                     <div class="input-group mb-3">
+                                        <asp:DropDownList ID="TipoTelf6" runat="server" style="padding-bottom: 15px; margin-top: -105px; margin-bottom: 80px; margin-left: 200px; background-color: #0f136bd6;color: white; width: 180px;" class="input-group-prepend be-addon">
+                                                <asp:ListItem Value="">Tipo de Telefono</asp:ListItem>
+                                                <asp:ListItem Value="Movil">Movil</asp:ListItem>
+                                                <asp:ListItem Value="Fijo">Fijo</asp:ListItem>
+                                        </asp:DropDownList>
+                                     </div>
+
                                     <div class="col-sm-6 mb-3 mb-sm-0" style="margin-left: 180px; margin-top: -30px;">
-                                        <asp:TextBox ID="TextBox11" runat="server" type="text" name="name" data-parsley-trigger="change"  
-                                            placeholder="Codigo Area" autocomplete="off" class="form-control" style="width: 130px; margin-left: -40px;">
+                                        <asp:TextBox ID="CodAre6" runat="server" type="text" name="name" data-parsley-trigger="change"  
+                                            placeholder="Codigo Area" autocomplete="off" class="form-control" style="width: 140px; margin-top: -81px; margin-left: 210px;">
                                         </asp:TextBox>
                                     </div>
 
                                     <div class="col-sm-6" style="margin-top: -30px; margin-left: 180px;">
-                                        <asp:TextBox ID="TextBox12" runat="server" type="text" name="name" data-parsley-trigger="change"  
-                                            placeholder="Teléfono 2" autocomplete="off" class="form-control" style="width: 240px; margin-left: 110px; margin-top: -8px;">
+                                        <asp:TextBox ID="txtTelefono6" runat="server" type="text" name="name" data-parsley-trigger="change"  
+                                            placeholder="Teléfono 2" autocomplete="off" class="form-control" style="width: 540px; margin-left: -190px; margin-top: -20px;">
                                         </asp:TextBox>
                                     </div>
                                 </div>

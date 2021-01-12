@@ -123,6 +123,15 @@ namespace Ucabmart.Views
         protected global::System.Web.UI.WebControls.DropDownList CodigoPais1;
 
         /// <summary>
+        /// Control TipoTelf.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList TipoTelf;
+
+        /// <summary>
         /// Control CodAre.
         /// </summary>
         /// <remarks>
@@ -148,6 +157,15 @@ namespace Ucabmart.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList CodigoPais2;
+
+        /// <summary>
+        /// Control TipoTelf2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList TipoTelf2;
 
         /// <summary>
         /// Control CodAre2.
@@ -330,58 +348,76 @@ namespace Ucabmart.Views
         protected global::System.Web.UI.WebControls.Label Label5;
 
         /// <summary>
-        /// Control DropDownList5.
+        /// Control CodigoPais3.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList5;
+        protected global::System.Web.UI.WebControls.DropDownList CodigoPais3;
 
         /// <summary>
-        /// Control TextBox1.
+        /// Control TipoTelf3.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.DropDownList TipoTelf3;
 
         /// <summary>
-        /// Control TextBox2.
+        /// Control CodAre3.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.TextBox CodAre3;
 
         /// <summary>
-        /// Control DropDownList6.
+        /// Control txtTelefono3.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList6;
+        protected global::System.Web.UI.WebControls.TextBox txtTelefono3;
 
         /// <summary>
-        /// Control TextBox9.
+        /// Control CodigoPais4.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox9;
+        protected global::System.Web.UI.WebControls.DropDownList CodigoPais4;
 
         /// <summary>
-        /// Control TextBox10.
+        /// Control TipoTelf4.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox10;
+        protected global::System.Web.UI.WebControls.DropDownList TipoTelf4;
+
+        /// <summary>
+        /// Control CodAre4.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox CodAre4;
+
+        /// <summary>
+        /// Control txtTelefono4.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtTelefono4;
 
         /// <summary>
         /// Control Label6.
@@ -429,22 +465,22 @@ namespace Ucabmart.Views
         protected global::System.Web.UI.WebControls.Label Label7;
 
         /// <summary>
-        /// Control TextBox3.
+        /// Control Nombre3.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox3;
+        protected global::System.Web.UI.WebControls.TextBox Nombre3;
 
         /// <summary>
-        /// Control TextBox4.
+        /// Control Nombre4.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox4;
+        protected global::System.Web.UI.WebControls.TextBox Nombre4;
 
         /// <summary>
         /// Control Label8.
@@ -456,22 +492,22 @@ namespace Ucabmart.Views
         protected global::System.Web.UI.WebControls.Label Label8;
 
         /// <summary>
-        /// Control TextBox5.
+        /// Control Apellido3.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox5;
+        protected global::System.Web.UI.WebControls.TextBox Apellido3;
 
         /// <summary>
-        /// Control TextBox6.
+        /// Control Apellido4.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox6;
+        protected global::System.Web.UI.WebControls.TextBox Apellido4;
 
         /// <summary>
         /// Control Label9.
@@ -483,58 +519,76 @@ namespace Ucabmart.Views
         protected global::System.Web.UI.WebControls.Label Label9;
 
         /// <summary>
-        /// Control DropDownList3.
+        /// Control CodigoPais5.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList3;
+        protected global::System.Web.UI.WebControls.DropDownList CodigoPais5;
 
         /// <summary>
-        /// Control TextBox7.
+        /// Control TipoTelf5.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox7;
+        protected global::System.Web.UI.WebControls.DropDownList TipoTelf5;
 
         /// <summary>
-        /// Control TextBox8.
+        /// Control CodAre5.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox8;
+        protected global::System.Web.UI.WebControls.TextBox CodAre5;
 
         /// <summary>
-        /// Control DropDownList4.
+        /// Control txtTelefono5.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList4;
+        protected global::System.Web.UI.WebControls.TextBox txtTelefono5;
 
         /// <summary>
-        /// Control TextBox11.
+        /// Control CodigoPais6.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox11;
+        protected global::System.Web.UI.WebControls.DropDownList CodigoPais6;
 
         /// <summary>
-        /// Control TextBox12.
+        /// Control TipoTelf6.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox12;
+        protected global::System.Web.UI.WebControls.DropDownList TipoTelf6;
+
+        /// <summary>
+        /// Control CodAre6.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox CodAre6;
+
+        /// <summary>
+        /// Control txtTelefono6.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtTelefono6;
 
         /// <summary>
         /// Control lblPagos.
