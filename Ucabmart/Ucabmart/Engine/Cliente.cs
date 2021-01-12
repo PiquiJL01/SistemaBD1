@@ -31,7 +31,7 @@ namespace Ucabmart.Engine
             }
         }
 
-        public Cliente(string rif, string password, int correo, int tienda = 0)
+        private Cliente(string rif, string password, int correo, int tienda)
         {
             RIF = rif;
             Password = password;
@@ -50,8 +50,6 @@ namespace Ucabmart.Engine
                 CodigoCorreoElectronico = cliente.CodigoCorreoElectronico;
             }
         }
-
-        public Cliente() { }
         #endregion
 
         #region CRUDs

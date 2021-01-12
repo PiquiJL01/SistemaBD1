@@ -8,16 +8,18 @@ namespace Ucabmart.Engine
 {
     public class Natural : Cliente
     {
+        #region Atributos
         public string Cedula { get; set; }
         public string Nombre1 { get; set; }
         public string Nombre2 { get; set; }
         public string Apellido1 { get; set; }
         public string Apellido2 { get; set; }
-        public string Direccion { get; set; }
+        public int Direccion { get; set; }
+        #endregion
 
         #region Declaraciones
-        public Natural(string rif, string password, CorreoElectronico email, Tienda tienda, string cedula,
-            string nombre1, string nombre2, string apellido1, string apellido2, string direccion)
+        public Natural(string rif, string password, CorreoElectronico email, string cedula,
+            string nombre1, string nombre2, string apellido1, string apellido2, Lugar direccion, Tienda tienda = null)
             : base(rif, password, email, tienda)
         {
             Cedula = cedula;
@@ -25,11 +27,11 @@ namespace Ucabmart.Engine
             Nombre2 = nombre2;
             Apellido1 = apellido1;
             Apellido2 = apellido2;
-            Direccion = direccion;
+            Direccion = direccion.Codigo;
         }
 
-        public Natural(string rif, string cedula,
-            string nombre1, string nombre2, string apellido1, string apellido2, string direccion)
+        private  Natural(string rif, string cedula,
+            string nombre1, string nombre2, string apellido1, string apellido2, int direccion)
             : base(rif)
         {
             Cedula = cedula;
@@ -40,27 +42,11 @@ namespace Ucabmart.Engine
             Direccion = direccion;
         }
 
-        //public Natural(string rif, int email, int tienda, string cedula,
-        //    string nombre1, string nombre2, string apellido1, string apellido2, string direccion, string password) 
-        //    : base(rif, password, email, tienda)
-        //{
-        //    Cedula = cedula;
-        //    Nombre1 = nombre1;
-        //    Nombre2 = nombre2;
-        //    Apellido1 = apellido1;
-        //    Apellido2 = apellido2;
-        //    Direccion = direccion;
-        //}
-
-        public Natural(string rif)
+        public Natural(string rif) : base(rif)
         {
             Natural natural = LeerNatural(rif);
             if (!(natural == null))
             {
-                RIF = natural.RIF;
-                CodigoCorreoElectronico = natural.CodigoCorreoElectronico;
-                CodigoTienda = natural.CodigoTienda;
-                Password = natural.Password;
                 Cedula = natural.Cedula;
                 Nombre1 = natural.Nombre1;
                 Nombre2 = natural.Nombre2;
@@ -80,7 +66,7 @@ namespace Ucabmart.Engine
 
                 Conexion.Open();
 
-                string Comando = "INSERT INTO naturales (cl_rif, na_cedula, na_1er_nombre, na_2do_nombre, na_1er_apellido, na_2do_apellido, na_direccion) " +
+                string Comando = "INSERT INTO naturales (cl_rif, na_cedula, na_1er_nombre, na_2do_nombre, na_1er_apellido, na_2do_apellido, lugar_lu_codigo) " +
                     "VALUES (@rif, @cedula, @nombre1, @nombre2, @apellido1, @apellido2, @direccion)";
                 Script = new NpgsqlCommand(Comando, Conexion);
 
@@ -112,7 +98,7 @@ namespace Ucabmart.Engine
             string nombre2 = null;
             string apellido1 = null;
             string apellido2 = null;
-            string direccion = null;
+            int direccion = 0;
             try
             {
                 Conexion.Open();
@@ -131,7 +117,7 @@ namespace Ucabmart.Engine
                     nombre2 = ReadString(3);
                     apellido1 = ReadString(4);
                     apellido2 = ReadString(5);
-                    direccion = ReadString(6);
+                    direccion = ReadInt(6);
                 }
 
                 Conexion.Close();
@@ -205,7 +191,7 @@ namespace Ucabmart.Engine
                 Conexion.Open();
 
                 string Comando = "UPDATE naturales SET na_cedula = @cedula, na_1er_nombre = @nombre1, na_2do_nombre = @nombre2, " +
-                    "na_1er_apellido = @ apellido1, na_2do_apellido = @apellido2, na_direccion = @direccion WHERE cl_rif = @rif";
+                    "na_1er_apellido = @ apellido1, na_2do_apellido = @apellido2, lugar_lu_codigo = @direccion WHERE cl_rif = @rif";
                 Script = new NpgsqlCommand(Comando, Conexion);
 
                 Script.Parameters.AddWithValue("rif", RIF);
