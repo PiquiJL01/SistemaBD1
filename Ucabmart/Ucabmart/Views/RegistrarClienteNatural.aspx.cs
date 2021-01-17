@@ -153,6 +153,9 @@ namespace Ucabmart.Views
                 telefono1.Insertar();
                 Telefono telefono2 = new Telefono(int.Parse(CodigoPais2.SelectedValue), int.Parse(CodAre2.Text), int.Parse(txtTelefono2.Text), TipoTelf2.Text, datosCliente);
                 telefono2.Insertar();
+
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('La persona ha sido registrado exitosamente');" +
+                                "window.location ='Clientes_Admin.aspx';", true);
             }
             catch (Exception ex)
             {
