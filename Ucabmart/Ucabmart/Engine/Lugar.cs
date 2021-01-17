@@ -16,6 +16,11 @@ namespace Ucabmart.Engine
 
 
         #region Declaraciones
+        public Lugar()
+        {
+
+        }
+
         public Lugar(string nombre, TipoLugar tipo, string descripcion, Lugar ubicacion = null)
         {
             Nombre = nombre;
@@ -78,11 +83,6 @@ namespace Ucabmart.Engine
             Nombre = nombre;
         }
         #endregion
-
-        public Lugar()
-        {
-
-        }
 
         #region CRUDs
         public override void Insertar()
@@ -272,6 +272,63 @@ namespace Ucabmart.Engine
 
                 }
             }
+        }
+        #endregion
+
+        #region Otros Metodos
+        public List<Lugar> LugaresPorTipo(TipoLugar tipo)
+        {
+            List<Lugar> lista = new List<Lugar>();
+
+            try
+            {
+                Conexion.Open();
+
+                string Command = "SELECT * FROM lugar WHERE lu_tipo = @tipo";
+                
+                NpgsqlCommand Script = new NpgsqlCommand(Command, Conexion);
+
+                switch (tipo)
+                {
+                    case TipoLugar.Direccion:
+                        Script.Parameters.AddWithValue("tipo", "Direccion");
+                        break;
+                    case TipoLugar.Estado:
+                        Script.Parameters.AddWithValue("tipo", "Estado");
+                        break;
+                    case TipoLugar.Municipio:
+                        Script.Parameters.AddWithValue("tipo", "Municipio");
+                        break;
+                    case TipoLugar.Pais:
+                        Script.Parameters.AddWithValue("tipo", "Pais");
+                        break;
+                    case TipoLugar.Parroquia:
+                        Script.Parameters.AddWithValue("tipo", "Parroquia");
+                        break;
+                    default:
+                        Tipo = null;
+                        break;
+                }
+
+                Reader = Script.ExecuteReader();
+
+                while (Reader.Read())
+                {
+                    Lugar lugar = new Lugar(ReadInt(0), ReadString(1), ReadString(2), ReadString(3), ReadInt(4));
+
+                    lista.Add(lugar);
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Ha ocurrido un error en la base de datos", e);
+            }
+            finally
+            {
+                Conexion.Close();
+            }
+
+            return lista;
         }
         #endregion
     }
