@@ -13,19 +13,28 @@ namespace Ucabmart.Views
         Lugar nombreLugar = new Lugar(0);
         int codigoEstado = -1, codigoMunicipio = -1;
 
-        protected int CodProduct(DropDownList x, DropDownList y)
+        protected int CodLugar(DropDownList x, DropDownList y, DropDownList z)
         {
             List<Lugar> lugares = new List<Lugar>();
             lugares = new Lugar().Todos();
             int CodMunicpio = 0;
+            int CodEstado = 0;
+
 
             foreach (Lugar lugar in lugares)
             {
-                if (y.SelectedValue == lugar.Nombre && lugar.Tipo == "Municipio")
+                if (z.SelectedValue == lugar.Nombre && lugar.Tipo == "Estado")
+                {
+                    CodEstado = lugar.Codigo;
+                }
+            }
+
+            foreach (Lugar lugar in lugares)
+            {
+                if (y.SelectedValue == lugar.Nombre && lugar.Tipo == "Municipio" && CodEstado == lugar.CodigoUbicacion)
                 {
                     CodMunicpio = lugar.Codigo;
                 }
-
             }
 
             foreach (Lugar lugar in lugares)
@@ -44,8 +53,8 @@ namespace Ucabmart.Views
         protected void btnRegistrar_Click(object sender, EventArgs e)
         {
 
-            int CodLug1 = this.CodProduct(dplParroquia,dplMunicipio); 
-            int CodLug2 = this.CodProduct(dplParroquia2,dplMunicipio2);
+            int CodLug1 = this.CodLugar(dplParroquia,dplMunicipio,dplEstado);
+            int CodLug2 = this.CodLugar(dplParroquia2,dplMunicipio2,dplEstado2);
 
 
             CorreoElectronico correo = new CorreoElectronico(txtCorreo.Text);
@@ -67,12 +76,12 @@ namespace Ucabmart.Views
             telefono4.Insertar();
 
 
-            PersonaContacto personaContacto2 = new PersonaContacto(CedulaDrop2.SelectedValue + txtCedula2.Text, Nombre3.Text, Nombre4.Text, Apellido3.Text, Apellido4.Text, proveedor);
+           /* PersonaContacto personaContacto2 = new PersonaContacto(CedulaDrop2.SelectedValue + txtCedula2.Text, Nombre3.Text, Nombre4.Text, Apellido3.Text, Apellido4.Text, proveedor);
             personaContacto2.Insertar();
             Telefono telefono5 = new Telefono(int.Parse(CodigoPais5.SelectedValue), int.Parse(CodAre5.Text), int.Parse(txtTelefono5.Text), TipoTelf5.Text, personaContacto2);
             telefono5.Insertar();
             Telefono telefono6 = new Telefono(int.Parse(CodigoPais6.SelectedValue), int.Parse(CodAre6.Text), int.Parse(txtTelefono6.Text), TipoTelf6.Text, personaContacto2);
-            telefono6.Insertar();
+            telefono6.Insertar();*/
 
             Session["ProveedorRif"] = proveedor.RIF;
             Response.Redirect("/Views/Check_Products.aspx", false);

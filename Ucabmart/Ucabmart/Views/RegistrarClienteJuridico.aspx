@@ -114,6 +114,23 @@
                                      </asp:TextBox>
                                 </div>
                                 <br >
+                                
+                                  <%--<Campo de texto de la pagina web >--%>
+                                <div class="form-group">
+                                    <asp:Label ID="PaginaWeb" runat="server" Text="Pagina Web"></asp:Label>
+                                    <asp:TextBox ID="txtPaginaWeb" runat="server" type="text" name="name" data-parsley-trigger="change"  
+                                          placeholder="Ingrese su Página Web" autocomplete="off" class="form-control"  style="text-align: center">
+                                     </asp:TextBox>
+                                </div>
+                                <%--<Campo de texto capital disponible >--%>
+
+                                <div class="form-group">
+                                    <asp:Label ID="Label10" for="txtCapitalDisponible" runat="server" Text="Capital Disponible"></asp:Label>
+                                    <asp:TextBox ID="txtCapitalDisponible" runat="server" type="number" name="name" data-parsley-trigger="change"  
+                                          placeholder="Ingrese su Capital Disponible" autocomplete="off" class="form-control"  style="text-align: center">
+                                     </asp:TextBox>
+                                </div>
+
                                  <%--<Campo de texto de los telefonos >--%>
                                 <div class="form-group row" style="margin-left: 5px;">
                                     <asp:Label ID="Telefonos" runat="server" Text="Telefonos"></asp:Label>
@@ -182,11 +199,10 @@
                                         </asp:TextBox>
                                     </div>
                                 </div>
-                                 <%--<Campo de texto de la dirección fiscal >--%>
-                                
-                                <hr>
-                                <asp:Label ID="Label1" runat="server" Text="Dirección Fiscal"  style="font-size:25px;"></asp:Label>
-                                <br />
+                                 <%--<Campo de texto de la dirección fiscal >--%>    
+                                <div class="PC">
+                                <asp:Label ID="Label1" runat="server" Text="Dirección Fiscal"></asp:Label>
+                                </div>
                                 <br />
                                 <asp:Label ID="Label11" runat="server" Text="Estado"></asp:Label>
                                 <div class="form-group">
@@ -214,9 +230,10 @@
                                         </div>
                                      </div>
                                 <%--<Campo de texto de la dirección fisica principal>--%>
-                                <hr>
-                                <asp:Label ID="Label2" runat="server" Text="Dirección Fisica Principal"  style="font-size:25px;"></asp:Label>
-                                <br />
+
+                                <div class="PC">
+                                <asp:Label ID="Label2" runat="server" Text="Dirección Fisica Principal"></asp:Label>
+                                </div>
                                 <br />
                                 <asp:Label ID="Label14" runat="server" Text="Estado"></asp:Label>
                                 <div class="form-group">
@@ -244,41 +261,40 @@
                                         </div>
                                      </div>
 
-                               <%-- <div class="form-group">
-                                    <asp:Label ID="Label2" for="txtDireccionFisica" runat="server" Text="Dirección Física Principal"></asp:Label>
-                                    <div class="input-group mb-3"><span class="input-group-prepend"><span class="input-group-text"><i class="fa fa-user"></i></span></span>
-                                        <asp:TextBox ID="txtDireccionFisica" runat="server" type="text" name="name" data-parsley-trigger="change"  
-                                            placeholder="Ingrese su dirección fisica principal" autocomplete="off" class="form-control" Height="87px" Width="361px"></asp:TextBox>
-                                    </div>
-                                </div>--%>
-
-                                  <%--<Campo de texto de la pagina web >--%>
-                                <div class="form-group">
-                                    <asp:Label ID="PaginaWeb" runat="server" Text="Pagina Web"></asp:Label>
-                                    <asp:TextBox ID="txtPaginaWeb" runat="server" type="text" name="name" data-parsley-trigger="change"  
-                                          placeholder="Ingrese su Página Web" autocomplete="off" class="form-control"  style="text-align: center">
-                                     </asp:TextBox>
-                                </div>
-                                <%--<Campo de texto capital disponible >--%>
-
-                                <div class="form-group">
-                                    <asp:Label ID="Label10" for="txtCapitalDisponible" runat="server" Text="Capital Disponible"></asp:Label>
-                                    <asp:TextBox ID="txtCapitalDisponible" runat="server" type="text" name="name" data-parsley-trigger="change"  
-                                          placeholder="Ingrese su Capital Disponible" autocomplete="off" class="form-control"  style="text-align: center">
-                                     </asp:TextBox>
-                                </div>
 
                                 <%--<Campo de texto para Personas de Contacto >--%>
                                <div class="PC">
                                     <asp:Label ID="Label3" runat="server" Text="Personas de Contacto"></asp:Label>
                                </div>
 
-                                <br/>
+                                
                                 <%--<Persona de Contacto Nº1 >--%>
-                                <div class="Contacto">
+                                <div class="Contacto" style="margin-top:20px">
                                     <asp:Label ID="Label4" runat="server" Text="Contacto Nº1"></asp:Label>
                                 </div>
                                 <br/>
+
+                                <%--<Campo de texto de la cédula>--%>
+                                <asp:Label ID="lblCedula" runat="server" Text="Cédula"></asp:Label>
+                                <div class="form-group row">
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <br >
+                                        <div class="input-group mb-3"><span class="input-group-prepend"><span class="input-group-text"><i class="fas fa-user-times"></i></span></span>
+                                            <asp:DropDownList ID="CedulaDrop" runat="server" style="padding:10px 50px 10px 50px; text-align: left;" class="input-group-prepend be-addon">
+                                                <asp:ListItem>V</asp:ListItem>
+                                                <asp:ListItem>E</asp:ListItem>
+                                                <asp:ListItem>P</asp:ListItem>
+                                            </asp:DropDownList>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <br >
+                                        <asp:TextBox ID="txtCedula" runat="server" type="text" name="name" data-parsley-trigger="change"  
+                                            placeholder="Ingrese su cédula " autocomplete="off" class="form-control" style="height: 45px;width: 330px;margin-left: -70px;">
+                                        </asp:TextBox>
+                                    </div>
+                                </div>
+
                                 <%--<Campo de texto para los nombres de la Persona de Contacto Nº1 >--%>
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
@@ -315,7 +331,7 @@
                                 <div class="form-group row" style="margin-left: 5px;">
                                     <asp:Label ID="Label5" runat="server" Text="Telefonos"></asp:Label>
                                      <div class="input-group mb-3">
-                                        <asp:DropDownList ID="DropDownList1" runat="server" style="padding-bottom: 15px; margin-top: 10px; margin-bottom: 50px; background-color: #0f136bd6;color: white; width: 180px;" class="input-group-prepend be-addon">
+                                        <asp:DropDownList ID="CodigoPais3" runat="server" style="padding-bottom: 15px; margin-top: 10px; margin-bottom: 50px; background-color: #0f136bd6;color: white; width: 180px;" class="input-group-prepend be-addon">
                                                 <asp:ListItem Value="">Codigo de País</asp:ListItem>
                                                 <asp:ListItem Value="54">Argentina</asp:ListItem>
                                                 <asp:ListItem Value="55">Brasil</asp:ListItem>
@@ -328,7 +344,7 @@
                                     <br />
 
                                      <div class="input-group mb-3">
-                                        <asp:DropDownList ID="DropDownList2" runat="server" style="padding-bottom: 15px; margin-top: -105px; margin-bottom: 80px; margin-left: 200px; background-color: #0f136bd6;color: white; width: 180px;" class="input-group-prepend be-addon">
+                                        <asp:DropDownList ID="TipoTelf3" runat="server" style="padding-bottom: 15px; margin-top: -105px; margin-bottom: 80px; margin-left: 200px; background-color: #0f136bd6;color: white; width: 180px;" class="input-group-prepend be-addon">
                                                 <asp:ListItem Value="">Tipo de Telefono</asp:ListItem>
                                                 <asp:ListItem Value="Movil">Movil</asp:ListItem>
                                                 <asp:ListItem Value="Fijo">Fijo</asp:ListItem>
@@ -336,19 +352,19 @@
                                      </div>
 
                                     <div class="col-sm-6 mb-3 mb-sm-0" style="margin-left: 180px; margin-top: -30px;">
-                                        <asp:TextBox ID="TextBox1" runat="server" type="text" name="number" data-parsley-trigger="change"  
+                                        <asp:TextBox ID="CodAre3" runat="server" type="text" name="number" data-parsley-trigger="change"  
                                             placeholder="Codigo Area" autocomplete="off" class="form-control" style="width: 140px; margin-top: -81px; margin-left: 210px;">
                                         </asp:TextBox>
                                     </div>
 
                                     <div class="col-sm-6 mb-3 mb-sm-0" style="margin-left: 180px; margin-top: -30px;">
-                                        <asp:TextBox ID="TextBox2" runat="server" type="text" name="name" data-parsley-trigger="change"  
+                                        <asp:TextBox ID="txtTelefono3" runat="server" type="text" name="name" data-parsley-trigger="change"  
                                             placeholder="Teléfono 1 " autocomplete="off" class="form-control" style="width: 540px; margin-left: -190px; margin-top: -20px;">
                                         </asp:TextBox>
                                     </div>
 
                                     <div class="input-group mb-3">
-                                        <asp:DropDownList ID="DropDownList5" runat="server" style="padding-bottom: 15px; margin-top: 10px; margin-bottom: 50px; background-color: #0f136bd6;color: white; width: 180px;" class="input-group-prepend be-addon">
+                                        <asp:DropDownList ID="CodigoPais4" runat="server" style="padding-bottom: 15px; margin-top: 10px; margin-bottom: 50px; background-color: #0f136bd6;color: white; width: 180px;" class="input-group-prepend be-addon">
                                                 <asp:ListItem Value="">Codigo de País</asp:ListItem>
                                                 <asp:ListItem Value="54">Argentina</asp:ListItem>
                                                 <asp:ListItem Value="55">Brasil</asp:ListItem>
@@ -360,7 +376,7 @@
                                      </div>
 
                                      <div class="input-group mb-3">
-                                        <asp:DropDownList ID="DropDownList6" runat="server" style="padding-bottom: 15px; margin-top: -105px; margin-bottom: 80px; margin-left: 200px; background-color: #0f136bd6;color: white; width: 180px;" class="input-group-prepend be-addon">
+                                        <asp:DropDownList ID="TipoTelf4" runat="server" style="padding-bottom: 15px; margin-top: -105px; margin-bottom: 80px; margin-left: 200px; background-color: #0f136bd6;color: white; width: 180px;" class="input-group-prepend be-addon">
                                                 <asp:ListItem Value="">Tipo de Telefono</asp:ListItem>
                                                 <asp:ListItem Value="Movil">Movil</asp:ListItem>
                                                 <asp:ListItem Value="Fijo">Fijo</asp:ListItem>
@@ -368,13 +384,13 @@
                                      </div>
 
                                     <div class="col-sm-6 mb-3 mb-sm-0" style="margin-left: 180px; margin-top: -30px;">
-                                        <asp:TextBox ID="TextBox9" runat="server" type="text" name="name" data-parsley-trigger="change"  
+                                        <asp:TextBox ID="CodAre4" runat="server" type="text" name="name" data-parsley-trigger="change"  
                                             placeholder="Codigo Area" autocomplete="off" class="form-control" style="width: 140px; margin-top: -81px; margin-left: 210px;">
                                         </asp:TextBox>
                                     </div>
 
                                     <div class="col-sm-6" style="margin-top: -30px; margin-left: 180px;">
-                                        <asp:TextBox ID="TextBox10" runat="server" type="text" name="name" data-parsley-trigger="change"  
+                                        <asp:TextBox ID="txtTelefono4" runat="server" type="text" name="name" data-parsley-trigger="change"  
                                             placeholder="Teléfono 2" autocomplete="off" class="form-control" style="width: 540px; margin-left: -190px; margin-top: -20px;">
                                         </asp:TextBox>
                                     </div>
@@ -382,12 +398,12 @@
 
                                  <%--<Persona de Contacto Nº2 >--%>
 
-                                <div class="Contacto">
+    <%--                            <div class="Contacto">
                                   <asp:Label ID="Label6" runat="server" Text="Contacto Nº2"></asp:Label>
                                 </div>
-                                <br/>
+                                <br/>--%>
                                 <%--<Campo de texto para los nombres de la Persona de Contacto Nº1 >--%>
-                                <div class="form-group row">
+                <%--                <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
                                          <asp:Label ID="Label7" runat="server" Text="Nombres"></asp:Label>
                                         <asp:TextBox ID="TextBox3" runat="server" type="name" name="name" data-parsley-trigger="change"  
@@ -399,11 +415,11 @@
                                             placeholder="Ingrese su 2do Nombre" autocomplete="off" class="form-control">
                                         </asp:TextBox>
                                     </div>
-                                </div>
+                                </div>--%>
 
                                  <%--<Campo de texto para los nombres de la Persona de Contacto Nº2 >--%>
                                 
-                                 <div class="form-group row" style="margin-bottom:-10px">
+<%--                                 <div class="form-group row" style="margin-bottom:-10px">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
                                          <asp:Label ID="Label8" runat="server" Text="Apellidos"></asp:Label>
                                         <asp:TextBox ID="TextBox5" runat="server" type="name" name="name" data-parsley-trigger="change"  
@@ -416,10 +432,10 @@
                                         </asp:TextBox>
                                     </div>
                                 </div>
-                                <br/>
+                                <br/>--%>
                                 <%--<Campo de texto de los telefonos de las personas de contacto2>--%>
-<%--<Campo de texto de los telefonos >--%>
-                                <div class="form-group row" style="margin-left: 5px;">
+
+<%--                                <div class="form-group row" style="margin-left: 5px;">
                                     <asp:Label ID="Label9" runat="server" Text="Telefonos"></asp:Label>
                                      <div class="input-group mb-3">
                                         <asp:DropDownList ID="DropDownList3" runat="server" style="padding-bottom: 15px; margin-top: 10px; margin-bottom: 50px; background-color: #0f136bd6;color: white; width: 180px;" class="input-group-prepend be-addon">
@@ -487,10 +503,10 @@
                                     </div>
                                 </div>
 
-                                <hr />
+                                <hr />--%>
 
                                 <%--<Campo de seleccion para medios de pagos>--%>
-                                <asp:Label ID="lblPagos" runat="server" Text="Medios de Pago"></asp:Label>
+<%--                                <asp:Label ID="lblPagos" runat="server" Text="Medios de Pago"></asp:Label>
                                 <div class="form-group">
                                         <div class="input-group mb-3"><span class="input-group-prepend"><span class="input-group-text"><i class="fas fa-user-times"></i></span></span>
                                             <asp:DropDownList ID="dplPago" runat="server" style="padding:10px 50px 10px 50px; text-align: left;" class="input-group-prepend be-addon">
@@ -498,7 +514,7 @@
                                                 <asp:ListItem>Tarjeta de Crédito</asp:ListItem>
                                             </asp:DropDownList>
                                         </div>
-                                </div>
+                                </div>--%>
                                  <%--<Campo de texto para la contraseña>--%>
                                 <asp:Label ID="lblContraseña" runat="server" Text="Contraseña"></asp:Label>
                                 <div class="form-group row">

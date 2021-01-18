@@ -17,15 +17,15 @@ namespace Ucabmart.Engine
 
         #region Declaraciones
         public Juridico(string rif, string password, CorreoElectronico correo, string denominacionComercial,
-            string razonSocial, float capital, string paginaWeb, Lugar direccionFisica, Lugar direccionFiscal, Tienda tienda = null)
+            string razonSocial, float capital, string paginaWeb, int direccionFisica, int direccionFiscal, Tienda tienda = null)
             : base(rif, password, correo, tienda)
         {
             DenominacionComercial = denominacionComercial;
             RazonSocial = razonSocial;
             Capital = capital;
             PaginaWeb = paginaWeb;
-            DireccionFisica = direccionFisica.Codigo;
-            DireccionFiscal = direccionFiscal.Codigo;
+            DireccionFisica = direccionFisica;
+            DireccionFiscal = direccionFiscal;
         }
 
         private Juridico(string rif, string denominacionComercial, string razonSocial, float capital, 
@@ -63,7 +63,7 @@ namespace Ucabmart.Engine
 
                 Conexion.Open();
 
-                string Comando = "INSERT INTO juridico (cl_rif, ju_denominacion_social, ju_razon_social, ju_capital, ju_pagina_web, ju_lugar_codigo, ju_lugar_codigo1) " +
+                string Comando = "INSERT INTO juridico (cl_rif, ju_denominacion_comercial, ju_razon_social, ju_capital, ju_pagina_web, lugar_lu_codigo, lugar_lu_codigo1) " +
                     "VALUES (@rif, @denominacion, @razon, @capital, @pagina, @fisica, @fiscal)";
                 Script = new NpgsqlCommand(Comando, Conexion);
 

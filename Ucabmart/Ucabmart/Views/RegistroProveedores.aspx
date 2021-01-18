@@ -261,11 +261,11 @@
                                     <asp:Label ID="Label3" runat="server" Text="Personas de Contacto"></asp:Label>
                                </div>
 
-                                <br/>
                                 <%--<Persona de Contacto Nº1 >--%>
                                 <div class="Contacto">
                                     <asp:Label ID="Label4" runat="server" Text="Contacto Nº1"></asp:Label>
                                 </div>
+                                <br/>
 
                                 <%--<Campo de texto de la cédula>--%>
                                 <asp:Label ID="lblCedula" runat="server" Text="Cédula"></asp:Label>
@@ -388,14 +388,14 @@
                                     </div>
                                 </div>
 
-                                 <%--<Persona de Contacto Nº2 >--%>
+                              <%--<Persona de Contacto Nº2 >--%>
 
-                                <div class="Contacto">
+<%--                                <div class="Contacto">
                                   <asp:Label ID="Label6" runat="server" Text="Contacto Nº2"></asp:Label>
-                                </div>
+                                </div>--%>
 
                                  <%--<Campo de texto de la cédula>--%>
-                                <asp:Label ID="lblCedula2" runat="server" Text="Cédula"></asp:Label>
+<%--                                <asp:Label ID="lblCedula2" runat="server" Text="Cédula"></asp:Label>
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
                                         <br >
@@ -413,10 +413,10 @@
                                             placeholder="Ingrese su cédula " autocomplete="off" class="form-control" style="height: 45px;width: 330px;margin-left: -70px;">
                                         </asp:TextBox>
                                     </div>
-                                </div>
+                                </div>--%>
 
                                 <%--<Campo de texto para los nombres de la Persona de Contacto Nº2 >--%>
-                                <div class="form-group row">
+<%--                                <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
                                          <asp:Label ID="Label7" runat="server" Text="Nombres"></asp:Label>
                                         <asp:TextBox ID="Nombre3" runat="server" type="name" name="name" data-parsley-trigger="change"  
@@ -428,11 +428,11 @@
                                             placeholder="Ingrese su 2do Nombre" autocomplete="off" class="form-control">
                                         </asp:TextBox>
                                     </div>
-                                </div>
+                                </div>--%>
 
                                  <%--<Campo de texto para los apellidos de la Persona de Contacto Nº2 >--%>
                                 
-                                 <div class="form-group row" style="margin-bottom:-10px">
+<%--                                 <div class="form-group row" style="margin-bottom:-10px">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
                                          <asp:Label ID="Label8" runat="server" Text="Apellidos"></asp:Label>
                                         <asp:TextBox ID="Apellido3" runat="server" type="name" name="name" data-parsley-trigger="change"  
@@ -444,11 +444,11 @@
                                             placeholder="Ingrese su 2do Apellido" autocomplete="off" class="form-control">
                                         </asp:TextBox>
                                     </div>
-                                </div>
-                                <br/>
+                                </div>--%>
+<%--                                <br/>--%>
                                 <%--<Campo de texto de los telefonos de las personas de contacto2>--%>
 
-                                 <div class="form-group row" style="margin-left: 5px;">
+<%--                                 <div class="form-group row" style="margin-left: 5px;">
                                     <asp:Label ID="Label9" runat="server" Text="Telefonos"></asp:Label>
                                      <div class="input-group mb-3">
                                         <asp:DropDownList ID="CodigoPais5" runat="server" style="padding-bottom: 15px; margin-top: 10px; margin-bottom: 50px; background-color: #0f136bd6;color: white; width: 180px;" class="input-group-prepend be-addon">
@@ -513,7 +513,7 @@
                                             placeholder="Teléfono 2" autocomplete="off" class="form-control" style="width: 540px; margin-left: -190px; margin-top: -20px;">
                                         </asp:TextBox>
                                     </div>
-                                </div>
+                                </div>--%>
 
                                 <hr />
 

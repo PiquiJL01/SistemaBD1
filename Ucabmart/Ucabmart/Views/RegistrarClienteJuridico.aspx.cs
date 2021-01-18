@@ -60,23 +60,91 @@ namespace Ucabmart.Views
             }
 
         }
+
+
+
+        protected int CodLugar(DropDownList x, DropDownList y, DropDownList z)
+        {
+            List<Lugar> lugares = new List<Lugar>();
+            lugares = new Lugar().Todos();
+            int CodMunicpio = 0;
+            int CodEstado = 0;
+
+
+            foreach (Lugar lugar in lugares)
+            {
+                if (z.SelectedValue == lugar.Nombre && lugar.Tipo == "Estado")
+                {
+                    CodEstado = lugar.Codigo;
+                }
+            }
+
+            foreach (Lugar lugar in lugares)
+            {
+                if (y.SelectedValue == lugar.Nombre && lugar.Tipo == "Municipio" && CodEstado == lugar.CodigoUbicacion)
+                {
+                    CodMunicpio = lugar.Codigo;
+                }
+            }
+
+            foreach (Lugar lugar in lugares)
+            {
+                if (x.SelectedValue == lugar.Nombre && lugar.Tipo == "Parroquia" && CodMunicpio == lugar.CodigoUbicacion)
+                {
+                    return lugar.Codigo;
+                }
+
+            }
+
+            return 0;
+        }
+
+
+
         protected void btnRegistrar_Click(object sender, EventArgs e)
         {
-         
-        }
-
-        protected void Agregar(object sender, EventArgs e)
-        {
-            List<ListItem> lista = new List<ListItem>();
-            lista.Add(new ListItem("España", "+40"));
-            lista.Add(new ListItem("Puerto Rico", "+42"));
-            lista.Add(new ListItem("Francia", "+34"));
-
-            foreach (ListItem item in lista)
+            try
             {
-               DropDownList1.Items.Insert(DropDownList1.Items.Count,item);
+                int CodLug1 = this.CodLugar(dplParroquia, dplMunicipio, dplEstado);
+                int CodLug2 = this.CodLugar(dplParroquia2, dplMunicipio2, dplEstado2);
+
+
+                CorreoElectronico ctrlCorreo = new CorreoElectronico(txtCorreo.Text);
+                ctrlCorreo.Insertar();
+
+                Cliente datosCliente = new Cliente(dplRif.SelectedValue + txtRif.Text, txtContraseña.Text, ctrlCorreo, null);
+                datosCliente.Insertar();
+
+                Juridico datosJuridico = new Juridico(dplRif.SelectedValue + txtRif.Text, txtContraseña.Text, ctrlCorreo,txtDenoComercial.Text,txtRazonSocial.Text, int.Parse(txtCapitalDisponible.Text),txtPaginaWeb.Text,CodLug2,CodLug1,null);
+                datosJuridico.Insertar();
+
+                Telefono telefono1 = new Telefono(int.Parse(CodigoPais1.SelectedValue), int.Parse(CodAre.Text), int.Parse(txtTelefono1.Text), TipoTelf.Text, datosCliente);
+                telefono1.Insertar();
+                Telefono telefono2 = new Telefono(int.Parse(CodigoPais2.SelectedValue), int.Parse(CodAre2.Text), int.Parse(txtTelefono2.Text), TipoTelf2.Text, datosCliente);
+                telefono2.Insertar();
+
+
+                PersonaContacto personaContacto1 = new PersonaContacto(CedulaDrop.SelectedValue + txtCedula.Text, Nombre1.Text, Nombre2.Text, Apellido1.Text, Apellido2.Text,datosJuridico);
+                personaContacto1.Insertar();
+                Telefono telefono3 = new Telefono(int.Parse(CodigoPais3.SelectedValue), int.Parse(CodAre3.Text), int.Parse(txtTelefono3.Text), TipoTelf3.Text, personaContacto1);
+                telefono3.Insertar();
+                Telefono telefono4 = new Telefono(int.Parse(CodigoPais4.SelectedValue), int.Parse(CodAre4.Text), int.Parse(txtTelefono4.Text), TipoTelf4.Text, personaContacto1);
+                telefono4.Insertar();
+
+
+
+                Response.Redirect("/Views/Clientes_Admin.aspx", false);
+
             }
+            catch (Exception ex)
+            {
+
+                Session["mensajeError"] = "Ha ocurrido un error al registrar la persona. " + ex;
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('NO DEBE HABER CAMPOS VACÍOS');", true);
+            }
+
         }
+
 
         protected void dplEstado_SelectedIndexChanged(object sender, EventArgs e)
         {

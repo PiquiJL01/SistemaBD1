@@ -102,14 +102,6 @@ namespace Ucabmart.Views
             try {
                 CorreoElectronico ctrlCorreo = new CorreoElectronico(txtCorreo.Text);
                 ctrlCorreo.Insertar();
-             //   List<CorreoElectronico> listaCorreo = new List<CorreoElectronico>();
-             //   int codigoCorreo = -1; 
-             //   foreach (CorreoElectronico item in listaCorreo)   //Busca obtener el codigo de correo que se acaba de agregar
-             //   {
-             //       if (item.Direccion == txtCorreo.Text)
-             //           codigoCorreo = item.Codigo;
-             //   }
-
                 Cliente datosCliente = new Cliente(dplRif.SelectedValue + txtRif.Text, txtContraseña.Text, ctrlCorreo,null);
              //   datosCliente.RIF = dplRif.SelectedValue + txtRif.Text;
              //   datosCliente.Password = txtContraseña.Text;
