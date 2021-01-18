@@ -221,6 +221,7 @@
     <Content Include="Content\css\Productos.css" />
     <Content Include="Content\css\Nomina.css" />
     <Content Include="Content\css\RegistrarClienteJuridico.css" />
+    <Content Include="Content\css\ModificarCliente.css" />
     <Content Include="Content\css\RegistroCliente.css" />
     <Content Include="Content\css\Check_Products.css" />
     <Content Include="Content\css\RegistroProveedores.css" />
@@ -1909,6 +1910,7 @@
     <Content Include="Views\IniciarSesion.aspx" />
     <Content Include="Views\Inicio.aspx" />
     <Content Include="Views\ModificarCliente.aspx" />
+    <Content Include="Views\ModificarClienteNatural.aspx" />
     <Content Include="Views\RegistrarClienteJuridico.aspx" />
     <Content Include="Views\RegistrarClienteNatural.aspx" />
     <Content Include="Views\RegistroProveedores.aspx" />
@@ -2041,6 +2043,13 @@
     </Compile>
     <Compile Include="Views\ModificarCliente.aspx.designer.cs">
       <DependentUpon>ModificarCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ModificarClienteNatural.aspx.cs">
+      <DependentUpon>ModificarClienteNatural.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ModificarClienteNatural.aspx.designer.cs">
+      <DependentUpon>ModificarClienteNatural.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\RegistrarClienteJuridico.aspx.cs">
       <DependentUpon>RegistrarClienteJuridico.aspx</DependentUpon>

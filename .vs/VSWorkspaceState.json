@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Ucabmart"
+    "\\Ucabmart",
+    "\\Ucabmart\\Ucabmart",
+    "\\Ucabmart\\Ucabmart\\Views"
   ],
   "SelectedNode": "\\Ucabmart\\Ucabmart.sln",
   "PreviewInSolutionExplorer": false

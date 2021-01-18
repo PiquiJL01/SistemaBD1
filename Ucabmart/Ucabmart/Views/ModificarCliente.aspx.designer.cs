@@ -7,9 +7,11 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace Ucabmart.Views {
-    
-    
-    public partial class ModificarCliente {
+namespace Ucabmart.Views
+{
+
+
+    public partial class ModificarCliente
+    {
     }
 }
