@@ -31,7 +31,8 @@ namespace Ucabmart.Engine
         }
 
         private  Natural(string rif, string cedula,
-            string nombre1, string nombre2, string apellido1, string apellido2, int direccion)
+            string nombre1, string nombre2, string apellido1, string apellido2, int direccion,
+            Cliente cliente = null)
             : base(rif)
         {
             Cedula = cedula;
@@ -40,9 +41,10 @@ namespace Ucabmart.Engine
             Apellido1 = apellido1;
             Apellido2 = apellido2;
             Direccion = direccion;
+            AtributosBase(cliente);
         }
 
-        public Natural(string rif) : base(rif)
+        public Natural(string rif)
         {
             Natural natural = LeerNatural(rif);
             if (!(natural == null))
@@ -54,6 +56,7 @@ namespace Ucabmart.Engine
                 Apellido1 = natural.Apellido1;
                 Apellido2 = natural.Apellido2;
                 Direccion = natural.Direccion;
+                AtributosBase(natural);
             }
         }
 
@@ -123,9 +126,12 @@ namespace Ucabmart.Engine
                     apellido1 = ReadString(4);
                     apellido2 = ReadString(5);
                     direccion = ReadInt(6);
+                    Conexion.Close();
                 }
-
-                Conexion.Close();
+                else
+                {
+                    Conexion.Close();
+                }
             }
             catch (Exception e)
             {
@@ -141,6 +147,7 @@ namespace Ucabmart.Engine
             }
 
             Natural natural = new Natural(rif, cedula, nombre1, nombre2, apellido1, apellido2, direccion);
+            natural.AtributosBase(new Cliente(natural.RIF));
             return natural;
         }
 
@@ -154,7 +161,7 @@ namespace Ucabmart.Engine
             string apellido1 = null;
             string apellido2 = null;
             int direccion = 0;
-         List<Natural> listaNatural = new List<Natural>();
+
             try
             {
                 Conexion.Open();
@@ -177,7 +184,7 @@ namespace Ucabmart.Engine
                     apellido2 = ReadString(5);
                     direccion = ReadInt(6);
                     Natural natural = new Natural(rif, cedula, nombre1, nombre2, apellido1, apellido2, direccion);
-                    listaNatural.Add(natural);
+                    lista.Add(natural);
                 }
                 
 
@@ -194,9 +201,13 @@ namespace Ucabmart.Engine
             finally
             {
                 Conexion.Close();
+                foreach (Natural natural in lista)
+                {
+                    natural.AtributosBase(new Cliente(natural.RIF));
+                }
             }
 
-            return listaNatural;
+            return lista;
         }
 
         public override void Actualizar()
@@ -268,5 +279,23 @@ namespace Ucabmart.Engine
             }
         }
         #endregion
+
+        private void AtributosBase(Cliente cliente)
+        {
+            if (!(cliente == null))
+            {
+                RIF = cliente.RIF;
+                Password = cliente.Password;
+                CodigoCorreoElectronico = cliente.CodigoCorreoElectronico;
+                CodigoTienda = cliente.CodigoTienda;
+            }
+            else
+            {
+                RIF = null;
+                Password = null;
+                CodigoCorreoElectronico = 0;
+                CodigoTienda = 0;
+            }
+        }
     }
 }
