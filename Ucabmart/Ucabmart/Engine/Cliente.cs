@@ -114,20 +114,15 @@ namespace Ucabmart.Engine
                 {
                     return new Cliente(ReadString(0), ReadString(3), ReadInt(2), ReadInt(1));
                 }
-
-                Conexion.Close();
+                
             }
             catch (Exception e)
             {
-                try
-                {
-                    Conexion.Close();
-                }
-                catch (Exception f)
-                {
-
-                }
-                return null;
+                throw new Exception("Ha ocurrido un error en la base de datos", e);
+            }
+            finally
+            {
+                Conexion.Close();
             }
             return null;
         }

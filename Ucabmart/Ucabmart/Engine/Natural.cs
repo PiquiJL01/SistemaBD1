@@ -104,6 +104,7 @@ namespace Ucabmart.Engine
             string apellido1 = null;
             string apellido2 = null;
             int direccion = 0;
+
             try
             {
                 Conexion.Open();
@@ -125,19 +126,16 @@ namespace Ucabmart.Engine
                     direccion = ReadInt(6);
                 }
 
-                Conexion.Close();
+                
             }
-            catch (Exception e)
+            
+             catch (Exception e)
             {
-                try
-                {
-                    Conexion.Close();
-                }
-                catch (Exception f)
-                {
-
-                }
-                return null;
+                throw new Exception("Ha ocurrido un error en la base de datos", e);
+            }
+            finally
+            {
+                Conexion.Close();
             }
 
             Natural natural = new Natural(rif, cedula, nombre1, nombre2, apellido1, apellido2, direccion);
@@ -154,49 +152,46 @@ namespace Ucabmart.Engine
             string apellido1 = null;
             string apellido2 = null;
             int direccion = 0;
-         List<Natural> listaNatural = new List<Natural>();
-            try
-            {
-                Conexion.Open();
 
-                string Command = "SELECT * FROM naturales";
-                NpgsqlCommand Script = new NpgsqlCommand(Command, Conexion);
-
-                Reader = Script.ExecuteReader();
-
-
-               
-                while (Reader.Read())
+            List<Natural> listaNatural = new List<Natural>();
+                try
                 {
-                    // Claves.Add(ReadString(0));
-                    rif = ReadString(0);
-                    cedula = ReadString(1);
-                    nombre1 = ReadString(2);
-                    nombre2 = ReadString(3);
-                    apellido1 = ReadString(4);
-                    apellido2 = ReadString(5);
-                    direccion = ReadInt(6);
-                    Natural natural = new Natural(rif, cedula, nombre1, nombre2, apellido1, apellido2, direccion);
-                    listaNatural.Add(natural);
+                    Conexion.Open();
+
+                    string Command = "SELECT * FROM naturales";
+                    NpgsqlCommand Script = new NpgsqlCommand(Command, Conexion);
+
+                    Reader = Script.ExecuteReader();
+                                   
+                    while (Reader.Read())
+                    {
+                        // Claves.Add(ReadString(0));
+                        rif = ReadString(0);
+                        cedula = ReadString(1);
+                        nombre1 = ReadString(2);
+                        nombre2 = ReadString(3);
+                        apellido1 = ReadString(4);
+                        apellido2 = ReadString(5);
+                        direccion = ReadInt(6);
+                        Natural natural = new Natural(rif, cedula, nombre1, nombre2, apellido1, apellido2, direccion);
+                        listaNatural.Add(natural);
+                    }
+                    
+                    //foreach (string clave in Claves)
+                    //{
+                    //    lista.Add(new Natural(clave));
+                    //}
                 }
-                
+                catch (Exception e)
+                {                                             
+                    throw new Exception("Ha ocurrido un error en la base de datos",e);
+                }
+                finally
+                {
+                    Conexion.Close();
+                }
 
-
-                //foreach (string clave in Claves)
-                //{
-                //    lista.Add(new Natural(clave));
-                //}
-            }
-            catch (Exception e)
-            {                                             
-                throw new Exception("Ha ocurrido un error en la base de datos",e);
-            }
-            finally
-            {
-                Conexion.Close();
-            }
-
-            return listaNatural;
+                return listaNatural;
         }
 
         public override void Actualizar()
@@ -223,18 +218,14 @@ namespace Ucabmart.Engine
 
                 Script.ExecuteNonQuery();
 
-                Conexion.Close();
             }
             catch (Exception e)
             {
-                try
-                {
-                    Conexion.Close();
-                }
-                catch (Exception f)
-                {
-
-                }
+                throw new Exception("Ha ocurrido un error en la base de datos", e);
+            }
+            finally
+            {
+                Conexion.Close();
             }
         }
 
