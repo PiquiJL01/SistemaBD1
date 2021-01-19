@@ -16,49 +16,56 @@ namespace Ucabmart.Views
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            List<Lugar> listaLugar = new List<Lugar>();
-            listaLugar = nombreLugar.Todos();
-            foreach (Lugar item in listaLugar)
+            try
             {
-                if (item.Tipo == "Estado")
+                List<Lugar> listaLugar = new List<Lugar>();
+                listaLugar = nombreLugar.Todos();
+                foreach (Lugar item in listaLugar)
                 {
-                    dplEstado.Items.Add(item.Nombre);
-                    dplEstado2.Items.Add(item.Nombre);
+                    if (item.Tipo == "Estado")
+                    {
+                        dplEstado.Items.Add(item.Nombre);
+                        dplEstado2.Items.Add(item.Nombre);
+                    }
+                }
+
+                foreach (Lugar item in listaLugar)
+                {
+                    if (dplEstado.SelectedValue == item.Nombre && item.CodigoUbicacion == 1)
+                        codigoEstado = item.Codigo;
+                    //almacena el codigo del estado
+                }
+
+                foreach (Lugar item in listaLugar)
+                {
+                    if (item.CodigoUbicacion == codigoEstado)
+                    {  //compara el codigo del estado con el codigo del municipio
+                        dplMunicipio.Items.Add(item.Nombre);      //agrega los municipios   
+                        dplMunicipio2.Items.Add(item.Nombre);
+                    }
+                }
+
+                foreach (Lugar item in listaLugar)
+                {
+                    if (dplMunicipio.SelectedValue == item.Nombre && codigoEstado == item.CodigoUbicacion)   //compara el codigo del estado con el codigo del municipio
+                        codigoMunicipio = item.Codigo;
+                    //almacena el codigo del municipio 
+                }
+
+                foreach (Lugar item in listaLugar)
+                {
+                    if (item.CodigoUbicacion == codigoMunicipio)
+                    {  //compara el codigo del municipio con el codigo de la parroquia
+                        dplParroquia.Items.Add(item.Nombre);
+                        dplParroquia2.Items.Add(item.Nombre);
+                    }
                 }
             }
-
-            foreach (Lugar item in listaLugar)
+            catch (Exception ex)
             {
-                if (dplEstado.SelectedValue == item.Nombre && item.CodigoUbicacion == 1)
-                    codigoEstado = item.Codigo;
-                //almacena el codigo del estado
+                Session["mensajeError"] = "Ha ocurrido un error con la base de datos. " + ex;
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('No hay conexión con la base de datos');", true);
             }
-
-            foreach (Lugar item in listaLugar)
-            {
-                if (item.CodigoUbicacion == codigoEstado)
-                {  //compara el codigo del estado con el codigo del municipio
-                    dplMunicipio.Items.Add(item.Nombre);      //agrega los municipios   
-                    dplMunicipio2.Items.Add(item.Nombre);
-                }
-            }
-
-            foreach (Lugar item in listaLugar)
-            {
-                if (dplMunicipio.SelectedValue == item.Nombre && codigoEstado == item.CodigoUbicacion)   //compara el codigo del estado con el codigo del municipio
-                    codigoMunicipio = item.Codigo;
-                //almacena el codigo del municipio 
-            }
-
-            foreach (Lugar item in listaLugar)
-            {
-                if (item.CodigoUbicacion == codigoMunicipio)
-                {  //compara el codigo del municipio con el codigo de la parroquia
-                    dplParroquia.Items.Add(item.Nombre);
-                    dplParroquia2.Items.Add(item.Nombre);
-                }
-            }
-
         }
 
 

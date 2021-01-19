@@ -52,6 +52,11 @@ namespace Ucabmart.Engine
                 DireccionFiscal = juridico.DireccionFiscal;
             }
         }
+
+        public Juridico()
+        {
+        }
+
         #endregion
 
         #region CRUDs
@@ -138,7 +143,15 @@ namespace Ucabmart.Engine
 
         public List<Juridico> TodosJuridicos()
         {
-            List<Juridico> lista = new List<Juridico>();
+            string clave = null;
+            string denominacionComercial = null;
+            string razonSocial = null;
+            float capital = 0;
+            string paginaWeb = null;
+            int direccionFisica = 0;
+            int direccionFiscal = 0;
+
+            List<Juridico> listaJuridico = new List<Juridico>();
 
             try
             {
@@ -148,35 +161,32 @@ namespace Ucabmart.Engine
                 NpgsqlCommand Script = new NpgsqlCommand(Command, Conexion);
 
                 Reader = Script.ExecuteReader();
-
-
-                List<string> Claves = new List<string>();
+                
                 while (Reader.Read())
                 {
-                    Claves.Add(ReadString(0));
+                    clave = ReadString(0);
+                    denominacionComercial = ReadString(1);
+                    razonSocial = ReadString(2);
+                    capital = ReadFloat(3);
+                    paginaWeb = ReadString(4);
+                    direccionFisica = ReadInt(5);
+                    direccionFiscal = ReadInt(6);
+                    Juridico juridico = new Juridico(clave, denominacionComercial, razonSocial, capital, paginaWeb, direccionFisica, direccionFiscal);
+                    listaJuridico.Add(juridico);
                 }
 
-                Conexion.Close();
 
-                foreach (string clave in Claves)
-                {
-                    lista.Add(new Juridico(clave));
-                }
             }
             catch (Exception e)
             {
-                try
-                {
-                    Conexion.Close();
-                }
-                catch (Exception f)
-                {
-
-                }
-                return null;
+                throw new Exception("Ha ocurrido un error en la base de datos", e);
+            }
+            finally
+            {
+                Conexion.Close();
             }
 
-            return lista;
+            return listaJuridico;
         }
 
         public override void Actualizar()

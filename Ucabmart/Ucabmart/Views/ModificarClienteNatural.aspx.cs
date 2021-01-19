@@ -87,9 +87,17 @@ namespace Ucabmart.Views
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            Nombre1.Enabled = false;
-            Nombre1.CssClass = "form-control";
-            cargarPagina(true);
+            try
+            {
+                Nombre1.Enabled = false;
+                Nombre1.CssClass = "form-control";
+                cargarPagina(true);
+            }
+            catch (Exception ex)
+            {
+                Session["mensajeError"] = "Ha ocurrido un error con la base de datos. " + ex;
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('No hay conexión con la base de datos');", true);
+            }
         }
 
         protected void btnBuscar_Click(object sender, EventArgs e)

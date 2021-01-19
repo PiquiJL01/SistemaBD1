@@ -91,7 +91,15 @@ namespace Ucabmart.Views
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            cargarPagina(true);
+            try
+            {
+                cargarPagina(true);
+            }
+            catch (Exception ex)
+            {
+                Session["mensajeError"] = "Ha ocurrido un error con la base de datos. " + ex;
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('No hay conexión con la base de datos');", true);
+            }
 
         }
 
@@ -150,8 +158,7 @@ namespace Ucabmart.Views
                                 "window.location ='Clientes_Admin.aspx';", true);
             }
             catch (Exception ex)
-            {
-
+            {         
                 Session["mensajeError"] = "Ha ocurrido un error al registrar la persona. " + ex;
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('NO DEBE HABER CAMPOS VACÍOS');", true);
             }
