@@ -104,7 +104,6 @@ namespace Ucabmart.Engine
             string apellido1 = null;
             string apellido2 = null;
             int direccion = 0;
-
             try
             {
                 Conexion.Open();
@@ -131,11 +130,15 @@ namespace Ucabmart.Engine
 
             catch (Exception e)
             {
-                throw new Exception("Ha ocurrido un error en la base de datos", e);
-            }
-            finally
-            {
-                Conexion.Close();
+                try
+                {
+                    Conexion.Close();
+                }
+                catch (Exception f)
+                {
+
+                }
+                return null;
             }
 
             Natural natural = new Natural(rif, cedula, nombre1, nombre2, apellido1, apellido2, direccion);
@@ -218,14 +221,18 @@ namespace Ucabmart.Engine
 
                 Script.ExecuteNonQuery();
 
+                Conexion.Close();
             }
             catch (Exception e)
             {
-                throw new Exception("Ha ocurrido un error en la base de datos", e);
-            }
-            finally
-            {
-                Conexion.Close();
+                try
+                {
+                    Conexion.Close();
+                }
+                catch (Exception f)
+                {
+
+                }
             }
         }
 
