@@ -1,4 +1,4 @@
-﻿using Npgsql;
+using Npgsql;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,9 +30,8 @@ namespace Ucabmart.Engine
             Direccion = direccion.Codigo;
         }
 
-        private  Natural(string rif, string cedula,
-            string nombre1, string nombre2, string apellido1, string apellido2, int direccion,
-            Cliente cliente = null)
+        private Natural(string rif, string cedula,
+            string nombre1, string nombre2, string apellido1, string apellido2, int direccion)
             : base(rif)
         {
             Cedula = cedula;
@@ -41,10 +40,9 @@ namespace Ucabmart.Engine
             Apellido1 = apellido1;
             Apellido2 = apellido2;
             Direccion = direccion;
-            AtributosBase(cliente);
         }
 
-        public Natural(string rif)
+        public Natural(string rif) : base(rif)
         {
             Natural natural = LeerNatural(rif);
             if (!(natural == null))
@@ -56,7 +54,6 @@ namespace Ucabmart.Engine
                 Apellido1 = natural.Apellido1;
                 Apellido2 = natural.Apellido2;
                 Direccion = natural.Direccion;
-                AtributosBase(natural);
             }
         }
 
@@ -107,6 +104,7 @@ namespace Ucabmart.Engine
             string apellido1 = null;
             string apellido2 = null;
             int direccion = 0;
+
             try
             {
                 Conexion.Open();
@@ -126,28 +124,21 @@ namespace Ucabmart.Engine
                     apellido1 = ReadString(4);
                     apellido2 = ReadString(5);
                     direccion = ReadInt(6);
-                    Conexion.Close();
                 }
-                else
-                {
-                    Conexion.Close();
-                }
+
+
             }
+
             catch (Exception e)
             {
-                try
-                {
-                    Conexion.Close();
-                }
-                catch (Exception f)
-                {
-
-                }
-                return null;
+                throw new Exception("Ha ocurrido un error en la base de datos", e);
+            }
+            finally
+            {
+                Conexion.Close();
             }
 
             Natural natural = new Natural(rif, cedula, nombre1, nombre2, apellido1, apellido2, direccion);
-            natural.AtributosBase(new Cliente(natural.RIF));
             return natural;
         }
 
@@ -162,6 +153,7 @@ namespace Ucabmart.Engine
             string apellido2 = null;
             int direccion = 0;
 
+            List<Natural> listaNatural = new List<Natural>();
             try
             {
                 Conexion.Open();
@@ -171,8 +163,6 @@ namespace Ucabmart.Engine
 
                 Reader = Script.ExecuteReader();
 
-
-               
                 while (Reader.Read())
                 {
                     // Claves.Add(ReadString(0));
@@ -184,10 +174,8 @@ namespace Ucabmart.Engine
                     apellido2 = ReadString(5);
                     direccion = ReadInt(6);
                     Natural natural = new Natural(rif, cedula, nombre1, nombre2, apellido1, apellido2, direccion);
-                    lista.Add(natural);
+                    listaNatural.Add(natural);
                 }
-                
-
 
                 //foreach (string clave in Claves)
                 //{
@@ -195,19 +183,15 @@ namespace Ucabmart.Engine
                 //}
             }
             catch (Exception e)
-            {                                             
-                throw new Exception("Ha ocurrido un error en la base de datos",e);
+            {
+                throw new Exception("Ha ocurrido un error en la base de datos", e);
             }
             finally
             {
                 Conexion.Close();
-                foreach (Natural natural in lista)
-                {
-                    natural.AtributosBase(new Cliente(natural.RIF));
-                }
             }
 
-            return lista;
+            return listaNatural;
         }
 
         public override void Actualizar()
@@ -234,18 +218,14 @@ namespace Ucabmart.Engine
 
                 Script.ExecuteNonQuery();
 
-                Conexion.Close();
             }
             catch (Exception e)
             {
-                try
-                {
-                    Conexion.Close();
-                }
-                catch (Exception f)
-                {
-
-                }
+                throw new Exception("Ha ocurrido un error en la base de datos", e);
+            }
+            finally
+            {
+                Conexion.Close();
             }
         }
 
@@ -279,23 +259,5 @@ namespace Ucabmart.Engine
             }
         }
         #endregion
-
-        private void AtributosBase(Cliente cliente)
-        {
-            if (!(cliente == null))
-            {
-                RIF = cliente.RIF;
-                Password = cliente.Password;
-                CodigoCorreoElectronico = cliente.CodigoCorreoElectronico;
-                CodigoTienda = cliente.CodigoTienda;
-            }
-            else
-            {
-                RIF = null;
-                Password = null;
-                CodigoCorreoElectronico = 0;
-                CodigoTienda = 0;
-            }
-        }
     }
 }
