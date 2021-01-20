@@ -69,7 +69,7 @@ namespace Ucabmart.Engine
             {
                 Conexion.Open();
 
-                string Comando = "SELECT * FROM corrreo_electronico WHERE ce_codigo=@codigo";
+                string Comando = "SELECT * FROM correo_electronico WHERE ce_codigo=@codigo";
                 Script = new NpgsqlCommand(Comando, Conexion);
 
                 Script.Parameters.AddWithValue("codigo", codigo);
