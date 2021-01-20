@@ -311,5 +311,143 @@ namespace Ucabmart.Engine
             }
         }
         #endregion
+
+        #region Busqueda por Clave Foranea
+        public Telefono Leer(Cliente cliente)
+        {
+            try
+            {
+                Conexion.Open();
+
+                string Comando = "SELECT * FROM telefono WHERE cliente_cl_rif = @rif";
+                Script = new NpgsqlCommand(Comando, Conexion);
+
+                Script.Parameters.AddWithValue("rif", cliente.RIF);
+                Reader = Script.ExecuteReader();
+
+                if (Reader.Read())
+                {
+                    return new Telefono(ReadInt(0), ReadInt(1), ReadInt(2), ReadString(3), ReadInt(4),
+                        ReadInt(5), ReadString(6), ReadString(7));
+                }
+
+                Conexion.Close();
+            }
+            catch (Exception e)
+            {
+                try
+                {
+                    Conexion.Close();
+                }
+                catch (Exception f)
+                {
+
+                }
+            }
+            return null;
+        }
+
+        public Telefono Leer(Empleado empleado)
+        {
+            try
+            {
+                Conexion.Open();
+
+                string Comando = "SELECT * FROM telefono WHERE empleado_em_codigo = @codigo";
+                Script = new NpgsqlCommand(Comando, Conexion);
+
+                Script.Parameters.AddWithValue("codigo", empleado.Codigo);
+                Reader = Script.ExecuteReader();
+
+                if (Reader.Read())
+                {
+                    return new Telefono(ReadInt(0), ReadInt(1), ReadInt(2), ReadString(3), ReadInt(4),
+                        ReadInt(5), ReadString(6), ReadString(7));
+                }
+
+                Conexion.Close();
+            }
+            catch (Exception e)
+            {
+                try
+                {
+                    Conexion.Close();
+                }
+                catch (Exception f)
+                {
+
+                }
+            }
+            return null;
+        }
+
+        public Telefono Leer(PersonaContacto personaContacto)
+        {
+            try
+            {
+                Conexion.Open();
+
+                string Comando = "SELECT * FROM telefono WHERE persona_contacto_pc_codigo = @codigo";
+                Script = new NpgsqlCommand(Comando, Conexion);
+
+                Script.Parameters.AddWithValue("codigo", personaContacto.Codigo);
+                Reader = Script.ExecuteReader();
+
+                if (Reader.Read())
+                {
+                    return new Telefono(ReadInt(0), ReadInt(1), ReadInt(2), ReadString(3), ReadInt(4),
+                        ReadInt(5), ReadString(6), ReadString(7));
+                }
+
+                Conexion.Close();
+            }
+            catch (Exception e)
+            {
+                try
+                {
+                    Conexion.Close();
+                }
+                catch (Exception f)
+                {
+
+                }
+            }
+            return null;
+        }
+
+        public Telefono Leer(Proveedor proveedor)
+        {
+            try
+            {
+                Conexion.Open();
+
+                string Comando = "SELECT * FROM telefono WHERE proveedor_pr_rif = @rif";
+                Script = new NpgsqlCommand(Comando, Conexion);
+
+                Script.Parameters.AddWithValue("rif", proveedor.RIF);
+                Reader = Script.ExecuteReader();
+
+                if (Reader.Read())
+                {
+                    return new Telefono(ReadInt(0), ReadInt(1), ReadInt(2), ReadString(3), ReadInt(4),
+                        ReadInt(5), ReadString(6), ReadString(7));
+                }
+
+                Conexion.Close();
+            }
+            catch (Exception e)
+            {
+                try
+                {
+                    Conexion.Close();
+                }
+                catch (Exception f)
+                {
+
+                }
+            }
+            return null;
+        }
+        #endregion
     }
 }
