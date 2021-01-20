@@ -1906,6 +1906,7 @@
     <Content Include="Views\Check_Products.aspx" />
     <Content Include="Views\ConsultarCliente.aspx" />
     <Content Include="Views\ConsultarClienteNatural.aspx" />
+    <Content Include="Views\ConsultarProveedores.aspx" />
     <Content Include="Views\CrearCuenta.aspx" />
     <Content Include="Views\IniciarSesion.aspx" />
     <Content Include="Views\Inicio.aspx" />
@@ -1918,6 +1919,7 @@
     <Content Include="Views\RegistrarJuridica.aspx" />
     <Content Include="Views\Tiendas.aspx" />
     <Content Include="Views\Categorias.aspx" />
+    <Content Include="Views\EliminarClienteNatural.aspx" />
     <Content Include="Views\User\InicioUsuario.aspx" />
     <Content Include="Views\RegistrarNatural.aspx">
       <BrowseToURL>~/Views/User/RegistrarNatural.aspx</BrowseToURL>
@@ -2015,6 +2017,13 @@
     </Compile>
     <Compile Include="Views\ConsultarClienteNatural.aspx.designer.cs">
       <DependentUpon>ConsultarClienteNatural.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ConsultarProveedores.aspx.cs">
+      <DependentUpon>ConsultarProveedores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ConsultarProveedores.aspx.designer.cs">
+      <DependentUpon>ConsultarProveedores.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\CrearCuenta.aspx.cs">
       <DependentUpon>CrearCuenta.aspx</DependentUpon>
@@ -2120,6 +2129,13 @@
     </Compile>
     <Compile Include="Views\Categorias.aspx.designer.cs">
       <DependentUpon>Categorias.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EliminarClienteNatural.aspx.cs">
+      <DependentUpon>EliminarClienteNatural.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\EliminarClienteNatural.aspx.designer.cs">
+      <DependentUpon>EliminarClienteNatural.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\User\InicioUsuario.aspx.cs">
       <DependentUpon>InicioUsuario.aspx</DependentUpon>

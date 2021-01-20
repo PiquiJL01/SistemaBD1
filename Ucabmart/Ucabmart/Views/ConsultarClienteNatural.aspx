@@ -59,16 +59,15 @@
                 <li class="li-3"></li>
             </ul>
         </div>
+        <!-- Options -->
+           <div class="option">Consultar Cliente</div>
+
       <form id="form1" runat="server">  
         <div class="container">
             <div class="card o-hidden border-0 shadow-lg my-5">
                 <div class="card-body p-0">
                     <div>
-                        <div class="p-5">
-                            <div class="text-center">
-                                <h1 class="h4 text-gray-900 mb-4">Consultar Cliente - Persona Natural</h1>
-                            </div>
-                            
+                        <div class="p-5">                            
                             <%--<form id="form1" runat="server">--%>
                                 <div class="form-group">
                                     <div class="input-group mb-3"><span class="input-group-prepend"><span class="input-group-text"><i class="fa fa-user"></i></span></span> 

@@ -111,10 +111,7 @@ namespace Ucabmart.Views
                 CorreoElectronico ctrlCorreo = new CorreoElectronico(txtCorreo.Text);
                 ctrlCorreo.Insertar();
                 Cliente datosCliente = new Cliente(dplRif.SelectedValue + txtRif.Text, txtContraseña.Text, ctrlCorreo,null);
-             //   datosCliente.RIF = dplRif.SelectedValue + txtRif.Text;
-             //   datosCliente.Password = txtContraseña.Text;
-             //   datosCliente.CodigoCorreoElectronico = codigoCorreo;
-             //   datosCliente.CodigoTienda = 0;
+            
                 datosCliente.Insertar();
 
                 Natural datosNatural = new Natural();
