@@ -220,19 +220,16 @@ namespace Ucabmart.Engine
                 Script.Prepare();
 
                 Script.ExecuteNonQuery();
-
-                Conexion.Close();
+                
             }
+
             catch (Exception e)
             {
-                try
-                {
-                    Conexion.Close();
-                }
-                catch (Exception f)
-                {
-
-                }
+                throw new Exception("Ha ocurrido un error en la base de datos", e);
+            }
+            finally
+            {
+                Conexion.Close();
             }
         }
         #endregion

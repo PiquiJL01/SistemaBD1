@@ -18,7 +18,7 @@ namespace Ucabmart.Engine
         #endregion
 
         #region Declaraciones
-        public Telefono(int codigoPais, int codigoArea, int numero, String tipo, 
+        public Telefono(int codigoPais, int codigoArea, int numero, String tipo,
             Cliente cliente)
         {
             Numero = new Dictionary<NumeroTelefono, int>
@@ -44,7 +44,7 @@ namespace Ucabmart.Engine
                 { NumeroTelefono.Area, codigoArea },
                 { NumeroTelefono.Numero, numero }
             };
-            
+
             Tipo = tipo;
             RifCliente = null;
             CodigoPersonaContacto = personaContacto.Codigo;
@@ -120,6 +120,10 @@ namespace Ucabmart.Engine
             CodigoPersonaContacto = codigoPersonaContacto;
             RifProveedor = rifProveedor;
             CodigoEmpleado = codigoEmpleado;
+        }
+
+        public Telefono()
+        {
         }
         #endregion
 
@@ -221,14 +225,11 @@ namespace Ucabmart.Engine
             }
             catch (Exception e)
             {
-                try
-                {
-                    Conexion.Close();
-                }
-                catch (Exception f)
-                {
-
-                }
+                throw new Exception("Ha ocurrido un error en la base de datos", e);
+            }
+            finally
+            {
+                Conexion.Close();
             }
             return null;
         }
@@ -256,15 +257,11 @@ namespace Ucabmart.Engine
             }
             catch (Exception e)
             {
-                try
-                {
-                    Conexion.Close();
-                }
-                catch (Exception f)
-                {
-
-                }
-                return null;
+                throw new Exception("Ha ocurrido un error en la base de datos", e);
+            }
+            finally
+            {
+                Conexion.Close();
             }
 
             return lista;
@@ -295,26 +292,23 @@ namespace Ucabmart.Engine
                 Script.Prepare();
 
                 Script.ExecuteNonQuery();
-
-                Conexion.Close();
+               
             }
             catch (Exception e)
             {
-                try
-                {
-                    Conexion.Close();
-                }
-                catch (Exception f)
-                {
-
-                }
+                throw new Exception("Ha ocurrido un error en la base de datos", e);
+            }
+            finally
+            {
+                Conexion.Close();
             }
         }
         #endregion
 
         #region Busqueda por Clave Foranea
-        public Telefono Leer(Cliente cliente)
+        public List<Telefono> Leer(Cliente cliente)
         {
+            List<Telefono> lista = new List<Telefono>();
             try
             {
                 Conexion.Open();
@@ -325,26 +319,22 @@ namespace Ucabmart.Engine
                 Script.Parameters.AddWithValue("rif", cliente.RIF);
                 Reader = Script.ExecuteReader();
 
-                if (Reader.Read())
+                while (Reader.Read())
                 {
-                    return new Telefono(ReadInt(0), ReadInt(1), ReadInt(2), ReadString(3), ReadInt(4),
+                    Telefono telefono = new Telefono(ReadInt(0), ReadInt(1), ReadInt(2), ReadString(3), ReadInt(4),
                         ReadInt(5), ReadString(6), ReadString(7));
+                    lista.Add(telefono);
                 }
-
-                Conexion.Close();
             }
             catch (Exception e)
             {
-                try
-                {
-                    Conexion.Close();
-                }
-                catch (Exception f)
-                {
-
-                }
+                throw new Exception("Ha ocurrido un error en la base de datos", e);
             }
-            return null;
+            finally
+            {
+                Conexion.Close();
+            }
+            return lista;
         }
 
         public Telefono Leer(Empleado empleado)
@@ -369,14 +359,11 @@ namespace Ucabmart.Engine
             }
             catch (Exception e)
             {
-                try
-                {
-                    Conexion.Close();
-                }
-                catch (Exception f)
-                {
-
-                }
+                throw new Exception("Ha ocurrido un error en la base de datos", e);
+            }
+            finally
+            {
+                Conexion.Close();
             }
             return null;
         }
@@ -403,14 +390,11 @@ namespace Ucabmart.Engine
             }
             catch (Exception e)
             {
-                try
-                {
-                    Conexion.Close();
-                }
-                catch (Exception f)
-                {
-
-                }
+                throw new Exception("Ha ocurrido un error en la base de datos", e);
+            }
+            finally
+            {
+                Conexion.Close();
             }
             return null;
         }
@@ -437,14 +421,11 @@ namespace Ucabmart.Engine
             }
             catch (Exception e)
             {
-                try
-                {
-                    Conexion.Close();
-                }
-                catch (Exception f)
-                {
-
-                }
+                throw new Exception("Ha ocurrido un error en la base de datos", e);
+            }
+            finally
+            {
+                Conexion.Close();
             }
             return null;
         }

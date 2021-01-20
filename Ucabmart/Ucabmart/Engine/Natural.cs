@@ -241,8 +241,7 @@ namespace Ucabmart.Engine
                 Script.Prepare();
 
                 Script.ExecuteNonQuery();
-
-                Conexion.Close();
+                
             }
             catch (Exception e)
             {
