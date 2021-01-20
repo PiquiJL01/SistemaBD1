@@ -109,7 +109,7 @@
                                     <div class="col-sm-6">
                                        <asp:Label ID="Label8" runat="server" Text="2do Nombre"></asp:Label>
                                        <asp:TextBox ID="Nombre2" runat="server" type="name" name="name" data-parsley-trigger="change"  
-                                            placeholder="Segundo Nombre" autocomplete="off" class="form-control" disabled="True">
+                                            placeholder="Segundo Nombre" autocomplete="off" class="form-control">
                                         </asp:TextBox>
                                     </div>
                                 </div>
@@ -121,13 +121,13 @@
                                     <div class="col-sm-6 mb-3 mb-sm-0">
                                          <asp:Label ID="Apellido" runat="server" Text="Apellido1"></asp:Label>
                                         <asp:TextBox ID="Apellido1" runat="server" type="name" name="name" data-parsley-trigger="change"  
-                                            placeholder="Primer Apellido" autocomplete="off" class="form-control" disabled="True">
+                                            placeholder="Primer Apellido" autocomplete="off" class="form-control">
                                         </asp:TextBox>
                                     </div>
                                     <div class="col-sm-6">
                                         <asp:Label ID="Label9" runat="server" Text="Apellido2"></asp:Label>
                                        <asp:TextBox ID="Apellido2" runat="server" type="name" name="name" data-parsley-trigger="change"  
-                                            placeholder="Segundo Apellido" autocomplete="off" class="form-control" disabled="True">
+                                            placeholder="Segundo Apellido" autocomplete="off" class="form-control">
                                         </asp:TextBox>
                                     </div>
                                 </div>
@@ -145,7 +145,7 @@
                                     <div class="col-sm-6 mb-3 mb-sm-0">
                                         <br >
                                         <div class="input-group mb-3"><span class="input-group-prepend"><span class="input-group-text"><i class="fas fa-user-times"></i></span></span>
-                                            <asp:DropDownList ID="dplRif" runat="server" style="padding:10px 50px 10px 50px; text-align: left;" class="input-group-prepend be-addon" disabled="True">
+                                            <asp:DropDownList ID="dplRif" runat="server" style="padding:10px 50px 10px 50px; text-align: left;" class="input-group-prepend be-addon">
                                                 <asp:ListItem>V</asp:ListItem>
                                                 <asp:ListItem>E</asp:ListItem>
                                                 <asp:ListItem>P</asp:ListItem>
@@ -155,7 +155,7 @@
                                     <div class="col-sm-6">
                                         <br >
                                         <asp:TextBox ID="txtRif" runat="server" type="text" name="name" data-parsley-trigger="change"  
-                                            placeholder="Numero de Rif" autocomplete="off" class="form-control" style="height: 45px;width: 590px;margin-left: -190px;" disabled="True">
+                                            placeholder="Numero de Rif" autocomplete="off" class="form-control" style="height: 45px;width: 590px;margin-left: -190px;">
                                          </asp:TextBox>
                                     </div>
                                 </div>
@@ -165,7 +165,7 @@
                                     <div class="col-sm-6 mb-3 mb-sm-0">
                                         <br >
                                         <div class="input-group mb-3"><span class="input-group-prepend"><span class="input-group-text"><i class="fas fa-user-times"></i></span></span>
-                                            <asp:DropDownList ID="dplCedula" runat="server" style="padding:10px 50px 10px 50px; text-align: left;" class="input-group-prepend be-addon" disabled="True">
+                                            <asp:DropDownList ID="dplCedula" runat="server" style="padding:10px 50px 10px 50px; text-align: left;" class="input-group-prepend be-addon">
                                                 <asp:ListItem>V</asp:ListItem>
                                                 <asp:ListItem>E</asp:ListItem>
                                                 <asp:ListItem>P</asp:ListItem>
@@ -175,7 +175,7 @@
                                     <div class="col-sm-6">
                                         <br >
                                         <asp:TextBox ID="txtCedula" runat="server" type="text" name="name" data-parsley-trigger="change"  
-                                            placeholder="Numero de Cedula" autocomplete="off" class="form-control" style="height: 45px;width: 590px;margin-left: -190px;" disabled="True">
+                                            placeholder="Numero de Cedula" autocomplete="off" class="form-control" style="height: 45px;width: 590px;margin-left: -190px;">
                                         </asp:TextBox>
                                     </div>
                                 </div>
@@ -191,7 +191,7 @@
                                 <div class="form-group">
                                     <asp:Label ID="Label14" runat="server" Text="Correo Electrónico"></asp:Label>
                                     <asp:TextBox ID="txtCorreo" runat="server" type="text" name="name" data-parsley-trigger="change"  
-                                          placeholder="Correo electrónico" autocomplete="off" class="form-control" disabled="True">
+                                          placeholder="Correo electrónico" autocomplete="off" class="form-control">
                                      </asp:TextBox>
                                 </div>
 
@@ -276,25 +276,25 @@
                                 <div class="form-group">
                                          <asp:Label ID="Label13" runat="server" Text="Estado"></asp:Label>
                                         <div class="input-group mb-3"><span class="input-group-prepend"><span class="input-group-text"><i class="fas fa-user"></i></span></span>
-                                            <asp:DropDownList ID="dplEstado" runat="server" style="padding:10px 30px 10px 30px; text-align: left;" class="input-group-prepend be-addon" OnSelectedIndexChanged="dplEstado_SelectedIndexChanged" AutoPostBack="True" disabled="True">
+                                            <asp:DropDownList ID="dplEstado" runat="server" style="padding:10px 10px 10px 10px; text-align: left;" class="input-group-prepend be-addon" OnSelectedIndexChanged="dplEstado_SelectedIndexChanged" AutoPostBack="True">
                                                 
                                             </asp:DropDownList>
                                         </div>
                                 </div>
 
-                                <div class="form-group"  style="margin-top: -84px; margin-left: 260px;">
+                                <div class="form-group"  style="margin-top: -84px; margin-left: 230px;">
                                         <asp:Label ID="Label15" runat="server" Text="Municipio"></asp:Label>
                                         <div class="input-group mb-3"><span class="input-group-prepend"><span class="input-group-text"><i class="fas fa-user"></i></span></span>
-                                            <asp:DropDownList ID="dplMunicipio" runat="server" style="padding:10px 50px 10px 50px; text-align: left;" class="input-group-prepend be-addon" AutoPostBack="True" OnSelectedIndexChanged="dplMunicipio_SelectedIndexChanged" disabled="True">
+                                            <asp:DropDownList ID="dplMunicipio" runat="server" style="padding:10px 10px 10px 10px; text-align: left;" class="input-group-prepend be-addon" AutoPostBack="True" OnSelectedIndexChanged="dplMunicipio_SelectedIndexChanged">
                                                 
                                             </asp:DropDownList>
                                         </div>
                                 </div>
 
-                                <div class="form-group"  style="margin-top: -84px; margin-left: 520px;">
+                                <div class="form-group"  style="margin-top: -84px; margin-left: 510px;">
                                         <asp:Label ID="Label16" runat="server" Text="Parroquia"></asp:Label>
                                         <div class="input-group mb-3"><span class="input-group-prepend"><span class="input-group-text"><i class="fas fa-user"></i></span></span>
-                                            <asp:DropDownList ID="dplParroquia" runat="server" style="padding:10px 50px 10px 50px; text-align: left;" class="input-group-prepend be-addon" disabled="True">
+                                            <asp:DropDownList ID="dplParroquia" runat="server" style="padding:10px 10px 10px 10px; text-align: left;" class="input-group-prepend be-addon">
                                                 
                                             </asp:DropDownList>
                                         </div>
@@ -306,12 +306,12 @@
                                     <div class="col-sm-6 mb-3 mb-sm-0">
                                          <asp:Label ID="Label17" runat="server" Text="Contraseña"></asp:Label>
                                         <asp:TextBox ID="txtContraseña" runat="server" type="password" name="name" data-parsley-trigger="change"  
-                                            placeholder="Ingrese contraseña " autocomplete="off" class="form-control" disabled="True">
+                                            placeholder="Ingrese contraseña " autocomplete="off" class="form-control">
                                         </asp:TextBox>
                                     </div>
                                     <div class="col-sm-6" style="margin-top:24px">
                                        <asp:TextBox ID="txtRepetirContraseña" runat="server" type="password" name="name" data-parsley-trigger="change"  
-                                            placeholder="Repetir Contraseña " autocomplete="off" class="form-control" disabled="True">
+                                            placeholder="Repetir Contraseña " autocomplete="off" class="form-control">
                                         </asp:TextBox>
                                     </div>
                                 </div>
