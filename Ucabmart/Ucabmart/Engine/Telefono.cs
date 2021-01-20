@@ -124,7 +124,9 @@ namespace Ucabmart.Engine
 
         public Telefono()
         {
+
         }
+
         #endregion
 
         #region CRUDs
