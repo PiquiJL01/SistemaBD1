@@ -169,10 +169,32 @@ namespace Ucabmart.Views
                 txtCedula.Text = new String(NumCed).Replace("\0", "");
                 txtCedula.Enabled = true;
 
-                //CORREO Y TELEFONOS
+                //CORREO
                 CorreoElectronico correo = new CorreoElectronico(cliente.CodigoCorreoElectronico);
                 txtCorreo.Text = correo.Direccion;
                 txtCorreo.Enabled = true;
+
+                //TELEFONOS
+
+                Telefono telefono1 = new Telefono();
+                telefono1 = telefono1.Leer(cliente);
+
+                foreach (ListItem item in CodigoPais1.Items)
+                {
+                    if (item.Value == telefono1.Numero[NumeroTelefono.Pais].ToString()) {
+
+                        CodigoPais1.SelectedValue = item.Value;
+                    
+                    }
+                }
+                CodigoPais1.Enabled = true;
+
+                TipoTelf.SelectedValue = telefono1.Tipo;
+                TipoTelf.Enabled = true;
+                CodAre.Text = telefono1.Numero[NumeroTelefono.Area].ToString();
+                CodAre.Enabled = true;
+                txtTelefono1.Text = telefono1.Numero[NumeroTelefono.Numero].ToString();
+                txtTelefono1.Enabled = true;
 
 
                 //LUGAR Y CONTRASEÑA
@@ -219,6 +241,16 @@ namespace Ucabmart.Views
                 txtCorreo.Enabled = false;
                 txtCorreo.CssClass = "form-control";
 
+                CodigoPais1.Enabled = false;
+                CodigoPais1.CssClass = "input-group-prepend be-addon";
+                TipoTelf.Enabled = false;
+                TipoTelf.CssClass = "input-group-prepend be-addon";
+                CodAre.Enabled = false;
+                CodAre.CssClass = "form-control";
+                txtTelefono1.Enabled = false;
+                txtTelefono1.CssClass = "form-control";
+
+
                 dplEstado.Enabled = false;
                 dplEstado.CssClass = "input-group-prepend be-addon";
                 dplMunicipio.Enabled = false;
@@ -241,6 +273,10 @@ namespace Ucabmart.Views
             dplCedula.Enabled = true;
             txtCedula.Enabled = true;
             txtCorreo.Enabled = true;
+            CodigoPais1.Enabled = true;
+            CodAre.Enabled = true;
+            TipoTelf.Enabled = true;
+            txtTelefono1.Enabled = true;
             dplEstado.Enabled = true;
             dplMunicipio.Enabled = true;
             dplParroquia.Enabled = true;
