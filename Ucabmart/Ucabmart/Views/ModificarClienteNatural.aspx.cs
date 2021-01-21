@@ -177,7 +177,8 @@ namespace Ucabmart.Views
                 //TELEFONOS
 
                 Telefono telefono1 = new Telefono();
-                telefono1 = telefono1.Leer(cliente);
+                List<Telefono> telefonos = telefono1.Leer(cliente);
+                telefono1 = telefonos[1];
 
                 foreach (ListItem item in CodigoPais1.Items)
                 {
