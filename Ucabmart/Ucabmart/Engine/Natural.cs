@@ -201,7 +201,7 @@ namespace Ucabmart.Engine
                 Conexion.Open();
 
                 string Comando = "UPDATE naturales SET na_cedula = @cedula, na_1er_nombre = @nombre1, na_2do_nombre = @nombre2, " +
-                    "na_1er_apellido = @ apellido1, na_2do_apellido = @apellido2, lugar_lu_codigo = @direccion WHERE cl_rif = @rif";
+                    "na_1er_apellido = @apellido1, na_2do_apellido = @apellido2, lugar_lu_codigo = @direccion WHERE cl_rif = @rif";
                 Script = new NpgsqlCommand(Comando, Conexion);
 
                 Script.Parameters.AddWithValue("rif", RIF);
