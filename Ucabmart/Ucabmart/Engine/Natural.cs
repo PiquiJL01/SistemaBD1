@@ -85,25 +85,22 @@ namespace Ucabmart.Engine
 
                 Script.Prepare();
 
-                Script.ExecuteNonQuery();
-
-                Conexion.Close();
+                Script.ExecuteNonQuery();  
             }
             catch (Exception e)
             {
+
+            }
+            finally
+            {
                 Conexion.Close();
+                base.Insertar();
             }
         }
 
         public Natural LeerNatural(string codigo)
         {
-            string rif = null;
-            string cedula = null;
-            string nombre1 = null;
-            string nombre2 = null;
-            string apellido1 = null;
-            string apellido2 = null;
-            int direccion = 0;
+            Natural natural = null;
 
             try
             {
@@ -117,13 +114,8 @@ namespace Ucabmart.Engine
 
                 if (Reader.Read())
                 {
-                    rif = ReadString(0);
-                    cedula = ReadString(1);
-                    nombre1 = ReadString(2);
-                    nombre2 = ReadString(3);
-                    apellido1 = ReadString(4);
-                    apellido2 = ReadString(5);
-                    direccion = ReadInt(6);
+                    natural = new Natural(ReadString(0), ReadString(1), ReadString(2), ReadString(3), 
+                        ReadString(4), ReadString(5), ReadInt(6));
                 }
             }
 
@@ -134,24 +126,20 @@ namespace Ucabmart.Engine
             finally
             {
                 Conexion.Close();
+                if (!(natural.RIF == null))
+                {
+                    Cliente cliente = new Cliente(natural.RIF);
+                    natural.Base(cliente);
+                }
             }
 
-            Natural natural = new Natural(rif, cedula, nombre1, nombre2, apellido1, apellido2, direccion);
             return natural;
         }
 
         public List<Natural> TodosNaturales()
         {
             List<Natural> lista = new List<Natural>();
-            string rif = null;
-            string cedula = null;
-            string nombre1 = null;
-            string nombre2 = null;
-            string apellido1 = null;
-            string apellido2 = null;
-            int direccion = 0;
 
-            List<Natural> listaNatural = new List<Natural>();
             try
             {
                 Conexion.Open();
@@ -164,21 +152,16 @@ namespace Ucabmart.Engine
                 while (Reader.Read())
                 {
                     // Claves.Add(ReadString(0));
-                    rif = ReadString(0);
-                    cedula = ReadString(1);
-                    nombre1 = ReadString(2);
-                    nombre2 = ReadString(3);
-                    apellido1 = ReadString(4);
-                    apellido2 = ReadString(5);
-                    direccion = ReadInt(6);
+                    string rif = ReadString(0);
+                    string cedula = ReadString(1);
+                    string nombre1 = ReadString(2);
+                    string nombre2 = ReadString(3);
+                    string apellido1 = ReadString(4);
+                    string apellido2 = ReadString(5);
+                    int direccion = ReadInt(6);
                     Natural natural = new Natural(rif, cedula, nombre1, nombre2, apellido1, apellido2, direccion);
-                    listaNatural.Add(natural);
+                    lista.Add(natural);
                 }
-
-                //foreach (string clave in Claves)
-                //{
-                //    lista.Add(new Natural(clave));
-                //}
             }
             catch (Exception e)
             {
@@ -189,7 +172,13 @@ namespace Ucabmart.Engine
                 Conexion.Close();
             }
 
-            return listaNatural;
+            foreach (Natural natural1 in lista)
+            {
+                Cliente cliente = new Cliente(natural1.RIF);
+                natural1.Base(cliente);
+            }
+
+            return lista;
         }
 
         public override void Actualizar()
@@ -224,6 +213,7 @@ namespace Ucabmart.Engine
             finally
             {
                 Conexion.Close();
+                base.Actualizar();
             }
         }
 
@@ -250,8 +240,17 @@ namespace Ucabmart.Engine
             finally
             {
                 Conexion.Close();
+                base.Eliminar();
             }
         }
         #endregion
+
+        private void Base(Cliente cliente)
+        {
+            RIF = cliente.RIF;
+            Password = cliente.Password;
+            CodigoCorreoElectronico = cliente.CodigoCorreoElectronico;
+            CodigoTienda = cliente.CodigoTienda;
+        }
     }
 }
