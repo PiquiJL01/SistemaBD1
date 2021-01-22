@@ -114,6 +114,25 @@ namespace Ucabmart.Views
                 txtCorreo.Enabled = false;
                 txtCorreo.CssClass = "form-control";
 
+                CodigoPais1.Enabled = false;
+                CodigoPais1.CssClass = "input-group-prepend be-addon";
+                TipoTelf.Enabled = false;
+                TipoTelf.CssClass = "input-group-prepend be-addon";
+                CodAre.Enabled = false;
+                CodAre.CssClass = "form-control";
+                txtTelefono1.Enabled = false;
+                txtTelefono1.CssClass = "form-control";
+
+
+                CodigoPais2.Enabled = false;
+                CodigoPais2.CssClass = "input-group-prepend be-addon";
+                TipoTelf2.Enabled = false;
+                TipoTelf2.CssClass = "input-group-prepend be-addon";
+                CodAre2.Enabled = false;
+                CodAre2.CssClass = "form-control";
+                txtTelefono2.Enabled = false;
+                txtTelefono2.CssClass = "form-control";
+
                 dplEstado.Enabled = false;
                 dplEstado.CssClass = "input-group-prepend be-addon";
                 dplMunicipio.Enabled = false;
@@ -125,6 +144,9 @@ namespace Ucabmart.Views
                 txtContraseña.CssClass = "form-control";
                 txtRepetirContraseña.Enabled = false;
                 txtRepetirContraseña.CssClass = "form-control";
+
+                btnModificar.Enabled = false;
+                btnModificar.CssClass = "btn btn-primary btn-user btn-block";
 
         }
 
@@ -177,11 +199,12 @@ namespace Ucabmart.Views
                 //TELEFONOS
 
                 Telefono telefono1 = new Telefono();
-             //   telefono1 = telefono1.Leer(cliente);
+                List<Telefono> telefonos = telefono1.Leer(cliente);
+
 
                 foreach (ListItem item in CodigoPais1.Items)
                 {
-                    if (item.Value == telefono1.Numero[NumeroTelefono.Pais].ToString()) {
+                    if (item.Value == telefonos[0].Numero[NumeroTelefono.Pais].ToString()) {
 
                         CodigoPais1.SelectedValue = item.Value;
                     
@@ -189,12 +212,33 @@ namespace Ucabmart.Views
                 }
                 CodigoPais1.Enabled = true;
 
-                TipoTelf.SelectedValue = telefono1.Tipo;
+                TipoTelf.SelectedValue = telefonos[0].Tipo;
                 TipoTelf.Enabled = true;
-                CodAre.Text = telefono1.Numero[NumeroTelefono.Area].ToString();
+                CodAre.Text = telefonos[0].Numero[NumeroTelefono.Area].ToString();
                 CodAre.Enabled = true;
-                txtTelefono1.Text = telefono1.Numero[NumeroTelefono.Numero].ToString();
+                txtTelefono1.Text = telefonos[0].Numero[NumeroTelefono.Numero].ToString();
                 txtTelefono1.Enabled = true;
+
+                if (telefonos.Count > 1) {
+
+                    foreach (ListItem item in CodigoPais2.Items)
+                    {
+                        if (item.Value == telefonos[1].Numero[NumeroTelefono.Pais].ToString())
+                        {
+
+                            CodigoPais2.SelectedValue = item.Value;
+
+                        }
+                    }
+                    CodigoPais2.Enabled = true;
+
+                    TipoTelf2.SelectedValue = telefonos[1].Tipo;
+                    TipoTelf2.Enabled = true;
+                    CodAre2.Text = telefonos[1].Numero[NumeroTelefono.Area].ToString();
+                    CodAre2.Enabled = true;
+                    txtTelefono2.Text = telefonos[1].Numero[NumeroTelefono.Numero].ToString();
+                    txtTelefono2.Enabled = true;
+                }
 
 
                 //LUGAR Y CONTRASEÑA
@@ -214,6 +258,8 @@ namespace Ucabmart.Views
                 txtContraseña.Enabled = true;
                 txtRepetirContraseña.Text = cliente.Password;
                 txtRepetirContraseña.Enabled = true;
+
+                btnModificar.Enabled = true;
 
             }
             else
@@ -251,6 +297,16 @@ namespace Ucabmart.Views
                 txtTelefono1.CssClass = "form-control";
 
 
+                CodigoPais2.Enabled = false;
+                CodigoPais2.CssClass = "input-group-prepend be-addon";
+                TipoTelf2.Enabled = false;
+                TipoTelf2.CssClass = "input-group-prepend be-addon";
+                CodAre2.Enabled = false;
+                CodAre2.CssClass = "form-control";
+                txtTelefono2.Enabled = false;
+                txtTelefono2.CssClass = "form-control";
+
+
                 dplEstado.Enabled = false;
                 dplEstado.CssClass = "input-group-prepend be-addon";
                 dplMunicipio.Enabled = false;
@@ -258,8 +314,73 @@ namespace Ucabmart.Views
                 dplParroquia.Enabled = false;
                 dplParroquia.CssClass = "input-group-prepend be-addon";
 
+                btnModificar.Enabled = false;
+                btnModificar.CssClass = "btn btn-primary btn-user btn-block";
             }
 
+        }
+
+
+        protected void btnGuardarCambios(object sender, EventArgs e)
+        {
+            int CodLug1 = this.CodLugar(dplParroquia, dplMunicipio, dplEstado);
+            Lugar lugar = new Lugar(CodLug1);
+
+            CorreoElectronico ctrlCorreo = new CorreoElectronico(txtCorreo.Text);
+            ctrlCorreo.Actualizar();
+
+            Cliente datosCliente = new Cliente(dplRif.SelectedValue + txtRif.Text, txtContraseña.Text, ctrlCorreo, null);
+            datosCliente.Actualizar();
+
+            Natural natural = new Natural(dplRif.SelectedValue + txtRif.Text, txtContraseña.Text,ctrlCorreo, dplCedula.SelectedValue + txtCedula.Text,Nombre1.Text,Nombre2.Text,Apellido1.Text,Apellido2.Text,lugar);
+            natural.Actualizar();
+
+            Telefono telefono1 = new Telefono(int.Parse(CodigoPais1.SelectedValue), int.Parse(CodAre.Text), int.Parse(txtTelefono1.Text), TipoTelf.Text, datosCliente);
+            telefono1.Actualizar();
+            Telefono telefono2 = new Telefono(int.Parse(CodigoPais2.SelectedValue), int.Parse(CodAre2.Text), int.Parse(txtTelefono2.Text), TipoTelf2.Text, datosCliente);
+            telefono1.Actualizar();
+
+
+
+
+        }
+
+
+
+        protected int CodLugar(DropDownList x, DropDownList y, DropDownList z)
+        {
+            List<Lugar> lugares = new List<Lugar>();
+            lugares = new Lugar().Todos();
+            int CodMunicpio = 0;
+            int CodEstado = 0;
+
+
+            foreach (Lugar lugar in lugares)
+            {
+                if (z.SelectedValue == lugar.Nombre && lugar.Tipo == "Estado")
+                {
+                    CodEstado = lugar.Codigo;
+                }
+            }
+
+            foreach (Lugar lugar in lugares)
+            {
+                if (y.SelectedValue == lugar.Nombre && lugar.Tipo == "Municipio" && CodEstado == lugar.CodigoUbicacion)
+                {
+                    CodMunicpio = lugar.Codigo;
+                }
+            }
+
+            foreach (Lugar lugar in lugares)
+            {
+                if (x.SelectedValue == lugar.Nombre && lugar.Tipo == "Parroquia" && CodMunicpio == lugar.CodigoUbicacion)
+                {
+                    return lugar.Codigo;
+                }
+
+            }
+
+            return 0;
         }
 
         protected void dplEstado_SelectedIndexChanged(object sender, EventArgs e)
@@ -277,11 +398,16 @@ namespace Ucabmart.Views
             CodAre.Enabled = true;
             TipoTelf.Enabled = true;
             txtTelefono1.Enabled = true;
+            CodigoPais2.Enabled = true;
+            CodAre2.Enabled = true;
+            TipoTelf2.Enabled = true;
+            txtTelefono2.Enabled = true;
             dplEstado.Enabled = true;
             dplMunicipio.Enabled = true;
             dplParroquia.Enabled = true;
             txtContraseña.Enabled = true;
             txtRepetirContraseña.Enabled = true;
+            btnModificar.Enabled = true;
 
             cargarPagina(false);
 

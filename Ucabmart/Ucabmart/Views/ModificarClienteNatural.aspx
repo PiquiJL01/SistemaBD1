@@ -233,7 +233,7 @@
                                      </div>
 
                                      <div class="input-group mb-3">
-                                        <asp:DropDownList ID="TipoTelf2" runat="server" style="padding-bottom: 15px; margin-top: -105px; margin-bottom: 80px; margin-left: 240px; background-color: #0f136bd6;color: white; width: 220px;" class="input-group-prepend be-addon" disabled="True">
+                                        <asp:DropDownList ID="TipoTelf2" runat="server" style="padding-bottom: 15px; margin-top: -105px; margin-bottom: 80px; margin-left: 240px; background-color: #0f136bd6;color: white; width: 220px;" class="input-group-prepend be-addon">
                                                 <asp:ListItem Value="">Tipo de Telefono</asp:ListItem>
                                                 <asp:ListItem Value="Movil">Movil</asp:ListItem>
                                                 <asp:ListItem Value="Fijo">Fijo</asp:ListItem>
@@ -242,13 +242,13 @@
 
                                     <div class="col-sm-6 mb-3 mb-sm-0" style="margin-left: 180px; margin-top: -30px;">
                                         <asp:TextBox ID="CodAre2" runat="server" type="text" name="name" data-parsley-trigger="change"  
-                                            placeholder="Codigo Area" autocomplete="off" class="form-control" style="width: 330px; margin-top: -81px; margin-left: 290px;" disabled="True">
+                                            placeholder="Codigo Area" autocomplete="off" class="form-control" style="width: 330px; margin-top: -81px; margin-left: 290px;">
                                         </asp:TextBox>
                                     </div>
 
                                     <div class="col-sm-6" style="margin-top: -30px; margin-left: 180px;">
                                         <asp:TextBox ID="txtTelefono2" runat="server" type="text" name="name" data-parsley-trigger="change"  
-                                            placeholder="Teléfono 2" autocomplete="off" class="form-control" style="width: 810px; margin-left: -190px; margin-top: -20px;" disabled="True">
+                                            placeholder="Teléfono 2" autocomplete="off" class="form-control" style="width: 810px; margin-left: -190px; margin-top: -20px;">
                                         </asp:TextBox>
                                     </div>
                                 </div>
@@ -306,7 +306,7 @@
                                 </div>
 
                                 <hr>
-                                <asp:Button ID="btnModificar" runat="server" class="btn btn-primary btn-user btn-block" Text="Modificar Datos" disabled="True"/>
+                                <asp:Button ID="btnModificar" runat="server" class="btn btn-primary btn-user btn-block" Text="Guardar Cambios" OnClick="btnGuardarCambios"/>
 
                             </div>  
 
