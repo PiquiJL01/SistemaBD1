@@ -70,18 +70,9 @@
                         <div class="p-5">                            
                                 <div class="form-group">
                                     <div class="input-group mb-3"><span class="input-group-prepend"><span class="input-group-text"><i class="fa fa-user"></i></span></span> 
-                                        <asp:TextBox ID="txtBuscar" runat="server" placeholder="Ingrese el Rif. Ejm: 'V1234', 'E1234' o 'P1234'" Width="311px" ></asp:TextBox>  
-                                        <asp:Button ID="btnBuscar" runat="server" class="btn btn-space btn-primary ml-1" Text="Buscar" OnClick="btnBuscar_Click" Width="87px" />
-                                        <asp:Button ID="btnEliminar" runat="server" class="btn btn-space btn-primary ml-1" Text="Eliminar" Width="87px" OnClick="btnEliminar_Click" />
-                                    </div>
-                                </div>
-
-                                <div class="table-responsive" ID="listaPersonaTabla" runat="server">
-                                    <div class="text-center">
-                                       <%-- <asp:Table ID="listaPersonaTabla" GridLines="Both" HorizontalAlign="Center" 
-                                            runat="server" class="table table-striped table-bordered second"
-                                            style ="width:100%" text-align ="center">
-                                        </asp:Table>--%>
+                                        <asp:TextBox ID="txtEliminar" runat="server" placeholder="Ingrese el Rif. Ejm: 'V1234', 'E1234' o 'P1234'" Width="311px" ></asp:TextBox>  
+                                        <asp:Button ID="btnEliminar" runat="server" class="btn btn-space btn-primary ml-1" Text="Eliminar"  Width="87px" OnClick="btnEliminar_Click" />
+                                        
                                     </div>
                                 </div>
 

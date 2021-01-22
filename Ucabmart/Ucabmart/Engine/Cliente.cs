@@ -31,6 +31,11 @@ namespace Ucabmart.Engine
             }
         }
 
+        public Cliente()
+        {
+
+        }
+
         private Cliente(string rif, string password, int correo, int tienda)
         {
             RIF = rif;
@@ -39,18 +44,15 @@ namespace Ucabmart.Engine
             CodigoTienda = tienda;
         }
 
-        public Cliente(string rif = null)
+        public Cliente(string rif)
         {
-            if (!(rif == null))
+            Cliente cliente = Leer(rif);
+            if (!(cliente == null))
             {
-                Cliente cliente = Leer(rif);
-                if (!(cliente == null))
-                {
-                    RIF = cliente.RIF;
-                    Password = cliente.Password;
-                    CodigoTienda = cliente.CodigoTienda;
-                    CodigoCorreoElectronico = cliente.CodigoCorreoElectronico;
-                }
+                RIF = cliente.RIF;
+                Password = cliente.Password;
+                CodigoTienda = cliente.CodigoTienda;
+                CodigoCorreoElectronico = cliente.CodigoCorreoElectronico;
             }
         }
         #endregion
