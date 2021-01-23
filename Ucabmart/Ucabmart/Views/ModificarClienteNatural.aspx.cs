@@ -340,7 +340,7 @@ namespace Ucabmart.Views
             Telefono telefono2 = new Telefono(int.Parse(CodigoPais2.SelectedValue), int.Parse(CodAre2.Text), int.Parse(txtTelefono2.Text), TipoTelf2.Text, datosCliente);
             telefono1.Actualizar();
 
-
+            Response.Redirect("/Views/Proveedores.aspx", false);
 
 
         }
