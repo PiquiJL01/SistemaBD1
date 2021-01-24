@@ -138,9 +138,8 @@ namespace Ucabmart.Views
                 Telefono telefono4 = new Telefono(int.Parse(CodigoPais4.SelectedValue), int.Parse(CodAre4.Text), int.Parse(txtTelefono4.Text), TipoTelf4.Text, personaContacto1);
                 telefono4.Insertar();
 
-
-
-                Response.Redirect("/Views/Clientes_Admin.aspx", false);
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('La persona ha sido registrado exitosamente');" +
+                                "window.location ='Clientes_Admin.aspx';", true);
 
             }
             catch (Exception ex)

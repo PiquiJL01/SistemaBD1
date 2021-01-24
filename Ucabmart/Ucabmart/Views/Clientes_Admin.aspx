@@ -99,7 +99,7 @@
                     </div>
                     <div class="col-lg-4 col-sm-6 mb-4" style="box-sizing: initial">
                         <div class="categorias-item">
-                            <a class="categorias-link" href="#">
+                            <a class="categorias-link" href="ModificarCliente.aspx">
                                 <div class="categorias-hover">
                                     <div class="categorias-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
@@ -113,7 +113,7 @@
                     </div>
                     <div class="col-lg-4 col-sm-6 mb-4" style="margin-left: 100px">
                         <div class="categorias-item">
-                            <a class="categorias-link" href="#">
+                            <a class="categorias-link" href="EliminarCliente.aspx">
                                 <div class="categorias-hover">
                                     <div class="categorias-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>

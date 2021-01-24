@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="EliminarClienteNatural.aspx.cs" Inherits="Ucabmart.Views.User.EliminarClienteNatural" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="EliminarCliente.aspx.cs" Inherits="Ucabmart.Views.EliminarCliente" %>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Ucabmart - Consultar Cliente Natural</title>
+        <title>Ucabmart - Consultar Cliente</title>
         <link rel="icon" type="image/x-icon" href="../../Content/assets/img/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
@@ -16,25 +16,25 @@
         <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="../Content/css/RegistroCliente.css" rel="stylesheet" />
-        
+        <link href="../../Content/css/Clientes.css" rel="stylesheet" />
+
     </head>
 
-    <body id="page-top" class="bg-gradient-primary">
+      <body id="page-top" class="bg-gradient-primary">
+
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
             <div class="container">
                 <a class="navbar-brand js-scroll-trigger" href="#page-top"><img class="Icon" src="../../Content/assets/img/Ucabmart-Logo.png" alt="" /></a>
-               
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars ml-1"></i>
                 </button>
-
                 <div class="collapse navbar-collapse" id="navbarResponsive">      
                    <!-- Topbar Search -->
+                       
                     <ul class="navbar-nav text-uppercase ml-auto">
-                        <li class="nav-item"> <a class="nav-item">      </a></li>
+                        <li class="nav-item"> <a class="nav-item">      </a>     </li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/Views/Clientes_Admin.aspx">Clientes</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/Views/Tiendas-Admin.aspx">Tiendas</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/Views/Productos_Admin.aspx">Productos</a></li>
@@ -45,45 +45,61 @@
                 </div>
             </div>
         </nav>
+       
+          <!-- Top Frame -->
+          <div class="Top-Frame">
+              <ul class="Ordened">
+                  <li class="li-1"></li>
+                  <li class="li-2">
+                      <ul class="Ordened">
+                          <li class="li-4" >CLIENTES-UCABMART</li>
+                          <li><img src="../Content/assets/img/Client/Client-Icono.png" height="80px"/>  </li>
+                      </ul>
+                  </li>
+                  <li class="li-3"></li>
+              </ul>
+          </div>
 
-        <!-- Top Frame -->
-        <div class="Top-Frame">
-            <ul class="Ordened">
-                <li class="li-1"></li>
-                <li class="li-2">
-                    <ul class="Ordened">
-                        <li class="li-4" >CLIENTES-UCABMART</li>
-                        <li><img src="../Content/assets/img/Client/Client-Icono.png" height="80px"/>  </li>
-                    </ul>
-                </li>
-                <li class="li-3"></li>
-            </ul>
-        </div>
-        <!-- Options -->
-           <div class="option">Eliminar Cliente Natural</div>
+       <!-- Options -->
+           <div class="option">Eliminar Cliente</div>
 
-      <form id="form1" runat="server">  
-        <div class="container">
-            <div class="card o-hidden border-0 shadow-lg my-5">
-                <div class="card-body p-0">
-                    <div>
-                        <div class="p-5">                            
-                                <div class="form-group">
-                                    <div class="input-group mb-3"><span class="input-group-prepend"><span class="input-group-text"><i class="fa fa-user"></i></span></span> 
-                                        <asp:TextBox ID="txtEliminar" runat="server" placeholder="Ingrese el Rif. Ejm: 'V1234', 'E1234' o 'P1234'" Width="311px" ></asp:TextBox>  
-                                        <asp:Button ID="btnEliminar" runat="server" class="btn btn-space btn-primary ml-1" Text="Eliminar"  Width="87px" OnClick="btnEliminar_Click" />
-                                        
-                                    </div>
+      <section class="page-section" id="tiendas">
+         <div class="container cuadro" style="margin-top: -150px; padding-top: 80px;">
+              <div class="justify-content-center cut">
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <div class="tiendas-item">
+                            <a class="tiendas-link" href="EliminarClienteNatural.aspx">
+                                <div class="tiendas-hover">
+                                    <div class="tiendas-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-
+                                <img class="img-fluid" src="../../Content/assets/img/Natural-Create.jpg" alt="" />
+                            </a>
+                            <div class="tiendas-caption" style="background-color:#4e73df">
+                                <div class="tiendas-caption-heading">Cliente - Persona Natural</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="tiendas-item">
+                            <a class="tiendas-link" href="EliminarClienteJuridico.aspx">
+                                <div class="tiendas-hover">
+                                    <div class="tiendas-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="../../Content/assets/img/Business-Create.jpg" alt="" />
+                            </a>
+                            <div class="tiendas-caption" style="background-color:#fed136">
+                                <div class="tiendas-caption-heading">Cliente - Persona Jurídica</div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+          </div>
+        </section>
 
+           <br>
+           <br>
         <!-- Footer-->
-          <footer class="footer py-4">
+        <footer class="footer py-4">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-4 text-lg-left">Copyright © Your Website 2020</div>
@@ -99,7 +115,6 @@
                 </div>
             </div>
         </footer>
-</form>
         <!-- Bootstrap core JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -112,5 +127,3 @@
         <script src="../../Content/js/scripts.js"></script>
     </body>
 </html>
-
-

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="EliminarClienteNatural.aspx.cs" Inherits="Ucabmart.Views.User.EliminarClienteNatural" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="EliminarClienteJuridico.aspx.cs" Inherits="Ucabmart.Views.EliminarClienteJuridico" %>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -60,7 +60,7 @@
             </ul>
         </div>
         <!-- Options -->
-           <div class="option">Eliminar Cliente Natural</div>
+           <div class="option">Eliminar Cliente Jurídico</div>
 
       <form id="form1" runat="server">  
         <div class="container">
@@ -112,5 +112,3 @@
         <script src="../../Content/js/scripts.js"></script>
     </body>
 </html>
-
-
