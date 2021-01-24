@@ -371,8 +371,9 @@ namespace Ucabmart.Engine
             return null;
         }
 
-        public Telefono Leer(PersonaContacto personaContacto)
+        public List<Telefono> Leer(PersonaContacto personaContacto)
         {
+            List<Telefono> listaTelefono = new List<Telefono>();
             try
             {
                 Conexion.Open();
@@ -383,13 +384,12 @@ namespace Ucabmart.Engine
                 Script.Parameters.AddWithValue("codigo", personaContacto.Codigo);
                 Reader = Script.ExecuteReader();
 
-                if (Reader.Read())
+                while (Reader.Read())
                 {
-                    return new Telefono(ReadInt(0), ReadInt(1), ReadInt(2), ReadString(3), ReadInt(4),
+                    Telefono telefono = new Telefono(ReadInt(0), ReadInt(1), ReadInt(2), ReadString(3), ReadInt(4),
                         ReadInt(5), ReadString(6), ReadString(7));
+                    listaTelefono.Add(telefono);
                 }
-
-                Conexion.Close();
             }
             catch (Exception e)
             {
@@ -399,7 +399,7 @@ namespace Ucabmart.Engine
             {
                 Conexion.Close();
             }
-            return null;
+            return listaTelefono;
         }
 
         public Telefono Leer(Proveedor proveedor)

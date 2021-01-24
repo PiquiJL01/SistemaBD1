@@ -91,11 +91,7 @@ namespace Ucabmart.Engine
                 }
                 finally
                 {
-                    try
-                    {
-                        Conexion.Close();
-                    }
-                    finally { }
+                    Conexion.Close();
                 }
             }
         }
@@ -126,13 +122,13 @@ namespace Ucabmart.Engine
                         RifProveedor = ReadString(7);
                     }
                 }
+                catch (Exception e)
+                {
+                    throw new Exception("Ha ocurrido un error en la base de datos", e);
+                }
                 finally
                 {
-                    try
-                    {
-                        Conexion.Close();
-                    }
-                    finally { }
+                    Conexion.Close();
                 }
             }
         }
@@ -195,10 +191,13 @@ namespace Ucabmart.Engine
                 {
                     Codigo = ReadInt(0);
                 }
-
-                Conexion.Close();
+                
             }
             catch (Exception e)
+            {
+                throw new Exception("Ha ocurrido un error en la base de datos", e);
+            }
+            finally
             {
                 Conexion.Close();
             }
@@ -226,14 +225,11 @@ namespace Ucabmart.Engine
             }
             catch (Exception e)
             {
-                try
-                {
-                    Conexion.Close();
-                }
-                catch (Exception f)
-                {
-
-                }
+                throw new Exception("Ha ocurrido un error en la base de datos", e);
+            }
+            finally
+            {
+                Conexion.Close();
             }
 
             return null;
@@ -262,15 +258,11 @@ namespace Ucabmart.Engine
             }
             catch (Exception e)
             {
-                try
-                {
-                    Conexion.Close();
-                }
-                catch (Exception f)
-                {
-
-                }
-                return null;
+                throw new Exception("Ha ocurrido un error en la base de datos", e);
+            }
+            finally
+            {
+                Conexion.Close();
             }
 
             return lista;
@@ -321,14 +313,11 @@ namespace Ucabmart.Engine
             }
             catch (Exception e)
             {
-                try
-                {
-                    Conexion.Close();
-                }
-                catch (Exception f)
-                {
-
-                }
+                throw new Exception("Ha ocurrido un error en la base de datos", e);
+            }
+            finally
+            {
+                Conexion.Close();
             }
         }
 
@@ -351,14 +340,11 @@ namespace Ucabmart.Engine
             }
             catch (Exception e)
             {
-                try
-                {
-                    Conexion.Close();
-                }
-                catch (Exception f)
-                {
-
-                }
+                throw new Exception("Ha ocurrido un error en la base de datos", e);
+            }
+            finally
+            {
+                Conexion.Close();
             }
         }
         #endregion

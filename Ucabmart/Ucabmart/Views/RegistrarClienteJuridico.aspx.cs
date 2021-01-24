@@ -114,8 +114,7 @@ namespace Ucabmart.Views
             {
                 int CodLug1 = this.CodLugar(dplParroquia, dplMunicipio, dplEstado);
                 int CodLug2 = this.CodLugar(dplParroquia2, dplMunicipio2, dplEstado2);
-
-
+                         
                 CorreoElectronico ctrlCorreo = new CorreoElectronico(txtCorreo.Text);
                 ctrlCorreo.Insertar();
 

@@ -1908,6 +1908,8 @@
     <Content Include="Views\ConsultarClienteNatural.aspx" />
     <Content Include="Views\ConsultarProveedores.aspx" />
     <Content Include="Views\CrearCuenta.aspx" />
+    <Content Include="Views\EliminarCliente.aspx" />
+    <Content Include="Views\EliminarClienteJuridico.aspx" />
     <Content Include="Views\IniciarSesion.aspx" />
     <Content Include="Views\Inicio.aspx" />
     <Content Include="Views\ModificarCliente.aspx" />
@@ -2031,6 +2033,20 @@
     </Compile>
     <Compile Include="Views\CrearCuenta.aspx.designer.cs">
       <DependentUpon>CrearCuenta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EliminarCliente.aspx.cs">
+      <DependentUpon>EliminarCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\EliminarCliente.aspx.designer.cs">
+      <DependentUpon>EliminarCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EliminarClienteJuridico.aspx.cs">
+      <DependentUpon>EliminarClienteJuridico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\EliminarClienteJuridico.aspx.designer.cs">
+      <DependentUpon>EliminarClienteJuridico.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\IniciarSesion.aspx.cs">
       <DependentUpon>IniciarSesion.aspx</DependentUpon>
