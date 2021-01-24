@@ -1913,6 +1913,7 @@
     <Content Include="Views\IniciarSesion.aspx" />
     <Content Include="Views\Inicio.aspx" />
     <Content Include="Views\ModificarCliente.aspx" />
+    <Content Include="Views\ModificarClienteJuridico.aspx" />
     <Content Include="Views\ModificarClienteNatural.aspx" />
     <Content Include="Views\RegistrarClienteJuridico.aspx" />
     <Content Include="Views\RegistrarClienteNatural.aspx" />
@@ -2068,6 +2069,13 @@
     </Compile>
     <Compile Include="Views\ModificarCliente.aspx.designer.cs">
       <DependentUpon>ModificarCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ModificarClienteJuridico.aspx.cs">
+      <DependentUpon>ModificarClienteJuridico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ModificarClienteJuridico.aspx.designer.cs">
+      <DependentUpon>ModificarClienteJuridico.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\ModificarClienteNatural.aspx.cs">
       <DependentUpon>ModificarClienteNatural.aspx</DependentUpon>

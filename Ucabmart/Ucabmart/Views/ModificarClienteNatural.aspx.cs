@@ -12,7 +12,6 @@ namespace Ucabmart.Views
     {
         Lugar nombreLugar = new Lugar(0);
         int codigoEstado = -1, codigoMunicipio = -1;
-        int vez = 1;
   
 
         public void cargarPagina(Boolean flag)
@@ -320,32 +319,67 @@ namespace Ucabmart.Views
 
         }
 
-
         protected void btnGuardarCambios(object sender, EventArgs e)
         {
             int CodLug1 = this.CodLugar(dplParroquia, dplMunicipio, dplEstado);
             Lugar lugar = new Lugar(CodLug1);
 
-            CorreoElectronico ctrlCorreo = new CorreoElectronico(txtCorreo.Text);
+            Natural ClienteNatural = new Natural(dplRif.SelectedValue + txtRif.Text);
+
+
+            CorreoElectronico ctrlCorreo = new CorreoElectronico(ClienteNatural.CodigoCorreoElectronico);
+            ctrlCorreo.Direccion = txtCorreo.Text;
             ctrlCorreo.Actualizar();
 
-            Cliente datosCliente = new Cliente(dplRif.SelectedValue + txtRif.Text, txtContraseña.Text, ctrlCorreo, null);
-            datosCliente.Actualizar();
+            //Cliente datosCliente = new Cliente(dplRif.SelectedValue + txtRif.Text, txtContraseña.Text, ctrlCorreo, null);
+            //datosCliente.Actualizar();
 
-            Natural natural = new Natural(dplRif.SelectedValue + txtRif.Text, txtContraseña.Text,ctrlCorreo, dplCedula.SelectedValue + txtCedula.Text,Nombre1.Text,Nombre2.Text,Apellido1.Text,Apellido2.Text,lugar);
-            natural.Actualizar();
+            ClienteNatural.Password = txtContraseña.Text;
+            ClienteNatural.Cedula = dplCedula.SelectedValue + txtCedula.Text;
+            ClienteNatural.Nombre1 = Nombre1.Text;
+            ClienteNatural.Nombre2 = Nombre2.Text;
+            ClienteNatural.Apellido1 = Apellido1.Text;
+            ClienteNatural.Apellido2 = Apellido2.Text;
+            ClienteNatural.Direccion = lugar.Codigo;
 
-            Telefono telefono1 = new Telefono(int.Parse(CodigoPais1.SelectedValue), int.Parse(CodAre.Text), int.Parse(txtTelefono1.Text), TipoTelf.Text, datosCliente);
-            telefono1.Actualizar();
-            Telefono telefono2 = new Telefono(int.Parse(CodigoPais2.SelectedValue), int.Parse(CodAre2.Text), int.Parse(txtTelefono2.Text), TipoTelf2.Text, datosCliente);
-            telefono1.Actualizar();
 
-            Response.Redirect("/Views/Proveedores.aspx", false);
+            //Natural natural = new Natural(dplRif.SelectedValue + txtRif.Text, txtContraseña.Text,ctrlCorreo, dplCedula.SelectedValue + txtCedula.Text,Nombre1.Text,Nombre2.Text,Apellido1.Text,Apellido2.Text,lugar);
+            ClienteNatural.Actualizar();
+
+            Telefono telefono = new Telefono();
+            List<Telefono> telefonos = telefono.Leer(ClienteNatural);
+           
+            
+            Telefono telefono1 = new Telefono(int.Parse(CodigoPais1.SelectedValue),int.Parse(CodAre.Text), int.Parse(txtTelefono1.Text), TipoTelf.Text,ClienteNatural);
+            Telefono telefono2 = new Telefono(int.Parse(CodigoPais2.SelectedValue), int.Parse(CodAre2.Text), int.Parse(txtTelefono2.Text), TipoTelf2.Text, ClienteNatural);
+
+            if (!VerificarCambiosTelefono(telefonos[0], telefono1))
+            {
+                telefonos[0].Eliminar();
+                telefono1.Insertar();
+            }
+
+            if (!VerificarCambiosTelefono(telefonos[1], telefono2))
+            {
+                telefonos[1].Eliminar();
+                telefono2.Insertar();
+            }
+
+            Response.Redirect("/Views/Clientes_Admin.aspx", false);
 
 
         }
 
+        protected bool VerificarCambiosTelefono(Telefono tlf1, Telefono tlf2)
+        {
+            if(tlf1.Numero[NumeroTelefono.Area] == tlf2.Numero[NumeroTelefono.Area] && tlf1.Numero[NumeroTelefono.Pais] == tlf2.Numero[NumeroTelefono.Pais] && tlf1.Numero[NumeroTelefono.Numero] == tlf2.Numero[NumeroTelefono.Numero] && tlf1.Tipo == tlf2.Tipo)
+            {
+                return true;
+            }
+            return false;
 
+
+        }
 
         protected int CodLugar(DropDownList x, DropDownList y, DropDownList z)
         {
@@ -415,7 +449,6 @@ namespace Ucabmart.Views
 
         protected void dplMunicipio_SelectedIndexChanged(object sender, EventArgs e)
         {
-            this.vez = 2;
             List<Lugar> listaLugar2 = new List<Lugar>();
             listaLugar2 = nombreLugar.Todos();
 
