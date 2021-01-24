@@ -83,24 +83,19 @@ namespace Ucabmart.Engine
                 Script.Prepare();
 
                 Script.ExecuteNonQuery();
-
-                Conexion.Close();
             }
-            catch (Exception e)
+            finally
             {
-                Conexion.Close();
+                try
+                {
+                    Conexion.Close();
+                }
+                finally { }
             }
         }
 
         public Juridico LeerJuridico(string rif)
         {
-            string clave = null;
-            string denominacionComercial = null;
-            string razonSocial = null;
-            float  capital = 0;
-            string paginaWeb = null;
-            int direccionFisica = 0;
-            int direccionFiscal = 0;
             try
             {
                 Conexion.Open();
@@ -113,45 +108,28 @@ namespace Ucabmart.Engine
 
                 if (Reader.Read())
                 {
-                    clave = ReadString(0);
-                    denominacionComercial = ReadString(1);
-                    razonSocial = ReadString(2);
-                    capital = ReadFloat(3);
-                    paginaWeb = ReadString(4);
-                    direccionFisica= ReadInt(5);
-                    direccionFiscal = ReadInt(6);
+                    Juridico juridico = new Juridico(ReadString(0), ReadString(1), ReadString(2), ReadFloat(3), ReadString(4), 
+                        ReadInt(5), ReadInt(6));
+                    Cliente cliente = new Cliente(juridico.RIF);
+                    juridico.Base(cliente);
+                    return juridico;
                 }
-
-                Conexion.Close();
             }
-            catch (Exception e)
+            finally
             {
                 try
                 {
                     Conexion.Close();
                 }
-                catch (Exception f)
-                {
-
-                }
-                return null;
+                finally { }
             }
 
-            Juridico juridico = new Juridico(clave, denominacionComercial, razonSocial, capital, paginaWeb, direccionFisica, direccionFiscal);
-            return juridico;
+            return null;
         }
 
         public List<Juridico> TodosJuridicos()
         {
-            string clave = null;
-            string denominacionComercial = null;
-            string razonSocial = null;
-            float capital = 0;
-            string paginaWeb = null;
-            int direccionFisica = 0;
-            int direccionFiscal = 0;
-
-            List<Juridico> listaJuridico = new List<Juridico>();
+            List<Juridico> lista = new List<Juridico>();
 
             try
             {
@@ -164,29 +142,28 @@ namespace Ucabmart.Engine
                 
                 while (Reader.Read())
                 {
-                    clave = ReadString(0);
-                    denominacionComercial = ReadString(1);
-                    razonSocial = ReadString(2);
-                    capital = ReadFloat(3);
-                    paginaWeb = ReadString(4);
-                    direccionFisica = ReadInt(5);
-                    direccionFiscal = ReadInt(6);
-                    Juridico juridico = new Juridico(clave, denominacionComercial, razonSocial, capital, paginaWeb, direccionFisica, direccionFiscal);
-                    listaJuridico.Add(juridico);
+                    Juridico juridico = new Juridico(ReadString(0), ReadString(1), ReadString(2), ReadFloat(3),
+                        ReadString(4), ReadInt(5), ReadInt(6));
+                    lista.Add(juridico);
                 }
-
-
-            }
-            catch (Exception e)
-            {
-                throw new Exception("Ha ocurrido un error en la base de datos", e);
             }
             finally
             {
-                Conexion.Close();
+                try
+                {
+                    Conexion.Close();
+                }
+                finally
+                {
+                    foreach (Juridico juridico in lista)
+                    {
+                        Cliente cliente = new Cliente(juridico.RIF);
+                        juridico.Base(cliente);
+                    }
+                }
             }
 
-            return listaJuridico;
+            return lista;
         }
 
         public override void Actualizar()
@@ -216,16 +193,13 @@ namespace Ucabmart.Engine
 
                 Conexion.Close();
             }
-            catch (Exception e)
+            finally
             {
                 try
                 {
                     Conexion.Close();
                 }
-                catch (Exception f)
-                {
-
-                }
+                finally { }
             }
         }
 
@@ -257,6 +231,23 @@ namespace Ucabmart.Engine
 
                 }
             }
+        }
+        #endregion
+
+        #region Metodos Privados
+        private void Base(Cliente cliente)
+        {
+            RIF = cliente.RIF;
+            Password = cliente.Password;
+            CodigoCorreoElectronico = cliente.CodigoCorreoElectronico;
+            CodigoTienda = cliente.CodigoTienda;
+        }
+        #endregion
+
+        #region Otros Metodos
+        public PersonaContacto PersonaContacto()
+        {
+            return new PersonaContacto(this);
         }
         #endregion
     }

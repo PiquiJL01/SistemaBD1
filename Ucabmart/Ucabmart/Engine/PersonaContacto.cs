@@ -21,14 +21,14 @@ namespace Ucabmart.Engine
 
         #region Declaraciones
         public PersonaContacto(string cedula, string nombre1, string nombre2,
-            string apellido1, string apellido2, Juridico cliente)
+            string apellido1, string apellido2, Juridico juridico)
         {
             Cedula = cedula;
             Nombre1 = nombre1;
             Nombre2 = nombre2;
             Apellido1 = apellido1;
             Apellido2 = apellido2;
-            RifClienteJuridico = cliente.RIF;
+            RifClienteJuridico = juridico.RIF;
             RifProveedor = null;
         }
 
@@ -44,19 +44,96 @@ namespace Ucabmart.Engine
             RifProveedor = proveedor.RIF;
         }
 
-        public PersonaContacto(int codigo)
+        public PersonaContacto(int codigo = 0)
         {
-            PersonaContacto personaContacto = Leer(codigo);
-            if (!(personaContacto == null))
+            if (!(codigo == 0))
             {
-                Codigo = personaContacto.Codigo;
-                Cedula = personaContacto.Cedula;
-                Nombre1 = personaContacto.Nombre1;
-                Nombre2 = personaContacto.Nombre2;
-                Apellido1 = personaContacto.Apellido1;
-                Apellido2 = personaContacto.Apellido2;
-                RifClienteJuridico = personaContacto.RifClienteJuridico;
-                RifProveedor = personaContacto.RifProveedor;
+                PersonaContacto personaContacto = Leer(codigo);
+                if (!(personaContacto == null))
+                {
+                    Codigo = personaContacto.Codigo;
+                    Cedula = personaContacto.Cedula;
+                    Nombre1 = personaContacto.Nombre1;
+                    Nombre2 = personaContacto.Nombre2;
+                    Apellido1 = personaContacto.Apellido1;
+                    Apellido2 = personaContacto.Apellido2;
+                    RifClienteJuridico = personaContacto.RifClienteJuridico;
+                    RifProveedor = personaContacto.RifProveedor;
+                }
+            }
+        }
+
+        public PersonaContacto(Proveedor proveedor)
+        {
+            if (!(proveedor.RIF == null))
+            {
+                try
+                {
+                    Conexion.Open();
+
+                    string Comando = "SELECT * FROM persona_contacto WHERE proveedor_pr_rif = @rif";
+                    Script = new NpgsqlCommand(Comando, Conexion);
+
+                    Script.Parameters.AddWithValue("rif", proveedor.RIF);
+                    Reader = Script.ExecuteReader();
+
+                    if (Reader.Read())
+                    {
+                        Codigo = ReadInt(0);
+                        Cedula = ReadString(1);
+                        Nombre1 = ReadString(2);
+                        Nombre2 = ReadString(3);
+                        Apellido1 = ReadString(4);
+                        Apellido2 = ReadString(5);
+                        RifClienteJuridico = ReadString(6);
+                        RifProveedor = ReadString(7);
+                    }
+                }
+                finally
+                {
+                    try
+                    {
+                        Conexion.Close();
+                    }
+                    finally { }
+                }
+            }
+        }
+
+        public PersonaContacto(Juridico juridico)
+        {
+            if (!(juridico.RIF == null))
+            {
+                try
+                {
+                    Conexion.Open();
+
+                    string Comando = "SELECT * FROM persona_contacto WHERE juridico_cl_rif = @rif";
+                    Script = new NpgsqlCommand(Comando, Conexion);
+
+                    Script.Parameters.AddWithValue("rif", juridico.RIF);
+                    Reader = Script.ExecuteReader();
+
+                    if (Reader.Read())
+                    {
+                        Codigo = ReadInt(0);
+                        Cedula = ReadString(1);
+                        Nombre1 = ReadString(2);
+                        Nombre2 = ReadString(3);
+                        Apellido1 = ReadString(4);
+                        Apellido2 = ReadString(5);
+                        RifClienteJuridico = ReadString(6);
+                        RifProveedor = ReadString(7);
+                    }
+                }
+                finally
+                {
+                    try
+                    {
+                        Conexion.Close();
+                    }
+                    finally { }
+                }
             }
         }
 
@@ -284,6 +361,9 @@ namespace Ucabmart.Engine
                 }
             }
         }
+        #endregion
+
+        #region Otros Metodos
         #endregion
     }
 }
