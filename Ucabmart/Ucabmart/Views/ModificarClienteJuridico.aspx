@@ -332,7 +332,7 @@
 
 
                                 <%--<Campo de texto para Personas de Contacto >--%>
-                               <div class="PC">
+                               <div class="PC" style="margin-top: 40px;">
                                     <asp:Label ID="Label17" runat="server" Text="Personas de Contacto"></asp:Label>
                                </div>
 

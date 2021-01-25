@@ -277,10 +277,80 @@ namespace Ucabmart.Views
                 txtRepetirContraseña.Text = cliente.Password;
                 txtRepetirContraseña.Enabled = true;
 
+                //PERSONA DE CONTACTO
+
+                PersonaContacto contacto = cliente.PersonaContacto();
+
+                //CEDULA
+                char[] c = new char[1];
+                contacto.Cedula.CopyTo(0, c, 0, 1);
+                char[] NumCed = new char[15];
+                contacto.Cedula.CopyTo(1, NumCed, 0, contacto.Cedula.Length - 1);
+
+                dplCedula.SelectedValue = new String(c).Replace("\0", "");
+                dplCedula.Enabled = true;
+                txtCedula.Text = new String(NumCed).Replace("\0", "");
+                txtCedula.Enabled = true;
+
+                //NOMBRE Y APELLIDO DE LA PERSONA DE CONTACTO
+                Nombre1.Text = contacto.Nombre1;
+                Nombre1.Enabled = true;
+                Nombre2.Text = contacto.Nombre2;
+                Nombre2.Enabled = true;
+
+                Apellido1.Text = contacto.Apellido1;
+                Apellido1.Enabled = true;
+                Apellido2.Text = contacto.Apellido2;
+                Apellido2.Enabled = true;
+
+
+                //TELEFONOS DE LA PERSONA DE CONTACTO
+
+                Telefono telefono3 = new Telefono();
+                List<Telefono> telefonosPC = telefono3.Leer(contacto);
+
+
+                foreach (ListItem item in CodigoPais3.Items)
+                {
+                    if (item.Value == telefonosPC[0].Numero[NumeroTelefono.Pais].ToString())
+                    {
+
+                        CodigoPais3.SelectedValue = item.Value;
+
+                    }
+                }
+                CodigoPais3.Enabled = true;
+
+                TipoTelf3.SelectedValue = telefonosPC[0].Tipo;
+                TipoTelf3.Enabled = true;
+                CodAre3.Text = telefonosPC[0].Numero[NumeroTelefono.Area].ToString();
+                CodAre3.Enabled = true;
+                txtTelefono3.Text = telefonosPC[0].Numero[NumeroTelefono.Numero].ToString();
+                txtTelefono3.Enabled = true;
+
+                if (telefonosPC.Count > 1)
+                {
+
+                    foreach (ListItem item in CodigoPais4.Items)
+                    {
+                        if (item.Value == telefonosPC[1].Numero[NumeroTelefono.Pais].ToString())
+                        {
+
+                            CodigoPais4.SelectedValue = item.Value;
+
+                        }
+                    }
+                    CodigoPais4.Enabled = true;
+
+                    TipoTelf4.SelectedValue = telefonosPC[1].Tipo;
+                    TipoTelf4.Enabled = true;
+                    CodAre4.Text = telefonosPC[1].Numero[NumeroTelefono.Area].ToString();
+                    CodAre4.Enabled = true;
+                    txtTelefono4.Text = telefonosPC[1].Numero[NumeroTelefono.Numero].ToString();
+                    txtTelefono4.Enabled = true;
+                }
+
                 btnModificar.Enabled = true;
-
-
-
 
             }
             else
@@ -385,7 +455,78 @@ namespace Ucabmart.Views
 
         protected void btnGuardarCambios(object sender, EventArgs e)
         {
+            //CLIENTE JURIDICO         
             
+            int CodLug1 = this.CodLugar(dplParroquia, dplMunicipio, dplEstado);
+            int CodLug2 = this.CodLugar(dplParroquia2, dplMunicipio2, dplEstado2);
+
+
+            Juridico ClienteJuridico = new Juridico(dplRif.SelectedValue + txtRif.Text);
+            ClienteJuridico.DenominacionComercial = txtDenoComercial.Text;
+            ClienteJuridico.RazonSocial = txtRazonSocial.Text;
+            ClienteJuridico.PaginaWeb = txtPaginaWeb.Text;
+            ClienteJuridico.Capital = float.Parse(txtCapitalDisponible.Text);
+            ClienteJuridico.Password = txtContraseña.Text;
+            ClienteJuridico.DireccionFiscal = CodLug1;
+            ClienteJuridico.DireccionFisica = CodLug2;
+
+
+            CorreoElectronico ctrlCorreo = new CorreoElectronico(ClienteJuridico.CodigoCorreoElectronico);
+            ctrlCorreo.Direccion = txtCorreo.Text;
+            ctrlCorreo.Actualizar();
+
+            ClienteJuridico.Actualizar();
+
+            Telefono telefono = new Telefono();
+            List<Telefono> telefonos = telefono.Leer(ClienteJuridico);
+
+
+            Telefono telefono1 = new Telefono(int.Parse(CodigoPais1.SelectedValue), int.Parse(CodAre.Text), int.Parse(txtTelefono1.Text), TipoTelf.Text, ClienteJuridico);
+            Telefono telefono2 = new Telefono(int.Parse(CodigoPais2.SelectedValue), int.Parse(CodAre2.Text), int.Parse(txtTelefono2.Text), TipoTelf2.Text, ClienteJuridico);
+
+            if (!VerificarCambiosTelefono(telefonos[0], telefono1))
+            {
+                telefonos[0].Eliminar();
+                telefono1.Insertar();
+            }
+
+            if (!VerificarCambiosTelefono(telefonos[1], telefono2))
+            {
+                telefonos[1].Eliminar();
+                telefono2.Insertar();
+            }
+
+            //PERSONA DE CONTACTO
+
+            PersonaContacto contacto = ClienteJuridico.PersonaContacto();
+            contacto.Nombre1 = Nombre1.Text;
+            contacto.Nombre2 = Nombre2.Text;
+            contacto.Apellido1 = Apellido1.Text;
+            contacto.Apellido2 = Apellido2.Text;
+            contacto.Cedula = dplCedula.SelectedValue + txtCedula.Text;
+
+            contacto.Actualizar();
+
+            
+            telefonos = telefono.Leer(contacto);
+
+
+            Telefono telefono3 = new Telefono(int.Parse(CodigoPais3.SelectedValue), int.Parse(CodAre3.Text), int.Parse(txtTelefono3.Text), TipoTelf3.Text, contacto);
+            Telefono telefono4 = new Telefono(int.Parse(CodigoPais4.SelectedValue), int.Parse(CodAre4.Text), int.Parse(txtTelefono4.Text), TipoTelf4.Text, contacto);
+
+            if (!VerificarCambiosTelefono(telefonos[0], telefono3))
+            {
+                telefonos[0].Eliminar();
+                telefono3.Insertar();
+            }
+
+            if (!VerificarCambiosTelefono(telefonos[1], telefono4))
+            {
+                telefonos[1].Eliminar();
+                telefono4.Insertar();
+            }
+
+            Response.Redirect("/Views/Clientes_Admin.aspx", false);
 
         }
 
@@ -438,6 +579,59 @@ namespace Ucabmart.Views
 
         protected void dplEstado_SelectedIndexChanged(object sender, EventArgs e)
         {
+            dplCedula.Enabled = true;
+            txtCedula.Enabled = true;
+
+            Nombre1.Enabled = true;
+            Nombre2.Enabled = true;
+
+            Apellido1.Enabled = true;
+            Apellido2.Enabled = true;
+
+            CodigoPais3.Enabled = true;
+            TipoTelf3.Enabled = true;
+            CodAre3.Enabled = true;
+            txtTelefono3.Enabled = true;
+
+            CodigoPais4.Enabled = true;
+            TipoTelf4.Enabled = true;
+            CodAre4.Enabled = true;
+            txtTelefono4.Enabled = true;
+
+            //DATOS DEL CLIENTE JURIDICO
+            dplRif.Enabled = true;
+            txtRif.Enabled = true;
+
+            txtDenoComercial.Enabled = true;
+            txtRazonSocial.Enabled = true;
+            txtPaginaWeb.Enabled = true;
+            txtCapitalDisponible.Enabled = true;
+            txtCorreo.Enabled = true;
+
+            CodigoPais1.Enabled = true;
+            TipoTelf.Enabled = true;
+            CodAre.Enabled = true;
+            txtTelefono1.Enabled = true;
+
+            CodigoPais2.Enabled = true;
+            TipoTelf2.Enabled = true;
+            CodAre2.Enabled = true;
+            txtTelefono2.Enabled = true;
+
+            dplEstado.Enabled = true;
+            dplMunicipio.Enabled = true;
+            dplParroquia.Enabled = true;
+
+            dplEstado2.Enabled = true;
+            dplMunicipio2.Enabled = true;
+            dplParroquia2.Enabled = true;
+
+            txtContraseña.Enabled = true;
+            txtRepetirContraseña.Enabled = true;
+
+            btnModificar.Enabled = true;
+
+
             List<Lugar> listaLugar = new List<Lugar>();
             listaLugar = nombreLugar.Todos();
             foreach (Lugar item in listaLugar)
@@ -471,6 +665,59 @@ namespace Ucabmart.Views
 
         protected void dplMunicipio_SelectedIndexChanged(object sender, EventArgs e)
         {
+            dplCedula.Enabled = true;
+            txtCedula.Enabled = true;
+
+            Nombre1.Enabled = true;
+            Nombre2.Enabled = true;
+
+            Apellido1.Enabled = true;
+            Apellido2.Enabled = true;
+
+            CodigoPais3.Enabled = true;
+            TipoTelf3.Enabled = true;
+            CodAre3.Enabled = true;
+            txtTelefono3.Enabled = true;
+
+            CodigoPais4.Enabled = true;
+            TipoTelf4.Enabled = true;
+            CodAre4.Enabled = true;
+            txtTelefono4.Enabled = true;
+
+            //DATOS DEL CLIENTE JURIDICO
+            dplRif.Enabled = true;
+            txtRif.Enabled = true;
+
+            txtDenoComercial.Enabled = true;
+            txtRazonSocial.Enabled = true;
+            txtPaginaWeb.Enabled = true;
+            txtCapitalDisponible.Enabled = true;
+            txtCorreo.Enabled = true;
+
+            CodigoPais1.Enabled = true;
+            TipoTelf.Enabled = true;
+            CodAre.Enabled = true;
+            txtTelefono1.Enabled = true;
+
+            CodigoPais2.Enabled = true;
+            TipoTelf2.Enabled = true;
+            CodAre2.Enabled = true;
+            txtTelefono2.Enabled = true;
+
+            dplEstado.Enabled = true;
+            dplMunicipio.Enabled = true;
+            dplParroquia.Enabled = true;
+
+            dplEstado2.Enabled = true;
+            dplMunicipio2.Enabled = true;
+            dplParroquia2.Enabled = true;
+
+            txtContraseña.Enabled = true;
+            txtRepetirContraseña.Enabled = true;
+
+            btnModificar.Enabled = true;
+
+
             List<Lugar> listaLugar2 = new List<Lugar>();
             listaLugar2 = nombreLugar.Todos();
 
@@ -496,6 +743,58 @@ namespace Ucabmart.Views
 
         protected void dplEstado2_SelectedIndexChanged(object sender, EventArgs e)
         {
+            dplCedula.Enabled = true;
+            txtCedula.Enabled = true;
+
+            Nombre1.Enabled = true;
+            Nombre2.Enabled = true;
+
+            Apellido1.Enabled = true;
+            Apellido2.Enabled = true;
+
+            CodigoPais3.Enabled = true;
+            TipoTelf3.Enabled = true;
+            CodAre3.Enabled = true;
+            txtTelefono3.Enabled = true;
+
+            CodigoPais4.Enabled = true;
+            TipoTelf4.Enabled = true;
+            CodAre4.Enabled = true;
+            txtTelefono4.Enabled = true;
+
+            //DATOS DEL CLIENTE JURIDICO
+            dplRif.Enabled = true;
+            txtRif.Enabled = true;
+
+            txtDenoComercial.Enabled = true;
+            txtRazonSocial.Enabled = true;
+            txtPaginaWeb.Enabled = true;
+            txtCapitalDisponible.Enabled = true;
+            txtCorreo.Enabled = true;
+
+            CodigoPais1.Enabled = true;
+            TipoTelf.Enabled = true;
+            CodAre.Enabled = true;
+            txtTelefono1.Enabled = true;
+
+            CodigoPais2.Enabled = true;
+            TipoTelf2.Enabled = true;
+            CodAre2.Enabled = true;
+            txtTelefono2.Enabled = true;
+
+            dplEstado.Enabled = true;
+            dplMunicipio.Enabled = true;
+            dplParroquia.Enabled = true;
+
+            dplEstado2.Enabled = true;
+            dplMunicipio2.Enabled = true;
+            dplParroquia2.Enabled = true;
+
+            txtContraseña.Enabled = true;
+            txtRepetirContraseña.Enabled = true;
+
+            btnModificar.Enabled = true;
+
             List<Lugar> listaLugar = new List<Lugar>();
             listaLugar = nombreLugar.Todos();
             foreach (Lugar item in listaLugar)
@@ -529,6 +828,58 @@ namespace Ucabmart.Views
 
         protected void dplMunicipio2_SelectedIndexChanged(object sender, EventArgs e)
         {
+            dplCedula.Enabled = true;
+            txtCedula.Enabled = true;
+
+            Nombre1.Enabled = true;
+            Nombre2.Enabled = true;
+
+            Apellido1.Enabled = true;
+            Apellido2.Enabled = true;
+
+            CodigoPais3.Enabled = true;
+            TipoTelf3.Enabled = true;
+            CodAre3.Enabled = true;
+            txtTelefono3.Enabled = true;
+
+            CodigoPais4.Enabled = true;
+            TipoTelf4.Enabled = true;
+            CodAre4.Enabled = true;
+            txtTelefono4.Enabled = true;
+
+            //DATOS DEL CLIENTE JURIDICO
+            dplRif.Enabled = true;
+            txtRif.Enabled = true;
+
+            txtDenoComercial.Enabled = true;
+            txtRazonSocial.Enabled = true;
+            txtPaginaWeb.Enabled = true;
+            txtCapitalDisponible.Enabled = true;
+            txtCorreo.Enabled = true;
+
+            CodigoPais1.Enabled = true;
+            TipoTelf.Enabled = true;
+            CodAre.Enabled = true;
+            txtTelefono1.Enabled = true;
+
+            CodigoPais2.Enabled = true;
+            TipoTelf2.Enabled = true;
+            CodAre2.Enabled = true;
+            txtTelefono2.Enabled = true;
+
+            dplEstado.Enabled = true;
+            dplMunicipio.Enabled = true;
+            dplParroquia.Enabled = true;
+
+            dplEstado2.Enabled = true;
+            dplMunicipio2.Enabled = true;
+            dplParroquia2.Enabled = true;
+
+            txtContraseña.Enabled = true;
+            txtRepetirContraseña.Enabled = true;
+
+            btnModificar.Enabled = true;
+
             List<Lugar> listaLugar2 = new List<Lugar>();
             listaLugar2 = nombreLugar.Todos();
 
