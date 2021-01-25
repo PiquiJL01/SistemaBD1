@@ -174,8 +174,8 @@ namespace Ucabmart.Engine
 
                 Conexion.Open();
 
-                string Comando = "UPDATE tabla SET ju_denominacion_social = @denominacion, ju_razon_social = @razon, ju_capital = @capital, " +
-                    "ju_pagina_web = @web, ju_lugar_codigo = @fisica, ju_lugar_codigo1 = @fiscal " +
+                string Comando = "UPDATE juridico SET ju_denominacion_comercial = @denominacion, ju_razon_social = @razon, ju_capital = @capital, " +
+                    "ju_pagina_web = @web, lugar_lu_codigo = @fisica, lugar_lu_codigo1 = @fiscal " +
                     "WHERE cl_rif = @rif";
                 Script = new NpgsqlCommand(Comando, Conexion);
 
@@ -185,7 +185,7 @@ namespace Ucabmart.Engine
                 Script.Parameters.AddWithValue("capital", Capital);
                 Script.Parameters.AddWithValue("web", PaginaWeb);
                 Script.Parameters.AddWithValue("fisica", DireccionFisica);
-                Script.Parameters.AddWithValue("Fiscal", DireccionFiscal);
+                Script.Parameters.AddWithValue("fiscal", DireccionFiscal);
 
                 Script.Prepare();
 

@@ -276,7 +276,7 @@ namespace Ucabmart.Engine
 
                 if (RifClienteJuridico == null)
                 {
-                    string Comando = "UPDATE persona_contacto SET pc_cedula = @cedula, pc_1er_nombre @nombre1, " +
+                    string Comando = "UPDATE persona_contacto SET pc_cedula = @cedula, pc_1er_nombre = @nombre1, " +
                         "pc_2do_nombre = @nombre2, pc_1er_apellido = @apellido1, pc_2do_apellido = @apellido2, " +
                         "proveedor_pr_rif = @proveedor WHERE pc_codigo = @codigo";
                     Script = new NpgsqlCommand(Comando, Conexion);
@@ -291,7 +291,7 @@ namespace Ucabmart.Engine
                 }
                 else
                 {
-                    string Comando = "UPDATE persona_contacto SET pc_cedula = @cedula, pc_1er_nombre @nombre1, " +
+                    string Comando = "UPDATE persona_contacto SET pc_cedula = @cedula, pc_1er_nombre = @nombre1, " +
                         "pc_2do_nombre = @nombre2, pc_1er_apellido = @apellido1, pc_2do_apellido = @apellido2, " +
                         "juridico_cl_rif = @juridico WHERE pc_codigo = @codigo";
                     Script = new NpgsqlCommand(Comando, Conexion);
