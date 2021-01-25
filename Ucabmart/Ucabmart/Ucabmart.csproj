@@ -1915,6 +1915,7 @@
     <Content Include="Views\ModificarCliente.aspx" />
     <Content Include="Views\ModificarClienteJuridico.aspx" />
     <Content Include="Views\ModificarClienteNatural.aspx" />
+    <Content Include="Views\ModificarProveedor.aspx" />
     <Content Include="Views\RegistrarClienteJuridico.aspx" />
     <Content Include="Views\RegistrarClienteNatural.aspx" />
     <Content Include="Views\RegistroProveedores.aspx" />
@@ -2083,6 +2084,13 @@
     </Compile>
     <Compile Include="Views\ModificarClienteNatural.aspx.designer.cs">
       <DependentUpon>ModificarClienteNatural.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ModificarProveedor.aspx.cs">
+      <DependentUpon>ModificarProveedor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ModificarProveedor.aspx.designer.cs">
+      <DependentUpon>ModificarProveedor.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\RegistrarClienteJuridico.aspx.cs">
       <DependentUpon>RegistrarClienteJuridico.aspx</DependentUpon>

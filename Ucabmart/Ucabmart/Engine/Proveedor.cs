@@ -55,6 +55,7 @@ namespace Ucabmart.Engine
                 DireccionFisica = proveedor.DireccionFisica;
                 DireccionFiscal = proveedor.DireccionFiscal;
                 CodigoCorreoElectronico = proveedor.CodigoCorreoElectronico;
+                PaginaWeb = proveedor.PaginaWeb;
             }
         }
         public Proveedor() {
@@ -273,5 +274,14 @@ namespace Ucabmart.Engine
             }
         }
         #endregion
+
+        #region Otros Metodos
+        public PersonaContacto PersonaContacto()
+        {
+            return new PersonaContacto(this);
+        }
+
+        #endregion
+
     }
 }

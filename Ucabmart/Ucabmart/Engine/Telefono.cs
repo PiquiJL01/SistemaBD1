@@ -402,8 +402,9 @@ namespace Ucabmart.Engine
             return listaTelefono;
         }
 
-        public Telefono Leer(Proveedor proveedor)
+        public List<Telefono> Leer(Proveedor proveedor)
         {
+            List<Telefono> lista= new List<Telefono>();
             try
             {
                 Conexion.Open();
@@ -414,13 +415,14 @@ namespace Ucabmart.Engine
                 Script.Parameters.AddWithValue("rif", proveedor.RIF);
                 Reader = Script.ExecuteReader();
 
-                if (Reader.Read())
+                while(Reader.Read())
                 {
-                    return new Telefono(ReadInt(0), ReadInt(1), ReadInt(2), ReadString(3), ReadInt(4),
+                    Telefono telefono = new Telefono(ReadInt(0), ReadInt(1), ReadInt(2), ReadString(3), ReadInt(4),
                         ReadInt(5), ReadString(6), ReadString(7));
+
+                    lista.Add(telefono);
                 }
 
-                Conexion.Close();
             }
             catch (Exception e)
             {
@@ -430,7 +432,7 @@ namespace Ucabmart.Engine
             {
                 Conexion.Close();
             }
-            return null;
+            return lista;
         }
         #endregion
     }
