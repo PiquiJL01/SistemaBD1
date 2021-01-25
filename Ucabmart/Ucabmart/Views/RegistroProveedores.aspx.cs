@@ -52,40 +52,46 @@ namespace Ucabmart.Views
 
         protected void btnRegistrar_Click(object sender, EventArgs e)
         {
+            try
+            {
+                int CodLug1 = this.CodLugar(dplParroquia, dplMunicipio, dplEstado);
+                int CodLug2 = this.CodLugar(dplParroquia2, dplMunicipio2, dplEstado2);
 
-            int CodLug1 = this.CodLugar(dplParroquia,dplMunicipio,dplEstado);
-            int CodLug2 = this.CodLugar(dplParroquia2,dplMunicipio2,dplEstado2);
+                CorreoElectronico correo = new CorreoElectronico(txtCorreo.Text);
+                correo.Insertar();
 
+                Proveedor proveedor = new Proveedor(dplRif.SelectedValue + txtRif.Text, txtRazonSocial.Text, txtDenoComercial.Text, txtPaginaWeb.Text, CodLug2, CodLug1, correo.Codigo);
+                proveedor.Insertar();
+                Telefono telefono1 = new Telefono(int.Parse(CodigoPais1.SelectedValue), int.Parse(CodAre.Text), int.Parse(txtTelefono1.Text), TipoTelf.Text, proveedor);
+                telefono1.Insertar();
+                Telefono telefono2 = new Telefono(int.Parse(CodigoPais2.SelectedValue), int.Parse(CodAre2.Text), int.Parse(txtTelefono2.Text), TipoTelf2.Text, proveedor);
+                telefono2.Insertar();
+                
+                PersonaContacto personaContacto1 = new PersonaContacto(CedulaDrop.SelectedValue + txtCedula.Text, Nombre1.Text, Nombre2.Text, Apellido1.Text, Apellido2.Text, proveedor);
+                personaContacto1.Insertar();
+                Telefono telefono3 = new Telefono(int.Parse(CodigoPais3.SelectedValue), int.Parse(CodAre3.Text), int.Parse(txtTelefono3.Text), TipoTelf3.Text, personaContacto1);
+                telefono3.Insertar();
+                Telefono telefono4 = new Telefono(int.Parse(CodigoPais4.SelectedValue), int.Parse(CodAre4.Text), int.Parse(txtTelefono4.Text), TipoTelf4.Text, personaContacto1);
+                telefono4.Insertar();
 
-            CorreoElectronico correo = new CorreoElectronico(txtCorreo.Text);
-            correo.Insertar();
-            
-            Proveedor proveedor = new Proveedor(dplRif.SelectedValue + txtRif.Text, txtRazonSocial.Text , txtDenoComercial.Text, txtPaginaWeb.Text,CodLug2,CodLug1,correo.Codigo);
-            proveedor.Insertar();
-            Telefono telefono1 = new Telefono(int.Parse(CodigoPais1.SelectedValue), int.Parse(CodAre.Text), int.Parse(txtTelefono1.Text), TipoTelf.Text, proveedor);
-            telefono1.Insertar();
-            Telefono telefono2 = new Telefono(int.Parse(CodigoPais2.SelectedValue), int.Parse(CodAre2.Text), int.Parse(txtTelefono2.Text), TipoTelf2.Text, proveedor);
-            telefono2.Insertar();
+                /* PersonaContacto personaContacto2 = new PersonaContacto(CedulaDrop2.SelectedValue + txtCedula2.Text, Nombre3.Text, Nombre4.Text, Apellido3.Text, Apellido4.Text, proveedor);
+                 personaContacto2.Insertar();
+                 Telefono telefono5 = new Telefono(int.Parse(CodigoPais5.SelectedValue), int.Parse(CodAre5.Text), int.Parse(txtTelefono5.Text), TipoTelf5.Text, personaContacto2);
+                 telefono5.Insertar();
+                 Telefono telefono6 = new Telefono(int.Parse(CodigoPais6.SelectedValue), int.Parse(CodAre6.Text), int.Parse(txtTelefono6.Text), TipoTelf6.Text, personaContacto2);
+                 telefono6.Insertar();*/
 
+                //Session["ProveedorRif"] = proveedor.RIF;
+                //Response.Redirect("/Views/Check_Products.aspx", false);
 
-            PersonaContacto personaContacto1 = new PersonaContacto(CedulaDrop.SelectedValue + txtCedula.Text, Nombre1.Text, Nombre2.Text, Apellido1.Text, Apellido2.Text, proveedor);
-            personaContacto1.Insertar();
-            Telefono telefono3 = new Telefono(int.Parse(CodigoPais3.SelectedValue), int.Parse(CodAre3.Text), int.Parse(txtTelefono3.Text), TipoTelf3.Text,personaContacto1);
-            telefono3.Insertar();
-            Telefono telefono4 = new Telefono(int.Parse(CodigoPais4.SelectedValue), int.Parse(CodAre4.Text), int.Parse(txtTelefono4.Text), TipoTelf4.Text,personaContacto1);
-            telefono4.Insertar();
-
-
-           /* PersonaContacto personaContacto2 = new PersonaContacto(CedulaDrop2.SelectedValue + txtCedula2.Text, Nombre3.Text, Nombre4.Text, Apellido3.Text, Apellido4.Text, proveedor);
-            personaContacto2.Insertar();
-            Telefono telefono5 = new Telefono(int.Parse(CodigoPais5.SelectedValue), int.Parse(CodAre5.Text), int.Parse(txtTelefono5.Text), TipoTelf5.Text, personaContacto2);
-            telefono5.Insertar();
-            Telefono telefono6 = new Telefono(int.Parse(CodigoPais6.SelectedValue), int.Parse(CodAre6.Text), int.Parse(txtTelefono6.Text), TipoTelf6.Text, personaContacto2);
-            telefono6.Insertar();*/
-
-            Session["ProveedorRif"] = proveedor.RIF;
-            Response.Redirect("/Views/Check_Products.aspx", false);
-
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('El proveedor se ha sido registrado exitosamente');" +
+                                    "window.location ='Proveedores.aspx';", true);
+            }
+            catch (Exception ex)
+            {
+                Session["mensajeError"] = "Ha ocurrido un error al registrar la persona. " + ex;
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('NO DEBE HABER CAMPOS VACÍOS');", true);
+            }
         }
 
         protected void Page_Load(object sender, EventArgs e)
