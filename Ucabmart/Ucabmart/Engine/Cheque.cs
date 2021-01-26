@@ -1,8 +1,6 @@
 ﻿using Npgsql;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace Ucabmart.Engine
 {
@@ -101,7 +99,7 @@ namespace Ucabmart.Engine
                 }
                 return null;
             }
-            Cheque cheque= new Cheque(clave, numero);
+            Cheque cheque = new Cheque(clave, numero);
             return cheque;
         }
 

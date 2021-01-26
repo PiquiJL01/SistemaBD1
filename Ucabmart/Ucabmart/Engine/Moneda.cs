@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace Ucabmart.Engine
 {
@@ -15,7 +12,7 @@ namespace Ucabmart.Engine
         {
             Codigo = codigo;
             Nombre = nombre;
-           // TasaDeCambio = tasaDeCambio;
+            // TasaDeCambio = tasaDeCambio;
             //FechaImplementacion = fechaImplementacion;
             Descripcion = descripcion;
         }

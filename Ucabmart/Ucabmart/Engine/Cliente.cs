@@ -1,8 +1,6 @@
 ﻿using Npgsql;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace Ucabmart.Engine
 {
@@ -114,7 +112,7 @@ namespace Ucabmart.Engine
                 {
                     return new Cliente(ReadString(0), ReadString(3), ReadInt(2), ReadInt(1));
                 }
-                
+
             }
             catch (Exception e)
             {
@@ -142,7 +140,7 @@ namespace Ucabmart.Engine
 
                 while (Reader.Read())
                 {
-                    Cliente cliente= new Cliente(ReadString(0), ReadString(3), ReadInt(1), ReadInt(2));
+                    Cliente cliente = new Cliente(ReadString(0), ReadString(3), ReadInt(1), ReadInt(2));
 
                     lista.Add(cliente);
                 }
@@ -220,7 +218,7 @@ namespace Ucabmart.Engine
                 Script.Prepare();
 
                 Script.ExecuteNonQuery();
-                
+
             }
 
             catch (Exception e)

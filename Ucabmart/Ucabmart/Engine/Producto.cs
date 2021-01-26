@@ -1,8 +1,6 @@
 ﻿using Npgsql;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace Ucabmart.Engine
 {
@@ -20,7 +18,7 @@ namespace Ucabmart.Engine
         #endregion
 
         #region Declaraciones
-        public Producto(string nombre, bool esAlimenticio, float precio, TipoCalidad calidad, 
+        public Producto(string nombre, bool esAlimenticio, float precio, TipoCalidad calidad,
             string descrpcion, Marca marca, Clasificacion clasificacion)
         {
             Nombre = nombre;
@@ -67,7 +65,7 @@ namespace Ucabmart.Engine
         }
 
 
-        private Producto(int codigo, string nombre, bool esAlimenticio, float precio, 
+        private Producto(int codigo, string nombre, bool esAlimenticio, float precio,
         string calidad, string descripcion, int marca, int clasificacion)
         {
             Codigo = codigo;
@@ -84,7 +82,7 @@ namespace Ucabmart.Engine
         public List<int> ProductosCod(List<String> items)
         {
             Producto p1 = new Producto();
-        
+
             List<Producto> productos = new List<Producto>();
             productos = p1.Todos();
             List<int> lista = new List<int>();
@@ -184,7 +182,7 @@ namespace Ucabmart.Engine
 
                 while (Reader.Read())
                 {
-                    Producto producto= new Producto(ReadInt(0), ReadString(1), ReadBool(2), 
+                    Producto producto = new Producto(ReadInt(0), ReadString(1), ReadBool(2),
                         ReadFloat(3), ReadString(4), ReadString(5), ReadInt(5), ReadInt(6));
 
                     lista.Add(producto);

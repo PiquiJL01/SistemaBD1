@@ -1,8 +1,6 @@
 ﻿using Npgsql;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace Ucabmart.Engine
 {
@@ -251,7 +249,7 @@ namespace Ucabmart.Engine
 
                 while (Reader.Read())
                 {
-                    Telefono telefono = new Telefono(ReadInt(0), ReadInt(1), ReadInt(2), 
+                    Telefono telefono = new Telefono(ReadInt(0), ReadInt(1), ReadInt(2),
                         ReadString(3), ReadInt(4), ReadInt(5), ReadString(6), ReadString(7));
 
                     lista.Add(telefono);
@@ -294,7 +292,7 @@ namespace Ucabmart.Engine
                 Script.Prepare();
 
                 Script.ExecuteNonQuery();
-               
+
             }
             catch (Exception e)
             {
@@ -305,7 +303,7 @@ namespace Ucabmart.Engine
                 Conexion.Close();
             }
         }
-        
+
         #endregion
 
         #region Busqueda por Clave Foranea
@@ -404,7 +402,7 @@ namespace Ucabmart.Engine
 
         public List<Telefono> Leer(Proveedor proveedor)
         {
-            List<Telefono> lista= new List<Telefono>();
+            List<Telefono> lista = new List<Telefono>();
             try
             {
                 Conexion.Open();
@@ -415,7 +413,7 @@ namespace Ucabmart.Engine
                 Script.Parameters.AddWithValue("rif", proveedor.RIF);
                 Reader = Script.ExecuteReader();
 
-                while(Reader.Read())
+                while (Reader.Read())
                 {
                     Telefono telefono = new Telefono(ReadInt(0), ReadInt(1), ReadInt(2), ReadString(3), ReadInt(4),
                         ReadInt(5), ReadString(6), ReadString(7));

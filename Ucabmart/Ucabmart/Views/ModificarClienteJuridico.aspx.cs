@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Ucabmart.Engine;
@@ -456,7 +454,7 @@ namespace Ucabmart.Views
         protected void btnGuardarCambios(object sender, EventArgs e)
         {
             //CLIENTE JURIDICO         
-            
+
             int CodLug1 = this.CodLugar(dplParroquia, dplMunicipio, dplEstado);
             int CodLug2 = this.CodLugar(dplParroquia2, dplMunicipio2, dplEstado2);
 
@@ -507,7 +505,7 @@ namespace Ucabmart.Views
 
             contacto.Actualizar();
 
-            
+
             telefonos = telefono.Leer(contacto);
 
 
