@@ -154,7 +154,6 @@ namespace Ucabmart.Views
         {
             Natural cliente = new Natural(BuscarRif.Text);
 
-
             if (cliente.Cedula != null)
             {
                 //NOMBRE Y APELLIDO
