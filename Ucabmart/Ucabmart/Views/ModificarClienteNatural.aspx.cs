@@ -315,59 +315,68 @@ namespace Ucabmart.Views
 
                 btnModificar.Enabled = false;
                 btnModificar.CssClass = "btn btn-primary btn-user btn-block";
+
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('El cliente no existe');", true);
             }
 
         }
 
         protected void btnGuardarCambios(object sender, EventArgs e)
         {
-            int CodLug1 = this.CodLugar(dplParroquia, dplMunicipio, dplEstado);
-            Lugar lugar = new Lugar(CodLug1);
-
-            Natural ClienteNatural = new Natural(dplRif.SelectedValue + txtRif.Text);
-
-
-            CorreoElectronico ctrlCorreo = new CorreoElectronico(ClienteNatural.CodigoCorreoElectronico);
-            ctrlCorreo.Direccion = txtCorreo.Text;
-            ctrlCorreo.Actualizar();
-
-            //Cliente datosCliente = new Cliente(dplRif.SelectedValue + txtRif.Text, txtContraseña.Text, ctrlCorreo, null);
-            //datosCliente.Actualizar();
-
-            ClienteNatural.Password = txtContraseña.Text;
-            ClienteNatural.Cedula = dplCedula.SelectedValue + txtCedula.Text;
-            ClienteNatural.Nombre1 = Nombre1.Text;
-            ClienteNatural.Nombre2 = Nombre2.Text;
-            ClienteNatural.Apellido1 = Apellido1.Text;
-            ClienteNatural.Apellido2 = Apellido2.Text;
-            ClienteNatural.Direccion = lugar.Codigo;
-
-
-            //Natural natural = new Natural(dplRif.SelectedValue + txtRif.Text, txtContraseña.Text,ctrlCorreo, dplCedula.SelectedValue + txtCedula.Text,Nombre1.Text,Nombre2.Text,Apellido1.Text,Apellido2.Text,lugar);
-            ClienteNatural.Actualizar();
-
-            Telefono telefono = new Telefono();
-            List<Telefono> telefonos = telefono.Leer(ClienteNatural);
-           
-            
-            Telefono telefono1 = new Telefono(int.Parse(CodigoPais1.SelectedValue),int.Parse(CodAre.Text), int.Parse(txtTelefono1.Text), TipoTelf.Text,ClienteNatural);
-            Telefono telefono2 = new Telefono(int.Parse(CodigoPais2.SelectedValue), int.Parse(CodAre2.Text), int.Parse(txtTelefono2.Text), TipoTelf2.Text, ClienteNatural);
-
-            if (!VerificarCambiosTelefono(telefonos[0], telefono1))
+            try
             {
-                telefonos[0].Eliminar();
-                telefono1.Insertar();
-            }
+                int CodLug1 = this.CodLugar(dplParroquia, dplMunicipio, dplEstado);
+                Lugar lugar = new Lugar(CodLug1);
 
-            if (!VerificarCambiosTelefono(telefonos[1], telefono2))
+                Natural ClienteNatural = new Natural(dplRif.SelectedValue + txtRif.Text);
+
+
+                CorreoElectronico ctrlCorreo = new CorreoElectronico(ClienteNatural.CodigoCorreoElectronico);
+                ctrlCorreo.Direccion = txtCorreo.Text;
+                ctrlCorreo.Actualizar();
+
+                //Cliente datosCliente = new Cliente(dplRif.SelectedValue + txtRif.Text, txtContraseña.Text, ctrlCorreo, null);
+                //datosCliente.Actualizar();
+
+                ClienteNatural.Password = txtContraseña.Text;
+                ClienteNatural.Cedula = dplCedula.SelectedValue + txtCedula.Text;
+                ClienteNatural.Nombre1 = Nombre1.Text;
+                ClienteNatural.Nombre2 = Nombre2.Text;
+                ClienteNatural.Apellido1 = Apellido1.Text;
+                ClienteNatural.Apellido2 = Apellido2.Text;
+                ClienteNatural.Direccion = lugar.Codigo;
+                            
+                //Natural natural = new Natural(dplRif.SelectedValue + txtRif.Text, txtContraseña.Text,ctrlCorreo, dplCedula.SelectedValue + txtCedula.Text,Nombre1.Text,Nombre2.Text,Apellido1.Text,Apellido2.Text,lugar);
+                ClienteNatural.Actualizar();
+
+                Telefono telefono = new Telefono();
+                List<Telefono> telefonos = telefono.Leer(ClienteNatural);
+
+
+                Telefono telefono1 = new Telefono(int.Parse(CodigoPais1.SelectedValue), int.Parse(CodAre.Text), int.Parse(txtTelefono1.Text), TipoTelf.Text, ClienteNatural);
+                Telefono telefono2 = new Telefono(int.Parse(CodigoPais2.SelectedValue), int.Parse(CodAre2.Text), int.Parse(txtTelefono2.Text), TipoTelf2.Text, ClienteNatural);
+
+                if (!VerificarCambiosTelefono(telefonos[0], telefono1))
+                {
+                    telefonos[0].Eliminar();
+                    telefono1.Insertar();
+                }
+
+                if (!VerificarCambiosTelefono(telefonos[1], telefono2))
+                {
+                    telefonos[1].Eliminar();
+                    telefono2.Insertar();
+                }
+
+                //Response.Redirect("/Views/Clientes_Admin.aspx", false);
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('El cliente se ha sido modificado exitosamente');" +
+                                        "window.location ='Clientes_Admin';", true);
+            }
+            catch (Exception ex)
             {
-                telefonos[1].Eliminar();
-                telefono2.Insertar();
+                Session["mensajeError"] = "Ha ocurrido un error al registrar la persona. " + ex;
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('NO DEBE HABER CAMPOS VACÍOS');", true);
             }
-
-            Response.Redirect("/Views/Clientes_Admin.aspx", false);
-
-
         }
 
         protected bool VerificarCambiosTelefono(Telefono tlf1, Telefono tlf2)
