@@ -1910,6 +1910,7 @@
     <Content Include="Views\CrearCuenta.aspx" />
     <Content Include="Views\EliminarCliente.aspx" />
     <Content Include="Views\EliminarClienteJuridico.aspx" />
+    <Content Include="Views\EliminarProveedor.aspx" />
     <Content Include="Views\IniciarSesion.aspx" />
     <Content Include="Views\Inicio.aspx" />
     <Content Include="Views\ModificarCliente.aspx" />
@@ -2049,6 +2050,13 @@
     </Compile>
     <Compile Include="Views\EliminarClienteJuridico.aspx.designer.cs">
       <DependentUpon>EliminarClienteJuridico.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EliminarProveedor.aspx.cs">
+      <DependentUpon>EliminarProveedor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\EliminarProveedor.aspx.designer.cs">
+      <DependentUpon>EliminarProveedor.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\IniciarSesion.aspx.cs">
       <DependentUpon>IniciarSesion.aspx</DependentUpon>

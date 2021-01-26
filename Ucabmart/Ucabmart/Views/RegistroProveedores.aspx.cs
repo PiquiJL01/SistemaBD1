@@ -81,11 +81,11 @@ namespace Ucabmart.Views
                  Telefono telefono6 = new Telefono(int.Parse(CodigoPais6.SelectedValue), int.Parse(CodAre6.Text), int.Parse(txtTelefono6.Text), TipoTelf6.Text, personaContacto2);
                  telefono6.Insertar();*/
 
-                //Session["ProveedorRif"] = proveedor.RIF;
-                //Response.Redirect("/Views/Check_Products.aspx", false);
+                Session["ProveedorRif"] = proveedor.RIF;
+                Response.Redirect("/Views/Check_Products.aspx", false);
 
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('El proveedor se ha sido registrado exitosamente');" +
-                                    "window.location ='Proveedores.aspx';", true);
+                //ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('El proveedor se ha sido registrado exitosamente');" +
+                //                    "window.location ='Proveedores.aspx';", true);
             }
             catch (Exception ex)
             {
