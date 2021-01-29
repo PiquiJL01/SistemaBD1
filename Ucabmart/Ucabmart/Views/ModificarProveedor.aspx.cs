@@ -170,9 +170,11 @@ namespace Ucabmart.Views
                 proveedor.RIF.CopyTo(1, NumRif, 0, proveedor.RIF.Length - 1);
 
                 dplRif.SelectedValue = new String(a).Replace("\0", "");
-                dplRif.Enabled = true;
+                dplRif.Enabled = false;
+                dplRif.CssClass = "input-group-prepend be-addon";
                 txtRif.Text = new String(NumRif).Replace("\0", "");
-                txtRif.Enabled = true;
+                txtRif.Enabled = false;
+                txtRif.CssClass = "form-control";
 
 
                 txtDenoComercial.Text = proveedor.DenominacionComercial;
@@ -437,7 +439,7 @@ namespace Ucabmart.Views
             int CodLug1 = this.CodLugar(dplParroquia, dplMunicipio, dplEstado);
             int CodLug2 = this.CodLugar(dplParroquia2, dplMunicipio2, dplEstado2);
 
-
+            
             Proveedor proveedor = new Proveedor(dplRif.SelectedValue + txtRif.Text);
             proveedor.DenominacionComercial = txtDenoComercial.Text;
             proveedor.RazonSocial = txtRazonSocial.Text;
@@ -449,8 +451,6 @@ namespace Ucabmart.Views
             CorreoElectronico ctrlCorreo = new CorreoElectronico(proveedor.CodigoCorreoElectronico);
             ctrlCorreo.Direccion = txtCorreo.Text;
             ctrlCorreo.Actualizar();
-
-            proveedor.Actualizar();
 
             Telefono telefono = new Telefono();
             List<Telefono> telefonos = telefono.Leer(proveedor);
@@ -574,8 +574,6 @@ namespace Ucabmart.Views
             txtTelefono4.Enabled = true;
 
             //DATOS DEL CLIENTE JURIDICO
-            dplRif.Enabled = true;
-            txtRif.Enabled = true;
 
             txtDenoComercial.Enabled = true;
             txtRazonSocial.Enabled = true;
@@ -656,8 +654,6 @@ namespace Ucabmart.Views
             txtTelefono4.Enabled = true;
 
             //DATOS DEL CLIENTE JURIDICO
-            dplRif.Enabled = true;
-            txtRif.Enabled = true;
 
             txtDenoComercial.Enabled = true;
             txtRazonSocial.Enabled = true;
@@ -730,8 +726,6 @@ namespace Ucabmart.Views
             txtTelefono4.Enabled = true;
 
             //DATOS DEL CLIENTE JURIDICO
-            dplRif.Enabled = true;
-            txtRif.Enabled = true;
 
             txtDenoComercial.Enabled = true;
             txtRazonSocial.Enabled = true;
@@ -811,8 +805,6 @@ namespace Ucabmart.Views
             txtTelefono4.Enabled = true;
 
             //DATOS DEL CLIENTE JURIDICO
-            dplRif.Enabled = true;
-            txtRif.Enabled = true;
 
             txtDenoComercial.Enabled = true;
             txtRazonSocial.Enabled = true;
@@ -860,6 +852,17 @@ namespace Ucabmart.Views
                 if (codigoMunicipio == item.CodigoUbicacion)
                     dplParroquia2.Items.Add(item.Nombre);
             }
+        }
+
+        protected bool VerificarCambiosRif(String a, String b) {
+        
+            if(a == b)
+            {
+                return true;
+            }
+
+            return false;
+        
         }
 
 

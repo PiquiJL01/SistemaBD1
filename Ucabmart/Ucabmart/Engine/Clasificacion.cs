@@ -38,6 +38,12 @@ namespace Ucabmart.Engine
             Nombre = nombre;
             Descripcion = descripción;
         }
+
+        public Clasificacion()
+        {
+
+        }
+
         #endregion
 
         #region CRUDs
@@ -200,5 +206,26 @@ namespace Ucabmart.Engine
             }
         }
         #endregion
+
+        #region Otros Metodos
+
+        public int Get_Clasificacion(String Name)
+        {
+            List<Clasificacion> clasificaciones = this.Todos();
+
+            foreach (Clasificacion clasificacion in clasificaciones)
+            {
+                if (clasificacion.Nombre == Name)
+                {
+                    return clasificacion.Codigo;
+                }
+            }
+            return -1;
+        }
+
+        #endregion
+
+
+
     }
 }

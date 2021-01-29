@@ -11,7 +11,7 @@ namespace Ucabmart.Engine
         #region Atributos
         public int Codigo { get; set; }
         public string Nombre { get; set; }
-        public bool EsAlimenticio { get; set; }
+        public string EsAlimenticio { get; set; }
         public float Precio { get; set; }
         public string Calidad { get; set; }
         public string Descripcion { get; set; }
@@ -20,7 +20,7 @@ namespace Ucabmart.Engine
         #endregion
 
         #region Declaraciones
-        public Producto(string nombre, bool esAlimenticio, float precio, TipoCalidad calidad, 
+        public Producto(string nombre, string esAlimenticio, float precio, TipoCalidad calidad, 
             string descrpcion, Marca marca, Clasificacion clasificacion)
         {
             Nombre = nombre;
@@ -67,7 +67,7 @@ namespace Ucabmart.Engine
         }
 
 
-        private Producto(int codigo, string nombre, bool esAlimenticio, float precio, 
+        private Producto(int codigo, string nombre, string esAlimenticio, float precio, 
         string calidad, string descripcion, int marca, int clasificacion)
         {
             Codigo = codigo;
@@ -149,7 +149,7 @@ namespace Ucabmart.Engine
 
                 if (Reader.Read())
                 {
-                    return new Producto(ReadInt(0), ReadString(1), ReadBool(2), ReadFloat(3), ReadString(4), ReadString(5), ReadInt(5), ReadInt(6));
+                    return new Producto(ReadInt(0), ReadString(1), ReadString(2), ReadFloat(3), ReadString(4), ReadString(5), ReadInt(5), ReadInt(6));
                 }
 
                 Conexion.Close();
@@ -184,7 +184,7 @@ namespace Ucabmart.Engine
 
                 while (Reader.Read())
                 {
-                    Producto producto= new Producto(ReadInt(0), ReadString(1), ReadBool(2), 
+                    Producto producto= new Producto(ReadInt(0), ReadString(1), ReadString(2), 
                         ReadFloat(3), ReadString(4), ReadString(5), ReadInt(5), ReadInt(6));
 
                     lista.Add(producto);
