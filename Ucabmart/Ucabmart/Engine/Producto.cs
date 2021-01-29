@@ -156,14 +156,7 @@ namespace Ucabmart.Engine
             }
             catch (Exception e)
             {
-                try
-                {
-                    Conexion.Close();
-                }
-                catch (Exception f)
-                {
-
-                }
+                Conexion.Close();
             }
 
             return null;
@@ -192,14 +185,8 @@ namespace Ucabmart.Engine
             }
             catch (Exception e)
             {
-                try
-                {
-                    Conexion.Close();
-                }
-                catch (Exception f)
-                {
-
-                }
+                Conexion.Close();
+               
                 return null;
             }
 
@@ -234,14 +221,7 @@ namespace Ucabmart.Engine
             }
             catch (Exception e)
             {
-                try
-                {
-                    Conexion.Close();
-                }
-                catch (Exception f)
-                {
-
-                }
+                Conexion.Close();                
             }
         }
 
@@ -264,14 +244,7 @@ namespace Ucabmart.Engine
             }
             catch (Exception e)
             {
-                try
-                {
-                    Conexion.Close();
-                }
-                catch (Exception f)
-                {
-
-                }
+                Conexion.Close();                
             }
         }
         #endregion

@@ -25,6 +25,7 @@ namespace Ucabmart.Views
             tabla += "<th>Código Dirección Física</th>";
             tabla += "<th>Código Dirección Fiscal</th>";
             tabla += "<th>Código Correo Electrónico</th>";
+            tabla += "<th>Productos</th>";
             tabla += "</tr>";
             tabla += "</thead>";
 
@@ -45,6 +46,24 @@ namespace Ucabmart.Views
                 tabla += "<td>" + item.DireccionFisica + "</td>";
                 tabla += "<td>" + item.DireccionFiscal + "</td>";
                 tabla += "<td>" + item.CodigoCorreoElectronico + "</td>";
+
+                List<int> codigoProductos = new List<int>();
+                codigoProductos = consultarProveedor.TodosEnPP_PR(item.RIF); //obtiene los codigos de los productos relacionado con el proveedor
+                Producto producto = new Producto();
+                List<Producto> todosProductos = producto.Todos();  //obtengo todos los productos
+
+                string nombreProducto="";  //declaración de la cadena que contendrá los nombres de los productos
+
+                foreach (Producto prod in todosProductos)
+                {
+                    foreach (int codigo in codigoProductos)
+                    {
+                        if (prod.Codigo == codigo)
+                            nombreProducto += prod.Nombre + "\n";
+                    }
+                }
+
+                tabla += "<td>" + nombreProducto + "</td>";
                 tabla += "</tr>";
             }
 

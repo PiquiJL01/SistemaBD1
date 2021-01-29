@@ -184,14 +184,7 @@ namespace Ucabmart.Engine
             }
             catch (Exception e)
             {
-                try
-                {
-                    Conexion.Close();
-                }
-                catch (Exception f)
-                {
-
-                }
+                Conexion.Close();                
             }
         }
 
@@ -273,6 +266,43 @@ namespace Ucabmart.Engine
                 Conexion.Close();
             }
         }
+        //obtiene la lista de los codigos de la tabla PR_PR dado un numero de rif del proveedor asociado
+        public  List<int> TodosEnPP_PR(string rif)
+        {
+            List<int> listaPR_PR = new List<int>();
+            int codigoProd = 0;
+
+            try
+            {
+                Conexion.Open();
+
+                string Command = "SELECT * FROM pr_pr";
+                NpgsqlCommand Script = new NpgsqlCommand(Command, Conexion);
+
+                Reader = Script.ExecuteReader();
+
+                
+                while (Reader.Read())
+                {
+                    if (rif == ReadString(1))
+                    {
+                        codigoProd = (ReadInt(0));
+                        listaPR_PR.Add(codigoProd);
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Ha ocurrido un error en la base de datos", e);
+            }
+            finally
+            {
+                Conexion.Close();
+            }
+
+            return listaPR_PR;
+        }
+
         #endregion
 
         #region Otros Metodos
