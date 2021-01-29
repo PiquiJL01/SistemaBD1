@@ -38,12 +38,21 @@ namespace Ucabmart.Views
                     {
                         numero.Eliminar();
                     }
+
+                    Producto todosProductos = new Producto();
+                    List<Producto> listaProducto = todosProductos.Todos();
+
+                    foreach (Producto producto in listaProducto)
+                    {
+                        consultaProveedor.EliminarProducto(producto);
+                    }
+
                     personaContacto.Eliminar();
                     consultaProveedor.Eliminar();
                     correo.Eliminar();
 
-                    ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('la persona ha sido eliminada');" +
-                                "window.location ='Clientes_Admin.aspx';", true);
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('El proveedor ha sido eliminado');" +
+                                "window.location ='Proveedores.aspx';", true);
                 }
                 else
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('El Proveedor no existe');", true);
