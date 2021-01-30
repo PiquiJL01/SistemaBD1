@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Ucabmart.Engine;
@@ -12,7 +10,7 @@ namespace Ucabmart.Views
     {
         Lugar nombreLugar = new Lugar(0);
         int codigoEstado = -1, codigoMunicipio = -1;
-       
+
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -114,14 +112,14 @@ namespace Ucabmart.Views
             {
                 int CodLug1 = this.CodLugar(dplParroquia, dplMunicipio, dplEstado);
                 int CodLug2 = this.CodLugar(dplParroquia2, dplMunicipio2, dplEstado2);
-                         
+
                 CorreoElectronico ctrlCorreo = new CorreoElectronico(txtCorreo.Text);
                 ctrlCorreo.Insertar();
 
                 Cliente datosCliente = new Cliente(dplRif.SelectedValue + txtRif.Text, txtContraseña.Text, ctrlCorreo, null);
                 datosCliente.Insertar();
 
-                Juridico datosJuridico = new Juridico(dplRif.SelectedValue + txtRif.Text, txtContraseña.Text, ctrlCorreo,txtDenoComercial.Text,txtRazonSocial.Text, int.Parse(txtCapitalDisponible.Text),txtPaginaWeb.Text,CodLug2,CodLug1,null);
+                Juridico datosJuridico = new Juridico(dplRif.SelectedValue + txtRif.Text, txtContraseña.Text, ctrlCorreo, txtDenoComercial.Text, txtRazonSocial.Text, int.Parse(txtCapitalDisponible.Text), txtPaginaWeb.Text, CodLug2, CodLug1, null);
                 datosJuridico.Insertar();
 
                 Telefono telefono1 = new Telefono(int.Parse(CodigoPais1.SelectedValue), int.Parse(CodAre.Text), int.Parse(txtTelefono1.Text), TipoTelf.Text, datosCliente);
@@ -130,7 +128,7 @@ namespace Ucabmart.Views
                 telefono2.Insertar();
 
 
-                PersonaContacto personaContacto1 = new PersonaContacto(CedulaDrop.SelectedValue + txtCedula.Text, Nombre1.Text, Nombre2.Text, Apellido1.Text, Apellido2.Text,datosJuridico);
+                PersonaContacto personaContacto1 = new PersonaContacto(CedulaDrop.SelectedValue + txtCedula.Text, Nombre1.Text, Nombre2.Text, Apellido1.Text, Apellido2.Text, datosJuridico);
                 personaContacto1.Insertar();
                 Telefono telefono3 = new Telefono(int.Parse(CodigoPais3.SelectedValue), int.Parse(CodAre3.Text), int.Parse(txtTelefono3.Text), TipoTelf3.Text, personaContacto1);
                 telefono3.Insertar();

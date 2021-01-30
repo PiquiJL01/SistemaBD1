@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 using Ucabmart.Controller;
 using Ucabmart.Engine;
 
@@ -137,6 +132,6 @@ namespace Ucabmart.Views
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('No hay conexión con la base de datos');", true);
             }
         }
-        
+
     }
 }

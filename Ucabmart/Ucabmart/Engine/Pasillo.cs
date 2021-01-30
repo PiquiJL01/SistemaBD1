@@ -1,8 +1,6 @@
 ﻿using Npgsql;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace Ucabmart.Engine
 {
@@ -97,7 +95,7 @@ namespace Ucabmart.Engine
 
                 if (Reader.Read())
                 {
-                    return new Pasillo(ReadInt(0), ReadInt(1), ReadString(2), ReadInt(3),ReadInt(4));
+                    return new Pasillo(ReadInt(0), ReadInt(1), ReadString(2), ReadInt(3), ReadInt(4));
                 }
 
                 Conexion.Close();

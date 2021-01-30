@@ -1,8 +1,6 @@
 ﻿using Npgsql;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace Ucabmart.Engine
 {
@@ -78,7 +76,7 @@ namespace Ucabmart.Engine
             CodigoUbicacion = ubicacion;
         }
 
-        private Lugar( string nombre)
+        private Lugar(string nombre)
         {
             Nombre = nombre;
         }
@@ -285,7 +283,7 @@ namespace Ucabmart.Engine
                 Conexion.Open();
 
                 string Command = "SELECT * FROM lugar WHERE lu_tipo = @tipo";
-                
+
                 NpgsqlCommand Script = new NpgsqlCommand(Command, Conexion);
 
                 switch (tipo)

@@ -105,10 +105,12 @@ namespace Ucabmart.Engine
                 {
                     Codigo = ReadInt(0);
                 }
-
-                Conexion.Close();
             }
             catch (Exception e)
+            {
+
+            }
+            finally
             {
                 Conexion.Close();
             }
@@ -130,10 +132,12 @@ namespace Ucabmart.Engine
                 {
                     return new Producto(ReadInt(0), ReadString(1), ReadString(2), ReadFloat(3), ReadString(4), ReadString(5), ReadInt(6), ReadInt(7));
                 }
-
-                Conexion.Close();
             }
             catch (Exception e)
+            {
+
+            }
+            finally
             {
                 Conexion.Close();
             }
@@ -163,6 +167,10 @@ namespace Ucabmart.Engine
                 }
             }
             catch (Exception e)
+            {               
+                return null;
+            }
+            finally
             {
                 throw new Exception("Ha ocurrido un error en la base de datos", e);
             }

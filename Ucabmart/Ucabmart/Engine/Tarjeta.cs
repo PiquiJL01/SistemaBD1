@@ -1,8 +1,6 @@
 ﻿using Npgsql;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace Ucabmart.Engine
 {
@@ -17,7 +15,7 @@ namespace Ucabmart.Engine
         #endregion
 
         #region Declaraciones
-        public Tarjeta(string nombre, string descripcion, DateTime fecha,TipoTarjeta tipo,
+        public Tarjeta(string nombre, string descripcion, DateTime fecha, TipoTarjeta tipo,
             int numero, int cvv, string nombreimpreso, DateTime fechaVencimiento)
             : base(nombre, descripcion, fecha)
         {

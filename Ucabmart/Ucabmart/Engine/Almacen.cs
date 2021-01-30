@@ -1,8 +1,6 @@
 ﻿using Npgsql;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace Ucabmart.Engine
 {
@@ -120,7 +118,7 @@ namespace Ucabmart.Engine
 
                 while (Reader.Read())
                 {
-                    Almacen almacen= new Almacen(ReadInt(0), ReadInt(1));
+                    Almacen almacen = new Almacen(ReadInt(0), ReadInt(1));
 
                     lista.Add(almacen);
                 }

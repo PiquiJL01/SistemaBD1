@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace Ucabmart.Views
 {
@@ -13,7 +8,7 @@ namespace Ucabmart.Views
         {
 
         }
-        
+
         protected void btnRegistrar_Click(object sender, EventArgs e)
         {
             string loginUsuario = Email.Text;
