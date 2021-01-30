@@ -149,7 +149,6 @@ namespace Ucabmart.Views
 
         }
 
-
         protected void btnBuscar_Click(object sender, EventArgs e)
         {
             Natural cliente = new Natural(BuscarRif.Text);

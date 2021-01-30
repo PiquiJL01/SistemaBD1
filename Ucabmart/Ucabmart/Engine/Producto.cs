@@ -72,7 +72,7 @@ namespace Ucabmart.Engine
             Nombre = nombre;
             EsAlimenticio = esAlimenticio;
             Precio = precio;
-            Calidad = Calidad;
+            Calidad = calidad;
             Descripcion = descripcion;
             CodigoMarca = marca;
             CodigoClasificacion = clasificacion;
@@ -128,7 +128,7 @@ namespace Ucabmart.Engine
 
                 if (Reader.Read())
                 {
-                    return new Producto(ReadInt(0), ReadString(1), ReadString(2), ReadFloat(3), ReadString(4), ReadString(5), ReadInt(5), ReadInt(6));
+                    return new Producto(ReadInt(0), ReadString(1), ReadString(2), ReadFloat(3), ReadString(4), ReadString(5), ReadInt(6), ReadInt(7));
                 }
 
                 Conexion.Close();
@@ -157,7 +157,7 @@ namespace Ucabmart.Engine
                 while (Reader.Read())
                 {
                     Producto producto= new Producto(ReadInt(0), ReadString(1), ReadString(2), 
-                        ReadFloat(3), ReadString(4), ReadString(5), ReadInt(5), ReadInt(6));
+                        ReadFloat(3), ReadString(4), ReadString(5), ReadInt(6), ReadInt(7));
 
                     lista.Add(producto);
                 }
