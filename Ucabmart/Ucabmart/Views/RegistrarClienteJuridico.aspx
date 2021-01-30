@@ -137,11 +137,6 @@
                                      <div class="input-group mb-3">
                                         <asp:DropDownList ID="CodigoPais1" runat="server" style="padding-bottom: 15px; margin-top: 10px; margin-bottom: 50px; background-color: #0f136bd6;color: white; width: 180px;" class="input-group-prepend be-addon">
                                                 <asp:ListItem Value="">Codigo de País</asp:ListItem>
-                                                <asp:ListItem Value="54">Argentina</asp:ListItem>
-                                                <asp:ListItem Value="55">Brasil</asp:ListItem>
-                                                <asp:ListItem Value="57">Colombia</asp:ListItem>
-                                                <asp:ListItem Value="593">Ecuador</asp:ListItem>
-                                                <asp:ListItem Value="66">Tailandia</asp:ListItem>
                                                 <asp:ListItem Value="58">Venezuela</asp:ListItem>
                                         </asp:DropDownList>
                                      </div>
@@ -170,11 +165,6 @@
                                     <div class="input-group mb-3">
                                         <asp:DropDownList ID="CodigoPais2" runat="server" style="padding-bottom: 15px; margin-top: 10px; margin-bottom: 50px; background-color: #0f136bd6;color: white; width: 180px;" class="input-group-prepend be-addon">
                                                 <asp:ListItem Value="">Codigo de País</asp:ListItem>
-                                                <asp:ListItem Value="54">Argentina</asp:ListItem>
-                                                <asp:ListItem Value="55">Brasil</asp:ListItem>
-                                                <asp:ListItem Value="57">Colombia</asp:ListItem>
-                                                <asp:ListItem Value="593">Ecuador</asp:ListItem>
-                                                <asp:ListItem Value="66">Tailandia</asp:ListItem>
                                                 <asp:ListItem Value="58">Venezuela</asp:ListItem>
                                         </asp:DropDownList>
                                      </div>
@@ -333,11 +323,6 @@
                                      <div class="input-group mb-3">
                                         <asp:DropDownList ID="CodigoPais3" runat="server" style="padding-bottom: 15px; margin-top: 10px; margin-bottom: 50px; background-color: #0f136bd6;color: white; width: 180px;" class="input-group-prepend be-addon">
                                                 <asp:ListItem Value="">Codigo de País</asp:ListItem>
-                                                <asp:ListItem Value="54">Argentina</asp:ListItem>
-                                                <asp:ListItem Value="55">Brasil</asp:ListItem>
-                                                <asp:ListItem Value="57">Colombia</asp:ListItem>
-                                                <asp:ListItem Value="593">Ecuador</asp:ListItem>
-                                                <asp:ListItem Value="66">Tailandia</asp:ListItem>
                                                 <asp:ListItem Value="58">Venezuela</asp:ListItem>
                                         </asp:DropDownList>
                                      </div>
@@ -366,11 +351,6 @@
                                     <div class="input-group mb-3">
                                         <asp:DropDownList ID="CodigoPais4" runat="server" style="padding-bottom: 15px; margin-top: 10px; margin-bottom: 50px; background-color: #0f136bd6;color: white; width: 180px;" class="input-group-prepend be-addon">
                                                 <asp:ListItem Value="">Codigo de País</asp:ListItem>
-                                                <asp:ListItem Value="54">Argentina</asp:ListItem>
-                                                <asp:ListItem Value="55">Brasil</asp:ListItem>
-                                                <asp:ListItem Value="57">Colombia</asp:ListItem>
-                                                <asp:ListItem Value="593">Ecuador</asp:ListItem>
-                                                <asp:ListItem Value="66">Tailandia</asp:ListItem>
                                                 <asp:ListItem Value="58">Venezuela</asp:ListItem>
                                         </asp:DropDownList>
                                      </div>

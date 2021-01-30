@@ -115,11 +115,7 @@ namespace Ucabmart.Engine
             }
             finally
             {
-                try
-                {
-                    Conexion.Close();
-                }
-                finally { }
+                Conexion.Close();
             }
 
             return null;
@@ -145,19 +141,18 @@ namespace Ucabmart.Engine
                     lista.Add(juridico);
                 }
             }
+            catch (Exception e)
+            {
+                throw new Exception("Ha ocurrido un error en la base de datos", e);
+            }
             finally
             {
-                try
+                Conexion.Close();
+                
+                foreach (Juridico juridico in lista)
                 {
-                    Conexion.Close();
-                }
-                finally
-                {
-                    foreach (Juridico juridico in lista)
-                    {
-                        Cliente cliente = new Cliente(juridico.RIF);
-                        juridico.Base(cliente);
-                    }
+                    Cliente cliente = new Cliente(juridico.RIF);
+                    juridico.Base(cliente);
                 }
             }
 
@@ -188,16 +183,16 @@ namespace Ucabmart.Engine
                 Script.Prepare();
 
                 Script.ExecuteNonQuery();
-
-                Conexion.Close();
+                
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Ha ocurrido un error en la base de datos", e);
             }
             finally
             {
-                try
-                {
-                    Conexion.Close();
-                }
-                finally { }
+                Conexion.Close();
+               
             }
         }
 

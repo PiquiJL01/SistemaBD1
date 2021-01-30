@@ -98,7 +98,7 @@ namespace Ucabmart.Engine
 
         public Natural LeerNatural(string codigo)
         {
-            Natural natural = null;
+            Natural natural = new Natural();
 
             try
             {

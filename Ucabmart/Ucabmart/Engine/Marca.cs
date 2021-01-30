@@ -40,6 +40,9 @@ namespace Ucabmart.Engine
             EsPropia = esPropia;
             Descripcion = descripcion;
         }
+
+        public Marca(){}
+
         #endregion
 
         #region CRUDs
@@ -206,5 +209,25 @@ namespace Ucabmart.Engine
             }
         }
         #endregion
+
+        #region Otros Metodos
+
+
+        public int Get_CodMarca(String Name)
+        {
+            List<Marca>marcas =this.Todos();
+
+            foreach (Marca marca in marcas)
+            {
+                if (marca.Nombre == Name) {
+                    return marca.Codigo;
+                }
+            }
+            return -1;
+        }
+
+        #endregion
+
+
     }
 }

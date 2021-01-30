@@ -232,6 +232,7 @@
     <Content Include="Content\css\Clientes.css" />
     <Content Include="Content\css\Productos.css" />
     <Content Include="Content\css\Nomina.css" />
+    <Content Include="Content\css\RegistrarProducto.css" />
     <Content Include="Content\css\RegistrarClienteJuridico.css" />
     <Content Include="Content\css\ModificarCliente.css" />
     <Content Include="Content\css\RegistroCliente.css" />
@@ -1923,12 +1924,15 @@
     <Content Include="Views\CrearCuenta.aspx" />
     <Content Include="Views\EliminarCliente.aspx" />
     <Content Include="Views\EliminarClienteJuridico.aspx" />
+    <Content Include="Views\EliminarProveedor.aspx" />
     <Content Include="Views\IniciarSesion.aspx" />
     <Content Include="Views\Inicio.aspx" />
     <Content Include="Views\ModificarCliente.aspx" />
     <Content Include="Views\ModificarClienteJuridico.aspx" />
     <Content Include="Views\ModificarClienteNatural.aspx" />
     <Content Include="Views\ModificarProveedor.aspx" />
+    <Content Include="Views\Product\ModificarProducto.aspx" />
+    <Content Include="Views\Product\RegistrarProducto.aspx" />
     <Content Include="Views\RegistrarClienteJuridico.aspx" />
     <Content Include="Views\RegistrarClienteNatural.aspx" />
     <Content Include="Views\RegistroProveedores.aspx" />
@@ -2069,6 +2073,13 @@
     <Compile Include="Views\EliminarClienteJuridico.aspx.designer.cs">
       <DependentUpon>EliminarClienteJuridico.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\EliminarProveedor.aspx.cs">
+      <DependentUpon>EliminarProveedor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\EliminarProveedor.aspx.designer.cs">
+      <DependentUpon>EliminarProveedor.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\IniciarSesion.aspx.cs">
       <DependentUpon>IniciarSesion.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2110,6 +2121,20 @@
     </Compile>
     <Compile Include="Views\ModificarProveedor.aspx.designer.cs">
       <DependentUpon>ModificarProveedor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Product\ModificarProducto.aspx.cs">
+      <DependentUpon>ModificarProducto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Product\ModificarProducto.aspx.designer.cs">
+      <DependentUpon>ModificarProducto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Product\RegistrarProducto.aspx.cs">
+      <DependentUpon>RegistrarProducto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Product\RegistrarProducto.aspx.designer.cs">
+      <DependentUpon>RegistrarProducto.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\RegistrarClienteJuridico.aspx.cs">
       <DependentUpon>RegistrarClienteJuridico.aspx</DependentUpon>
