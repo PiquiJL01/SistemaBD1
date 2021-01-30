@@ -82,7 +82,6 @@ namespace Ucabmart.Views.Product
         {
             try
             {
-
                 Producto producto = new Producto(int.Parse(BuscarCod.Text));
 
                 producto.Nombre = TxtNombre.Text;
@@ -151,10 +150,5 @@ namespace Ucabmart.Views.Product
 
 
         }
-
-
-
-
-
     }
 }
