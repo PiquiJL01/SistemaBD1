@@ -31,10 +31,8 @@ namespace Ucabmart.Views
 
             tabla += "<tbody>";
 
-            List<Proveedor> listaProveedores = new List<Proveedor>();
             consultarProveedor = new Proveedor();
-
-            listaProveedores = consultarProveedor.Todos();
+            List<Proveedor> listaProveedores = consultarProveedor.Todos();
 
             foreach (Proveedor item in listaProveedores)
             {
@@ -47,8 +45,7 @@ namespace Ucabmart.Views
                 tabla += "<td>" + item.DireccionFiscal + "</td>";
                 tabla += "<td>" + item.CodigoCorreoElectronico + "</td>";
 
-                List<int> codigoProductos = new List<int>();
-                codigoProductos = consultarProveedor.TodosEnPP_PR(item.RIF); //obtiene los codigos de los productos relacionado con el proveedor
+                List<int> codigoProductos = consultarProveedor.TodosEnPP_PR(item.RIF); //obtiene los codigos de los productos relacionado con el proveedor
                 Producto producto = new Producto();
                 List<Producto> todosProductos = producto.Todos();  //obtengo todos los productos
 
