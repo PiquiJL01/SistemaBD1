@@ -46,29 +46,27 @@ namespace Ucabmart.Engine
             CodigoClasificacion = clasificacion.Codigo;
         }
 
-        public Producto(int codigo)
+        public Producto(int codigo = 0)
         {
-            Producto producto = Leer(codigo);
-            if (!(producto == null))
+            if (!(codigo == 0))
             {
-                Codigo = producto.Codigo;
-                Nombre = producto.Nombre;
-                EsAlimenticio = producto.EsAlimenticio;
-                Precio = producto.Precio;
-                Calidad = producto.Calidad;
-                Descripcion = producto.Descripcion;
-                CodigoMarca = producto.CodigoMarca;
-                CodigoClasificacion = producto.CodigoClasificacion;
+                Producto producto = Leer(codigo);
+                if (!(producto == null))
+                {
+                    Codigo = producto.Codigo;
+                    Nombre = producto.Nombre;
+                    EsAlimenticio = producto.EsAlimenticio;
+                    Precio = producto.Precio;
+                    Calidad = producto.Calidad;
+                    Descripcion = producto.Descripcion;
+                    CodigoMarca = producto.CodigoMarca;
+                    CodigoClasificacion = producto.CodigoClasificacion;
+                }
             }
         }
 
-        public Producto()
-        {
-        }
-
-
         private Producto(int codigo, string nombre, string esAlimenticio, float precio, 
-        string calidad, string descripcion, int marca, int clasificacion)
+            string calidad, string descripcion, int marca, int clasificacion)
         {
             Codigo = codigo;
             Nombre = nombre;
@@ -81,25 +79,6 @@ namespace Ucabmart.Engine
         }
         #endregion
 
-        public List<int> ProductosCod(List<String> items)
-        {
-            Producto p1 = new Producto();
-        
-            List<Producto> productos = new List<Producto>();
-            productos = p1.Todos();
-            List<int> lista = new List<int>();
-
-            foreach (Producto producto in productos)
-            {
-                if (items.Contains(producto.Nombre))
-                {
-                    lista.Add(producto.Codigo);
-                }
-            }
-
-            return lista;
-
-        }
 
         #region CRUDs
         public override void Insertar()
@@ -246,6 +225,28 @@ namespace Ucabmart.Engine
             {
                 Conexion.Close();                
             }
+        }
+        #endregion
+
+        #region OtrosMetodos
+        public List<int> ProductosCod(List<String> items)
+        {
+            Producto p1 = new Producto();
+
+            List<Producto> productos = new List<Producto>();
+            productos = p1.Todos();
+            List<int> lista = new List<int>();
+
+            foreach (Producto producto in productos)
+            {
+                if (items.Contains(producto.Nombre))
+                {
+                    lista.Add(producto.Codigo);
+                }
+            }
+
+            return lista;
+
         }
         #endregion
     }
