@@ -46,7 +46,7 @@ namespace Ucabmart.Engine
             CodigoClasificacion = clasificacion.Codigo;
         }
 
-        public Producto(int codigo = 0)
+        public Producto(int codigo)
         {
             if (!(codigo == 0))
             {
@@ -77,6 +77,11 @@ namespace Ucabmart.Engine
             CodigoMarca = marca;
             CodigoClasificacion = clasificacion;
         }
+        public Producto()
+        {
+
+        }
+
         #endregion
 
 
@@ -130,10 +135,13 @@ namespace Ucabmart.Engine
                 {
                     return new Producto(ReadInt(0), ReadString(1), ReadString(2), ReadFloat(3), ReadString(4), ReadString(5), ReadInt(6), ReadInt(7));
                 }
-
-                Conexion.Close();
+                
             }
             catch (Exception e)
+            {
+                throw new Exception("Ha ocurrido un error en la base de datos", e);
+            }
+            finally
             {
                 Conexion.Close();
             }
@@ -248,6 +256,31 @@ namespace Ucabmart.Engine
             }
 
             return lista;
+
+        }
+
+        public void EliminarEnPR_PR() {
+            try
+            {
+                Conexion.Open();
+
+                string Commando = "DELETE FROM pr_pr WHERE producto_pr_codigo = @codigo";
+                Script = new NpgsqlCommand(Commando, Conexion);
+
+                Script.Parameters.AddWithValue("codigo", Codigo);
+
+                Script.Prepare();
+
+                Script.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Ha ocurrido un error en la base de datos", e);
+            }
+            finally
+            {
+                Conexion.Close();
+            }
 
         }
         #endregion

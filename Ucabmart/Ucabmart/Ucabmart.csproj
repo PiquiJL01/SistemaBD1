@@ -1919,6 +1919,7 @@
     <Content Include="Views\ModificarClienteNatural.aspx" />
     <Content Include="Views\ModificarProveedor.aspx" />
     <Content Include="Views\Product\ConsultarProducto.aspx" />
+    <Content Include="Views\Product\EliminarProducto.aspx" />
     <Content Include="Views\Product\ModificarProducto.aspx" />
     <Content Include="Views\Product\RegistrarProducto.aspx" />
     <Content Include="Views\RegistrarClienteJuridico.aspx" />
@@ -2110,6 +2111,13 @@
     </Compile>
     <Compile Include="Views\Product\ConsultarProducto.aspx.designer.cs">
       <DependentUpon>ConsultarProducto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Product\EliminarProducto.aspx.cs">
+      <DependentUpon>EliminarProducto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Product\EliminarProducto.aspx.designer.cs">
+      <DependentUpon>EliminarProducto.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Product\ModificarProducto.aspx.cs">
       <DependentUpon>ModificarProducto.aspx</DependentUpon>
