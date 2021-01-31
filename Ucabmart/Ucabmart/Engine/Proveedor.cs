@@ -1,8 +1,6 @@
 ﻿using Npgsql;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace Ucabmart.Engine
 {
@@ -58,7 +56,8 @@ namespace Ucabmart.Engine
                 PaginaWeb = proveedor.PaginaWeb;
             }
         }
-        public Proveedor() {
+        public Proveedor()
+        {
         }
 
         #endregion
@@ -72,7 +71,7 @@ namespace Ucabmart.Engine
 
                 string Comando = "INSERT INTO proveedor (pr_rif, pr_razon_social, pr_denominacion_comercial, pr_pag_web, Lugar_lu_codigo, lugar_lu_codigo2, correo_electronico_ce_codigo) " +
                     "VALUES (@rif, @razon, @denominacion, @web, @fisica, @fiscal, @correo)";
-                
+
                 Script = new NpgsqlCommand(Comando, Conexion);
 
                 Script.Parameters.AddWithValue("rif", RIF);
@@ -108,7 +107,7 @@ namespace Ucabmart.Engine
 
                 if (Reader.Read())
                 {
-                    return new Proveedor(ReadString(0), ReadString(1), ReadString(2), ReadString(3), ReadInt(4), ReadInt(5),ReadInt(6));
+                    return new Proveedor(ReadString(0), ReadString(1), ReadString(2), ReadString(3), ReadInt(4), ReadInt(5), ReadInt(6));
                 }
 
                 Conexion.Close();

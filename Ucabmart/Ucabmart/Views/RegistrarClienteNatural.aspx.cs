@@ -1,13 +1,6 @@
-﻿using MessagingToolkit.QRCode.Codec;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
-using Ucabmart.Controller;
 using Ucabmart.Engine;
 
 namespace Ucabmart.Views
@@ -15,12 +8,13 @@ namespace Ucabmart.Views
     public partial class RegistrarClienteNatural : System.Web.UI.Page
     {
         Lugar nombreLugar = new Lugar(0);
-        int  codigoEstado = -1, codigoMunicipio = -1;
+        int codigoEstado = -1, codigoMunicipio = -1;
 
-        public void cargarPagina(Boolean flag) {
-           List<Lugar> listaLugar = new List<Lugar>(); 
+        public void cargarPagina(Boolean flag)
+        {
+            List<Lugar> listaLugar = new List<Lugar>();
             listaLugar = nombreLugar.Todos();
-            
+
             if (flag)
             {
                 foreach (Lugar item in listaLugar)
@@ -33,7 +27,7 @@ namespace Ucabmart.Views
                 {
                     if (dplEstado.SelectedValue == item.Nombre && item.CodigoUbicacion == 1)
                         codigoEstado = item.Codigo;
-                      //almacena el codigo del estado
+                    //almacena el codigo del estado
                 }
 
                 foreach (Lugar item in listaLugar)
@@ -46,7 +40,7 @@ namespace Ucabmart.Views
                 {
                     if (dplMunicipio.SelectedValue == item.Nombre && codigoEstado == item.CodigoUbicacion)   //compara el codigo del estado con el codigo del municipio
                         codigoMunicipio = item.Codigo;
-                      //almacena el codigo del municipio 
+                    //almacena el codigo del municipio 
                 }
 
                 foreach (Lugar item in listaLugar)
@@ -83,11 +77,11 @@ namespace Ucabmart.Views
                 {
                     if (codigoMunicipio == item.CodigoUbicacion)
                         dplParroquia.Items.Add(item.Nombre);
-                     
+
                 }
             }
         }
-        
+
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -107,11 +101,12 @@ namespace Ucabmart.Views
 
         protected void btnRegistrar_Click(object sender, EventArgs e)
         {
-            try {
+            try
+            {
                 CorreoElectronico ctrlCorreo = new CorreoElectronico(txtCorreo.Text);
                 ctrlCorreo.Insertar();
-                Cliente datosCliente = new Cliente(dplRif.SelectedValue + txtRif.Text, txtContraseña.Text, ctrlCorreo,null);
-            
+                Cliente datosCliente = new Cliente(dplRif.SelectedValue + txtRif.Text, txtContraseña.Text, ctrlCorreo, null);
+
                 datosCliente.Insertar();
 
                 Natural datosNatural = new Natural();
@@ -140,7 +135,7 @@ namespace Ucabmart.Views
                 foreach (Lugar item in listaLugar2)
                 {
                     if (dplParroquia.SelectedValue == item.Nombre && item.Tipo == "Parroquia" && codigoMunicipio == item.CodigoUbicacion)
-                        codigoParroquia= item.Codigo;
+                        codigoParroquia = item.Codigo;
                 }
 
                 datosNatural.Direccion = codigoParroquia;
@@ -155,14 +150,14 @@ namespace Ucabmart.Views
                                 "window.location ='Clientes_Admin.aspx';", true);
             }
             catch (Exception ex)
-            {         
+            {
                 Session["mensajeError"] = "Ha ocurrido un error al registrar la persona. " + ex;
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('NO DEBE HABER CAMPOS VACÍOS');", true);
             }
-            
+
         }
 
-        
+
 
         protected void dplEstado_SelectedIndexChanged(object sender, EventArgs e)
         {

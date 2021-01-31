@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
-namespace Ucabmart.Controller
+﻿namespace Ucabmart.Controller
 {
     public class Class1
     {

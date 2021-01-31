@@ -1,8 +1,6 @@
 ﻿using Npgsql;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace Ucabmart.Engine
 {
@@ -133,7 +131,7 @@ namespace Ucabmart.Engine
             }
         }
 
-        private PersonaContacto(int codigo, string cedula, string nombre1, string nombre2, 
+        private PersonaContacto(int codigo, string cedula, string nombre1, string nombre2,
             string apellido1, string apellido2, string rifjuridico, string rifProveedor)
         {
             Codigo = codigo;
@@ -191,7 +189,7 @@ namespace Ucabmart.Engine
                 {
                     Codigo = ReadInt(0);
                 }
-                
+
             }
             catch (Exception e)
             {
@@ -217,7 +215,7 @@ namespace Ucabmart.Engine
 
                 if (Reader.Read())
                 {
-                    return new PersonaContacto(ReadInt(0), ReadString(1), ReadString(2), ReadString(3), 
+                    return new PersonaContacto(ReadInt(0), ReadString(1), ReadString(2), ReadString(3),
                         ReadString(4), ReadString(5), ReadString(6), ReadString(7));
                 }
 
@@ -304,7 +302,7 @@ namespace Ucabmart.Engine
                     Script.Parameters.AddWithValue("apellido2", Apellido2);
                     Script.Parameters.AddWithValue("juridico", RifClienteJuridico);
                 }
-                
+
                 Script.Prepare();
 
                 Script.ExecuteNonQuery();

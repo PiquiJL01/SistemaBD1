@@ -1,8 +1,6 @@
 ﻿using Npgsql;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace Ucabmart.Engine
 {
@@ -38,6 +36,11 @@ namespace Ucabmart.Engine
             Nombre = nombre;
             Descripcion = descripcion;
         }
+
+        public Departamento()
+        {
+        }
+
         #endregion
 
         #region CRUDs

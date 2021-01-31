@@ -1,8 +1,6 @@
 ﻿using Npgsql;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace Ucabmart.Engine
 {
@@ -38,6 +36,11 @@ namespace Ucabmart.Engine
             Nombre = nombre;
             Descripcion = descripcion;
         }
+
+        public Cargo()
+        {
+        }
+
         #endregion
 
         #region CRUDs
@@ -117,7 +120,7 @@ namespace Ucabmart.Engine
 
                 while (Reader.Read())
                 {
-                    Cargo cargo= new Cargo(ReadInt(0), ReadString(1), ReadString(2));
+                    Cargo cargo = new Cargo(ReadInt(0), ReadString(1), ReadString(2));
 
                     lista.Add(cargo);
                 }

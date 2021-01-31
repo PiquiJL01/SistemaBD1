@@ -1,8 +1,6 @@
 ﻿using Npgsql;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace Ucabmart.Engine
 {
@@ -14,7 +12,7 @@ namespace Ucabmart.Engine
         #region Declaraciones
         public Canje(string nombre, string descripcion, DateTime fecha) : base(nombre, descripcion, fecha) { }
 
-        public Canje(int codigo) : base(codigo) { } 
+        public Canje(int codigo) : base(codigo) { }
         #endregion
 
         #region CRUDs
@@ -25,8 +23,8 @@ namespace Ucabmart.Engine
                 base.Insertar();
 
                 Conexion.Open();
-                
-                string Comando = "INSERT INTO canje (mp_codigo) " + 
+
+                string Comando = "INSERT INTO canje (mp_codigo) " +
                     "VALUES (@codigo)";
                 Script = new NpgsqlCommand(Comando, Conexion);
 

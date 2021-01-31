@@ -1,8 +1,6 @@
 ﻿using Npgsql;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace Ucabmart.Engine
 {
@@ -170,7 +168,7 @@ namespace Ucabmart.Engine
 
                 while (Reader.Read())
                 {
-                    Horario horario = new Horario(ReadInt(0), ReadTime(1), ReadTime(2), ReadString(3), 
+                    Horario horario = new Horario(ReadInt(0), ReadTime(1), ReadTime(2), ReadString(3),
                         ReadString(4));
 
                     lista.Add(horario);

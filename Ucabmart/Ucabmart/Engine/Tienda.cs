@@ -1,8 +1,6 @@
 ﻿using Npgsql;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace Ucabmart.Engine
 {
@@ -23,7 +21,7 @@ namespace Ucabmart.Engine
             CodigoDireccion = direccion.Codigo;
         }
 
-        public Tienda(int codigo) 
+        public Tienda(int codigo)
         {
             Tienda tienda = Leer(codigo);
             if (!(tienda == null))
@@ -42,6 +40,11 @@ namespace Ucabmart.Engine
             Descripcion = descripcion;
             CodigoDireccion = direccon;
         }
+
+        public Tienda()
+        {
+        }
+
         #endregion
 
         #region CRUDs

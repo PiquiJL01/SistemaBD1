@@ -1,8 +1,6 @@
 ﻿using Npgsql;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace Ucabmart.Engine
 {
@@ -28,7 +26,7 @@ namespace Ucabmart.Engine
             DireccionFiscal = direccionFiscal;
         }
 
-        private Juridico(string rif, string denominacionComercial, string razonSocial, float capital, 
+        private Juridico(string rif, string denominacionComercial, string razonSocial, float capital,
             string paginaWeb, int direccionFisica, int direccionFiscal) : base(rif)
         {
             DenominacionComercial = denominacionComercial;
@@ -108,7 +106,7 @@ namespace Ucabmart.Engine
 
                 if (Reader.Read())
                 {
-                    Juridico juridico = new Juridico(ReadString(0), ReadString(1), ReadString(2), ReadFloat(3), ReadString(4), 
+                    Juridico juridico = new Juridico(ReadString(0), ReadString(1), ReadString(2), ReadFloat(3), ReadString(4),
                         ReadInt(5), ReadInt(6));
                     Cliente cliente = new Cliente(juridico.RIF);
                     juridico.Base(cliente);
@@ -135,7 +133,7 @@ namespace Ucabmart.Engine
                 NpgsqlCommand Script = new NpgsqlCommand(Command, Conexion);
 
                 Reader = Script.ExecuteReader();
-                
+
                 while (Reader.Read())
                 {
                     Juridico juridico = new Juridico(ReadString(0), ReadString(1), ReadString(2), ReadFloat(3),
@@ -212,7 +210,7 @@ namespace Ucabmart.Engine
                 Script.Prepare();
 
                 Script.ExecuteNonQuery();
-                
+
             }
             catch (Exception e)
             {

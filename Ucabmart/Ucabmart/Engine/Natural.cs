@@ -1,8 +1,6 @@
 using Npgsql;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace Ucabmart.Engine
 {
@@ -85,7 +83,7 @@ namespace Ucabmart.Engine
 
                 Script.Prepare();
 
-                Script.ExecuteNonQuery();  
+                Script.ExecuteNonQuery();
             }
             catch (Exception e)
             {
@@ -114,7 +112,7 @@ namespace Ucabmart.Engine
 
                 if (Reader.Read())
                 {
-                    natural = new Natural(ReadString(0), ReadString(1), ReadString(2), ReadString(3), 
+                    natural = new Natural(ReadString(0), ReadString(1), ReadString(2), ReadString(3),
                         ReadString(4), ReadString(5), ReadInt(6));
                 }
             }
@@ -231,7 +229,7 @@ namespace Ucabmart.Engine
                 Script.Prepare();
 
                 Script.ExecuteNonQuery();
-                
+
             }
             catch (Exception e)
             {
