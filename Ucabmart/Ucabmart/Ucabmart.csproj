@@ -232,6 +232,7 @@
     <Content Include="Content\css\Clientes.css" />
     <Content Include="Content\css\Productos.css" />
     <Content Include="Content\css\Nomina.css" />
+    <Content Include="Content\css\RegistarEmpleado.css" />
     <Content Include="Content\css\RegistrarProducto.css" />
     <Content Include="Content\css\RegistrarClienteJuridico.css" />
     <Content Include="Content\css\ModificarCliente.css" />
@@ -1925,6 +1926,7 @@
     <Content Include="Views\EliminarCliente.aspx" />
     <Content Include="Views\EliminarClienteJuridico.aspx" />
     <Content Include="Views\EliminarProveedor.aspx" />
+    <Content Include="Views\Employee\RegistrarEmpleado.aspx" />
     <Content Include="Views\IniciarSesion.aspx" />
     <Content Include="Views\Inicio.aspx" />
     <Content Include="Views\ModificarCliente.aspx" />
@@ -2080,6 +2082,13 @@
     </Compile>
     <Compile Include="Views\EliminarProveedor.aspx.designer.cs">
       <DependentUpon>EliminarProveedor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Employee\RegistrarEmpleado.aspx.cs">
+      <DependentUpon>RegistrarEmpleado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Employee\RegistrarEmpleado.aspx.designer.cs">
+      <DependentUpon>RegistrarEmpleado.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\IniciarSesion.aspx.cs">
       <DependentUpon>IniciarSesion.aspx</DependentUpon>

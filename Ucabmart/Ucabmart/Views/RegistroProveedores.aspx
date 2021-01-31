@@ -260,12 +260,11 @@
                                <div class="PC">
                                     <asp:Label ID="Label3" runat="server" Text="Personas de Contacto"></asp:Label>
                                </div>
-
+                                <br />
                                 <%--<Persona de Contacto Nº1 >--%>
                                 <div class="Contacto">
                                     <asp:Label ID="Label4" runat="server" Text="Contacto Nº1"></asp:Label>
                                 </div>
-                                <br/>
 
                                 <%--<Campo de texto de la cédula>--%>
                                 <asp:Label ID="lblCedula" runat="server" Text="Cédula"></asp:Label>

@@ -40,6 +40,11 @@ namespace Ucabmart.Engine
             Descripcion = descripcion;
             CodigoDireccion = direccon;
         }
+
+        public Tienda()
+        {
+        }
+
         #endregion
 
         #region CRUDs

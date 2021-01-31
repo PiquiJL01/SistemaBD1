@@ -36,6 +36,11 @@ namespace Ucabmart.Engine
             Nombre = nombre;
             Descripcion = descripcion;
         }
+
+        public Departamento()
+        {
+        }
+
         #endregion
 
         #region CRUDs

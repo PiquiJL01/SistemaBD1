@@ -613,3 +613,7 @@ C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\Microso
 C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.ReportViewer.ProcessingObjectModel.DLL
 C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.ReportViewer.WebForms.DLL
 C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\ReportViewerForMvc.dll
+C:\Users\Jose\Documents\GitHub\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.ReportViewer.Common.dll
+C:\Users\Jose\Documents\GitHub\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+C:\Users\Jose\Documents\GitHub\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.ReportViewer.WebForms.DLL
+C:\Users\Jose\Documents\GitHub\SistemaBD1\Ucabmart\Ucabmart\bin\ReportViewerForMvc.dll

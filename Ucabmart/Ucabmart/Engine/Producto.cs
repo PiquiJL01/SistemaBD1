@@ -172,10 +172,6 @@ namespace Ucabmart.Engine
             }
             finally
             {
-                throw new Exception("Ha ocurrido un error en la base de datos", e);
-            }
-            finally
-            {
                 Conexion.Close();
             }
 
