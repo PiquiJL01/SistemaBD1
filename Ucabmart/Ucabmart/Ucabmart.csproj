@@ -1917,7 +1917,11 @@
     <Content Include="Views\EliminarCliente.aspx" />
     <Content Include="Views\EliminarClienteJuridico.aspx" />
     <Content Include="Views\EliminarProveedor.aspx" />
+<<<<<<< Updated upstream
     <Content Include="Views\Employee\ConsultarEmpleado.aspx" />
+=======
+    <Content Include="Views\Employee\Beneficios.aspx" />
+>>>>>>> Stashed changes
     <Content Include="Views\Employee\RegistrarEmpleado.aspx" />
     <Content Include="Views\IniciarSesion.aspx" />
     <Content Include="Views\Inicio.aspx" />
@@ -2071,12 +2075,21 @@
     <Compile Include="Views\EliminarProveedor.aspx.designer.cs">
       <DependentUpon>EliminarProveedor.aspx</DependentUpon>
     </Compile>
+<<<<<<< Updated upstream
     <Compile Include="Views\Employee\ConsultarEmpleado.aspx.cs">
       <DependentUpon>ConsultarEmpleado.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Views\Employee\ConsultarEmpleado.aspx.designer.cs">
       <DependentUpon>ConsultarEmpleado.aspx</DependentUpon>
+=======
+    <Compile Include="Views\Employee\Beneficios.aspx.cs">
+      <DependentUpon>Beneficios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Employee\Beneficios.aspx.designer.cs">
+      <DependentUpon>Beneficios.aspx</DependentUpon>
+>>>>>>> Stashed changes
     </Compile>
     <Compile Include="Views\Employee\RegistrarEmpleado.aspx.cs">
       <DependentUpon>RegistrarEmpleado.aspx</DependentUpon>
