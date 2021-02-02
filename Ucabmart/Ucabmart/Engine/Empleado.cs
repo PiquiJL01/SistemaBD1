@@ -83,14 +83,11 @@ namespace Ucabmart.Engine
             CodigoDireccion = direccion;
             CodigoCorreoElectronico = correo;
         }
-<<<<<<< HEAD
 
         public Empleado()
         {
 
         }
-=======
->>>>>>> parent of 18b5e11... Vista Consultar Empleado
         #endregion
 
         #region CRUDs
@@ -177,21 +174,14 @@ namespace Ucabmart.Engine
                         ReadString(6), ReadInt(7), ReadInt(8), ReadInt(9), ReadInt(10), ReadString(11), ReadInt(12));
                 }
 
-<<<<<<< HEAD
-=======
-                Conexion.Close();
->>>>>>> parent of 18b5e11... Vista Consultar Empleado
             }
             catch (Exception e)
             {
-                try
-                {
-                    Conexion.Close();
-                }
-                catch (Exception f)
-                {
-
-                }
+                throw new Exception("Ha ocurrido un error en la base de datos", e);
+            }
+            finally
+            {
+                Conexion.Close();
             }
 
             return null;
@@ -220,15 +210,11 @@ namespace Ucabmart.Engine
             }
             catch (Exception e)
             {
-                try
-                {
-                    Conexion.Close();
-                }
-                catch (Exception f)
-                {
-
-                }
-                return null;
+                throw new Exception("Ha ocurrido un error en la base de datos", e);
+            }
+            finally
+            {
+                Conexion.Close();
             }
 
             return lista;
@@ -288,21 +274,14 @@ namespace Ucabmart.Engine
 
                 Script.ExecuteNonQuery();
 
-<<<<<<< HEAD
-=======
-                Conexion.Close();
->>>>>>> parent of 18b5e11... Vista Consultar Empleado
             }
             catch (Exception e)
             {
-                try
-                {
-                    Conexion.Close();
-                }
-                catch (Exception f)
-                {
-
-                }
+                throw new Exception("Ha ocurrido un error en la base de datos", e);
+            }
+            finally
+            {
+                Conexion.Close();
             }
         }
 
@@ -321,21 +300,14 @@ namespace Ucabmart.Engine
 
                 Script.ExecuteNonQuery();
 
-<<<<<<< HEAD
-=======
-                Conexion.Close();
->>>>>>> parent of 18b5e11... Vista Consultar Empleado
             }
             catch (Exception e)
             {
-                try
-                {
-                    Conexion.Close();
-                }
-                catch (Exception f)
-                {
-
-                }
+                throw new Exception("Ha ocurrido un error en la base de datos", e);
+            }
+            finally
+            {
+                Conexion.Close();
             }
         }
         #endregion
