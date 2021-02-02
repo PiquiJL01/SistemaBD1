@@ -203,25 +203,5 @@ namespace Ucabmart.Engine
             }
         }
         #endregion
-
-        #region Otros Metodos
-
-
-        public int Get_CodCargo(String Name)
-        {
-            List<Cargo> cargos = this.Todos();
-
-            foreach (Cargo cargo in cargos)
-            {
-                if (cargo.Nombre == Name)
-                {
-                    return cargo.Codigo;
-                }
-            }
-            return -1;
-        }
-
-        #endregion
-
     }
 }
