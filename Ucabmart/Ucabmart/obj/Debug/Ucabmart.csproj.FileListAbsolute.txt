@@ -606,6 +606,12 @@ C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\obj\Debug\U
 C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\obj\Debug\Ucabmart.csproj.CopyComplete
 C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\obj\Debug\Ucabmart.dll
 C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\obj\Debug\Ucabmart.pdb
+C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\obj\Debug\RdlCompile.cache
+C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\obj\Debug\RdlCompile.compiled
+C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.ReportViewer.Common.dll
+C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.ReportViewer.WebForms.DLL
+C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\ReportViewerForMvc.dll
 C:\Users\Jose\Documents\GitHub\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.ReportViewer.Common.dll
 C:\Users\Jose\Documents\GitHub\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.ReportViewer.ProcessingObjectModel.DLL
 C:\Users\Jose\Documents\GitHub\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.ReportViewer.WebForms.DLL
