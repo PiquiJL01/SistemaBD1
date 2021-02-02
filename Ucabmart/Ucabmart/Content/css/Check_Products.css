@@ -76,10 +76,14 @@ body {
 }
 
 .Checklist td label {
-    font-size: 25px;
+    font-size: 16px;
+    background-color: #4e73df;
+    color: azure;
+    text-align: center;
+    width: 400px;
 }
 
-td .ColorChangeBlue {
+/*td .ColorChangeBlue {
     background-color: cornflowerblue;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -91,7 +95,7 @@ td .ColorChangeYellow {
     padding-top: 10px;
     padding-bottom: 10px;
     padding-right: 300px;
-}
+}*/
 
 
 hr {

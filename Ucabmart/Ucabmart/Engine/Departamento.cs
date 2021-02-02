@@ -203,5 +203,26 @@ namespace Ucabmart.Engine
             }
         }
         #endregion
+
+
+        #region Otros Metodos
+
+
+        public int Get_CodDepartamento(String Name)
+        {
+            List<Departamento> departamentos = this.Todos();
+
+            foreach (Departamento departamento in departamentos)
+            {
+                if (departamento.Nombre == Name)
+                {
+                    return departamento.Codigo;
+                }
+            }
+            return -1;
+        }
+
+        #endregion
+
     }
 }
