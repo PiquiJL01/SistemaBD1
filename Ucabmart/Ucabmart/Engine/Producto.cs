@@ -113,7 +113,7 @@ namespace Ucabmart.Engine
             }
             catch (Exception e)
             {
-                throw new Exception("Ha ocurrido un error en la base de datos", e);
+
             }
             finally
             {
@@ -137,11 +137,18 @@ namespace Ucabmart.Engine
                 {
                     return new Producto(ReadInt(0), ReadString(1), ReadString(2), ReadFloat(3), ReadString(4), ReadString(5), ReadInt(6), ReadInt(7));
                 }
+<<<<<<< HEAD
                 
             }
             catch (Exception e)
             {
                 throw new Exception("Ha ocurrido un error en la base de datos", e);
+=======
+            }
+            catch (Exception e)
+            {
+
+>>>>>>> main
             }
             finally
             {
@@ -173,8 +180,8 @@ namespace Ucabmart.Engine
                 }
             }
             catch (Exception e)
-            {
-                throw new Exception("Ha ocurrido un error en la base de datos", e);
+            {               
+                return null;
             }
             finally
             {
