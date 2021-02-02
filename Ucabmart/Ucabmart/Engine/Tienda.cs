@@ -211,25 +211,5 @@ namespace Ucabmart.Engine
             }
         }
         #endregion
-
-        #region Otros Metodos
-
-
-        public int Get_CodTienda(String Name)
-        {
-            List<Tienda> tiendas = this.Todos();
-
-            foreach (Tienda tienda in tiendas)
-            {
-                if (tienda.Nombre == Name)
-                {
-                    return tienda.Codigo;
-                }
-            }
-            return -1;
-        }
-
-        #endregion
-
     }
 }

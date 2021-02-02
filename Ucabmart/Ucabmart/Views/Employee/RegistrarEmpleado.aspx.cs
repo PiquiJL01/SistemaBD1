@@ -137,79 +137,6 @@ namespace Ucabmart.Views.Employee
             }
         }
 
-        protected List<DayOfWeek> Get_Days()
-        {
-
-            List<DayOfWeek> days = new List<DayOfWeek>();
-
-            foreach (ListItem item in Dias.Items)
-            {
-                if (item.Selected) {
-
-                    switch (item.Value)
-                    {
-                        case "Domingo":
-                            days.Add(DayOfWeek.Sunday);
-                            break;
-                        case "Lunes":
-                            days.Add(DayOfWeek.Monday);
-                            break;
-                        case "Martes":
-                            days.Add(DayOfWeek.Tuesday);
-                            break;
-                        case "Miercoles":
-                            days.Add(DayOfWeek.Wednesday);
-                            break;
-                        case "Jueves":
-                            days.Add(DayOfWeek.Thursday);
-                            break;
-                        case "Viernes":
-                            days.Add(DayOfWeek.Friday);
-                            break;
-                        case "Sabado":
-                            days.Add(DayOfWeek.Saturday);
-                            break;
-                    }
-
-                }
-
-            }
-
-             return days;
-
-
-        }
-
-
-        protected TipoTurno Get_Turno()
-        {
-
-            TipoTurno tipoTurno = new TipoTurno();
-
-            switch (Turno.SelectedValue)
-            {
-                case "Diurno":
-                    tipoTurno = TipoTurno.Diurno;
-                    break;
-
-                case "Matutino":
-                    tipoTurno = TipoTurno.Matutino;
-                    break;
-
-                case "Vespertino":
-                    tipoTurno = TipoTurno.Vespertino;
-                    break;
-
-                case "Nocturno":
-                    tipoTurno = TipoTurno.Nocturno;
-                    break;
-            }
-
-            return tipoTurno;
-
-
-        }
-
         protected int CodLugar(DropDownList x, DropDownList y, DropDownList z)
         {
             List<Lugar> lugares = new List<Lugar>();
@@ -262,20 +189,6 @@ namespace Ucabmart.Views.Employee
             }
         }
 
-        protected void AssignHorarios(Empleado empleado) {
-
-            List<DayOfWeek> daysOfWeeks = Get_Days();
-
-            foreach ( DayOfWeek item in daysOfWeeks)
-            {
-                new Horario(TimeSpan.Parse(HoraInicio.Text), TimeSpan.Parse(HoraFin.Text), Get_Turno(),item).Insertar();
-
-            }
-
-            
-        }
-
-
         protected void btnRegistrar_Click(object sender, EventArgs e) {
 
             try
@@ -285,24 +198,10 @@ namespace Ucabmart.Views.Employee
                 CorreoElectronico correo = new CorreoElectronico(txtCorreo.Text);
                 correo.Insertar();
 
-                Departamento departamento = new Departamento();
-                int CodDepartamento = departamento.Get_CodDepartamento(Departamentos.SelectedValue);
+                //Empleado empleado = new Empleado(,);
 
-                Tienda tienda = new Tienda();
-                int CodTienda = tienda.Get_CodTienda(Tiendas.SelectedValue);
-
-                Cargo cargo = new Cargo();
-                int CodCargo = cargo.Get_CodCargo(Cargos.SelectedValue);
-
-
-                Empleado empleado = new Empleado(txtContraseña.Text,dplRif.SelectedValue + txtRif.Text,dplCedula.SelectedValue + txtCedula.Text,Nombre1.Text,
-                Nombre2.Text,Apellido1.Text,Apellido2.Text,new Departamento(CodDepartamento),new Tienda(CodTienda),new Lugar(CodLug1),correo,new Empleado(int.Parse(Jefe.Text)));
-
-                this.AssignHorarios(empleado);
-
-
-                Session["EmpleadoRif"] = empleado.Codigo;
-                Response.Redirect("/Views/Employee/Beneficios.aspx", false);
+                //Session["EmpleadoRif"] = proveedor.RIF;
+                Response.Redirect("/Views/Employee/RegistrarEmpleado.aspx", false);
 
             }
             catch (Exception ex)
