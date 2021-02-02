@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Web.UI;
 
 namespace Ucabmart.Views
 {
@@ -11,9 +12,21 @@ namespace Ucabmart.Views
 
         protected void btnRegistrar_Click(object sender, EventArgs e)
         {
-            string loginUsuario = Email.Text;
-            Session["NombreLogin"] = loginUsuario;
-            Response.Redirect("/Views/User/InicioUsuario.aspx", false);
+            try
+            {
+                string loginUsuario = Email.Text;
+                Session["NombreLogin"] = loginUsuario;
+
+                //ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", 
+                //                "window.location ='/Views/User/InicioUsuario.aspx';", true);
+                Response.Redirect("/Views/User/InicioUsuario.aspx", false);
+            }
+            catch (Exception ex)
+            {
+                Session["mensajeError"] = "Ha ocurrido un error al acceder en el Login. " + ex;
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('NO DEBE HABER CAMPOS VACÍOS ');", true);
+
+            }
         }
 
 

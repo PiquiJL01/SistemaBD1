@@ -13,7 +13,7 @@
                                  placeholder="Buscar" autocomplete="off" class="form-control">
                         </asp:TextBox>    
                         
-                        <asp:ImageButton id="imagebutton1" runat="server"  style="width:55px;" class="btn btn-primary search" AlternateText="Buscar" ImageAlign="left" ImageUrl="../Content/assets/img/Lupa.png" OnClick="btnBuscar_Click"/>
+                        <asp:ImageButton id="imagebutton1" runat="server"  style="width:55px;" class="btn btn-primary search" AlternateText="Buscar" ImageAlign="left" ImageUrl="../../Content/assets/img/Lupa.png" OnClick="btnBuscar_Click"/>
                         
                         <%--      <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
                                 aria-label="Search" aria-describedby="basic-addon2">
