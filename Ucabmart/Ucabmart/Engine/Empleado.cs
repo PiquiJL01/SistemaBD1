@@ -312,5 +312,83 @@ namespace Ucabmart.Engine
             }
         }
         #endregion
+
+        #region Entidades Muchos a Muchos
+        public List<Beneficio> Beneficios()
+        {
+            List<Beneficio> beneficios = new List<Beneficio>();
+            List<int> codigos = new List<int>();
+
+            try
+            {
+                Conexion.Open();
+
+                string Command = "SELECT beneficio_be_codigo FROM em_be WHERE empleado_em_codigo = @codigo";
+                NpgsqlCommand Script = new NpgsqlCommand(Command, Conexion);
+
+                Script.Parameters.AddWithValue("codigo", Codigo);
+
+                Reader = Script.ExecuteReader();
+
+                while (Reader.Read())
+                {
+                    codigos.Add(ReadInt(0));
+                }
+            }
+            finally
+            {
+                try
+                {
+                    Conexion.Close();
+                }
+                finally { }
+            }
+
+            foreach (int codigo in codigos)
+            {
+                beneficios.Add(new Beneficio(codigo));
+            }
+
+            return beneficios;
+        }
+
+        public List<Horario> Horarios()
+        {
+            List<Horario> horarios = new List<Horario>();
+            List<int> codigos = new List<int>();
+
+            try
+            {
+                Conexion.Open();
+
+                string Command = "SELECT horario_ho_codigo FROM em_ho WHERE empleado_em_codigo = @codigo";
+                NpgsqlCommand Script = new NpgsqlCommand(Command, Conexion);
+
+                Script.Parameters.AddWithValue("codigo", Codigo);
+
+                Reader = Script.ExecuteReader();
+
+                while (Reader.Read())
+                {
+                    codigos.Add(ReadInt(0));
+                }
+            }
+            finally
+            {
+                try
+                {
+                    Conexion.Close();
+                }
+                finally { }
+            }
+
+            foreach (int codigo in codigos)
+            {
+                horarios.Add(new Horario(codigo));
+            }
+
+            return horarios;
+        }
+        #endregion
     }
 }

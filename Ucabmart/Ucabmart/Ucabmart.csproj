@@ -1983,6 +1983,7 @@
     <Compile Include="Engine\Marca.cs" />
     <Compile Include="Engine\MetodoDePago.cs" />
     <Compile Include="Engine\Moneda.cs" />
+    <Compile Include="Engine\MuchosAMuchos.cs" />
     <Compile Include="Engine\Natural.cs" />
     <Compile Include="Engine\Pasillo.cs" />
     <Compile Include="Engine\Pedido.cs" />
