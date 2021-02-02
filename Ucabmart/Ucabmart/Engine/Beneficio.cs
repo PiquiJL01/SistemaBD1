@@ -42,6 +42,11 @@ namespace Ucabmart.Engine
                 Descripcion = null;
             }
         }
+
+        public Beneficio()
+        {
+        }
+
         #endregion
 
         #region CRUDs
