@@ -80,7 +80,8 @@ body {
     background-color: #4e73df;
     color: azure;
     text-align: center;
-    width: 400px;
+    width: 500px;
+    border-radius: 10px;
 }
 
 td .ColorChangeBlue {

@@ -15,6 +15,14 @@ namespace Ucabmart.Engine
         private NpgsqlConnection Conexion = new NpgsqlConnection(ConnectionString);
         #endregion
 
+        #region Declaraciones
+        public MuchosAMuchos()
+        {
+
+        }
+
+        #endregion
+
         #region Insertar
         public void Insertar(Empleado empleado, Horario horario)
         {
@@ -41,6 +49,7 @@ namespace Ucabmart.Engine
                 finally { }
             }
         }
+
 
         public void Insertar(Empleado empleado, Beneficio beneficio, DateTime fecha = new DateTime(), float monto = 0)
         {

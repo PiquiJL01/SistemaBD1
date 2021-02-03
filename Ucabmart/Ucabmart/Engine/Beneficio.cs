@@ -208,5 +208,27 @@ namespace Ucabmart.Engine
             }
         }
         #endregion
+
+        #region OtrosMetodos
+        public List<int> BeneficiosCod(List<String> items)
+        {
+            Beneficio p1 = new Beneficio();
+
+            List<Beneficio> beneficios = new List<Beneficio>();
+            beneficios = p1.Todos();
+            List<int> lista = new List<int>();
+
+            foreach (Beneficio beneficio in beneficios)
+            {
+                if (items.Contains(beneficio.Nombre))
+                {
+                    lista.Add(beneficio.Codigo);
+                }
+            }
+
+            return lista;
+
+        }
+        #endregion
     }
 }

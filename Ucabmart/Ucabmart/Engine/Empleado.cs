@@ -27,6 +27,7 @@ namespace Ucabmart.Engine
             Departamento departamento, Tienda tienda, Lugar direccion, CorreoElectronico correo, Empleado jefe = null)
         {
             Password = password;
+            Cedula = cedula;
             RIF = rif;
             Nombre1 = nombre1;
             Nombre2 = nombre2;
@@ -100,7 +101,7 @@ namespace Ucabmart.Engine
                 if (CodigoJefe == 0)
                 {
                     string Comando = "INSERT INTO empleado (em_rif, em_cedula, em_1er_nombre, em_2do_nombre, em_1er_apellido, em_2do_apellido, " +
-                    "tienda_ti_codigo, departamento_de_codigo, empleado_em_codigo, lugar_lu_codigo, correo_electronico_ce_codigo, em_password) " +
+                    "tienda_ti_codigo, departamento_de_codigo, lugar_lu_codigo, correo_electronico_ce_codigo, em_password) " +
                     "VALUES (@rif, @cedula, @nombre1, @nombre2, @apellido1, @apellido2, @tienda, @departamento, @direccion, " +
                     "@correo, @password) " +
                     "RETURNING em_codigo";

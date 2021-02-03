@@ -31,32 +31,39 @@ namespace Ucabmart.Views.Employee
 
         }
 
+        protected void AssignBeneficios(Empleado empleado)
+        {
+
+            MuchosAMuchos Bene_Emple = new MuchosAMuchos();
+
+            List<String> elements = new List<string>();
+
+            foreach (ListItem item in Options.Items)
+            {
+                if (item.Selected)
+                {
+                    elements.Add(item.Value);
+                }
+            }
+
+            Beneficio beneficio = new Beneficio();
+            List<int> CodigosBeneficios = beneficio.BeneficiosCod(elements);
+
+            foreach (int codigo in CodigosBeneficios)
+            {
+                Bene_Emple.Insertar(empleado, new Beneficio(codigo));
+            }
+
+        }
+
+
         protected void btn_Click(object sender, EventArgs e)
         {
             int EmpleadoRif = int.Parse(Session["EmpleadoRif"].ToString());
-            //Proveedor proveedor = new Proveedor(ProveedorRif);
 
-            //List<String> elements = new List<string>();
+            this.AssignBeneficios(new Empleado(EmpleadoRif));
 
-            //foreach (ListItem item in Options.Items)
-            //{
-            //    if (item.Selected)
-            //    {
-            //        elements.Add(item.Value);
-            //    }
-            //}
-
-            //Producto prod1 = new Producto();
-            //List<int> CodigosProduct = prod1.ProductosCod(elements);
-
-            //foreach (int codigo in CodigosProduct)
-            //{
-            //    proveedor.AgregarProducto(new Producto(codigo));
-            //}
-
-            //Response.Redirect("/Views/Proveedores.aspx", false);
-            // ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('El proveedor se ha sido registrado exitosamente');" +
-            //                       "window.location ='Proveedores.aspx';", true);
+            Response.Redirect("/Views/Nomina_Admin.aspx", false);
 
         }
     }

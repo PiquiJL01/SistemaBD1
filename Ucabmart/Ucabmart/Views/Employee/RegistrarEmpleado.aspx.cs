@@ -267,11 +267,13 @@ namespace Ucabmart.Views.Employee
         {
 
             List<DayOfWeek> daysOfWeeks = Get_Days();
+            MuchosAMuchos Hora_Emple = new MuchosAMuchos();
 
             foreach (DayOfWeek item in daysOfWeeks)
             {
-                new Horario(TimeSpan.Parse(HoraInicio.Text), TimeSpan.Parse(HoraFin.Text), Get_Turno(), item).Insertar();
-
+                Horario horario = new Horario(TimeSpan.Parse(HoraInicio.Text), TimeSpan.Parse(HoraFin.Text), Get_Turno(), item);
+                horario.Insertar();
+                Hora_Emple.Insertar(empleado, horario);
             }
 
 
@@ -295,13 +297,23 @@ namespace Ucabmart.Views.Employee
                 Cargo cargo = new Cargo();
                 int CodCargo = cargo.Get_CodCargo(Cargos.SelectedValue);
 
+                if (int.Parse(Jefe.Text) != 0) {
+                    Empleado empleado = new Empleado(txtContraseña.Text, dplRif.SelectedValue + txtRif.Text, dplCedula.SelectedValue + txtCedula.Text, Nombre1.Text,
+                    Nombre2.Text, Apellido1.Text, Apellido2.Text, new Departamento(CodDepartamento), new Tienda(CodTienda), new Lugar(CodLug1), correo, new Empleado(int.Parse(Jefe.Text)));
+                    empleado.Insertar();
+                    this.AssignHorarios(empleado);
+                    Session["EmpleadoRif"] = empleado.Codigo;
+                }
+                else
+                {
+                    Empleado empleado = new Empleado(txtContraseña.Text, dplRif.SelectedValue + txtRif.Text, dplCedula.SelectedValue + txtCedula.Text, Nombre1.Text,
+                    Nombre2.Text, Apellido1.Text, Apellido2.Text, new Departamento(CodDepartamento), new Tienda(CodTienda), new Lugar(CodLug1), correo);
+                    empleado.Insertar();
+                    this.AssignHorarios(empleado);
+                    Session["EmpleadoRif"] = empleado.Codigo;
+                }
 
-                Empleado empleado = new Empleado(txtContraseña.Text, dplRif.SelectedValue + txtRif.Text, dplCedula.SelectedValue + txtCedula.Text, Nombre1.Text,
-                Nombre2.Text, Apellido1.Text, Apellido2.Text, new Departamento(CodDepartamento), new Tienda(CodTienda), new Lugar(CodLug1), correo, new Empleado(int.Parse(Jefe.Text)));
-
-                this.AssignHorarios(empleado);
-
-                Session["EmpleadoRif"] = empleado.Codigo;
+   
                 Response.Redirect("/Views/Employee/Beneficios.aspx", false);
 
             }
