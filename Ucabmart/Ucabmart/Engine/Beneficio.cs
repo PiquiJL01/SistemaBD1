@@ -26,20 +26,23 @@ namespace Ucabmart.Engine
             Descripcion = descripcion;
         }
 
-        public Beneficio(int codigo)
+        public Beneficio(int codigo = 0)
         {
-            Beneficio beneficio = Leer(codigo);
-            if (!(beneficio == null))
+            if (!(codigo == 0))
             {
-                Codigo = beneficio.Codigo;
-                Nombre = beneficio.Nombre;
-                Descripcion = beneficio.Descripcion;
-            }
-            else
-            {
-                Codigo = 0;
-                Nombre = null;
-                Descripcion = null;
+                Beneficio beneficio = Leer(codigo);
+                if (!(beneficio == null))
+                {
+                    Codigo = beneficio.Codigo;
+                    Nombre = beneficio.Nombre;
+                    Descripcion = beneficio.Descripcion;
+                }
+                else
+                {
+                    Codigo = 0;
+                    Nombre = null;
+                    Descripcion = null;
+                }
             }
         }
         #endregion
