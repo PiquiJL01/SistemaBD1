@@ -150,5 +150,32 @@ namespace Ucabmart.Engine
             }
         }
         #endregion
+
+        #region Manejo de Conexion
+        public bool AbrirConexion()
+        {
+            try
+            {
+                Conexion.Open();
+
+                return true;
+            }
+            catch
+            {
+                CerrarConexion();
+            }
+
+            return false;
+        }
+
+        public void CerrarConexion()
+        {
+            try
+            {
+                Conexion.Close();
+            }
+            finally { }
+        }
+        #endregion
     }
 }

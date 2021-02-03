@@ -110,12 +110,14 @@ namespace Ucabmart.Engine
                 {
                     Codigo = ReadInt(0);
                 }
-
-                Conexion.Close();
             }
-            catch (Exception e)
+            finally
             {
-                Conexion.Close();
+                try
+                {
+                    Conexion.Close();
+                }
+                finally { }
             }
         }
 
@@ -135,19 +137,14 @@ namespace Ucabmart.Engine
                 {
                     return new Horario(ReadInt(0), ReadTime(1), ReadTime(2), ReadString(3), ReadString(4));
                 }
-
-                Conexion.Close();
             }
-            catch (Exception e)
+            finally
             {
                 try
                 {
                     Conexion.Close();
                 }
-                catch (Exception f)
-                {
-
-                }
+                finally { }
             }
 
             return null;
