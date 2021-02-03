@@ -348,7 +348,7 @@
                                     </div>
                                 </div>
                                 <hr>
-                                <asp:Button ID="btnRegistrar" runat="server" class="btn btn-primary btn-user btn-block" Text="Registrar Cuenta" OnClick="btnRegistrar_Click" />
+                                <asp:Button ID="btnRegistrar" runat="server" class="btn btn-primary btn-user btn-block" Text="Registrar Empleado" OnClick="btnRegistrar_Click" />
                                 
               
                             
