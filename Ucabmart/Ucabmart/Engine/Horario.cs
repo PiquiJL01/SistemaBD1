@@ -25,7 +25,7 @@ namespace Ucabmart.Engine
                     Turno = "Diurno";
                     break;
                 case TipoTurno.Matutino:
-                    Turno = "Matutino0";
+                    Turno = "Matutino";
                     break;
                 case TipoTurno.Vespertino:
                     Turno = "Vespertino";
