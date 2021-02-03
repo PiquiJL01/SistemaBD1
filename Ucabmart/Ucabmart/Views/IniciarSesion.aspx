@@ -60,7 +60,7 @@
 
                                         <%--<Campo de texto de la Contraseña >--%> 
                                         <div class="form-group">
-                                               <asp:TextBox ID="Password" runat="server" type="text" name="name" data-parsley-trigger="change"  
+                                               <asp:TextBox ID="Password" runat="server" type="password" name="name" data-parsley-trigger="change"  
                                                     placeholder="Contraseña" autocomplete="off" class="form-control form-control-user" style="text-align: center">
                                                </asp:TextBox>
                                         </div>

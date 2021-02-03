@@ -32,6 +32,10 @@ namespace Ucabmart.Engine
         {
             Direccion = direccion;
         }
+
+        public CorreoElectronico()
+        {
+        }
         #endregion
 
         #region CRUDs
@@ -137,19 +141,15 @@ namespace Ucabmart.Engine
                 Script.Prepare();
 
                 Script.ExecuteNonQuery();
-
-                Conexion.Close();
+                
             }
             catch (Exception e)
             {
-                try
-                {
-                    Conexion.Close();
-                }
-                catch (Exception f)
-                {
-
-                }
+                throw new Exception("Ha ocurrido un error en la base de datos", e);
+            }
+            finally
+            {
+                Conexion.Close();
             }
         }
 
@@ -177,6 +177,36 @@ namespace Ucabmart.Engine
                 Conexion.Close();
             }
         }
+
+        public  CorreoElectronico LeerPorNombre(string direccion)
+        {
+            try
+            {
+                Conexion.Open();
+
+                string Comando = "SELECT * FROM correo_electronico WHERE ce_direccion=@direccion";
+                Script = new NpgsqlCommand(Comando, Conexion);
+
+                Script.Parameters.AddWithValue("direccion", direccion);
+                Reader = Script.ExecuteReader();
+
+                if (Reader.Read())
+                {
+                    return new CorreoElectronico(ReadInt(0), ReadString(1));
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Ha ocurrido un error en la base de datos", e);
+            }
+            finally
+            {
+                Conexion.Close();
+            }
+
+            return null;
+        }
+
         #endregion
     }
 }
