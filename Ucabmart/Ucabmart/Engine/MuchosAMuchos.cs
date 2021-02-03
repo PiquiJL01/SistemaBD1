@@ -28,7 +28,7 @@ namespace Ucabmart.Engine
         {
             if(AbrirConexion())
             {
-                string Comando = "INSERT INTO em_ho (empleado_em_codigo, horario_ho_codigo) VALUES (@empleado, horario)";
+                string Comando = "INSERT INTO em_ho (empleado_em_codigo, horario_ho_codigo) VALUES (@empleado, @horario)";
                 Script = new NpgsqlCommand(Comando, Conexion);
 
                 Script.Parameters.AddWithValue("empleado", empleado.Codigo);

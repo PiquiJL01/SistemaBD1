@@ -181,7 +181,6 @@ namespace Ucabmart.Views.Employee
 
         }
 
-
         protected TipoTurno Get_Turno()
         {
 
@@ -279,8 +278,8 @@ namespace Ucabmart.Views.Employee
 
         }
 
-        protected void btnRegistrar_Click(object sender, EventArgs e) {
-
+        protected void btnRegistrar_Click(object sender, EventArgs e) 
+        {
             try
             {
                 int CodLug1 = this.CodLugar(dplParroquia, dplMunicipio, dplEstado);

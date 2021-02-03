@@ -163,7 +163,7 @@ namespace Ucabmart.Engine
             {
                 Conexion.Open();
 
-                string Comando = "SELECT * FROM tabla WHERE em_codigo=@codigo";
+                string Comando = "SELECT * FROM empleado WHERE em_codigo=@codigo";
                 Script = new NpgsqlCommand(Comando, Conexion);
 
                 Script.Parameters.AddWithValue("codigo", codigo);
