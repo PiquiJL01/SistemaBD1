@@ -110,12 +110,14 @@ namespace Ucabmart.Engine
                 {
                     Codigo = ReadInt(0);
                 }
-
-                Conexion.Close();
             }
-            catch (Exception e)
+            finally
             {
-                Conexion.Close();
+                try
+                {
+                    Conexion.Close();
+                }
+                finally { }
             }
         }
 
@@ -135,19 +137,14 @@ namespace Ucabmart.Engine
                 {
                     return new Horario(ReadInt(0), ReadTime(1), ReadTime(2), ReadString(3), ReadString(4));
                 }
-
-                Conexion.Close();
             }
-            catch (Exception e)
+            finally
             {
                 try
                 {
                     Conexion.Close();
                 }
-                catch (Exception f)
-                {
-
-                }
+                finally { }
             }
 
             return null;
@@ -157,10 +154,8 @@ namespace Ucabmart.Engine
         {
             List<Horario> lista = new List<Horario>();
 
-            try
+            if(AbrirConexion())
             {
-                Conexion.Open();
-
                 string Command = "SELECT * FROM horario";
                 NpgsqlCommand Script = new NpgsqlCommand(Command, Conexion);
 
@@ -174,28 +169,16 @@ namespace Ucabmart.Engine
                     lista.Add(horario);
                 }
             }
-            catch (Exception e)
-            {
-                try
-                {
-                    Conexion.Close();
-                }
-                catch (Exception f)
-                {
 
-                }
-                return null;
-            }
+            CerrarConexion();
 
             return lista;
         }
 
         public override void Actualizar()
         {
-            try
+            if(AbrirConexion())
             {
-                Conexion.Open();
-
                 string Comando = "UPDATE horario SET ho_hora_inicio = @inicio, ho_hora_salida = @salida, " +
                     "ho_turno = @turno, ho_dia = @dia WHERE ho_codigo = @codigo";
                 Script = new NpgsqlCommand(Comando, Conexion);
@@ -212,25 +195,14 @@ namespace Ucabmart.Engine
 
                 Conexion.Close();
             }
-            catch (Exception e)
-            {
-                try
-                {
-                    Conexion.Close();
-                }
-                catch (Exception f)
-                {
 
-                }
-            }
+            CerrarConexion();
         }
 
         public override void Eliminar()
         {
-            try
+            if(AbrirConexion())
             {
-                Conexion.Open();
-
                 string Commando = "DELETE FROM horario WHERE ho_codigo = @codigo";
                 Script = new NpgsqlCommand(Commando, Conexion);
 
@@ -242,17 +214,8 @@ namespace Ucabmart.Engine
 
                 Conexion.Close();
             }
-            catch (Exception e)
-            {
-                try
-                {
-                    Conexion.Close();
-                }
-                catch (Exception f)
-                {
 
-                }
-            }
+            CerrarConexion();
         }
         #endregion
     }

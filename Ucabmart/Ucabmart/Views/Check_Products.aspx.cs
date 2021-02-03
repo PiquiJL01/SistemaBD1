@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Web.UI.WebControls;
 using Ucabmart.Engine;
+using System.Web.UI;
 
 namespace Ucabmart.Views
 {
@@ -72,9 +73,9 @@ namespace Ucabmart.Views
                 proveedor.AgregarProducto(new Producto(codigo));
             }
 
-           //Response.Redirect("/Views/Proveedores.aspx", false);
-           // ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('El proveedor se ha sido registrado exitosamente');" +
-           //                       "window.location ='Proveedores.aspx';", true);
+            //Response.Redirect("/Views/Proveedores.aspx", false);
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('El proveedor se ha sido registrado exitosamente');" +
+                                  "window.location ='Proveedores.aspx';", true);
 
         }
 

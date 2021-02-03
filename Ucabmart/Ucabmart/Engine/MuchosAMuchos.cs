@@ -26,28 +26,20 @@ namespace Ucabmart.Engine
         #region Insertar
         public void Insertar(Empleado empleado, Horario horario)
         {
-            try
+            if(AbrirConexion())
             {
-                Conexion.Open();
-
-                string Comando = "INSERT INTO em_ho (empleado_em_codigo, horario_ho_codigo) VALUES (@codigo1, codigo2)";
+                string Comando = "INSERT INTO em_ho (empleado_em_codigo, horario_ho_codigo) VALUES (@empleado, horario)";
                 Script = new NpgsqlCommand(Comando, Conexion);
 
-                Script.Parameters.AddWithValue("codigo1", empleado.Codigo);
-                Script.Parameters.AddWithValue("codigo2", horario.Codigo);
+                Script.Parameters.AddWithValue("empleado", empleado.Codigo);
+                Script.Parameters.AddWithValue("horario", horario.Codigo);
 
                 Script.Prepare();
 
                 Script.ExecuteNonQuery();
             }
-            finally
-            {
-                try
-                {
-                    Conexion.Close();
-                }
-                finally { }
-            }
+
+            CerrarConexion();
         }
 
 
@@ -57,10 +49,9 @@ namespace Ucabmart.Engine
             {
                 fecha = DateTime.Today;
             }
-            try
-            {
-                Conexion.Open();
 
+            if (AbrirConexion())
+            {
                 string Comando = "INSERT INTO em_be (empleado_em_codigo, beneficio_be_codigo, fecha, monto2) " +
                     "VALUES (@codigo1, codigo2, @fecha, @monto)";
                 Script = new NpgsqlCommand(Comando, Conexion);
@@ -74,23 +65,15 @@ namespace Ucabmart.Engine
 
                 Script.ExecuteNonQuery();
             }
-            finally
-            {
-                try
-                {
-                    Conexion.Close();
-                }
-                finally { }
-            }
+
+            CerrarConexion();
         }
 
         /* Modelo para Insertar en BD una entidad Muchos a Muchos
         public void Insertar(Tipo1 tipo1, Tipo2 tipo2)
         {
-            try
+            if(AbrirConexion())
             {
-                Conexion.Open();
-
                 string Comando = "INSERT INTO tabla (codigo1, codigo2) VALUES (@codigo1, codigo2)";
                 Script = new NpgsqlCommand(Comando, Conexion);
 
@@ -101,14 +84,7 @@ namespace Ucabmart.Engine
 
                 Script.ExecuteNonQuery();
             }
-            finally
-            {
-                try
-                {
-                    Conexion.Close();
-                }
-                finally { }
-            }
+            CerrarConexion();
         }
         */
         #endregion
@@ -166,7 +142,6 @@ namespace Ucabmart.Engine
                 finally { }
             }
         }
-        #endregion
 
         /*Modelo Eliminar de BD Muchos a Muchos
         public void Eliminar(Tipo1 tipo1, Tipo2 tipo2)
@@ -198,5 +173,33 @@ namespace Ucabmart.Engine
             }
         }
         */
+        #endregion
+
+        #region Manejo de Conexion
+        private bool AbrirConexion()
+        {
+            try
+            {
+                Conexion.Open();
+
+                return true;
+            }
+            catch
+            {
+                CerrarConexion();
+            }
+
+            return false;
+        }
+
+        private void CerrarConexion()
+        {
+            try
+            {
+                Conexion.Close();
+            }
+            finally { }
+        }
+        #endregion
     }
 }
