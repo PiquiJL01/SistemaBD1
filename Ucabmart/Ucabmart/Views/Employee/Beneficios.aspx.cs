@@ -10,9 +10,11 @@ namespace Ucabmart.Views.Employee
 {
     public partial class Beneficios : System.Web.UI.Page
     {
+        public string nombreUsuario { get; set; }
+
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            this.nombreUsuario = Session["NombreLogin"].ToString();
         }
 
         protected void Add_Items(object sender, EventArgs e)

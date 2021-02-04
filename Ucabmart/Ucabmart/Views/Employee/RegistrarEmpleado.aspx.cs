@@ -10,6 +10,7 @@ namespace Ucabmart.Views.Employee
 {
     public partial class RegistrarEmpleado : System.Web.UI.Page
     {
+        public string nombreUsuario { get; set; }
 
         Lugar nombreLugar = new Lugar(0);
         int codigoEstado = -1, codigoMunicipio = -1;
@@ -248,6 +249,7 @@ namespace Ucabmart.Views.Employee
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            this.nombreUsuario = Session["NombreLogin"].ToString();
             try
             {
                 cargarPagina(true);

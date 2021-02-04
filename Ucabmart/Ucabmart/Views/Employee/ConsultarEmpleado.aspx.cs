@@ -12,9 +12,12 @@ namespace Ucabmart.Views.Employee
     {
         public string tabla;
         public Empleado consultarEmpleado;
+        public string nombreUsuario { get; set; }
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            this.nombreUsuario = Session["NombreLogin"].ToString();
+
             tabla += "<table id='example' class='table table-striped table-bordered second' style='width: 100%'>";
             tabla += "<thead>";
             tabla += "<tr>";
