@@ -53,12 +53,12 @@ namespace Ucabmart.Engine
             if (AbrirConexion())
             {
                 string Comando = "INSERT INTO em_be (empleado_em_codigo, beneficio_be_codigo, fecha, monto2) " +
-                    "VALUES (@codigo1, codigo2, @fecha, @monto)";
+                    "VALUES (@codigo1, @codigo2, @fecha, @monto)";
                 Script = new NpgsqlCommand(Comando, Conexion);
 
                 Script.Parameters.AddWithValue("codigo1", empleado.Codigo);
                 Script.Parameters.AddWithValue("codigo2", beneficio.Codigo);
-                Script.Parameters.AddWithValue("@fecha", fecha);
+                Script.Parameters.AddWithValue("fecha", fecha);
                 Script.Parameters.AddWithValue("monto", monto);
 
                 Script.Prepare();
