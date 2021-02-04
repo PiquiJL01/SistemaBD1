@@ -10,8 +10,11 @@ namespace Ucabmart.Views.Product
 {
     public partial class RegistrarProducto : System.Web.UI.Page
     {
+        public string nombreUsuario { get; set; }
+
         protected void Page_Load(object sender, EventArgs e)
         {
+            this.nombreUsuario = Session["NombreLogin"].ToString();
             this.Agregar_Marcas();
             this.Agregar_Clasificaciones();
         }
