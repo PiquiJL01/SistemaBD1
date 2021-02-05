@@ -80,7 +80,20 @@ body {
     line-height: 40px;
     border-radius: 5px;
     padding-left: 10px;
+    text-align:center;
 }
+
+
+.Contacto2 {
+    margin-bottom: 20px;
+    background-color: #60666d;
+    color: white;
+    line-height: 40px;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+
 
 .SubTittle2 {
     background-color: cornflowerblue;

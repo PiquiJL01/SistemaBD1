@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ModificarClienteNatural.aspx.cs" Inherits="Ucabmart.Views.ModificarClienteNatural" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ModificarEmpleado.aspx.cs" Inherits="Ucabmart.Views.Employee.ModificarEmpleado" %>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -16,7 +16,7 @@
         <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="../Content/css/ModificarCliente.css" rel="stylesheet" />
+        <link href="../../Content/css/ModificarCliente.css" rel="stylesheet" />
         
     </head>
 
@@ -75,19 +75,19 @@
             </div>
         </nav>
 
-        <!-- Top Frame -->
-        <div class="Top-Frame">
-            <ul class="Ordened">
-                <li class="li-1"></li>
-                <li class="li-2">
-                    <ul class="Ordened">
-                        <li class="li-4" >CLIENTES-UCABMART</li>
-                        <li><img src="../Content/assets/img/Client/Client-Icono.png" height="80px"/>  </li>
-                    </ul>
-                </li>
-                <li class="li-3"></li>
-            </ul>
-        </div>
+          <!-- Top Frame -->
+          <div class="Top-Frame">
+              <ul class="Ordened">
+                  <li class="li-1"></li>
+                  <li class="li-2">
+                      <ul class="Ordened">
+                          <li class="li-4" >NOMINA-UCABMART</li>
+                          <li><img src="../../Content/assets/img/Employees/Employee-Icon.png" height="80px"/>  </li>
+                      </ul>
+                  </li>
+                  <li class="li-3"></li>
+              </ul>
+          </div>
 
       <form id="form1" runat="server">  
         <div class="container">
@@ -96,7 +96,7 @@
                     <div>
                         <div class="p-5">
                             <div class="text-center">
-                                <h1 class="h4 text-gray-900 mb-4">Modificar Cliente - Persona Natural</h1>
+                                <h1 class="h4 text-gray-900 mb-4">Modificar Empleado</h1>
                             </div>
                             
                             <%--<form id="form1" runat="server">--%>
@@ -106,8 +106,8 @@
                                             <asp:ListItem>Natural</asp:ListItem>
                                             <asp:ListItem>Jurídico</asp:ListItem>
                                         </asp:DropDownList>   --%>
-                                        <asp:TextBox ID="BuscarRif" runat="server" type="text" name="name" data-parsley-trigger="change"  
-                                         placeholder="Ingrese el Rif del cliente..." autocomplete="off" class="form-control" style="padding:10px 50px 10px 50px; text-align: left;">
+                                        <asp:TextBox ID="BuscarCod" runat="server" type="text" name="name" data-parsley-trigger="change"  
+                                         placeholder="Ingrese el codigo del empleado..." autocomplete="off" class="form-control" style="padding:10px 50px 10px 50px; text-align: left;">
                                         </asp:TextBox>
 
                                         <asp:Button ID="btnBuscar" runat="server" class="btn btn-space btn-primary ml-1" Text="Buscar" OnClick="btnBuscar_Click" Width="87px" />
@@ -120,24 +120,26 @@
                              <%--<Datos del Cliente>--%>
                               <div style="margin-left: 100px; margin-right: 100px;">
                                 <div class="PC">
-                                <asp:Label ID="Label6" runat="server" Text="Datos del Cliente"></asp:Label>
+                                <asp:Label ID="Label6" runat="server" Text="Datos del Empleado"></asp:Label>
                                 </div> 
                                
-                                 <%--<Campo de texto del nombre >--%>
+                                 <%--<NOMBRE Y APELLIDO >--%>
                                 <br/>
                                  <div class="Contacto" style="margin-bottom:40px">
                                  <asp:Label ID="Label7" runat="server" Text="Nombre - Apellido"></asp:Label>
                                  </div>
 
+                                 <%--<Campo de texto del nombre >--%>
+
                                  <div class="form-group row">
                                     <div class="col-sm-6">
-                                         <asp:Label ID="Nombre" runat="server" Text="1er Nombre"></asp:Label>
+                                         <asp:Label ID="Label26" runat="server" Text="1er Nombre"></asp:Label>
                                         <asp:TextBox ID="Nombre1" runat="server" type="name" name="name" data-parsley-trigger="change"  
                                             placeholder="Primer Nombre" autocomplete="off" class="form-control">
                                         </asp:TextBox>
                                     </div>
                                     <div class="col-sm-6">
-                                       <asp:Label ID="Label8" runat="server" Text="2do Nombre"></asp:Label>
+                                       <asp:Label ID="Label27" runat="server" Text="2do Nombre"></asp:Label>
                                        <asp:TextBox ID="Nombre2" runat="server" type="name" name="name" data-parsley-trigger="change"  
                                             placeholder="Segundo Nombre" autocomplete="off" class="form-control">
                                         </asp:TextBox>
@@ -149,13 +151,13 @@
 
                                  <div class="form-group row" style="margin-bottom:-10px">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                         <asp:Label ID="Apellido" runat="server" Text="Apellido1"></asp:Label>
+                                         <asp:Label ID="Label28" runat="server" Text="Apellido1"></asp:Label>
                                         <asp:TextBox ID="Apellido1" runat="server" type="name" name="name" data-parsley-trigger="change"  
                                             placeholder="Primer Apellido" autocomplete="off" class="form-control">
                                         </asp:TextBox>
                                     </div>
                                     <div class="col-sm-6">
-                                        <asp:Label ID="Label9" runat="server" Text="Apellido2"></asp:Label>
+                                        <asp:Label ID="Label29" runat="server" Text="Apellido2"></asp:Label>
                                        <asp:TextBox ID="Apellido2" runat="server" type="name" name="name" data-parsley-trigger="change"  
                                             placeholder="Segundo Apellido" autocomplete="off" class="form-control">
                                         </asp:TextBox>
@@ -163,19 +165,19 @@
                                 </div>
 
 
-                                 <%--<Rif y Cedula>--%>
+                                 <%--<RIF Y CEDULA>--%>
 
                                  <div class="Contacto" style="margin-bottom:10px; margin-top: 10px;">
-                                    <asp:Label ID="Label10" runat="server" Text="Cedula - Rif"></asp:Label>
+                                    <asp:Label ID="Label30" runat="server" Text="Cedula - Rif"></asp:Label>
                                  </div>
 
                                  <%--<Campo de texto del Rif >--%>
-                                 <asp:Label ID="lblRif" runat="server" Text="Rif"></asp:Label>
+                                 <asp:Label ID="Label31" runat="server" Text="Rif"></asp:Label>
                                  <div class="form-group row" style="margin-bottom:-10px">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
                                         <br >
                                         <div class="input-group mb-3"><span class="input-group-prepend"><span class="input-group-text"><i class="fas fa-user-times"></i></span></span>
-                                            <asp:DropDownList ID="dplRif" runat="server" style="padding:10px 50px 10px 50px; text-align: left;" class="input-group-prepend be-addon">
+                                            <asp:DropDownList ID="dplrif" runat="server" style="padding:10px 50px 10px 50px; text-align: left;" class="input-group-prepend be-addon">
                                                 <asp:ListItem>V</asp:ListItem>
                                                 <asp:ListItem>E</asp:ListItem>
                                                 <asp:ListItem>P</asp:ListItem>
@@ -189,9 +191,10 @@
                                          </asp:TextBox>
                                     </div>
                                 </div>
+
                                 <%--<Campo de texto de la cédula>--%>
-                                <asp:Label ID="lblCedula" runat="server" Text="Cédula"></asp:Label>
-                                <div class="form-group row" style="margin-bottom:-10px">
+                                <asp:Label ID="Label32" runat="server" Text="Cédula"></asp:Label>
+                                 <div class="form-group row" style="margin-bottom:-10px">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
                                         <br >
                                         <div class="input-group mb-3"><span class="input-group-prepend"><span class="input-group-text"><i class="fas fa-user-times"></i></span></span>
@@ -211,15 +214,15 @@
                                 </div>
 
 
-                               <%--<Correo y Telefonos>--%>
+                               <%--<CORREO Y TELEFONOS>--%>
 
                                  <div class="Contacto" style="margin-bottom:20px; margin-top: 10px;">
-                                    <asp:Label ID="Label11" runat="server" Text="Correo Eletronico - Telefonos"></asp:Label>
+                                    <asp:Label ID="Label8" runat="server" Text="Correo Eletronico - Telefonos"></asp:Label>
                                  </div>
                                
                                 <%--<Campo de texto del correo >--%>
                                 <div class="form-group">
-                                    <asp:Label ID="Label14" runat="server" Text="Correo Electrónico"></asp:Label>
+                                    <asp:Label ID="Label9" runat="server" Text="Correo Electrónico"></asp:Label>
                                     <asp:TextBox ID="txtCorreo" runat="server" type="text" name="name" data-parsley-trigger="change"  
                                           placeholder="Correo electrónico" autocomplete="off" class="form-control">
                                      </asp:TextBox>
@@ -227,7 +230,7 @@
 
                                 <%--<Campo de texto de los telefonos >--%>
                                 <div class="form-group row" style="margin-left: 5px;">
-                                    <asp:Label ID="Telefonos" runat="server" Text="Telefonos"></asp:Label>
+                                    <asp:Label ID="Label33" runat="server" Text="Telefonos"></asp:Label>
                                      <div class="input-group mb-3">
                                         <asp:DropDownList ID="CodigoPais1" runat="server" style="padding-bottom: 15px; margin-top: 10px; margin-bottom: 50px; background-color: #0f136bd6;color: white; width: 220px;" class="input-group-prepend be-addon">
                                                 <asp:ListItem Value="">Codigo de País</asp:ListItem>
@@ -283,18 +286,121 @@
                                         </asp:TextBox>
                                     </div>
                                 </div>
+                               
+                                  
+                                  
+                                 <%--<CARGO - DEPARTAMENTO - TIENDA - JEFE>--%>
 
-                                
-                                  <%--<Direccion y Contraseña >--%>
+
+                                 <div class="Contacto" style="margin-bottom:40px; margin-top: 10px;">
+                                    <asp:Label ID="Label19" runat="server" Text="Cargo - Departamento - Tienda -Jefe"></asp:Label>
+                                 </div>
+
+                                 <div class="form-group" style="margin-bottom:20px; margin-top:30px">
+
+                                    <asp:DropDownList ID="Cargos" runat="server" style="padding-bottom: 15px; background-color: #0f136bd6;color: white; width: 370px;" class="input-group-prepend be-addon">
+                                   </asp:DropDownList>
+
+                                   <asp:DropDownList ID="Departamentos" runat="server" style="padding-bottom: 15px; margin-left: 400px; margin-top: -40px; background-color: #0f136bd6;color: white; width:420px;" class="input-group-prepend be-addon">
+                                   </asp:DropDownList>
+
+                                </div>
+
+
+                                 <div class="form-group" style="margin-bottom:20px; margin-top:50px">
+
+                                   <asp:DropDownList ID="Tiendas" runat="server" style="padding-bottom: 15px; background-color: #0f136bd6;color: white; width: 370px;" class="input-group-prepend be-addon">
+                                   </asp:DropDownList>
+
+                                   <div style="margin-left: 400px; margin-top: -60px;">
+                                     <asp:Label ID="Label18" runat="server" Text="Jefe"></asp:Label>
+                                     <asp:TextBox ID="Jefe" runat="server" type="text" name="name" data-parsley-trigger="change"  
+                                          placeholder="Ingrese el rif del Jefe" autocomplete="off" class="form-control">
+                                     </asp:TextBox>
+                                  </div>
+
+                                </div>
+
+
+                                 <%--<HORARIOS>--%>
+                             
+                                <div class="Contacto" style="margin-top: 40px;">
+                                    <asp:Label ID="Label12" runat="server" Text="Horarios"></asp:Label>
+                                </div>
+
+                              <div class="form-group" style="margin-bottom:20px; margin-top:30px">
+
+                                  <%--<Hora de Inicio >--%>
+                                   <div>
+                                    <asp:Label ID="Label13" runat="server" Text="Hora de Inicio"></asp:Label>
+                                    <asp:TextBox ID="HoraInicio" runat="server" type="time" name="name" data-parsley-trigger="change"  
+                                          placeholder="Hora Inicio" autocomplete="off" class="form-control" style="width:370px;">
+                                    </asp:TextBox>
+                                   </div>
+
+                                    <br />
+                                  <%--<Hora de Fin >--%>
+                                  <div style="margin-left: 400px; margin-top: -84px;">
+                                    <asp:Label ID="Label15" runat="server" Text="Hora de Fin"></asp:Label>
+                                    <asp:TextBox ID="HoraFin" runat="server" type="time" name="name" data-parsley-trigger="change"  
+                                          placeholder="Hora Fin" autocomplete="off" class="form-control" style="width:420px;">
+                                   </asp:TextBox>
+                                  </div>
+
+                                    <br />
+                                   <%--<Turnos >--%>
+                                   <asp:DropDownList ID="Turno" runat="server" style="padding-bottom: 15px; background-color: #0f136bd6;color: white; width: 500px; margin-left: 160px;" class="input-group-prepend be-addon">
+                                       <asp:ListItem Value="Diurno">Diurno</asp:ListItem>
+                                       <asp:ListItem Value="Matutino">Matutino</asp:ListItem>
+                                       <asp:ListItem Value="Nocturno">Nocturno</asp:ListItem>
+                                       <asp:ListItem Value="Vespertino">Vespertino</asp:ListItem>
+                                   </asp:DropDownList>
+
+                                    <br />
+                                    <%--<Dias >--%>
+                                    <div style="margin-top: 20px;">
+                                        <div class="Contacto2" style="margin-bottom: 20px;">
+                                        <asp:Label ID="Label16" runat="server" Text="Dias del horario"></asp:Label>
+                                        </div>
+                                        <asp:CheckBoxList ID="Dias" runat="server" style="background-color:#4e73df; color: white; border-radius: 10px; padding: 10px 10px 10px 10px; margin-top: 40px;" class="input-group-prepend be-addon">
+                                            <asp:ListItem Value="Lunes">Lunes</asp:ListItem>
+                                            <asp:ListItem Value="Martes">Martes</asp:ListItem>
+                                            <asp:ListItem Value="Miercoles">Miercoles</asp:ListItem>
+                                            <asp:ListItem Value="Jueves">Jueves</asp:ListItem>
+                                            <asp:ListItem Value="Viernes">Viernes</asp:ListItem>
+                                            <asp:ListItem Value="Sabado">Sabado</asp:ListItem>
+                                            <asp:ListItem Value="Domingo">Domingo</asp:ListItem>
+                                        </asp:CheckBoxList>
+                                    </div>
+
+                               </div>
+
+
+                                 <%--<BENEFICIOS>--%>
+                             
+                                <div class="Contacto" style="margin-top: 40px;">
+                                    <asp:Label ID="Label20" runat="server" Text="Beneficios"></asp:Label>
+                                </div>
+
+                                    <div style="margin-top: 20px;">
+                                        <asp:CheckBoxList ID="Options" runat="server" style="background-color:#4e73df; color: white; border-radius: 10px; padding: 10px 10px 10px 10px; margin-top: 40px;" class="input-group-prepend be-addon">
+
+                                        </asp:CheckBoxList>
+                                    </div>
+
+
+
+
+                                 <%--<DIRECCION Y CONTRASEÑA>--%>
                                  
-                                  <div class="Contacto" style="margin-top: 10px;">
-                                    <asp:Label ID="Label12" runat="server" Text="Direccion - Contraseña"></asp:Label>
+                                  <div class="Contacto" style="margin-top: 40px;">
+                                    <asp:Label ID="Label10" runat="server" Text="Direccion - Contraseña"></asp:Label>
                                  </div>
 
                                 <%--<Direccion del Cliente >--%>
                                 <br />
                                 <div class="form-group">
-                                         <asp:Label ID="Label13" runat="server" Text="Estado"></asp:Label>
+                                         <asp:Label ID="Label11" runat="server" Text="Estado"></asp:Label>
                                         <div class="input-group mb-3"><span class="input-group-prepend"><span class="input-group-text"><i class="fas fa-user"></i></span></span>
                                             <asp:DropDownList ID="dplEstado" runat="server" style="padding:10px 10px 10px 10px; text-align: left;" class="input-group-prepend be-addon" OnSelectedIndexChanged="dplEstado_SelectedIndexChanged" AutoPostBack="True">
                                                 
@@ -303,7 +409,7 @@
                                 </div>
 
                                 <div class="form-group"  style="margin-top: -84px; margin-left: 230px;">
-                                        <asp:Label ID="Label15" runat="server" Text="Municipio"></asp:Label>
+                                        <asp:Label ID="Label14" runat="server" Text="Municipio"></asp:Label>
                                         <div class="input-group mb-3"><span class="input-group-prepend"><span class="input-group-text"><i class="fas fa-user"></i></span></span>
                                             <asp:DropDownList ID="dplMunicipio" runat="server" style="padding:10px 10px 10px 10px; text-align: left;" class="input-group-prepend be-addon" AutoPostBack="True" OnSelectedIndexChanged="dplMunicipio_SelectedIndexChanged">
                                                 
@@ -312,7 +418,7 @@
                                 </div>
 
                                 <div class="form-group"  style="margin-top: -84px; margin-left: 510px;">
-                                        <asp:Label ID="Label16" runat="server" Text="Parroquia"></asp:Label>
+                                        <asp:Label ID="Label25" runat="server" Text="Parroquia"></asp:Label>
                                         <div class="input-group mb-3"><span class="input-group-prepend"><span class="input-group-text"><i class="fas fa-user"></i></span></span>
                                             <asp:DropDownList ID="dplParroquia" runat="server" style="padding:10px 10px 10px 10px; text-align: left;" class="input-group-prepend be-addon">
                                                 
@@ -324,7 +430,7 @@
                                 <br >
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                         <asp:Label ID="Label17" runat="server" Text="Contraseña"></asp:Label>
+                                         <asp:Label ID="Label34" runat="server" Text="Contraseña"></asp:Label>
                                         <asp:TextBox ID="txtContraseña" runat="server" type="password" name="name" data-parsley-trigger="change"  
                                             placeholder="Ingrese contraseña " autocomplete="off" class="form-control">
                                         </asp:TextBox>
@@ -335,6 +441,7 @@
                                         </asp:TextBox>
                                     </div>
                                 </div>
+
 
                                 <hr>
                                 <asp:Button ID="btnModificar" runat="server" class="btn btn-primary btn-user btn-block" Text="Guardar Cambios" OnClick="btnGuardarCambios"/>
@@ -402,7 +509,7 @@
 
 </form>
 
-        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
               aria-hidden="true">
               <div class="modal-dialog" role="document">
                   <div class="modal-content">
