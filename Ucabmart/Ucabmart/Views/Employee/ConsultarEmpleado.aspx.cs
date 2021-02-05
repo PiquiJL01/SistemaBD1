@@ -52,7 +52,7 @@ namespace Ucabmart.Views.Employee
                 tabla += "<td>" + item.Nombre2 + "</td>";
                 tabla += "<td>" + item.Apellido1 + "</td>";
                 tabla += "<td>" + item.Apellido2 + "</td>";
-                tabla += "<td>" + item.CodigoTienda+ "</td>";
+                tabla += "<td>" + item.CodigoTienda + "</td>";
                 tabla += "<td>" + item.CodigoDepartamento + "</td>";
                 tabla += "<td>" + item.CodigoJefe + "</td>";
                 tabla += "<td>" + item.CodigoDireccion + "</td>";

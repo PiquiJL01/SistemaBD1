@@ -81,7 +81,7 @@
                   <li class="li-1"></li>
                   <li class="li-2">
                       <ul class="Ordened">
-                          <li class="li-4" >PRODUCTOS-UCABMART</li>
+                          <li class="li-4" >NOMINA-UCABMART</li>
                           <li><img src="../../Content/assets/img/Product/Product-Icon.png" height="80px"/>  </li>
                       </ul>
                   </li>
@@ -90,7 +90,7 @@
           </div>
           
         <!-- Options -->
-           <div class="option">Consultar Producto</div>
+           <div class="option">Consultar Empleado</div>
           
           <form id="form1" runat="server">  
               <div class="container">

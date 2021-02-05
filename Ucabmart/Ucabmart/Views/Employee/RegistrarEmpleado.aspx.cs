@@ -308,7 +308,7 @@ namespace Ucabmart.Views.Employee
                 else
                 {
                     Empleado empleado = new Empleado(txtContraseña.Text, dplRif.SelectedValue + txtRif.Text, dplCedula.SelectedValue + txtCedula.Text, Nombre1.Text,
-                    Nombre2.Text, Apellido1.Text, Apellido2.Text, new Departamento(CodDepartamento), new Tienda(CodTienda), new Lugar(CodLug1), correo);
+                    Nombre2.Text, Apellido1.Text, Apellido2.Text, new Departamento(CodDepartamento), new Tienda(CodTienda), new Lugar(CodLug1), correo, null);
                     empleado.Insertar();
                     this.AssignHorarios(empleado);
                     Session["EmpleadoRif"] = empleado.Codigo;
