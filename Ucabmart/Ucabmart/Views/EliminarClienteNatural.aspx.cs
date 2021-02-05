@@ -7,9 +7,11 @@ namespace Ucabmart.Views.User
 {
     public partial class EliminarClienteNatural : System.Web.UI.Page
     {
+        public string nombreUsuario { get; set; }
+
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            this.nombreUsuario = Session["NombreLogin"].ToString();
         }
 
         protected void btnEliminar_Click(object sender, EventArgs e)

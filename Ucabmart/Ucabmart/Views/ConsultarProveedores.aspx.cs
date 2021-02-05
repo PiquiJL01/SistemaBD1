@@ -6,11 +6,14 @@ namespace Ucabmart.Views
 {
     public partial class ConsultarProveedores : System.Web.UI.Page
     {
+        public string nombreUsuario { get; set; }
         public string tabla;
         public Proveedor consultarProveedor;
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            this.nombreUsuario = Session["NombreLogin"].ToString();
+
             tabla += "<table id='example' class='table table-striped table-bordered second' style='width: 100%'>";
             tabla += "<thead>";
             tabla += "<tr>";

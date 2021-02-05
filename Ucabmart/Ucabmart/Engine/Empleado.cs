@@ -24,7 +24,7 @@ namespace Ucabmart.Engine
 
         #region Declaraciones
         public Empleado(string password, string rif, string cedula, string nombre1, string nombre2, string apellido1, string apellido2,
-            Departamento departamento, Tienda tienda, Lugar direccion, CorreoElectronico correo, Empleado jefe = null)
+            Departamento departamento, Tienda tienda, Lugar direccion, CorreoElectronico correo, Empleado jefe )
         {
             Password = password;
             Cedula = cedula;
@@ -69,7 +69,7 @@ namespace Ucabmart.Engine
         }
 
         private Empleado(int codigo, string rif, string cedula, string nombre1, string nombre2, string apellido1, string apellido2,
-            int departamento, int tienda, int direccion, int correo, string password, int jefe = 0)
+            int tienda, int departamento, int jefe , int direccion , int correo, string password )
         {
             Codigo = codigo;
             Password = password;
@@ -172,7 +172,7 @@ namespace Ucabmart.Engine
                 if (Reader.Read())
                 {
                     return new Empleado(ReadInt(0), ReadString(1), ReadString(2), ReadString(3), ReadString(4), ReadString(5),
-                        ReadString(6), ReadInt(7), ReadInt(8), ReadInt(9), ReadInt(10), ReadString(11), ReadInt(12));
+                        ReadString(6), ReadInt(7), ReadInt(8), ReadInt(9), ReadInt(10), ReadInt(11), ReadString(12));
                 }
 
             }
@@ -204,7 +204,7 @@ namespace Ucabmart.Engine
                 while (Reader.Read())
                 {
                     Empleado empleado = new Empleado(ReadInt(0), ReadString(1), ReadString(2), ReadString(3), ReadString(4), ReadString(5),
-                        ReadString(6), ReadInt(7), ReadInt(8), ReadInt(9), ReadInt(10), ReadString(11), ReadInt(12));
+                        ReadString(6), ReadInt(7), ReadInt(8), ReadInt(9), ReadInt(10), ReadInt(11), ReadString(12));
 
                     lista.Add(empleado);
                 }

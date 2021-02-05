@@ -12,9 +12,11 @@ namespace Ucabmart.Views
         public string cadena;
         public Natural ctrlConsultaNatural;
         public Juridico ctrlConsultaJuridico;
+        public string nombreUsuario { get; set; }
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            this.nombreUsuario = Session["NombreLogin"].ToString();
         }
 
         protected void btnBuscar_Click(object sender, EventArgs e)

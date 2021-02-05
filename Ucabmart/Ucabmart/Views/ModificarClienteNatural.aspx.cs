@@ -12,7 +12,7 @@ namespace Ucabmart.Views
     {
         Lugar nombreLugar = new Lugar(0);
         int codigoEstado = -1, codigoMunicipio = -1;
-  
+        public string nombreUsuario { get; set; }
 
         public void cargarPagina(Boolean flag)
         {
@@ -88,7 +88,8 @@ namespace Ucabmart.Views
 
         protected void Page_Load(object sender, EventArgs e)
         {
-                cargarPagina(true);
+            this.nombreUsuario = Session["NombreLogin"].ToString();
+            cargarPagina(true);
 
                 Nombre1.Enabled = false;
                 Nombre1.CssClass = "form-control";

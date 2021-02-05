@@ -28,7 +28,7 @@ namespace Ucabmart.Views
                         Session["NombreLogin"] = loginUsuario;
 
 
-                        Response.Redirect("/Views/User/InicioUsuario.aspx", false);
+                        Response.Redirect("/Views/Inicio_Admin.aspx", false);
                         //ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", 
                         //                "window.location ='/Views/User/InicioUsuario.aspx';", true);
                     }

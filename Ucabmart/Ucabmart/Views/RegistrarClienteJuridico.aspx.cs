@@ -10,10 +10,11 @@ namespace Ucabmart.Views
     {
         Lugar nombreLugar = new Lugar(0);
         int codigoEstado = -1, codigoMunicipio = -1;
-
+        public string nombreUsuario { get; set; }
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            this.nombreUsuario = Session["NombreLogin"].ToString();
             try
             {
                 List<Lugar> listaLugar = new List<Lugar>();

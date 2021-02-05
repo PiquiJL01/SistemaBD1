@@ -10,6 +10,7 @@ namespace Ucabmart.Views
 {
     public partial class WebForm7 : System.Web.UI.Page
     {
+        public string nombreUsuario { get; set; }
         Lugar nombreLugar = new Lugar(0);
         int codigoEstado = -1, codigoMunicipio = -1;
 
@@ -96,6 +97,7 @@ namespace Ucabmart.Views
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            this.nombreUsuario = Session["NombreLogin"].ToString();
             try
             {
                 List<Lugar> listaLugar = new List<Lugar>();
