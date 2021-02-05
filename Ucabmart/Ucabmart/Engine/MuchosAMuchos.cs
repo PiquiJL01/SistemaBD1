@@ -12,8 +12,32 @@ namespace Ucabmart.Engine
         private const string ConnectionString = "Host = labs-dbservices01.ucab.edu.ve; User Id = grupo5bd1; Password = 123456789; Database = grupo5db"; //conexion a la bd del proyecto
         //private const string ConnectionString = "Host = labs-dbservices01.ucab.edu.ve; User Id = jlgil18; Password = inmunda01; Database = testconnection "; //conexion de pruebas
         private NpgsqlCommand Script;
+        public NpgsqlDataReader Reader;
         private NpgsqlConnection Conexion = new NpgsqlConnection(ConnectionString);
         #endregion
+
+        public MuchosAMuchos()
+        {
+        }
+
+        /// <summary>
+        /// Usa el <c>Reader</c> para hacer una lectura
+        /// </summary>
+        /// <param name="posicion">Poscicion en la tabla, inicio en 0</param>
+        /// <returns>Dato de tipo <c>int</c></returns>
+        public int ReadInt(int posicion)
+        {
+            try
+            {
+                return Reader.GetInt32(posicion);
+            }
+            catch (Exception e)
+            {
+                return 0;
+            }
+        }
+
+
 
         #region Insertar
         public void Insertar(Empleado empleado, Horario horario)
@@ -158,6 +182,39 @@ namespace Ucabmart.Engine
             }
             CerrarConexion();
         }
+
+        #region retorna los codigos de los horarios del empleado
+        public List<int> codigoHorario(int codigoEmpleado)
+        {
+            List<int> listaHorario = new List<int>();
+
+            try
+            {
+                Conexion.Open();
+
+                string Comando = "SELECT horario_ho_codigo FROM em_ho WHERE empleado_em_codigo=@codigoEmpleado";
+                Script = new NpgsqlCommand(Comando, Conexion);
+
+                Script.Parameters.AddWithValue("codigoEmpleado", codigoEmpleado);
+                Reader = Script.ExecuteReader();
+
+                while (Reader.Read())
+                {
+                    listaHorario.Add(ReadInt(0));
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Ha ocurrido un error en la base de datos", e);
+            }
+            finally
+            {
+                Conexion.Close();
+            }
+            return listaHorario;
+        }
+        #endregion
+
 
         /*Modelo Eliminar de BD Muchos a Muchos
         public void Eliminar(Tipo1 tipo1, Tipo2 tipo2)
