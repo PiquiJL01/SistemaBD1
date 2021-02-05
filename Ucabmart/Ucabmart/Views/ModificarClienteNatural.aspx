@@ -126,8 +126,9 @@
                                  <%--<Campo de texto del nombre >--%>
                                 <br/>
                                  <div class="Contacto" style="margin-bottom:40px">
-                                 <asp:Label ID="Label7" runat="server" Text="Nombre y Apellido"></asp:Label>
+                                 <asp:Label ID="Label7" runat="server" Text="Nombre - Apellido"></asp:Label>
                                  </div>
+
                                  <div class="form-group row">
                                     <div class="col-sm-6">
                                          <asp:Label ID="Nombre" runat="server" Text="1er Nombre"></asp:Label>

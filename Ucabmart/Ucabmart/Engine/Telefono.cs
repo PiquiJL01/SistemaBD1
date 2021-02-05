@@ -338,8 +338,9 @@ namespace Ucabmart.Engine
             return lista;
         }
 
-        public Telefono Leer(Empleado empleado)
+        public List<Telefono> Leer(Empleado empleado)
         {
+            List<Telefono> listaTelefono = new List<Telefono>();
             try
             {
                 Conexion.Open();
@@ -352,8 +353,9 @@ namespace Ucabmart.Engine
 
                 if (Reader.Read())
                 {
-                    return new Telefono(ReadInt(0), ReadInt(1), ReadInt(2), ReadString(3), ReadInt(4),
+                    Telefono telefono = new Telefono(ReadInt(0), ReadInt(1), ReadInt(2), ReadString(3), ReadInt(4),
                         ReadInt(5), ReadString(6), ReadString(7));
+                    listaTelefono.Add(telefono);
                 }
 
                 Conexion.Close();
@@ -366,7 +368,7 @@ namespace Ucabmart.Engine
             {
                 Conexion.Close();
             }
-            return null;
+            return listaTelefono ;
         }
 
         public List<Telefono> Leer(PersonaContacto personaContacto)
