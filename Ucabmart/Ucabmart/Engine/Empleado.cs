@@ -72,6 +72,7 @@ namespace Ucabmart.Engine
             int tienda, int departamento, int jefe , int direccion , int correo, string password )
         {
             Codigo = codigo;
+            Cedula = cedula;
             Password = password;
             RIF = rif;
             Nombre1 = nombre1;

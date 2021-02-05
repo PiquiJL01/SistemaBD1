@@ -135,11 +135,7 @@ namespace Ucabmart.Engine
             }
             finally
             {
-                try
-                {
-                    Conexion.Close();
-                }
-                finally { }
+                Conexion.Close();                
             }
         }
 
