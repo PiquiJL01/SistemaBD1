@@ -58,8 +58,7 @@ namespace Ucabmart.Views.Employee
                 tabla += "<td>" + item.Apellido1 + "</td>";
                 tabla += "<td>" + item.Apellido2 + "</td>";
 
-                Tienda tienda = new Tienda();
-                tienda = tienda.Leer(item.CodigoTienda);
+                Tienda tienda = new Tienda(item.CodigoTienda);
                 string nombreTienda = tienda.Nombre;
 
                 tabla += "<td>" + nombreTienda + "</td>";
@@ -86,17 +85,14 @@ namespace Ucabmart.Views.Employee
                 tabla += "<td>" + nombreBeneficio + "</td>";
                 tabla += "<td>" + item.Password + "</td>";
 
-                MuchosAMuchos codigoHorario = new MuchosAMuchos();
-                Horario horario = new Horario();
-                List<int> listaHorarios = codigoHorario.codigoHorario(item.Codigo);
+                List<Horario> horarios = item.Horarios();
                 string horaInicio = "";
                 string horaFin= "";
                 string turno = "";
                 string dia = "";
 
-                foreach (int codHora in listaHorarios)
+                foreach (Horario horario in horarios)
                 {
-                    horario = horario.Leer(codHora);
                     horaInicio += horario.HoraEntrada + "\n";
                     horaFin += horario.HoraSalida + "\n";
                     turno += horario.Turno + "\n";

@@ -315,6 +315,10 @@ namespace Ucabmart.Engine
         #endregion
 
         #region Entidades Muchos a Muchos
+        /// <summary>
+        /// Comunicacion con la BD
+        /// </summary>
+        /// <returns>Lista de los beneficios del empleado</returns>
         public List<Beneficio> Beneficios()
         {
             List<Beneficio> beneficios = new List<Beneficio>();
@@ -353,14 +357,17 @@ namespace Ucabmart.Engine
             return beneficios;
         }
 
+        /// <summary>
+        /// Conexion con la BD
+        /// </summary>
+        /// <returns>Lista de horarios del empleado</returns>
         public List<Horario> Horarios()
         {
             List<Horario> horarios = new List<Horario>();
             List<int> codigos = new List<int>();
 
-            try
+            if(AbrirConexion())
             {
-                Conexion.Open();
 
                 string Command = "SELECT horario_ho_codigo FROM em_ho WHERE empleado_em_codigo = @codigo";
                 NpgsqlCommand Script = new NpgsqlCommand(Command, Conexion);
@@ -374,14 +381,8 @@ namespace Ucabmart.Engine
                     codigos.Add(ReadInt(0));
                 }
             }
-            finally
-            {
-                try
-                {
-                    Conexion.Close();
-                }
-                finally { }
-            }
+
+            CerrarConexion();
 
             foreach (int codigo in codigos)
             {
@@ -389,6 +390,102 @@ namespace Ucabmart.Engine
             }
 
             return horarios;
+        }
+
+        public List<int> CodigosHorarios()
+        {
+            List<int> listaHorario = new List<int>();
+
+            if (AbrirConexion())
+            {
+                string Comando = "SELECT horario_ho_codigo FROM em_ho WHERE empleado_em_codigo=@codigoEmpleado";
+                Script = new NpgsqlCommand(Comando, Conexion);
+
+                Script.Parameters.AddWithValue("codigoEmpleado", Codigo);
+                Reader = Script.ExecuteReader();
+
+                while (Reader.Read())
+                {
+                    listaHorario.Add(ReadInt(0));
+                }
+            }
+
+            CerrarConexion();
+
+            return listaHorario;
+        }
+
+        public List<Cargo> Cargos()
+        {
+            List<Cargo> cargos = new List<Cargo>();
+            List<int> codigos = new List<int>();
+
+            if (AbrirConexion())
+            {
+                string Command = "SELECT cargo_ca_codigo FROM em_ca WHERE empleado_em_codigo = @codigo";
+                NpgsqlCommand Script = new NpgsqlCommand(Command, Conexion);
+
+                Script.Parameters.AddWithValue("codigo", Codigo);
+
+                Reader = Script.ExecuteReader();
+
+                while (Reader.Read())
+                {
+                    codigos.Add(ReadInt(0));
+                }
+            }
+
+            CerrarConexion();
+
+            foreach (int codigo in codigos)
+            {
+                cargos.Add(new Cargo(codigo));
+            }
+
+            return cargos;
+        }
+
+        /// <summary>
+        /// Conexion con la BD
+        /// </summary>
+        /// <remarks>La tupla tiene: el sueldo (float)y las fechas de inicio y fin en ese orden (DateTime, fin puede ser null)</remarks>
+        /// <returns>Atributos de los cargos del empleaado, basado en su historico</returns>
+        public Dictionary<int, Tuple<float,DateTime, DateTime>> AtributosCargos()
+        {
+            Dictionary<int, Tuple<float, DateTime, DateTime>> sueldos = new Dictionary<int, Tuple<float, DateTime, DateTime>>();
+
+            if (AbrirConexion())
+            {
+                string Command = "SELECT cargo_ca_codigo, sueldo FROM em_ca WHERE empleado_em_codigo = @codigo";
+                NpgsqlCommand Script = new NpgsqlCommand(Command, Conexion);
+
+                Script.Parameters.AddWithValue("codigo", Codigo);
+
+                Reader = Script.ExecuteReader();
+
+                while (Reader.Read())
+                {
+                    Tuple<float, DateTime, DateTime> tuple = new Tuple<float, DateTime, DateTime>(ReadFloat(1), ReadDate(2), ReadDate(3));
+                    sueldos.Add(ReadInt(0), tuple);
+                }
+            }
+
+            CerrarConexion();
+
+            return sueldos;
+        }
+
+        public Cargo CargoActual()
+        {
+            Dictionary<int, Tuple<float, DateTime, DateTime>> valores = AtributosCargos();
+            foreach (int codigo in valores.Keys)
+            {
+                if (valores[codigo].Item3.Year == 0001)
+                {
+                    return new Cargo(codigo);
+                }
+            }
+            return null;
         }
         #endregion
     }

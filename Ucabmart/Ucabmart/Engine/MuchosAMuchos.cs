@@ -183,38 +183,23 @@ namespace Ucabmart.Engine
             CerrarConexion();
         }
 
-        #region retorna los codigos de los horarios del empleado
-        public List<int> codigoHorario(int codigoEmpleado)
+        public void Eliminar(Empleado empleado, Cargo cargo)
         {
-            List<int> listaHorario = new List<int>();
-
-            try
+            if (AbrirConexion())
             {
-                Conexion.Open();
+                string Commando = "DELETE FROM em_be " +
+                    "WHERE (empleado_em_codigo = @codigo1) AND (beneficio_be_codigo = @codigo2)";
+                Script = new NpgsqlCommand(Commando, Conexion);
 
-                string Comando = "SELECT horario_ho_codigo FROM em_ho WHERE empleado_em_codigo=@codigoEmpleado";
-                Script = new NpgsqlCommand(Comando, Conexion);
+                Script.Parameters.AddWithValue("codigo1", empleado.Codigo);
+                Script.Parameters.AddWithValue("codigo2", cargo.Codigo);
 
-                Script.Parameters.AddWithValue("codigoEmpleado", codigoEmpleado);
-                Reader = Script.ExecuteReader();
+                Script.Prepare();
 
-                while (Reader.Read())
-                {
-                    listaHorario.Add(ReadInt(0));
-                }
+                Script.ExecuteNonQuery();
             }
-            catch (Exception e)
-            {
-                throw new Exception("Ha ocurrido un error en la base de datos", e);
-            }
-            finally
-            {
-                Conexion.Close();
-            }
-            return listaHorario;
+            CerrarConexion();
         }
-        #endregion
-
 
         /*Modelo Eliminar de BD Muchos a Muchos
         public void Eliminar(Tipo1 tipo1, Tipo2 tipo2)
@@ -235,6 +220,24 @@ namespace Ucabmart.Engine
             CerrarConexion();
         }
         */
+        #endregion
+
+        #region Actualizar atributos en los muchos a muchos
+        public void Actualizar(Empleado empleado, Cargo cargo, DateTime fechaFin)
+        {
+            if (AbrirConexion())
+            {
+                string Comando = "UPDATE em_ca SET fecha_fin = @fecha " +
+                    "WHERE em_codigo = @codigo";
+                Script = new NpgsqlCommand(Comando, Conexion);
+
+                Script.Prepare();
+
+                Script.ExecuteNonQuery();
+            }
+
+            CerrarConexion();
+        }
         #endregion
 
         #region Manejo de Conexion
