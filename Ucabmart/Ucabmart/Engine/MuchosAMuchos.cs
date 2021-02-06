@@ -223,8 +223,13 @@ namespace Ucabmart.Engine
         #endregion
 
         #region Actualizar atributos en los muchos a muchos
-        public void Actualizar(Empleado empleado, Cargo cargo, DateTime fechaFin)
+        public void Actualizar(Empleado empleado, Cargo cargo, DateTime fechaFin = new DateTime())
         {
+            if (fechaFin.Year == 0001)
+            {
+                fechaFin = DateTime.Today;
+            }
+
             if (AbrirConexion())
             {
                 string Comando = "UPDATE em_ca SET fecha_fin = @fecha " +
