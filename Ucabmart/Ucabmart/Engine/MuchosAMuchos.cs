@@ -228,8 +228,12 @@ namespace Ucabmart.Engine
             if (AbrirConexion())
             {
                 string Comando = "UPDATE em_ca SET fecha_fin = @fecha " +
-                    "WHERE em_codigo = @codigo";
+                    "WHERE (empleado_em_codigo = @empleado) AND (cargo_ca_codigo = @cargo)";
                 Script = new NpgsqlCommand(Comando, Conexion);
+
+                Script.Parameters.AddWithValue("fecha", fechaFin);
+                Script.Parameters.AddWithValue("empleado", empleado.Codigo);
+                Script.Parameters.AddWithValue("cargo", cargo.Codigo);
 
                 Script.Prepare();
 
