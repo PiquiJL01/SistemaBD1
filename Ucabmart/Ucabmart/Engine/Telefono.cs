@@ -351,10 +351,11 @@ namespace Ucabmart.Engine
                 Script.Parameters.AddWithValue("codigo", empleado.Codigo);
                 Reader = Script.ExecuteReader();
 
-                if (Reader.Read())
+                while(Reader.Read())
                 {
                     Telefono telefono = new Telefono(ReadInt(0), ReadInt(1), ReadInt(2), ReadString(3), ReadInt(4),
                         ReadInt(5), ReadString(6), ReadString(7));
+
                     listaTelefono.Add(telefono);
                 }
 

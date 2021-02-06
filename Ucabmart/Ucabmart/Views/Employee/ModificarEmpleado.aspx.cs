@@ -71,6 +71,16 @@ namespace Ucabmart.Views.Employee
                 empleado.CodigoTienda = CodTienda;
 
 
+                //CARGO
+                MuchosAMuchos cargo_emple = new MuchosAMuchos();
+                Cargo cargo = empleado.CargoActual();
+
+
+
+
+
+
+
                 Telefono telefono = new Telefono();
                 List<Telefono> telefonos = telefono.Leer(empleado);
 
@@ -208,6 +218,42 @@ namespace Ucabmart.Views.Employee
 
             Empleado jefe = new Empleado(empleado.CodigoJefe);
             Jefe.Text = jefe.Codigo.ToString();
+
+            //CARGO
+            Cargo cargo = empleado.CargoActual();
+            Cargos.SelectedValue = cargo.Nombre;
+
+            //Horarios
+            List<Horario> horarios = empleado.Horarios();
+            HoraInicio.Text = horarios[0].HoraEntrada.ToString();
+            HoraFin.Text = horarios[0].HoraSalida.ToString();
+            Turno.SelectedValue = horarios[0].Turno;
+
+            foreach (Horario horario in horarios)
+            {
+                foreach (ListItem item in Dias.Items)
+                {
+                    if (item.Text == horario.Dia) {
+                        
+                        item.Selected = true;
+                    }
+                }  
+            }
+
+            //BENEFICIOS
+            List<Beneficio> beneficios = empleado.Beneficios();
+
+            foreach (Beneficio beneficio in beneficios)
+            {
+                foreach (ListItem item in Options.Items)
+                {
+                    if (item.Text == beneficio.Nombre)
+                    {
+
+                        item.Selected = true;
+                    }
+                }
+            }
 
 
         }
