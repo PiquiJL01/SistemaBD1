@@ -81,7 +81,7 @@ namespace Ucabmart.Engine
             RifCliente = null;
             CodigoPersonaContacto = 0;
             RifProveedor = null;
-            CodigoEmpleado = 0;
+            CodigoEmpleado = empleado.Codigo;
         }
 
         public Telefono(int codigoPais, int codigoArea, int numero)
@@ -174,14 +174,14 @@ namespace Ucabmart.Engine
                 else if (!(CodigoEmpleado == 0))
                 {
                     string Comando = "INSERT INTO telefono (te_codigo_pais, te_codigo_area, te_numero, te_tipo, empleado_em_codigo) " +
-                        "VALUES (@pais, @area, @numero, @tipo, @proveedor)";
+                        "VALUES (@pais, @area, @numero, @tipo, @empleado)";
                     Script = new NpgsqlCommand(Comando, Conexion);
 
                     Script.Parameters.AddWithValue("pais", Numero[NumeroTelefono.Pais]);
                     Script.Parameters.AddWithValue("area", Numero[NumeroTelefono.Area]);
                     Script.Parameters.AddWithValue("numero", Numero[NumeroTelefono.Numero]);
                     Script.Parameters.AddWithValue("tipo", Tipo);
-                    Script.Parameters.AddWithValue("proveedor", RifProveedor);
+                    Script.Parameters.AddWithValue("empleado", CodigoEmpleado);
                 }
                 else
                 {

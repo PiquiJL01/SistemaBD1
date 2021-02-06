@@ -7,11 +7,11 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace Ucabmart.Views
+namespace Ucabmart.Views.Role
 {
 
 
-    public partial class WebForm2
+    public partial class Role_Admin
     {
     }
 }

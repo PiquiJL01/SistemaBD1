@@ -231,6 +231,7 @@
     <Content Include="Content\css\RegistroCliente.css" />
     <Content Include="Content\css\Check_Products.css" />
     <Content Include="Content\css\RegistroProveedores.css" />
+    <Content Include="Content\css\Role.css" />
     <Content Include="Content\css\Tiendas.css" />
     <Content Include="Content\css\Proveedores.css" />
     <Content Include="Content\css\sb-admin-2.min.css" />
@@ -1934,6 +1935,7 @@
     <Content Include="Views\RegistrarClienteJuridico.aspx" />
     <Content Include="Views\RegistrarClienteNatural.aspx" />
     <Content Include="Views\RegistroProveedores.aspx" />
+    <Content Include="Views\Role\Role_Admin.aspx" />
     <Content Include="Views\Tiendas-Admin.aspx" />
     <Content Include="Views\RegistrarJuridica.aspx" />
     <Content Include="Views\Tiendas.aspx" />
@@ -2192,6 +2194,13 @@
     </Compile>
     <Compile Include="Views\RegistroProveedores.aspx.designer.cs">
       <DependentUpon>RegistroProveedores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Role\Role_Admin.aspx.cs">
+      <DependentUpon>Role_Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Role\Role_Admin.aspx.designer.cs">
+      <DependentUpon>Role_Admin.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Tiendas-Admin.aspx.cs">
       <DependentUpon>Tiendas-Admin.aspx</DependentUpon>
@@ -2484,7 +2493,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\Admin\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
