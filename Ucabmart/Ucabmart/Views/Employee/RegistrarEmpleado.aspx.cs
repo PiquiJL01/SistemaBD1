@@ -95,12 +95,21 @@ namespace Ucabmart.Views.Employee
             lista = cargo.Todos();
 
             ListItem Title = new ListItem("Cargo", "");
-            Cargos.Items.Insert(Cargos.Items.Count, Title);
+            
+            if (!Cargos.Items.Contains(Title)) {
+            
+                Cargos.Items.Insert(Cargos.Items.Count, Title);
+
+            }
 
             foreach (Cargo item in lista)
             {
                 ListItem listItem = new ListItem(item.Nombre, item.Nombre);
-                Cargos.Items.Insert(Cargos.Items.Count, listItem);
+
+                if (!Cargos.Items.Contains(listItem))
+                {
+                    Cargos.Items.Insert(Cargos.Items.Count, listItem);
+                }
             }
         }
 
@@ -112,12 +121,20 @@ namespace Ucabmart.Views.Employee
             lista = departamento.Todos();
 
             ListItem Title = new ListItem("Departamento", "");
-            Departamentos.Items.Insert(Departamentos.Items.Count, Title);
+
+            if (!Departamentos.Items.Contains(Title))
+            {
+                Departamentos.Items.Insert(Departamentos.Items.Count, Title);
+            }
 
             foreach (Departamento item in lista)
             {
                 ListItem listItem = new ListItem(item.Nombre, item.Nombre);
-                Departamentos.Items.Insert(Departamentos.Items.Count, listItem);
+
+                if (!Departamentos.Items.Contains(listItem))
+                {
+                    Departamentos.Items.Insert(Departamentos.Items.Count, listItem);
+                }
             }
         }
 
@@ -129,12 +146,20 @@ namespace Ucabmart.Views.Employee
             lista = tienda.Todos();
 
             ListItem Title = new ListItem("Tienda", "");
-            Tiendas.Items.Insert(Tiendas.Items.Count, Title);
+
+            if (!Tiendas.Items.Contains(Title))
+            {
+                Tiendas.Items.Insert(Tiendas.Items.Count, Title);
+            }
 
             foreach (Tienda item in lista)
             {
                 ListItem listItem = new ListItem(item.Nombre, item.Nombre);
-                Tiendas.Items.Insert(Tiendas.Items.Count, listItem);
+
+                if (!Tiendas.Items.Contains(listItem))
+                {
+                    Tiendas.Items.Insert(Tiendas.Items.Count, listItem);
+                }
             }
         }
 
@@ -280,6 +305,16 @@ namespace Ucabmart.Views.Employee
 
         }
 
+
+        protected void AssignCargos(Empleado empleado, Cargo cargo) {
+
+            MuchosAMuchos Cargo_Emple = new MuchosAMuchos();
+
+            Cargo_Emple.Insertar(empleado, cargo, 4000);
+
+
+        }
+
         protected void btnRegistrar_Click(object sender, EventArgs e) 
         {
             try
@@ -298,11 +333,22 @@ namespace Ucabmart.Views.Employee
                 Cargo cargo = new Cargo();
                 int CodCargo = cargo.Get_CodCargo(Cargos.SelectedValue);
 
+
                 if (int.Parse(Jefe.Text) != 0) {
                     Empleado empleado = new Empleado(txtContraseña.Text, dplRif.SelectedValue + txtRif.Text, dplCedula.SelectedValue + txtCedula.Text, Nombre1.Text,
                     Nombre2.Text, Apellido1.Text, Apellido2.Text, new Departamento(CodDepartamento), new Tienda(CodTienda), new Lugar(CodLug1), correo, new Empleado(int.Parse(Jefe.Text)));
                     empleado.Insertar();
+
                     this.AssignHorarios(empleado);
+                    this.AssignCargos(empleado, new Cargo(CodCargo));
+
+                    Telefono telefono1 = new Telefono(int.Parse(CodigoPais1.SelectedValue), int.Parse(CodAre.Text), int.Parse(txtTelefono1.Text), TipoTelf.Text,empleado);
+                    telefono1.Insertar();
+
+                    Telefono telefono2 = new Telefono(int.Parse(CodigoPais2.SelectedValue), int.Parse(CodAre2.Text), int.Parse(txtTelefono2.Text), TipoTelf2.Text,empleado);
+                    telefono2.Insertar();
+
+
                     Session["EmpleadoRif"] = empleado.Codigo;
                 }
                 else
@@ -310,7 +356,16 @@ namespace Ucabmart.Views.Employee
                     Empleado empleado = new Empleado(txtContraseña.Text, dplRif.SelectedValue + txtRif.Text, dplCedula.SelectedValue + txtCedula.Text, Nombre1.Text,
                     Nombre2.Text, Apellido1.Text, Apellido2.Text, new Departamento(CodDepartamento), new Tienda(CodTienda), new Lugar(CodLug1), correo, null);
                     empleado.Insertar();
+
                     this.AssignHorarios(empleado);
+                    this.AssignCargos(empleado, new Cargo(CodCargo));
+
+                    Telefono telefono1 = new Telefono(int.Parse(CodigoPais1.SelectedValue), int.Parse(CodAre.Text), int.Parse(txtTelefono1.Text), TipoTelf.Text,empleado);
+                    telefono1.Insertar();
+
+                    Telefono telefono2 = new Telefono(int.Parse(CodigoPais2.SelectedValue), int.Parse(CodAre2.Text), int.Parse(txtTelefono2.Text), TipoTelf2.Text,empleado);
+                    telefono2.Insertar();
+
                     Session["EmpleadoRif"] = empleado.Codigo;
                 }
 

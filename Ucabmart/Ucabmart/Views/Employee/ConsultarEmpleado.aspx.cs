@@ -28,12 +28,17 @@ namespace Ucabmart.Views.Employee
             tabla += "<th>Segundo Nombre</th>";
             tabla += "<th>Primer Apellido</th>";
             tabla += "<th>Segundo Apellido</th>";
-            tabla += "<th>Código Tienda</th>";
-            tabla += "<th>Código Departamento</th>";
+            tabla += "<th>Tienda</th>";
+            tabla += "<th>Departamento</th>";
             tabla += "<th>Código Empleado</th>";
             tabla += "<th>Código Lugar</th>";
             tabla += "<th>Código Correo</th>";
+            tabla += "<th>Beneficios</th>";
             tabla += "<th>Contraseña</th>";
+            tabla += "<th>Horas de Entrada</th>";
+            tabla += "<th>Horas de Salida</th>";
+            tabla += "<th>Turnos</th>";
+            tabla += "<th>Días</th>";
             tabla += "</tr>";
             tabla += "</thead>";
 
@@ -52,12 +57,52 @@ namespace Ucabmart.Views.Employee
                 tabla += "<td>" + item.Nombre2 + "</td>";
                 tabla += "<td>" + item.Apellido1 + "</td>";
                 tabla += "<td>" + item.Apellido2 + "</td>";
-                tabla += "<td>" + item.CodigoTienda + "</td>";
-                tabla += "<td>" + item.CodigoDepartamento + "</td>";
+
+                Tienda tienda = new Tienda(item.CodigoTienda);
+                string nombreTienda = tienda.Nombre;
+
+                tabla += "<td>" + nombreTienda + "</td>";
+
+                Departamento departamento = new Departamento();
+                departamento = departamento.Leer(item.CodigoDepartamento);
+                string nombreDepartamento = departamento.Nombre;
+
+                tabla += "<td>" + nombreDepartamento + "</td>";
+
                 tabla += "<td>" + item.CodigoJefe + "</td>";
                 tabla += "<td>" + item.CodigoDireccion + "</td>";
                 tabla += "<td>" + item.CodigoCorreoElectronico + "</td>";
+
+                Beneficio beneficio = new Beneficio();
+                List<int> listaBeneficios = beneficio.codigoBeneficios(item.Codigo);
+                string nombreBeneficio = "";
+
+                foreach (int codigoBeneficios in listaBeneficios) {
+                    beneficio = beneficio.Leer(codigoBeneficios);
+                    nombreBeneficio += beneficio.Nombre + "\n";
+                }
+
+                tabla += "<td>" + nombreBeneficio + "</td>";
                 tabla += "<td>" + item.Password + "</td>";
+
+                List<Horario> horarios = item.Horarios();
+                string horaInicio = "";
+                string horaFin= "";
+                string turno = "";
+                string dia = "";
+
+                foreach (Horario horario in horarios)
+                {
+                    horaInicio += horario.HoraEntrada + "\n";
+                    horaFin += horario.HoraSalida + "\n";
+                    turno += horario.Turno + "\n";
+                    dia += horario.Dia + "\n";
+                }
+
+                tabla += "<td>" + horaInicio + "</td>";
+                tabla += "<td>" + horaFin + "</td>";
+                tabla += "<td>" + turno + "</td>";
+                tabla += "<td>" + dia + "</td>";
 
                 tabla += "</tr>";
             }

@@ -81,7 +81,7 @@ namespace Ucabmart.Engine
             RifCliente = null;
             CodigoPersonaContacto = 0;
             RifProveedor = null;
-            CodigoEmpleado = 0;
+            CodigoEmpleado = empleado.Codigo;
         }
 
         public Telefono(int codigoPais, int codigoArea, int numero)
@@ -174,14 +174,14 @@ namespace Ucabmart.Engine
                 else if (!(CodigoEmpleado == 0))
                 {
                     string Comando = "INSERT INTO telefono (te_codigo_pais, te_codigo_area, te_numero, te_tipo, empleado_em_codigo) " +
-                        "VALUES (@pais, @area, @numero, @tipo, @proveedor)";
+                        "VALUES (@pais, @area, @numero, @tipo, @empleado)";
                     Script = new NpgsqlCommand(Comando, Conexion);
 
                     Script.Parameters.AddWithValue("pais", Numero[NumeroTelefono.Pais]);
                     Script.Parameters.AddWithValue("area", Numero[NumeroTelefono.Area]);
                     Script.Parameters.AddWithValue("numero", Numero[NumeroTelefono.Numero]);
                     Script.Parameters.AddWithValue("tipo", Tipo);
-                    Script.Parameters.AddWithValue("proveedor", RifProveedor);
+                    Script.Parameters.AddWithValue("empleado", CodigoEmpleado);
                 }
                 else
                 {
@@ -338,8 +338,9 @@ namespace Ucabmart.Engine
             return lista;
         }
 
-        public Telefono Leer(Empleado empleado)
+        public List<Telefono> Leer(Empleado empleado)
         {
+            List<Telefono> listaTelefono = new List<Telefono>();
             try
             {
                 Conexion.Open();
@@ -350,10 +351,12 @@ namespace Ucabmart.Engine
                 Script.Parameters.AddWithValue("codigo", empleado.Codigo);
                 Reader = Script.ExecuteReader();
 
-                if (Reader.Read())
+                while(Reader.Read())
                 {
-                    return new Telefono(ReadInt(0), ReadInt(1), ReadInt(2), ReadString(3), ReadInt(4),
+                    Telefono telefono = new Telefono(ReadInt(0), ReadInt(1), ReadInt(2), ReadString(3), ReadInt(4),
                         ReadInt(5), ReadString(6), ReadString(7));
+
+                    listaTelefono.Add(telefono);
                 }
 
                 Conexion.Close();
@@ -366,7 +369,7 @@ namespace Ucabmart.Engine
             {
                 Conexion.Close();
             }
-            return null;
+            return listaTelefono ;
         }
 
         public List<Telefono> Leer(PersonaContacto personaContacto)
