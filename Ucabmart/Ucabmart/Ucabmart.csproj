@@ -1967,6 +1967,7 @@
     <Content Include="Views\RegistrarClienteJuridico.aspx" />
     <Content Include="Views\RegistrarClienteNatural.aspx" />
     <Content Include="Views\RegistroProveedores.aspx" />
+    <Content Include="Views\Reports\AddToReportsPages.txt" />
     <Content Include="Views\Reports\WebForm1.aspx" />
     <Content Include="Views\Tiendas-Admin.aspx" />
     <Content Include="Views\RegistrarJuridica.aspx" />
