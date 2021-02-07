@@ -68,6 +68,28 @@ namespace Ucabmart.Engine
             }
         }
 
+        public Empleado(string rif)
+        {
+            Empleado empleado = Leer(rif);
+            if (!(empleado == null))
+            {
+                Codigo = empleado.Codigo;
+                Password = empleado.Password;
+                RIF = empleado.RIF;
+                Cedula = empleado.Cedula;
+                Nombre1 = empleado.Nombre1;
+                Nombre2 = empleado.Nombre2;
+                Apellido1 = empleado.Apellido1;
+                Apellido2 = empleado.Apellido2;
+                CodigoDepartamento = empleado.CodigoDepartamento;
+                CodigoTienda = empleado.CodigoTienda;
+                CodigoJefe = empleado.CodigoJefe;
+                CodigoDireccion = empleado.CodigoDireccion;
+                CodigoCorreoElectronico = empleado.CodigoCorreoElectronico;
+            }
+        }
+
+
         private Empleado(int codigo, string rif, string cedula, string nombre1, string nombre2, string apellido1, string apellido2,
             int tienda, int departamento, int jefe , int direccion , int correo, string password )
         {
@@ -168,6 +190,37 @@ namespace Ucabmart.Engine
                 Script = new NpgsqlCommand(Comando, Conexion);
 
                 Script.Parameters.AddWithValue("codigo", codigo);
+                Reader = Script.ExecuteReader();
+
+                if (Reader.Read())
+                {
+                    return new Empleado(ReadInt(0), ReadString(1), ReadString(2), ReadString(3), ReadString(4), ReadString(5),
+                        ReadString(6), ReadInt(7), ReadInt(8), ReadInt(9), ReadInt(10), ReadInt(11), ReadString(12));
+                }
+
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Ha ocurrido un error en la base de datos", e);
+            }
+            finally
+            {
+                Conexion.Close();
+            }
+
+            return null;
+        }
+
+        public Empleado Leer(string rif)
+        {
+            try
+            {
+                Conexion.Open();
+
+                string Comando = "SELECT * FROM empleado WHERE em_rif=@rif";
+                Script = new NpgsqlCommand(Comando, Conexion);
+
+                Script.Parameters.AddWithValue("rif", rif);
                 Reader = Script.ExecuteReader();
 
                 if (Reader.Read())
