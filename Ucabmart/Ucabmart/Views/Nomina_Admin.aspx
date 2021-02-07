@@ -40,6 +40,7 @@
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/Views/Productos_Admin.aspx">Productos</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/Views/Proveedores.aspx">Proveedores</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/Views/Nomina_Admin.aspx">Nomina</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/Views/Role/Role_Admin.aspx">Roles</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/Views/Inicio_Admin.aspx">Inicio</a></li>
                     
                         <li class="nav-item dropdown no-arrow">
@@ -129,7 +130,7 @@
                     </div>
                     <div class="col-lg-4 col-sm-6 mb-4" style="box-sizing: initial">
                         <div class="categorias-item">
-                            <a class="categorias-link" href="#">
+                            <a class="categorias-link" href="Employee/ModificarEmpleado.aspx">
                                 <div class="categorias-hover">
                                     <div class="categorias-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
