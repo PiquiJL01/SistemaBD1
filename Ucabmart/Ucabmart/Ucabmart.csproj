@@ -143,7 +143,9 @@
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -1968,7 +1970,7 @@
     <Content Include="Views\RegistrarClienteNatural.aspx" />
     <Content Include="Views\RegistroProveedores.aspx" />
     <Content Include="Views\Reports\AddToReportsPages.txt" />
-    <Content Include="Views\Reports\WebForm1.aspx" />
+    <Content Include="Views\Reports\WebForm2.aspx" />
     <Content Include="Views\Tiendas-Admin.aspx" />
     <Content Include="Views\RegistrarJuridica.aspx" />
     <Content Include="Views\Tiendas.aspx" />
@@ -2045,7 +2047,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="Reports\DataSet1.Designer.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="Views\AgregarCliente.aspx.cs">
       <DependentUpon>AgregarCliente.aspx</DependentUpon>
@@ -2222,12 +2223,20 @@
     <Compile Include="Views\RegistroProveedores.aspx.designer.cs">
       <DependentUpon>RegistroProveedores.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Views\Reports\WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="Views\Reports\TestDataSet.cs">
+      <DependentUpon>TestDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\TestDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TestDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\WebForm2.aspx.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Views\Reports\WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="Views\Reports\WebForm2.aspx.designer.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Tiendas-Admin.aspx.cs">
       <DependentUpon>Tiendas-Admin.aspx</DependentUpon>
@@ -2503,12 +2512,16 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <Content Include="Reports\DataSet1.xsc">
-      <DependentUpon>DataSet1.xsd</DependentUpon>
+    <Content Include="Views\Reports\TestDataSet.xsc">
+      <DependentUpon>TestDataSet.xsd</DependentUpon>
     </Content>
-    <None Include="Reports\DataSet1.xsd" />
-    <Content Include="Reports\DataSet1.xss">
-      <DependentUpon>DataSet1.xsd</DependentUpon>
+    <None Include="Views\Reports\TestDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TestDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Views\Reports\TestDataSet.xss">
+      <DependentUpon>TestDataSet.xsd</DependentUpon>
     </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -2523,7 +2536,7 @@
     <Folder Include="Views\Admin\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Reports\Report1.rdlc" />
+    <EmbeddedResource Include="Views\Reports\Report1.rdlc" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
