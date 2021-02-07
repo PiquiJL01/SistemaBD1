@@ -10,34 +10,13 @@ namespace Ucabmart.Engine
     {
         #region Atributos para establecer la conexion
         private const string ConnectionString = "Host = labs-dbservices01.ucab.edu.ve; User Id = grupo5bd1; Password = 123456789; Database = grupo5db"; //conexion a la bd del proyecto
-        //private const string ConnectionString = "Host = labs-dbservices01.ucab.edu.ve; User Id = jlgil18; Password = inmunda01; Database = testconnection "; //conexion de pruebas
         private NpgsqlCommand Script;
-        public NpgsqlDataReader Reader;
         private NpgsqlConnection Conexion = new NpgsqlConnection(ConnectionString);
         #endregion
 
         public MuchosAMuchos()
         {
         }
-
-        /// <summary>
-        /// Usa el <c>Reader</c> para hacer una lectura
-        /// </summary>
-        /// <param name="posicion">Poscicion en la tabla, inicio en 0</param>
-        /// <returns>Dato de tipo <c>int</c></returns>
-        public int ReadInt(int posicion)
-        {
-            try
-            {
-                return Reader.GetInt32(posicion);
-            }
-            catch (Exception e)
-            {
-                return 0;
-            }
-        }
-
-
 
         #region Insertar
         public void Insertar(Empleado empleado, Horario horario)
@@ -57,7 +36,6 @@ namespace Ucabmart.Engine
 
             CerrarConexion();
         }
-
 
         public void Insertar(Empleado empleado, Beneficio beneficio, DateTime fecha = new DateTime(), float monto = 0)
         {
