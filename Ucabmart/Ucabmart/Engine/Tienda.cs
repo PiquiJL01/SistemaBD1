@@ -93,15 +93,19 @@ namespace Ucabmart.Engine
                 {
                     return new Tienda(ReadInt(0), ReadString(1), ReadString(2), ReadInt(3));
                 }
-                
+
+                Conexion.Close();
             }
             catch (Exception e)
             {
-                throw new Exception("Ha ocurrido un error en la base de datos", e);
-            }
-            finally
-            {
-                Conexion.Close();
+                try
+                {
+                    Conexion.Close();
+                }
+                catch (Exception f)
+                {
+
+                }
             }
 
             return null;

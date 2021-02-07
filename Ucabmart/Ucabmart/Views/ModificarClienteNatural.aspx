@@ -39,7 +39,6 @@
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/Views/Productos_Admin.aspx">Productos</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/Views/Proveedores.aspx">Proveedores</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/Views/Nomina_Admin.aspx">Nomina</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/Views/Role/Role_Admin.aspx">Roles</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/Views/Inicio_Admin.aspx">Inicio</a></li>
                     
                         <li class="nav-item dropdown no-arrow">
@@ -127,9 +126,8 @@
                                  <%--<Campo de texto del nombre >--%>
                                 <br/>
                                  <div class="Contacto" style="margin-bottom:40px">
-                                 <asp:Label ID="Label7" runat="server" Text="Nombre - Apellido"></asp:Label>
+                                 <asp:Label ID="Label7" runat="server" Text="Nombre y Apellido"></asp:Label>
                                  </div>
-
                                  <div class="form-group row">
                                     <div class="col-sm-6">
                                          <asp:Label ID="Nombre" runat="server" Text="1er Nombre"></asp:Label>

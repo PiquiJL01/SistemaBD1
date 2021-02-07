@@ -26,7 +26,7 @@ namespace Ucabmart.Engine
             Descripcion = descripcion;
         }
 
-        public Beneficio(int codigo)
+        public Beneficio(int codigo = 0)
         {
             if (!(codigo == 0))
             {
@@ -44,10 +44,6 @@ namespace Ucabmart.Engine
                     Descripcion = null;
                 }
             }
-        }
-
-        public Beneficio()
-        {
         }
         #endregion
 
@@ -95,14 +91,20 @@ namespace Ucabmart.Engine
                 {
                     return new Beneficio(ReadInt(0), ReadString(1), ReadString(2));
                 }
+
+                Conexion.Close();
             }
             catch (Exception e)
             {
-                throw new Exception("Ha ocurrido un error en la base de datos", e);
-            }
-            finally
-            {
-                Conexion.Close();
+                try
+                {
+                    Conexion.Close();
+                }
+                catch (Exception f)
+                {
+
+                }
+                return null;
             }
 
             return null;
@@ -130,11 +132,15 @@ namespace Ucabmart.Engine
             }
             catch (Exception e)
             {
-                throw new Exception("Ha ocurrido un error en la base de datos", e);
-            }
-            finally
-            {
-                Conexion.Close();
+                try
+                {
+                    Conexion.Close();
+                }
+                catch (Exception f)
+                {
+
+                }
+                return null;
             }
 
             return lista;
@@ -157,14 +163,18 @@ namespace Ucabmart.Engine
 
                 Script.ExecuteNonQuery();
 
+                Conexion.Close();
             }
             catch (Exception e)
             {
-                throw new Exception("Ha ocurrido un error en la base de datos", e);
-            }
-            finally
-            {
-                Conexion.Close();
+                try
+                {
+                    Conexion.Close();
+                }
+                catch (Exception f)
+                {
+
+                }
             }
         }
 
@@ -182,15 +192,19 @@ namespace Ucabmart.Engine
                 Script.Prepare();
 
                 Script.ExecuteNonQuery();
-                
+
+                Conexion.Close();
             }
             catch (Exception e)
             {
-                throw new Exception("Ha ocurrido un error en la base de datos", e);
-            }
-            finally
-            {
-                Conexion.Close();
+                try
+                {
+                    Conexion.Close();
+                }
+                catch (Exception f)
+                {
+
+                }
             }
         }
         #endregion
@@ -214,38 +228,6 @@ namespace Ucabmart.Engine
 
             return lista;
 
-        }
-        #endregion
-
-        #region retorna los codigos de los beneficios del empleado
-        public List<int> codigoBeneficios(int codigoEmpleado)
-        {
-            List<int> listaBeneficios = new List<int>();
-
-            try
-            {
-                Conexion.Open();
-
-                string Comando = "SELECT beneficio_be_codigo FROM em_be WHERE empleado_em_codigo=@codigoEmpleado";
-                Script = new NpgsqlCommand(Comando, Conexion);
-
-                Script.Parameters.AddWithValue("codigoEmpleado", codigoEmpleado);
-                Reader = Script.ExecuteReader();
-
-                while (Reader.Read())
-                {
-                    listaBeneficios.Add(ReadInt(0));
-                }
-            }
-            catch (Exception e)
-            {
-                throw new Exception("Ha ocurrido un error en la base de datos", e);
-            }
-            finally
-            {
-                Conexion.Close();
-            }
-            return listaBeneficios;
         }
         #endregion
     }

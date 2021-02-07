@@ -538,7 +538,7 @@ namespace Ucabmart.Views
             }
             catch (Exception ex)
             {
-                Session["mensajeError"] = "Ha ocurrido un error al modificar el cliente juridico. " + ex;
+                Session["mensajeError"] = "Ha ocurrido un error al registrar la persona. " + ex;
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('NO DEBE HABER CAMPOS VACÍOS');", true);
             }
         }

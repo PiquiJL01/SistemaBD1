@@ -86,10 +86,6 @@ namespace Ucabmart.Engine
             Turno = turno;
             Dia = dia;
         }
-
-        public Horario()
-        {
-        }
         #endregion
 
         #region CRUDs
@@ -117,7 +113,11 @@ namespace Ucabmart.Engine
             }
             finally
             {
-                Conexion.Close();               
+                try
+                {
+                    Conexion.Close();
+                }
+                finally { }
             }
         }
 
@@ -140,7 +140,11 @@ namespace Ucabmart.Engine
             }
             finally
             {
-                Conexion.Close();                
+                try
+                {
+                    Conexion.Close();
+                }
+                finally { }
             }
 
             return null;
