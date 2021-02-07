@@ -72,15 +72,27 @@ namespace Ucabmart.Views.Employee
 
 
                 //CARGO
-                MuchosAMuchos cargo_emple = new MuchosAMuchos();
+
+                //ACTUALIZAR CAGO VIEJO
+                MuchosAMuchos emple_muchos= new MuchosAMuchos();
                 Cargo cargo = empleado.CargoActual();
+                emple_muchos.Actualizar(empleado, cargo);
+
+                //COLOCAR NUEVO CARGO
+                Cargo NuevoCargo = new Cargo();
+                int CodNuevoCargo = NuevoCargo.Get_CodCargo(Cargos.SelectedValue);
+                emple_muchos.Insertar(empleado, new Cargo(CodNuevoCargo));
 
 
+                //HORARIOS
+                this.Delete_Horarios(empleado);
+                this.AssignHorarios(empleado);
 
+                //BENEFICIOS
+                this.Delete_Beneficios(empleado);
+                this.AssignBeneficios(empleado);
 
-
-
-
+                //TELEFONOS
                 Telefono telefono = new Telefono();
                 List<Telefono> telefonos = telefono.Leer(empleado);
 
@@ -100,6 +112,7 @@ namespace Ucabmart.Views.Employee
                     telefono2.Insertar();
                 }
 
+                empleado.Actualizar();
 
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('El cliente se ha sido modificado exitosamente');" +
                                         "window.location ='Nomina_Admin';", true);
@@ -255,6 +268,74 @@ namespace Ucabmart.Views.Employee
                 }
             }
 
+
+        }
+
+        protected void AssignHorarios(Empleado empleado)
+        {
+
+            List<DayOfWeek> daysOfWeeks = Get_Days();
+            MuchosAMuchos Hora_Emple = new MuchosAMuchos();
+
+            foreach (DayOfWeek item in daysOfWeeks)
+            {
+                Horario horario = new Horario(TimeSpan.Parse(HoraInicio.Text), TimeSpan.Parse(HoraFin.Text), Get_Turno(), item);
+                horario.Insertar();
+                Hora_Emple.Insertar(empleado, horario);
+            }
+
+
+        }
+
+        public void Delete_Horarios(Empleado empleado) {
+
+
+            List<Horario> horarios = empleado.Horarios();
+            MuchosAMuchos em_ho = new MuchosAMuchos();
+
+            foreach (Horario horario in horarios)
+            {
+                em_ho.Eliminar(empleado, horario);
+                horario.Eliminar();
+            }
+            
+        }
+
+        protected void AssignBeneficios(Empleado empleado)
+        {
+
+            MuchosAMuchos Bene_Emple = new MuchosAMuchos();
+
+            List<String> elements = new List<string>();
+
+            foreach (ListItem item in Options.Items)
+            {
+                if (item.Selected)
+                {
+                    elements.Add(item.Value);
+                }
+            }
+
+            Beneficio beneficio = new Beneficio();
+            List<int> CodigosBeneficios = beneficio.BeneficiosCod(elements);
+
+            foreach (int codigo in CodigosBeneficios)
+            {
+                Bene_Emple.Insertar(empleado, new Beneficio(codigo));
+            }
+
+        }
+
+        public void Delete_Beneficios(Empleado empleado)
+        {
+
+            List<Beneficio> beneficios = empleado.Beneficios();
+            MuchosAMuchos em_be = new MuchosAMuchos();
+
+            foreach (Beneficio beneficio in beneficios)
+            {
+                em_be.Eliminar(empleado,beneficio);
+            }
 
         }
 
@@ -560,22 +641,6 @@ namespace Ucabmart.Views.Employee
                 if (codigoMunicipio == item.CodigoUbicacion)
                     dplParroquia.Items.Add(item.Nombre);
             }
-        }
-
-        protected void AssignHorarios(Empleado empleado)
-        {
-
-            List<DayOfWeek> daysOfWeeks = Get_Days();
-            MuchosAMuchos Hora_Emple = new MuchosAMuchos();
-
-            foreach (DayOfWeek item in daysOfWeeks)
-            {
-                Horario horario = new Horario(TimeSpan.Parse(HoraInicio.Text), TimeSpan.Parse(HoraFin.Text), Get_Turno(), item);
-                horario.Insertar();
-                Hora_Emple.Insertar(empleado, horario);
-            }
-
-
         }
 
         protected void Add_Items()
