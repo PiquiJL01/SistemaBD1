@@ -129,7 +129,7 @@ namespace Ucabmart.Engine
         {
             if (AbrirConexion())
             {
-                string Commando = "DELETE FROM em_ho WHERE (empleado_em_codigo = @codigo1) AND (horario_ho_codigo = @codigo2";
+                string Commando = "DELETE FROM em_ho WHERE (empleado_em_codigo = @codigo1) AND (horario_ho_codigo = @codigo2)";
                 Script = new NpgsqlCommand(Commando, Conexion);
 
                 Script.Parameters.AddWithValue("codigo1", empleado.Codigo);
