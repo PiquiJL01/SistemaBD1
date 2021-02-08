@@ -28,7 +28,7 @@ namespace Ucabmart.Views.Employee
                     Telefono telefono = new Telefono();
                     List<Telefono> listaTelefono = telefono.Leer(empleado);
                     CorreoElectronico correo = new CorreoElectronico(empleado.CodigoCorreoElectronico);
-                    correo.Eliminar();
+                    
                     foreach (Telefono numero in listaTelefono)
                     {
                         numero.Eliminar();
@@ -59,7 +59,7 @@ namespace Ucabmart.Views.Employee
                     empleadoM_M.Eliminar(empleado, nombreCargo);
 
                     empleado.Eliminar();
-                    
+                    correo.Eliminar();
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('El empleado ha sido eliminada');" +
                                 "window.location ='../Nomina_Admin.aspx';", true);
                 }
@@ -69,7 +69,6 @@ namespace Ucabmart.Views.Employee
             }
             catch (Exception ex)
             {
-                Session["mensajeError"] = "Ha ocurrido un error con la base de datos. " + ex;
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('Hubo un error al eliminar');", true);
             }
         }

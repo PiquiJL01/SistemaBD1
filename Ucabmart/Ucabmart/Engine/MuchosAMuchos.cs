@@ -248,7 +248,7 @@ namespace Ucabmart.Engine
                 string Comando = "SELECT * FROM em_ca WHERE empleado_em_codigo=@codigo";
                 Script = new NpgsqlCommand(Comando, Conexion);
 
-                Script.Parameters.AddWithValue("codigo", codigo);
+                Script.Parameters.AddWithValue("codigo", codigo.Codigo);
                 Reader = Script.ExecuteReader();
 
                 if (Reader.Read())

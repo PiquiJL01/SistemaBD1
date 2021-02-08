@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Eliminar Empleado.aspx.cs" Inherits="Ucabmart.Views.Employee.Eliminar_Empleado" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="EliminarEmpleado.aspx.cs" Inherits="Ucabmart.Views.Employee.EliminarEmpleado" %>
 
 <!DOCTYPE html>
 <html lang="es">

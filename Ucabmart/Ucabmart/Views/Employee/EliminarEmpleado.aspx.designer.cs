@@ -7,13 +7,11 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace Ucabmart.Views.Employee
-{
-
-
-    public partial class EliminarEmpleado
-    {
-
+namespace Ucabmart.Views.Employee {
+    
+    
+    public partial class EliminarEmpleado {
+        
         /// <summary>
         /// Control form1.
         /// </summary>
@@ -22,7 +20,7 @@ namespace Ucabmart.Views.Employee
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-
+        
         /// <summary>
         /// Control txtEliminar.
         /// </summary>
@@ -31,7 +29,7 @@ namespace Ucabmart.Views.Employee
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtEliminar;
-
+        
         /// <summary>
         /// Control btnEliminar.
         /// </summary>
