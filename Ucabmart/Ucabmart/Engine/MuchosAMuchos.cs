@@ -66,43 +66,53 @@ namespace Ucabmart.Engine
 
         public void Insertar(Empleado empleado, Cargo cargo, float sueldo = 0, DateTime fechainicio = new DateTime(), DateTime fechaFin = new DateTime())
         {
-            if (fechainicio.Year == 0001)
+
+            try
             {
-                fechainicio = DateTime.Today;
+                if (fechainicio.Year == 0001)
+                {
+                    fechainicio = DateTime.Today;
+                }
+
+
+                if (AbrirConexion())
+                {
+                    if (fechaFin.Year == 0001)
+                    {
+                        string Comando = "INSERT INTO em_ca (empleado_em_codigo, cargo_ca_codigo, sueldo, fecha_inicio) " +
+                            "VALUES (@empleado, @cargo, @sueldo, @fechainicio)";
+                        Script = new NpgsqlCommand(Comando, Conexion);
+
+                        Script.Parameters.AddWithValue("empleado", empleado.Codigo);
+                        Script.Parameters.AddWithValue("cargo", cargo.Codigo);
+                        Script.Parameters.AddWithValue("sueldo", sueldo);
+                        Script.Parameters.AddWithValue("fechainicio", fechainicio);
+                    }
+                    else
+                    {
+                        string Comando = "INSERT INTO em_ca (empleado_em_codigo, cargo_ca_codigo, sueldo, fecha_inicio, fecha_fin) " +
+                            "VALUES (@empleado, @cargo, @sueldo, @fechainicio, @fechafin)";
+                        Script = new NpgsqlCommand(Comando, Conexion);
+
+                        Script.Parameters.AddWithValue("empleado", empleado.Codigo);
+                        Script.Parameters.AddWithValue("cargo", cargo.Codigo);
+                        Script.Parameters.AddWithValue("sueldo", sueldo);
+                        Script.Parameters.AddWithValue("fechainicio", fechainicio);
+                        Script.Parameters.AddWithValue("fechafin", fechaFin);
+                    }
+
+                    Script.Prepare();
+
+                    Script.ExecuteNonQuery();
+                }
+                CerrarConexion();
+            }
+            catch (Exception ex)
+            {
+
             }
 
 
-            if (AbrirConexion())
-            {
-                if (fechaFin.Year == 0001)
-                {
-                    string Comando = "INSERT INTO em_ca (empleado_em_codigo, cargo_ca_codigo, sueldo, fecha_inicio) " +
-                        "VALUES (@empleado, @cargo, @sueldo, @fechainicio)";
-                    Script = new NpgsqlCommand(Comando, Conexion);
-
-                    Script.Parameters.AddWithValue("empleado", empleado.Codigo);
-                    Script.Parameters.AddWithValue("cargo", cargo.Codigo);
-                    Script.Parameters.AddWithValue("sueldo", sueldo);
-                    Script.Parameters.AddWithValue("fechainicio", fechainicio);
-                }
-                else
-                {
-                    string Comando = "INSERT INTO em_ca (empleado_em_codigo, cargo_ca_codigo, sueldo, fecha_inicio, fecha_fin) " +
-                        "VALUES (@empleado, @cargo, @sueldo, @fechainicio, @fechafin)";
-                    Script = new NpgsqlCommand(Comando, Conexion);
-
-                    Script.Parameters.AddWithValue("empleado", empleado.Codigo);
-                    Script.Parameters.AddWithValue("cargo", cargo.Codigo);
-                    Script.Parameters.AddWithValue("sueldo", sueldo);
-                    Script.Parameters.AddWithValue("fechainicio", fechainicio);
-                    Script.Parameters.AddWithValue("fechafin", fechaFin);
-                }
-
-                Script.Prepare();
-
-                Script.ExecuteNonQuery();
-            }
-            CerrarConexion();
         }
 
         /* Modelo para Insertar en BD una entidad Muchos a Muchos
@@ -128,20 +138,28 @@ namespace Ucabmart.Engine
         #region Eliminar
         public void Eliminar(Empleado empleado, Horario horario)
         {
-            if (AbrirConexion())
+            try
             {
-                string Commando = "DELETE FROM em_ho WHERE (empleado_em_codigo = @codigo1) AND (horario_ho_codigo = @codigo2)";
-                Script = new NpgsqlCommand(Commando, Conexion);
+                if (AbrirConexion())
+                {
+                    string Commando = "DELETE FROM em_ho WHERE (empleado_em_codigo = @codigo1) AND (horario_ho_codigo = @codigo2)";
+                    Script = new NpgsqlCommand(Commando, Conexion);
 
-                Script.Parameters.AddWithValue("codigo1", empleado.Codigo);
-                Script.Parameters.AddWithValue("codigo2", horario.Codigo);
+                    Script.Parameters.AddWithValue("codigo1", empleado.Codigo);
+                    Script.Parameters.AddWithValue("codigo2", horario.Codigo);
 
-                Script.Prepare();
+                    Script.Prepare();
 
-                Script.ExecuteNonQuery();
+                    Script.ExecuteNonQuery();
+                }
+
+                CerrarConexion();
+            }
+            catch (Exception ex)
+            {
+               
             }
 
-            CerrarConexion();
         }
 
         public void Eliminar(Empleado empleado, Beneficio beneficio)
