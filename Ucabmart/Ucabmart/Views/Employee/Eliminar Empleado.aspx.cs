@@ -25,21 +25,43 @@ namespace Ucabmart.Views.Employee
 
                 if (empleado != null)
                 {
-                    Natural personaNatural = new Natural(txtEliminar.Text);
                     Telefono telefono = new Telefono();
                     List<Telefono> listaTelefono = telefono.Leer(empleado);
                     CorreoElectronico correo = new CorreoElectronico(empleado.CodigoCorreoElectronico);
-
+                    correo.Eliminar();
                     foreach (Telefono numero in listaTelefono)
                     {
                         numero.Eliminar();
                     }
-                    personaNatural.Eliminar();
-                    clienteNatural.Eliminar();
-                    correo.Eliminar();
+
+                    Beneficio beneficio = new Beneficio();
+                    List<int> listaBeneficios = beneficio.codigoBeneficios(empleado.Codigo);
+                    MuchosAMuchos empleadoM_M = new MuchosAMuchos();
+
+                    foreach (int codigoBeneficios in listaBeneficios)
+                    {
+                        beneficio = beneficio.Leer(codigoBeneficios);
+                        empleadoM_M.Eliminar(empleado, beneficio);
+                    }
+
+                    Horario horario = new Horario();
+                    List<int> listaHorario = horario.codHorario(empleado);
+                   
+                    foreach (int codigoHorario in listaHorario)
+                    {
+                        horario = horario.Leer(codigoHorario);
+                        empleadoM_M.Eliminar(empleado, horario);
+                        horario.Eliminar();
+                    }
+
+                    int codigoCargo = empleadoM_M.BuscarEnCargo(empleado);
+                    Cargo nombreCargo = new Cargo(codigoCargo);
+                    empleadoM_M.Eliminar(empleado, nombreCargo);
+
+                    empleado.Eliminar();
 
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('El empleado ha sido eliminada');" +
-                                "window.location ='Clientes_Admin.aspx';", true);
+                                "window.location ='../Nomina_Admin.aspx';", true);
                 }
                 else
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('El empleado no existe');", true);
@@ -48,7 +70,7 @@ namespace Ucabmart.Views.Employee
             catch (Exception ex)
             {
                 Session["mensajeError"] = "Ha ocurrido un error con la base de datos. " + ex;
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('No hay conexión con la base de datos');", true);
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('Hubo un error al eliminar');", true);
             }
         }
     }

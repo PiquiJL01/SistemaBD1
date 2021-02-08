@@ -358,8 +358,6 @@ namespace Ucabmart.Engine
 
                     listaTelefono.Add(telefono);
                 }
-
-                Conexion.Close();
             }
             catch (Exception e)
             {

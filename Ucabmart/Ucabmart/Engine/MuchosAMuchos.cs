@@ -11,6 +11,7 @@ namespace Ucabmart.Engine
         #region Atributos para establecer la conexion
         private const string ConnectionString = "Host = labs-dbservices01.ucab.edu.ve; User Id = grupo5bd1; Password = 123456789; Database = grupo5db"; //conexion a la bd del proyecto
         private NpgsqlCommand Script;
+        public NpgsqlDataReader Reader;
         private NpgsqlConnection Conexion = new NpgsqlConnection(ConnectionString);
         #endregion
 
@@ -129,7 +130,7 @@ namespace Ucabmart.Engine
         {
             if (AbrirConexion())
             {
-                string Commando = "DELETE FROM em_ho WHERE (empleado_em_codigo = @codigo1) AND (horario_ho_codigo = @codigo2";
+                string Commando = "DELETE FROM em_ho WHERE (empleado_em_codigo = @codigo1) AND (horario_ho_codigo = @codigo2)";
                 Script = new NpgsqlCommand(Commando, Conexion);
 
                 Script.Parameters.AddWithValue("codigo1", empleado.Codigo);
@@ -145,28 +146,39 @@ namespace Ucabmart.Engine
 
         public void Eliminar(Empleado empleado, Beneficio beneficio)
         {
-            if (AbrirConexion())
+            try
             {
-                string Commando = "DELETE FROM em_be " +
-                    "WHERE (empleado_em_codigo = @codigo1) AND (beneficio_be_codigo = @codigo2)";
-                Script = new NpgsqlCommand(Commando, Conexion);
+                if (AbrirConexion())
+                {
+                    string Commando = "DELETE FROM em_be " +
+                        "WHERE (empleado_em_codigo = @codigo1) AND (beneficio_be_codigo = @codigo2)";
+                    Script = new NpgsqlCommand(Commando, Conexion);
 
-                Script.Parameters.AddWithValue("codigo1", empleado.Codigo);
-                Script.Parameters.AddWithValue("codigo2", beneficio.Codigo);
+                    Script.Parameters.AddWithValue("codigo1", empleado.Codigo);
+                    Script.Parameters.AddWithValue("codigo2", beneficio.Codigo);
 
-                Script.Prepare();
+                    Script.Prepare();
 
-                Script.ExecuteNonQuery();
+                    Script.ExecuteNonQuery();
+                }
             }
-            CerrarConexion();
+            catch (Exception e)
+            {
+                throw new Exception("Ha ocurrido un error en la base de datos", e);
+            }
+            finally
+            {
+                CerrarConexion();
+            }
+            
         }
 
         public void Eliminar(Empleado empleado, Cargo cargo)
         {
             if (AbrirConexion())
             {
-                string Commando = "DELETE FROM em_be " +
-                    "WHERE (empleado_em_codigo = @codigo1) AND (beneficio_be_codigo = @codigo2)";
+                string Commando = "DELETE FROM em_ca " +
+                    "WHERE (empleado_em_codigo = @codigo1) AND (cargo_ca_codigo = @codigo2)";
                 Script = new NpgsqlCommand(Commando, Conexion);
 
                 Script.Parameters.AddWithValue("codigo1", empleado.Codigo);
@@ -226,6 +238,37 @@ namespace Ucabmart.Engine
             CerrarConexion();
         }
         #endregion
+        //devuelve el codigo del cargo donde trabaja
+        public int BuscarEnCargo(Empleado codigo)
+        {
+            try
+            {
+                Conexion.Open();
+
+                string Comando = "SELECT * FROM em_ca WHERE empleado_em_codigo=@codigo";
+                Script = new NpgsqlCommand(Comando, Conexion);
+
+                Script.Parameters.AddWithValue("codigo", codigo);
+                Reader = Script.ExecuteReader();
+
+                if (Reader.Read())
+                {
+                    return ReadInt(1);
+                }
+
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Ha ocurrido un error en la base de datos", e);
+            }
+            finally
+            {
+                Conexion.Close();
+            }
+
+            return 0;
+        }
+
 
         #region Manejo de Conexion
         private bool AbrirConexion()
@@ -252,6 +295,25 @@ namespace Ucabmart.Engine
             }
             finally { }
         }
+
+
+        /// <summary>
+        /// Usa el <c>Reader</c> para hacer una lectura
+        /// </summary>
+        /// <param name="posicion">Poscicion en la tabla, inicio en 0</param>
+        /// <returns>Dato de tipo <c>int</c></returns>
+        public int ReadInt(int posicion)
+        {
+            try
+            {
+                return Reader.GetInt32(posicion);
+            }
+            catch (Exception e)
+            {
+                return 0;
+            }
+        }
+
         #endregion
     }
 }

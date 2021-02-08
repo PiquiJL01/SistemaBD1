@@ -1920,6 +1920,7 @@
     <Content Include="Views\EliminarProveedor.aspx" />
     <Content Include="Views\Employee\Beneficios.aspx" />
     <Content Include="Views\Employee\ConsultarEmpleado.aspx" />
+    <Content Include="Views\Employee\Eliminar Empleado.aspx" />
     <Content Include="Views\Employee\ModificarEmpleado.aspx" />
     <Content Include="Views\Employee\RegistrarEmpleado.aspx" />
     <Content Include="Views\IniciarSesion.aspx" />
@@ -2089,6 +2090,13 @@
     </Compile>
     <Compile Include="Views\Employee\ConsultarEmpleado.aspx.designer.cs">
       <DependentUpon>ConsultarEmpleado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Employee\Eliminar Empleado.aspx.cs">
+      <DependentUpon>Eliminar Empleado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Employee\Eliminar Empleado.aspx.designer.cs">
+      <DependentUpon>Eliminar Empleado.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Employee\ModificarEmpleado.aspx.cs">
       <DependentUpon>ModificarEmpleado.aspx</DependentUpon>
