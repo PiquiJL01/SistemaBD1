@@ -601,6 +601,16 @@ namespace Ucabmart.Engine
             }
             return null;
         }
+
+        public Tuple<float, DateTime, DateTime> AtributosCargoActual()
+        {
+            return AtributosCargos()[CargoActual().Codigo];
+        }
+
+        public float SueldoActual()
+        {
+            return AtributosCargoActual().Item1;
+        }
         #endregion
 
         #region Otros Metodos
