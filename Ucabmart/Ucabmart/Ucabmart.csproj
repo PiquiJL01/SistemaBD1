@@ -225,6 +225,7 @@
     <Content Include="Content\css\Productos.css" />
     <Content Include="Content\css\Nomina.css" />
     <Content Include="Content\css\RegistarEmpleado.css" />
+    <Content Include="Content\css\AsignarRol.css" />
     <Content Include="Content\css\RegistrarProducto.css" />
     <Content Include="Content\css\RegistrarClienteJuridico.css" />
     <Content Include="Content\css\ModificarCliente.css" />
@@ -1936,6 +1937,7 @@
     <Content Include="Views\RegistrarClienteJuridico.aspx" />
     <Content Include="Views\RegistrarClienteNatural.aspx" />
     <Content Include="Views\RegistroProveedores.aspx" />
+    <Content Include="Views\Role\AsignarRol.aspx" />
     <Content Include="Views\Role\Role_Admin.aspx" />
     <Content Include="Views\Tiendas-Admin.aspx" />
     <Content Include="Views\RegistrarJuridica.aspx" />
@@ -2202,6 +2204,13 @@
     </Compile>
     <Compile Include="Views\RegistroProveedores.aspx.designer.cs">
       <DependentUpon>RegistroProveedores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Role\AsignarRol.aspx.cs">
+      <DependentUpon>AsignarRol.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Role\AsignarRol.aspx.designer.cs">
+      <DependentUpon>AsignarRol.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Role\Role_Admin.aspx.cs">
       <DependentUpon>Role_Admin.aspx</DependentUpon>

@@ -1,5 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Role_Admin.aspx.cs" Inherits="Ucabmart.Views.Role.Role_Admin" %>
-
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AsignarRol.aspx.cs" Inherits="Ucabmart.Views.Role.AsignarRol" %>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -8,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Ucabmart</title>
+        <title>Ucabmart - Asignar Rol</title>
         <link rel="icon" type="image/x-icon" href="../../Content/assets/img/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
@@ -17,7 +16,7 @@
         <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="../../Content/css/Tiendas.css" rel="stylesheet" />
+        <link href="../../Content/css/AsignarRol.css" rel="stylesheet" />
     </head>
 
       <body id="page-top" class="bg-gradient-primary">
@@ -34,13 +33,13 @@
                    <!-- Topbar Search -->
                        
                     <ul class="navbar-nav text-uppercase ml-auto">
-                        <li class="nav-item"> <a class="nav-item"></a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/Views/Clientes_Admin.aspx">Clientes</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/Views/Tiendas-Admin.aspx">Tiendas</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/Views/Productos_Admin.aspx">Productos</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/Views/Proveedores.aspx">Proveedores</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/Views/Nomina_Admin.aspx">Nomina</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/Views/Role/Role_Admin.aspx">Roles</a></li>
+                        <li class="nav-item"> <a class="nav-item">      </a>     </li>
+                        <li ID="Clientes" class="nav-item" runat="server"><a class="nav-link js-scroll-trigger" href="/Views/Clientes_Admin.aspx">Clientes</a></li>
+                        <li ID="Tiendas" class="nav-item" runat="server"><a class="nav-link js-scroll-trigger" href="/Views/Tiendas-Admin.aspx">Tiendas</a></li>
+                        <li ID="Productos" class="nav-item" runat="server"><a class="nav-link js-scroll-trigger" href="/Views/Productos_Admin.aspx">Productos</a></li>
+                        <li ID="Proveedores" class="nav-item" runat="server"><a class="nav-link js-scroll-trigger" href="/Views/Proveedores.aspx">Proveedores</a></li>
+                        <li ID="Nomina" class="nav-item" runat="server"><a class="nav-link js-scroll-trigger" href="/Views/Nomina_Admin.aspx">Nomina</a></li>
+                        <li ID="RolesA" class="nav-item" runat="server"><a class="nav-link js-scroll-trigger" href="/Views/Role/Role_Admin.aspx">Roles</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/Views/Inicio_Admin.aspx">Inicio</a></li>
                     
                         <li class="nav-item dropdown no-arrow">
@@ -69,10 +68,9 @@
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout
-
                                 </a>
                             </div>
-                        </li>                    
+                        </li>
                     </ul>  
                 </div>
             </div>
@@ -92,77 +90,69 @@
               </ul>
           </div>
 
-          <header class="masthead" style="margin-top: -14px; margin-bottom: 40px;">
-          </header>
 
-       <!-- Options -->
-           <div class="option">Opciones</div>
+        <div class="container">
+        <div class="card o-hidden border-0 shadow-lg my-5">
+            <div class="card-body p-0">
+                <!-- Nested Row within Card Body -->
+                <div class="row">
+                    <div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
+                    <div class="col-lg-7">
+                        <div class="p-5">
+                            <div class="text-center">
+                                <h1 class="h4 text-gray-900 mb-4">Asignar Roles</h1>
+                            </div>
+                            <form id="form1" runat="server">
+                               
+                              <div class="form-group" style="width: 500px; margin-left: auto; margin-right: auto;">
+                                    <div class="input-group mb-3"><span class="input-group-prepend" style="box-shadow: 1.5px 1px 5px #443939;"><span class="input-group-text"><i class="fa fa-user"></i></span></span> 
 
-      <section class="page-section" id="categorias">
-         <div class="container cuadro" style="margin-top: -150px; padding-top: 80px;">
-            <div class="row" style="padding-left: 150px;">
-                    <div class="col-lg-4 col-sm-6 mb-4">
-                        <div class="categorias-item">
-                            <a class="categorias-link" href="/Views/Role/AsignarRol.aspx">
-                                <div class="categorias-hover">
-                                    <div class="categorias-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                        <asp:TextBox ID="BuscarCod" runat="server" type="text" name="name" data-parsley-trigger="change"  
+                                         placeholder="Ingrese el codigo del empleado..." autocomplete="off" class="form-control" style="padding:10px 50px 10px 50px; text-align: left;">
+                                        </asp:TextBox>
+
+                                        <asp:Button ID="btnBuscar" runat="server" class="btn btn-space btn-primary ml-1" Text="Buscar" OnClick="btnBuscar_Click" Width="87px" />
+                                        
+                                    </div>
                                 </div>
-                                <img class="img-fluid2" src="../../Content/assets/img/Provider/Add-Provider.jpg" alt="" />
-                            </a>
-                            <div class="categorias-caption" style="margin-right:-68px; background-color:#4e73dfd1">
-                                <div class="categorias-caption-heading">Asignar Rol</div>
-                                <div class="categorias-caption-subheading text-muted">Permite asignarle el rol a un usuario...</div>
-                            </div>
+
+                                <br />
+
+                                <div class="form-group">
+                                         <asp:Label ID="Nombre" runat="server" Text="Nombre"></asp:Label>
+                                        <asp:TextBox ID="TxtNombre" runat="server" type="name" name="name" data-parsley-trigger="change"  
+                                            placeholder="Ingrese el nombre del producto" autocomplete="off" class="form-control">
+                                        </asp:TextBox>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <asp:DropDownList ID="Roles" runat="server" style="padding-bottom: 15px; background-color: #0f136bd6;color: white; width: 520px;" class="input-group-prepend be-addon">
+                                        <asp:ListItem Value="">Rol</asp:ListItem>
+                                   </asp:DropDownList>
+                                    
+                                    <div style="margin-top: 20px;">
+                                        <asp:CheckBoxList ID="Permisos" runat="server" style="background-color:#4e73df; color: white; border-radius: 10px; padding: 10px 10px 10px 10px; margin-top: 40px;" class="input-group-prepend be-addon">
+                                 
+                                        </asp:CheckBoxList>
+                                    </div>
+
+                                </div>
+
+
+                                <hr>
+                                <asp:Button ID="Asignar" runat="server" class="btn btn-primary btn-user btn-block" Text="Guardar Cambios" OnClick="btnRegistrar_Click"/>
+                                          
+                            
+                            </form>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-sm-6 mb-4" style="margin-left: 120px">
-                        <div class="categorias-item">
-                            <a class="categorias-link" href="#">
-                                <div class="categorias-hover">
-                                    <div class="categorias-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid2" src="../../Content/assets/img/Provider/Consulting-Provider.jpg" alt="" />
-                            </a>
-                            <div class="categorias-caption" style="margin-right:-69px; background-color:#4e73dfd1">
-                                <div class="categorias-caption-heading">Consultar Rol</div>
-                                <div class="categorias-caption-subheading text-muted">Permite revisar los roles de los usuarios......</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 mb-4" style="box-sizing: initial">
-                        <div class="categorias-item">
-                            <a class="categorias-link" href="#">
-                                <div class="categorias-hover">
-                                    <div class="categorias-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid2" src="../../Content/assets/img/Provider/Update-Provider.jpg" alt="" />
-                            </a>
-                            <div class="categorias-caption" style="margin-right:-44px; background-color:#4e73dfd1">
-                                <div class="categorias-caption-heading">Modificar Rol</div>
-                                <div class="categorias-caption-subheading text-muted">Permite cambiar los roles de los usuarios......</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 mb-4" style="margin-left: 100px">
-                        <div class="categorias-item">
-                            <a class="categorias-link" href="#">
-                                <div class="categorias-hover">
-                                    <div class="categorias-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid2" src="../../Content/assets/img/Provider/Delete-Provider.jpg" alt="" />
-                            </a>
-                            <div class="categorias-caption" style="margin-right:-68px; background-color:#4e73dfd1">
-                                <div class="categorias-caption-heading">Eliminar Rol</div>
-                                <div class="categorias-caption-subheading text-muted">Permite eliminar los roles de los usuarios......</div>
-                            </div>
-                        </div>
-                    </div>
+                </div>
             </div>
-          </div>
-        </section>
+        </div>
 
-           <br>
-           <br>
+    </div>
+
         <!-- Footer-->
         <footer class="footer py-4">
             <div class="container">
@@ -181,7 +171,7 @@
             </div>
         </footer>
 
-           <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+          <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
               aria-hidden="true">
               <div class="modal-dialog" role="document">
                   <div class="modal-content">
