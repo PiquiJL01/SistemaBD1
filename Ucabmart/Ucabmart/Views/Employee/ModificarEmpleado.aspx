@@ -301,9 +301,13 @@
 
                                     <asp:DropDownList ID="Cargos" runat="server" style="padding-bottom: 15px; background-color: #0f136bd6;color: white; width: 370px;" class="input-group-prepend be-addon">
                                    </asp:DropDownList>
-
-                                   <asp:DropDownList ID="Departamentos" runat="server" style="padding-bottom: 15px; margin-left: 400px; margin-top: -40px; background-color: #0f136bd6;color: white; width:420px;" class="input-group-prepend be-addon">
-                                   </asp:DropDownList>
+                                  
+                                   <div style="margin-left: 400px; margin-top: -62px;">
+                                     <asp:Label ID="Label17" runat="server" Text="Sueldo"></asp:Label>
+                                     <asp:TextBox ID="TextMonto" runat="server" type="number" name="name" data-parsley-trigger="change"  
+                                          placeholder="Ingrese el sueldo del cargo" autocomplete="off" class="form-control">
+                                     </asp:TextBox>
+                                  </div>
 
                                 </div>
 
@@ -313,13 +317,17 @@
                                    <asp:DropDownList ID="Tiendas" runat="server" style="padding-bottom: 15px; background-color: #0f136bd6;color: white; width: 370px;" class="input-group-prepend be-addon">
                                    </asp:DropDownList>
 
-                                   <div style="margin-left: 400px; margin-top: -60px;">
-                                     <asp:Label ID="Label18" runat="server" Text="Jefe"></asp:Label>
-                                     <asp:TextBox ID="Jefe" runat="server" type="text" name="name" data-parsley-trigger="change"  
-                                          placeholder="Ingrese el rif del Jefe" autocomplete="off" class="form-control">
-                                     </asp:TextBox>
-                                  </div>
+                                   <asp:DropDownList ID="Departamentos" runat="server" style="padding-bottom: 15px; margin-left: 400px; margin-top: -40px; background-color: #0f136bd6;color: white; width:420px;" class="input-group-prepend be-addon">
+                                   </asp:DropDownList>
 
+                                </div>
+
+                                <br />
+                                <div class="form-group">
+                                         <asp:Label ID="Label18" runat="server" Text="Jefe"></asp:Label>
+                                        <asp:TextBox ID="Jefe" runat="server" type="name" name="name" data-parsley-trigger="change"  
+                                            placeholder="Ingrese el rif del Jefe" autocomplete="off" class="form-control">
+                                        </asp:TextBox>
                                 </div>
 
 

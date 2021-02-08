@@ -81,7 +81,7 @@ namespace Ucabmart.Views.Employee
                 //COLOCAR NUEVO CARGO
                 Cargo NuevoCargo = new Cargo();
                 int CodNuevoCargo = NuevoCargo.Get_CodCargo(Cargos.SelectedValue);
-                emple_muchos.Insertar(empleado, new Cargo(CodNuevoCargo));
+                emple_muchos.Insertar(empleado, new Cargo(CodNuevoCargo),int.Parse(TextMonto.Text));
 
 
                 //HORARIOS
@@ -235,6 +235,7 @@ namespace Ucabmart.Views.Employee
             //CARGO
             Cargo cargo = empleado.CargoActual();
             Cargos.SelectedValue = cargo.Nombre;
+
 
             //Horarios
             List<Horario> horarios = empleado.Horarios();
@@ -693,6 +694,7 @@ namespace Ucabmart.Views.Employee
             txtRepetirContraseña.Enabled = enable;
 
             Cargos.Enabled = enable;
+            TextMonto.Enabled = enable;
             Departamentos.Enabled = enable;
             Tiendas.Enabled = enable;
             Jefe.Enabled = enable;
@@ -730,6 +732,7 @@ namespace Ucabmart.Views.Employee
             dplParroquia.CssClass = "input-group-prepend be-addon";
 
             Cargos.CssClass = "input-group-prepend be-addon";
+            TextMonto.CssClass = "form-control";
             Departamentos.CssClass = "input-group-prepend be-addon";
             Tiendas.CssClass = "input-group-prepend be-addon";
             Jefe.CssClass = "form-control";
