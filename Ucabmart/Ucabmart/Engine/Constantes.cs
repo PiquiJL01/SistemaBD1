@@ -1,5 +1,16 @@
 ﻿namespace Ucabmart.Engine
 {
+    public enum CodigoPermiso : int
+    {
+        nulo = 0,
+        Productos = 1,
+        Tienda = 2,
+        Nomina = 3,
+        Proveedores = 4,
+        Clientes = 5,
+        Roles = 6
+    }
+
     public enum NumeroTelefono
     {
         Pais,
