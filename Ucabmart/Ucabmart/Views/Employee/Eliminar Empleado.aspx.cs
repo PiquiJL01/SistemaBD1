@@ -59,7 +59,7 @@ namespace Ucabmart.Views.Employee
                     empleadoM_M.Eliminar(empleado, nombreCargo);
 
                     empleado.Eliminar();
-
+                    
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('El empleado ha sido eliminada');" +
                                 "window.location ='../Nomina_Admin.aspx';", true);
                 }
