@@ -570,7 +570,9 @@ namespace Ucabmart.Engine
 
             if (AbrirConexion())
             {
-                string Command = "SELECT cargo_ca_codigo, sueldo FROM em_ca WHERE empleado_em_codigo = @codigo";
+                string Command = "SELECT cargo_ca_codigo, sueldo, fecha_inicio, fecha_fin " +
+                    "FROM em_ca " +
+                    "WHERE empleado_em_codigo = @codigo";
                 NpgsqlCommand Script = new NpgsqlCommand(Command, Conexion);
 
                 Script.Parameters.AddWithValue("codigo", Codigo);
