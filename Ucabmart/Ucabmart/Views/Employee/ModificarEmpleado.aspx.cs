@@ -73,7 +73,7 @@ namespace Ucabmart.Views.Employee
 
                 //CARGO
 
-                //ACTUALIZAR CAGO VIEJO
+                //ACTUALIZAR CARGO VIEJO
                 MuchosAMuchos emple_muchos= new MuchosAMuchos();
                 Cargo cargo = empleado.CargoActual();
                 emple_muchos.Actualizar(empleado, cargo);
@@ -115,11 +115,10 @@ namespace Ucabmart.Views.Employee
                 empleado.Actualizar();
 
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('El cliente se ha sido modificado exitosamente');" +
-                                        "window.location ='Nomina_Admin';", true);
+                                        "window.location ='../Nomina_Admin.aspx';", true);
             }
             catch (Exception ex)
             {
-                Session["mensajeError"] = "Ha ocurrido un error al modificar el empleado. " + ex;
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('NO DEBE HABER CAMPOS VACÍOS');", true);
             }
 

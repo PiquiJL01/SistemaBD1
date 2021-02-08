@@ -105,12 +105,17 @@ namespace Ucabmart.Engine
 
                     Script.ExecuteNonQuery();
                 }
+                
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Ha ocurrido un error en la base de datos", e);
+            }
+            finally
+            {
                 CerrarConexion();
             }
-            catch (Exception ex)
-            {
 
-            }
 
 
         }

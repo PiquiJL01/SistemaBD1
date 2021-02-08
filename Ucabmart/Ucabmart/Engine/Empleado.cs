@@ -277,62 +277,72 @@ namespace Ucabmart.Engine
 
         public override void Actualizar()
         {
-            if(AbrirConexion())
-            { 
-                if (CodigoJefe == 0)
+            try
+            {
+                if (AbrirConexion())
                 {
-                    string Comando = "UPDATE empleado " +
-                        "SET em_rif = @rif, em_cedula = @cedula, em_1er_nombre = @nombre1, em_2do_nombre = @nombre2, " +
-                            "em_1er_apellido = @apellido1, em_2do_apellido = @apellido2, tienda_ti_codigo = @tienda, " +
-                            "departamento_de_codigo = @departamento, lugar_lu_codigo = @direccion, " +
-                            "correo_electronico_ce_codigo = @correo, em_password  = @password" +
-                        "WHERE em_codigo = @codigo";
-                    Script = new NpgsqlCommand(Comando, Conexion);
+                    if (CodigoJefe == 0)
+                    {
+                        string Comando = "UPDATE empleado " +
+                            "SET em_rif = @rif, em_cedula = @cedula, em_1er_nombre = @nombre1, em_2do_nombre = @nombre2, " +
+                                "em_1er_apellido = @apellido1, em_2do_apellido = @apellido2, tienda_ti_codigo = @tienda, " +
+                                "departamento_de_codigo = @departamento, lugar_lu_codigo = @direccion, " +
+                                "correo_electronico_ce_codigo = @correo, em_password = @password " +
+                            "WHERE em_codigo = @codigo";
+                        Script = new NpgsqlCommand(Comando, Conexion);
 
-                    Script.Parameters.AddWithValue("codigo", Codigo);
-                    Script.Parameters.AddWithValue("rif", RIF);
-                    Script.Parameters.AddWithValue("cedula", Cedula);
-                    Script.Parameters.AddWithValue("nombre1", Nombre1);
-                    Script.Parameters.AddWithValue("nombre2", Nombre2);
-                    Script.Parameters.AddWithValue("apellido1", Apellido1);
-                    Script.Parameters.AddWithValue("apellido2", Apellido2);
-                    Script.Parameters.AddWithValue("tienda", CodigoTienda);
-                    Script.Parameters.AddWithValue("departamento", CodigoDepartamento);
-                    Script.Parameters.AddWithValue("direccion", CodigoDireccion);
-                    Script.Parameters.AddWithValue("correo", CodigoCorreoElectronico);
-                    Script.Parameters.AddWithValue("password", Password);
+                        Script.Parameters.AddWithValue("codigo", Codigo);
+                        Script.Parameters.AddWithValue("rif", RIF);
+                        Script.Parameters.AddWithValue("cedula", Cedula);
+                        Script.Parameters.AddWithValue("nombre1", Nombre1);
+                        Script.Parameters.AddWithValue("nombre2", Nombre2);
+                        Script.Parameters.AddWithValue("apellido1", Apellido1);
+                        Script.Parameters.AddWithValue("apellido2", Apellido2);
+                        Script.Parameters.AddWithValue("tienda", CodigoTienda);
+                        Script.Parameters.AddWithValue("departamento", CodigoDepartamento);
+                        Script.Parameters.AddWithValue("direccion", CodigoDireccion);
+                        Script.Parameters.AddWithValue("correo", CodigoCorreoElectronico);
+                        Script.Parameters.AddWithValue("password", Password);
+                    }
+                    else
+                    {
+                        string Comando = "UPDATE empleado " +
+                            "SET em_rif = @rif, em_cedula = @cedula, em_1er_nombre = @nombre1, em_2do_nombre = @nombre2, " +
+                                "em_1er_apellido = @apellido1, em_2do_apellido = @apellido2, tienda_ti_codigo = @tienda, " +
+                                "departamento_de_codigo = @departamento, empleado_em_codigo = @jefe, lugar_lu_codigo = @direccion, " +
+                                "correo_electronico_ce_codigo = @correo, em_password = @password " +
+                            "WHERE em_codigo = @codigo";
+                        Script = new NpgsqlCommand(Comando, Conexion);
+
+                        Script.Parameters.AddWithValue("codigo", Codigo);
+                        Script.Parameters.AddWithValue("rif", RIF);
+                        Script.Parameters.AddWithValue("cedula", Cedula);
+                        Script.Parameters.AddWithValue("nombre1", Nombre1);
+                        Script.Parameters.AddWithValue("nombre2", Nombre2);
+                        Script.Parameters.AddWithValue("apellido1", Apellido1);
+                        Script.Parameters.AddWithValue("apellido2", Apellido2);
+                        Script.Parameters.AddWithValue("tienda", CodigoTienda);
+                        Script.Parameters.AddWithValue("departamento", CodigoDepartamento);
+                        Script.Parameters.AddWithValue("jefe", CodigoJefe);
+                        Script.Parameters.AddWithValue("direccion", CodigoDireccion);
+                        Script.Parameters.AddWithValue("correo", CodigoCorreoElectronico);
+                        Script.Parameters.AddWithValue("password", Password);
+                    }
+
+                    Script.Prepare();
+
+                    Script.ExecuteNonQuery();
                 }
-                else
-                {
-                    string Comando = "UPDATE empleado " +
-                        "SET em_rif = @rif, em_cedula = @cedula, em_1er_nombre = @nombre1, em_2do_nombre = @nombre2, " +
-                            "em_1er_apellido = @apellido1, em_2do_apellido = @apellido2, tienda_ti_codigo = @tienda, " +
-                            "departamento_de_codigo = @departamento, empleado_em_codigo = @jefe, lugar_lu_codigo = @direccion, " +
-                            "correo_electronico_ce_codigo = @correo, em_password  = @password" +
-                        "WHERE em_codigo = @codigo";
-                    Script = new NpgsqlCommand(Comando, Conexion);
-
-                    Script.Parameters.AddWithValue("codigo", Codigo);
-                    Script.Parameters.AddWithValue("rif", RIF);
-                    Script.Parameters.AddWithValue("cedula", Cedula);
-                    Script.Parameters.AddWithValue("nombre1", Nombre1);
-                    Script.Parameters.AddWithValue("nombre2", Nombre2);
-                    Script.Parameters.AddWithValue("apellido1", Apellido1);
-                    Script.Parameters.AddWithValue("apellido2", Apellido2);
-                    Script.Parameters.AddWithValue("tienda", CodigoTienda);
-                    Script.Parameters.AddWithValue("departamento", CodigoDepartamento);
-                    Script.Parameters.AddWithValue("jefe", CodigoJefe);
-                    Script.Parameters.AddWithValue("direccion", CodigoDireccion);
-                    Script.Parameters.AddWithValue("correo", CodigoCorreoElectronico);
-                    Script.Parameters.AddWithValue("password", Password);
-                }
-
-                Script.Prepare();
-
-                Script.ExecuteNonQuery();
             }
-
-            CerrarConexion();
+            catch (Exception e)
+            {
+                throw new Exception("Ha ocurrido un error en la base de datos", e);
+            }
+            finally
+            {
+                CerrarConexion();
+            }
+            
         }
 
         public override void Eliminar()
