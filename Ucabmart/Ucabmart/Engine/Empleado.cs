@@ -277,19 +277,19 @@ namespace Ucabmart.Engine
 
         public override void Actualizar()
         {
-            try
-            {
-                Conexion.Open();
-
+            if(AbrirConexion())
+            { 
                 if (CodigoJefe == 0)
                 {
-                    string Comando = "UPDATE empleado SET em_rif = @rif, em_cedula = @cedula, em_1er_nombre = @nombre1, em_2do_nombre = @nombre2, " +
-                    "em_1er_apellido = @apellido1, em_2do_apellido = @apellido2, tienda_ti_codigo = @tienda, " +
-                    "departamento_de_codigo = @departamento, lugar_lu_codigo = @direccion, " +
-                    "correo_electronico_ce_codigo = @correo, em_password  = @password" +
-                    "WHERE em_codigo = @codigo";
+                    string Comando = "UPDATE empleado " +
+                        "SET em_rif = @rif, em_cedula = @cedula, em_1er_nombre = @nombre1, em_2do_nombre = @nombre2, " +
+                            "em_1er_apellido = @apellido1, em_2do_apellido = @apellido2, tienda_ti_codigo = @tienda, " +
+                            "departamento_de_codigo = @departamento, lugar_lu_codigo = @direccion, " +
+                            "correo_electronico_ce_codigo = @correo, em_password  = @password" +
+                        "WHERE em_codigo = @codigo";
                     Script = new NpgsqlCommand(Comando, Conexion);
 
+                    Script.Parameters.AddWithValue("codigo", Codigo);
                     Script.Parameters.AddWithValue("rif", RIF);
                     Script.Parameters.AddWithValue("cedula", Cedula);
                     Script.Parameters.AddWithValue("nombre1", Nombre1);
@@ -304,13 +304,15 @@ namespace Ucabmart.Engine
                 }
                 else
                 {
-                    string Comando = "UPDATE empleado SET em_rif = @rif, em_cedula = @cedula, em_1er_nombre = @nombre1, em_2do_nombre = @nombre2, " +
-                    "em_1er_apellido = @apellido1, em_2do_apellido = @apellido2, tienda_ti_codigo = @tienda, " +
-                    "departamento_de_codigo = @departamento, empleado_em_codigo = @jefe, lugar_lu_codigo = @direccion, " +
-                    "correo_electronico_ce_codigo = @correo, em_password  = @password" +
-                    "WHERE em_codigo = @codigo";
+                    string Comando = "UPDATE empleado " +
+                        "SET em_rif = @rif, em_cedula = @cedula, em_1er_nombre = @nombre1, em_2do_nombre = @nombre2, " +
+                            "em_1er_apellido = @apellido1, em_2do_apellido = @apellido2, tienda_ti_codigo = @tienda, " +
+                            "departamento_de_codigo = @departamento, empleado_em_codigo = @jefe, lugar_lu_codigo = @direccion, " +
+                            "correo_electronico_ce_codigo = @correo, em_password  = @password" +
+                        "WHERE em_codigo = @codigo";
                     Script = new NpgsqlCommand(Comando, Conexion);
 
+                    Script.Parameters.AddWithValue("codigo", Codigo);
                     Script.Parameters.AddWithValue("rif", RIF);
                     Script.Parameters.AddWithValue("cedula", Cedula);
                     Script.Parameters.AddWithValue("nombre1", Nombre1);
@@ -328,16 +330,9 @@ namespace Ucabmart.Engine
                 Script.Prepare();
 
                 Script.ExecuteNonQuery();
+            }
 
-            }
-            catch (Exception e)
-            {
-                throw new Exception("Ha ocurrido un error en la base de datos", e);
-            }
-            finally
-            {
-                Conexion.Close();
-            }
+            CerrarConexion();
         }
 
         public override void Eliminar()
