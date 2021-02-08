@@ -1979,7 +1979,7 @@
     <Compile Include="Engine\ConexionBD.cs" />
     <Compile Include="Engine\Departamento.cs" />
     <Compile Include="Engine\Descuento.cs" />
-    <Compile Include="Engine\Dominios.cs" />
+    <Compile Include="Engine\Constantes.cs" />
     <Compile Include="Engine\Efectivo.cs" />
     <Compile Include="Engine\Empleado.cs" />
     <Compile Include="Engine\Estatus.cs" />

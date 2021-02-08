@@ -54,7 +54,7 @@ namespace Ucabmart.Views.Employee
                         horario.Eliminar();
                     }
 
-                    int codigoCargo = empleadoM_M.BuscarEnCargo(empleado);
+                    int codigoCargo = empleado.BuscarEnCargo();
                     Cargo nombreCargo = new Cargo(codigoCargo);
                     empleadoM_M.Eliminar(empleado, nombreCargo);
 

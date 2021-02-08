@@ -15,9 +15,7 @@ namespace Ucabmart.Engine
         private NpgsqlConnection Conexion = new NpgsqlConnection(ConnectionString);
         #endregion
 
-        public MuchosAMuchos()
-        {
-        }
+        public MuchosAMuchos() { }
 
         #region Insertar
         public void Insertar(Empleado empleado, Horario horario)
@@ -120,11 +118,57 @@ namespace Ucabmart.Engine
 
         }
 
+        public void Insertar(Rol rol, Permiso permiso)
+        {
+            try
+            {
+                Conexion.Open();
+
+                string Comando = "INSERT INTO pe_ro (permiso_pe_codigo, rol_ro_codigo) VALUES (@permiso, @rol)";
+                Script = new NpgsqlCommand(Comando, Conexion);
+
+                Script.Parameters.AddWithValue("rol", rol.Codigo);
+                Script.Parameters.AddWithValue("permiso", permiso.Codigo);
+
+                Script.Prepare();
+
+                Script.ExecuteNonQuery();
+            }
+            finally
+            {
+                CerrarConexion();
+            }
+        }
+
+        public void Insertar(Empleado empleado, Rol rol)
+        {
+            try
+            {
+                Conexion.Open();
+
+                string Comando = "INSERT INTO ro_em (empleado_em_codigo, rol_ro_codigo) VALUES (@empleado, @rol)";
+                Script = new NpgsqlCommand(Comando, Conexion);
+
+                Script.Parameters.AddWithValue("empleado", empleado.Codigo);
+                Script.Parameters.AddWithValue("rol", rol.Codigo);
+
+                Script.Prepare();
+
+                Script.ExecuteNonQuery();
+            }
+            finally
+            {
+                CerrarConexion();
+            }
+        }
+
         /* Modelo para Insertar en BD una entidad Muchos a Muchos
         public void Insertar(Tipo1 tipo1, Tipo2 tipo2)
         {
-            if(AbrirConexion())
+            try
             {
+                Conexion.Open();
+                
                 string Comando = "INSERT INTO tabla (codigo1, codigo2) VALUES (@codigo1, @codigo2)";
                 Script = new NpgsqlCommand(Comando, Conexion);
 
@@ -135,7 +179,10 @@ namespace Ucabmart.Engine
 
                 Script.ExecuteNonQuery();
             }
-            CerrarConexion();
+            finally
+            {
+                CerrarConexion();
+            }
         }
         */
         #endregion
@@ -214,6 +261,42 @@ namespace Ucabmart.Engine
             CerrarConexion();
         }
 
+        public void Eliminar(Permiso permiso, Rol rol)
+        {
+            if (AbrirConexion())
+            {
+                string Commando = "DELETE FROM pe_ro WHERE (permiso_pe_codigo = @permiso) AND (rol_ro_codigo= @rol)";
+                Script = new NpgsqlCommand(Commando, Conexion);
+
+                Script.Parameters.AddWithValue("permiso", permiso.Codigo);
+                Script.Parameters.AddWithValue("rol", rol.Codigo);
+
+                Script.Prepare();
+
+                Script.ExecuteNonQuery();
+            }
+
+            CerrarConexion();
+        }
+
+        public void Eliminar(Empleado empleado, Rol rol)
+        {
+            if (AbrirConexion())
+            {
+                string Commando = "DELETE FROM ro_em WHERE (empleado_em_codigo = @empleado) AND (rol_ro_codigo = @rol)";
+                Script = new NpgsqlCommand(Commando, Conexion);
+
+                Script.Parameters.AddWithValue("empleado", empleado.Codigo);
+                Script.Parameters.AddWithValue("rol", rol.Codigo);
+
+                Script.Prepare();
+
+                Script.ExecuteNonQuery();
+            }
+
+            CerrarConexion();
+        }
+
         /*Modelo Eliminar de BD Muchos a Muchos
         public void Eliminar(Tipo1 tipo1, Tipo2 tipo2)
         {
@@ -261,38 +344,7 @@ namespace Ucabmart.Engine
             CerrarConexion();
         }
         #endregion
-        //devuelve el codigo del cargo donde trabaja
-        public int BuscarEnCargo(Empleado codigo)
-        {
-            try
-            {
-                Conexion.Open();
-
-                string Comando = "SELECT * FROM em_ca WHERE empleado_em_codigo=@codigo";
-                Script = new NpgsqlCommand(Comando, Conexion);
-
-                Script.Parameters.AddWithValue("codigo", codigo.Codigo);
-                Reader = Script.ExecuteReader();
-
-                if (Reader.Read())
-                {
-                    return ReadInt(1);
-                }
-
-            }
-            catch (Exception e)
-            {
-                throw new Exception("Ha ocurrido un error en la base de datos", e);
-            }
-            finally
-            {
-                Conexion.Close();
-            }
-
-            return 0;
-        }
-
-
+        
         #region Manejo de Conexion
         private bool AbrirConexion()
         {
@@ -318,25 +370,6 @@ namespace Ucabmart.Engine
             }
             finally { }
         }
-
-
-        /// <summary>
-        /// Usa el <c>Reader</c> para hacer una lectura
-        /// </summary>
-        /// <param name="posicion">Poscicion en la tabla, inicio en 0</param>
-        /// <returns>Dato de tipo <c>int</c></returns>
-        public int ReadInt(int posicion)
-        {
-            try
-            {
-                return Reader.GetInt32(posicion);
-            }
-            catch (Exception e)
-            {
-                return 0;
-            }
-        }
-
         #endregion
     }
 }

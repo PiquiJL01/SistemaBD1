@@ -194,8 +194,10 @@ namespace Ucabmart.Engine
 
                 if (Reader.Read())
                 {
-                    return new Empleado(ReadInt(0), ReadString(1), ReadString(2), ReadString(3), ReadString(4), ReadString(5),
+                    Empleado empleado = new Empleado(ReadInt(0), ReadString(1), ReadString(2), ReadString(3), ReadString(4), ReadString(5),
                         ReadString(6), ReadInt(7), ReadInt(8), ReadInt(9), ReadInt(10), ReadInt(11), ReadString(12));
+                    CerrarConexion();
+                    return empleado;
                 }
 
             }
@@ -205,7 +207,7 @@ namespace Ucabmart.Engine
             }
             finally
             {
-                Conexion.Close();
+                CerrarConexion();
             }
 
             return null;
@@ -373,10 +375,6 @@ namespace Ucabmart.Engine
         #endregion
 
         #region Entidades Muchos a Muchos
-        /// <summary>
-        /// Comunicacion con la BD
-        /// </summary>
-        /// <returns>Lista de los beneficios del empleado</returns>
         public List<Beneficio> Beneficios()
         {
             List<Beneficio> beneficios = new List<Beneficio>();
@@ -400,11 +398,7 @@ namespace Ucabmart.Engine
             }
             finally
             {
-                try
-                {
-                    Conexion.Close();
-                }
-                finally { }
+                CerrarConexion();
             }
 
             foreach (int codigo in codigos)
@@ -415,10 +409,72 @@ namespace Ucabmart.Engine
             return beneficios;
         }
 
-        /// <summary>
-        /// Conexion con la BD
-        /// </summary>
-        /// <returns>Lista de horarios del empleado</returns>
+        public List<Rol> Roles()
+        {
+            List<Rol> roles = new List<Rol>();
+            List<int> codigos = new List<int>();
+
+            try
+            {
+                Conexion.Open();
+
+                string Command = "SELECT rol_ro_codigo FROM ro_em WHERE empleado_em_codigo = @codigo";
+                NpgsqlCommand Script = new NpgsqlCommand(Command, Conexion);
+
+                Script.Parameters.AddWithValue("codigo", Codigo);
+
+                Reader = Script.ExecuteReader();
+
+                while (Reader.Read())
+                {
+                    codigos.Add(ReadInt(0));
+                }
+            }
+            finally
+            {
+                CerrarConexion();
+            }
+
+            foreach (int codigo in codigos)
+            {
+                roles.Add(new Rol(codigo));
+            }
+
+            return roles;
+        }
+
+        public List<Permiso> Permisos()
+        {
+            List<Permiso> permisos = new List<Permiso>();
+
+            //Evalua para todos los roles del empleado
+            List<Rol> roles = Roles();
+            foreach (Rol rol in roles)
+            {
+                //Evalua para todos los permisos del rol
+                List<Permiso> permisos1 = rol.Permisos();
+                foreach (Permiso permiso1 in permisos1)
+                {
+                    //Evalua si el rol ya estaba en los permisos agregados
+                    bool isIn = false;
+                    foreach (Permiso permiso in permisos)
+                    {
+                        if (permiso.Codigo == permiso1.Codigo)
+                        {
+                            isIn = true;
+                            break;
+                        }
+                    }
+                    if (!isIn)
+                    {
+                        permisos.Add(permiso1);
+                    }
+                }
+            }
+
+            return permisos;
+        }
+
         public List<Horario> Horarios()
         {
             List<Horario> horarios = new List<Horario>();
@@ -544,6 +600,38 @@ namespace Ucabmart.Engine
                 }
             }
             return null;
+        }
+        #endregion
+
+        #region Otros Metodos
+        public int BuscarEnCargo()
+        {
+            try
+            {
+                Conexion.Open();
+
+                string Comando = "SELECT * FROM em_ca WHERE empleado_em_codigo = @codigo";
+                Script = new NpgsqlCommand(Comando, Conexion);
+
+                Script.Parameters.AddWithValue("codigo", Codigo);
+                Reader = Script.ExecuteReader();
+
+                if (Reader.Read())
+                {
+                    int numero = ReadInt(1);
+                }
+
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Ha ocurrido un error en la base de datos", e);
+            }
+            finally
+            {
+                Conexion.Close();
+            }
+
+            return 0;
         }
         #endregion
     }
