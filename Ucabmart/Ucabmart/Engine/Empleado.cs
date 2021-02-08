@@ -616,8 +616,9 @@ namespace Ucabmart.Engine
         #endregion
 
         #region Otros Metodos
-        public int BuscarEnCargo()
+        public List<int> BuscarEnCargo()
         {
+            List<int> lista = new List<int>();
             try
             {
                 Conexion.Open();
@@ -628,9 +629,9 @@ namespace Ucabmart.Engine
                 Script.Parameters.AddWithValue("codigo", Codigo);
                 Reader = Script.ExecuteReader();
 
-                if (Reader.Read())
+                while (Reader.Read())
                 {
-                    int numero = ReadInt(1);
+                    lista.Add(ReadInt(1));
                 }
 
             }
@@ -643,7 +644,7 @@ namespace Ucabmart.Engine
                 Conexion.Close();
             }
 
-            return 0;
+            return lista;
         }
         #endregion
     }

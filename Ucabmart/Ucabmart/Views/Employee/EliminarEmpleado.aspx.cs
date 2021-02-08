@@ -54,9 +54,14 @@ namespace Ucabmart.Views.Employee
                         horario.Eliminar();
                     }
 
-                    int codigoCargo = empleado.BuscarEnCargo();
-                    Cargo nombreCargo = new Cargo(codigoCargo);
-                    empleadoM_M.Eliminar(empleado, nombreCargo);
+                    List<int> listaCargo = empleado.BuscarEnCargo();
+
+                    foreach (int codigoCargo in listaCargo)
+                    {
+                        Cargo nombreCargo = new Cargo(codigoCargo);
+                        empleadoM_M.Eliminar(empleado, nombreCargo);
+                    }
+                    
 
                     empleado.Eliminar();
                     correo.Eliminar();
