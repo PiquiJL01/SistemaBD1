@@ -78,11 +78,14 @@ namespace Ucabmart.Views.Employee
                 Cargo cargo = empleado.CargoActual();
                 emple_muchos.Actualizar(empleado, cargo);
 
+
                 //COLOCAR NUEVO CARGO
                 Cargo NuevoCargo = new Cargo();
                 int CodNuevoCargo = NuevoCargo.Get_CodCargo(Cargos.SelectedValue);
-                emple_muchos.Insertar(empleado, new Cargo(CodNuevoCargo),int.Parse(TextMonto.Text));
-
+                if (cargo.Codigo != CodNuevoCargo)
+                {
+                    emple_muchos.Insertar(empleado, new Cargo(CodNuevoCargo), int.Parse(TextMonto.Text));
+                }
 
                 //HORARIOS
                 this.Delete_Horarios(empleado);
