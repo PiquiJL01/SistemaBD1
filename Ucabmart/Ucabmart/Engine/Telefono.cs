@@ -339,7 +339,7 @@ namespace Ucabmart.Engine
         }
 
         public List<Telefono> Leer(Empleado empleado)
-        {
+        { 
             List<Telefono> listaTelefono = new List<Telefono>();
             try
             {
