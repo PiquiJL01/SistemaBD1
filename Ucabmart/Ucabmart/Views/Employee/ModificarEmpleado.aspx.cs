@@ -234,6 +234,7 @@ namespace Ucabmart.Views.Employee
             //CARGO
             Cargo cargo = empleado.CargoActual();
             Cargos.SelectedValue = cargo.Nombre;
+            TextMonto.Text = empleado.SueldoActual().ToString();
 
 
             //Horarios
