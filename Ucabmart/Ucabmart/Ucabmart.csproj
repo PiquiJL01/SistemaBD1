@@ -2238,10 +2238,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>NotiMart.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Views\Reports\OrdenDeCompraCliente.Designer.cs">
+    <Compile Include="Views\Reports\OrdenDeCompra.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>OrdenDeCompraCliente.xsd</DependentUpon>
+      <DependentUpon>OrdenDeCompra.xsd</DependentUpon>
     </Compile>
     <Compile Include="Views\Reports\ResumenAsistencias.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -2576,16 +2576,16 @@
     <Content Include="Views\Reports\ResumenAsistencias.xsc">
       <DependentUpon>ResumenAsistencias.xsd</DependentUpon>
     </Content>
-    <Content Include="Views\Reports\OrdenDeCompraCliente.xsc">
-      <DependentUpon>OrdenDeCompraCliente.xsd</DependentUpon>
+    <Content Include="Views\Reports\OrdenDeCompra.xsc">
+      <DependentUpon>OrdenDeCompra.xsd</DependentUpon>
     </Content>
-    <None Include="Views\Reports\OrdenDeCompraCliente.xsd">
+    <None Include="Views\Reports\OrdenDeCompra.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>OrdenDeCompraCliente.Designer.cs</LastGenOutput>
+      <LastGenOutput>OrdenDeCompra.Designer.cs</LastGenOutput>
     </None>
-    <Content Include="Views\Reports\OrdenDeCompraCliente.xss">
-      <DependentUpon>OrdenDeCompraCliente.xsd</DependentUpon>
+    <Content Include="Views\Reports\OrdenDeCompra.xss">
+      <DependentUpon>OrdenDeCompra.xsd</DependentUpon>
     </Content>
     <None Include="Views\Reports\ResumenAsistencias.xsd">
       <SubType>Designer</SubType>
@@ -2619,6 +2619,7 @@
     <EmbeddedResource Include="Views\Reports\Asistencias.rdlc" />
     <EmbeddedResource Include="Views\Reports\BalanceTienda.rdlc" />
     <EmbeddedResource Include="Views\Reports\NotiMart.rdlc" />
+    <EmbeddedResource Include="Views\Reports\OrdenDeCompra.rdlc" />
     <EmbeddedResource Include="Views\Reports\ResumenAsistencia.rdlc" />
     <EmbeddedResource Include="Views\Reports\TestReport.rdlc" />
   </ItemGroup>
