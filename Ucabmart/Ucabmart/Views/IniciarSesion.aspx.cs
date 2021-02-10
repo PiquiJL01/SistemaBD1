@@ -21,6 +21,7 @@ namespace Ucabmart.Views
                 if (correo != null)
                 {
                     Cliente buscar = new Cliente();
+                    Empleado buscarEmpleado = new Empleado();
 
                     if (buscar.BuscarContrasenaCliente(correo.Codigo) == Password.Text)
                     {
@@ -28,11 +29,19 @@ namespace Ucabmart.Views
                         Session["NombreLogin"] = loginUsuario;
 
 
-                        Response.Redirect("/Views/Inicio_Admin.aspx", false);
+                        Response.Redirect("/Views/User/InicioUsuario.aspx", false);
                         //ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", 
                         //                "window.location ='/Views/User/InicioUsuario.aspx';", true);
                     }
                     else
+                        if(buscarEmpleado.BuscarContrasenaEmpleado(correo.Codigo) == Password.Text)
+                    {
+                        string loginUsuario = Email.Text;
+                        Session["NombreLogin"] = loginUsuario;
+                        
+                        Response.Redirect("/Views/Inicio_Admin.aspx", false);
+                    }
+                        else
                         ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('La contraseña es incorrecta');", true);
                 }
                 else

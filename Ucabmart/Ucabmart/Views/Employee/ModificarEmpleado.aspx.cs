@@ -73,16 +73,19 @@ namespace Ucabmart.Views.Employee
 
                 //CARGO
 
-                //ACTUALIZAR CAGO VIEJO
+                //ACTUALIZAR CARGO VIEJO
                 MuchosAMuchos emple_muchos= new MuchosAMuchos();
                 Cargo cargo = empleado.CargoActual();
                 emple_muchos.Actualizar(empleado, cargo);
 
+
                 //COLOCAR NUEVO CARGO
                 Cargo NuevoCargo = new Cargo();
                 int CodNuevoCargo = NuevoCargo.Get_CodCargo(Cargos.SelectedValue);
-                emple_muchos.Insertar(empleado, new Cargo(CodNuevoCargo));
-
+                if (cargo.Codigo != CodNuevoCargo)
+                {
+                    emple_muchos.Insertar(empleado, new Cargo(CodNuevoCargo), int.Parse(TextMonto.Text));
+                }
 
                 //HORARIOS
                 this.Delete_Horarios(empleado);
@@ -115,11 +118,10 @@ namespace Ucabmart.Views.Employee
                 empleado.Actualizar();
 
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('El cliente se ha sido modificado exitosamente');" +
-                                        "window.location ='Nomina_Admin';", true);
+                                        "window.location ='../Nomina_Admin.aspx';", true);
             }
             catch (Exception ex)
             {
-                Session["mensajeError"] = "Ha ocurrido un error al modificar el empleado. " + ex;
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('NO DEBE HABER CAMPOS VACÍOS');", true);
             }
 
@@ -235,6 +237,8 @@ namespace Ucabmart.Views.Employee
             //CARGO
             Cargo cargo = empleado.CargoActual();
             Cargos.SelectedValue = cargo.Nombre;
+            TextMonto.Text = empleado.SueldoActual().ToString();
+
 
             //Horarios
             List<Horario> horarios = empleado.Horarios();
@@ -693,6 +697,7 @@ namespace Ucabmart.Views.Employee
             txtRepetirContraseña.Enabled = enable;
 
             Cargos.Enabled = enable;
+            TextMonto.Enabled = enable;
             Departamentos.Enabled = enable;
             Tiendas.Enabled = enable;
             Jefe.Enabled = enable;
@@ -730,6 +735,7 @@ namespace Ucabmart.Views.Employee
             dplParroquia.CssClass = "input-group-prepend be-addon";
 
             Cargos.CssClass = "input-group-prepend be-addon";
+            TextMonto.CssClass = "form-control";
             Departamentos.CssClass = "input-group-prepend be-addon";
             Tiendas.CssClass = "input-group-prepend be-addon";
             Jefe.CssClass = "form-control";

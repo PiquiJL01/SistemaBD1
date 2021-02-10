@@ -68,6 +68,28 @@ namespace Ucabmart.Engine
             }
         }
 
+        public Empleado(string rif)
+        {
+            Empleado empleado = Leer(rif);
+            if (!(empleado == null))
+            {
+                Codigo = empleado.Codigo;
+                Password = empleado.Password;
+                RIF = empleado.RIF;
+                Cedula = empleado.Cedula;
+                Nombre1 = empleado.Nombre1;
+                Nombre2 = empleado.Nombre2;
+                Apellido1 = empleado.Apellido1;
+                Apellido2 = empleado.Apellido2;
+                CodigoDepartamento = empleado.CodigoDepartamento;
+                CodigoTienda = empleado.CodigoTienda;
+                CodigoJefe = empleado.CodigoJefe;
+                CodigoDireccion = empleado.CodigoDireccion;
+                CodigoCorreoElectronico = empleado.CodigoCorreoElectronico;
+            }
+        }
+
+
         private Empleado(int codigo, string rif, string cedula, string nombre1, string nombre2, string apellido1, string apellido2,
             int tienda, int departamento, int jefe , int direccion , int correo, string password )
         {
@@ -172,6 +194,39 @@ namespace Ucabmart.Engine
 
                 if (Reader.Read())
                 {
+                    Empleado empleado = new Empleado(ReadInt(0), ReadString(1), ReadString(2), ReadString(3), ReadString(4), ReadString(5),
+                        ReadString(6), ReadInt(7), ReadInt(8), ReadInt(9), ReadInt(10), ReadInt(11), ReadString(12));
+                    CerrarConexion();
+                    return empleado;
+                }
+
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Ha ocurrido un error en la base de datos", e);
+            }
+            finally
+            {
+                CerrarConexion();
+            }
+
+            return null;
+        }
+
+        public Empleado Leer(string rif)
+        {
+            try
+            {
+                Conexion.Open();
+
+                string Comando = "SELECT * FROM empleado WHERE em_rif=@rif";
+                Script = new NpgsqlCommand(Comando, Conexion);
+
+                Script.Parameters.AddWithValue("rif", rif);
+                Reader = Script.ExecuteReader();
+
+                if (Reader.Read())
+                {
                     return new Empleado(ReadInt(0), ReadString(1), ReadString(2), ReadString(3), ReadString(4), ReadString(5),
                         ReadString(6), ReadInt(7), ReadInt(8), ReadInt(9), ReadInt(10), ReadInt(11), ReadString(12));
                 }
@@ -226,56 +281,60 @@ namespace Ucabmart.Engine
         {
             try
             {
-                Conexion.Open();
-
-                if (CodigoJefe == 0)
+                if (AbrirConexion())
                 {
-                    string Comando = "UPDATE empleado SET em_rif = @rif, em_cedula = @cedula, em_1er_nombre = @nombre1, em_2do_nombre = @nombre2, " +
-                    "em_1er_apellido = @apellido1, em_2do_apellido = @apellido2, tienda_ti_codigo = @tienda, " +
-                    "departamento_de_codigo = @departamento, lugar_lu_codigo = @direccion, " +
-                    "correo_electronico_ce_codigo = @correo, em_password  = @password" +
-                    "WHERE em_codigo = @codigo";
-                    Script = new NpgsqlCommand(Comando, Conexion);
+                    if (CodigoJefe == 0)
+                    {
+                        string Comando = "UPDATE empleado " +
+                            "SET em_rif = @rif, em_cedula = @cedula, em_1er_nombre = @nombre1, em_2do_nombre = @nombre2, " +
+                                "em_1er_apellido = @apellido1, em_2do_apellido = @apellido2, tienda_ti_codigo = @tienda, " +
+                                "departamento_de_codigo = @departamento, lugar_lu_codigo = @direccion, " +
+                                "correo_electronico_ce_codigo = @correo, em_password = @password " +
+                            "WHERE em_codigo = @codigo";
+                        Script = new NpgsqlCommand(Comando, Conexion);
 
-                    Script.Parameters.AddWithValue("rif", RIF);
-                    Script.Parameters.AddWithValue("cedula", Cedula);
-                    Script.Parameters.AddWithValue("nombre1", Nombre1);
-                    Script.Parameters.AddWithValue("nombre2", Nombre2);
-                    Script.Parameters.AddWithValue("apellido1", Apellido1);
-                    Script.Parameters.AddWithValue("apellido2", Apellido2);
-                    Script.Parameters.AddWithValue("tienda", CodigoTienda);
-                    Script.Parameters.AddWithValue("departamento", CodigoDepartamento);
-                    Script.Parameters.AddWithValue("direccion", CodigoDireccion);
-                    Script.Parameters.AddWithValue("correo", CodigoCorreoElectronico);
-                    Script.Parameters.AddWithValue("password", Password);
+                        Script.Parameters.AddWithValue("codigo", Codigo);
+                        Script.Parameters.AddWithValue("rif", RIF);
+                        Script.Parameters.AddWithValue("cedula", Cedula);
+                        Script.Parameters.AddWithValue("nombre1", Nombre1);
+                        Script.Parameters.AddWithValue("nombre2", Nombre2);
+                        Script.Parameters.AddWithValue("apellido1", Apellido1);
+                        Script.Parameters.AddWithValue("apellido2", Apellido2);
+                        Script.Parameters.AddWithValue("tienda", CodigoTienda);
+                        Script.Parameters.AddWithValue("departamento", CodigoDepartamento);
+                        Script.Parameters.AddWithValue("direccion", CodigoDireccion);
+                        Script.Parameters.AddWithValue("correo", CodigoCorreoElectronico);
+                        Script.Parameters.AddWithValue("password", Password);
+                    }
+                    else
+                    {
+                        string Comando = "UPDATE empleado " +
+                            "SET em_rif = @rif, em_cedula = @cedula, em_1er_nombre = @nombre1, em_2do_nombre = @nombre2, " +
+                                "em_1er_apellido = @apellido1, em_2do_apellido = @apellido2, tienda_ti_codigo = @tienda, " +
+                                "departamento_de_codigo = @departamento, empleado_em_codigo = @jefe, lugar_lu_codigo = @direccion, " +
+                                "correo_electronico_ce_codigo = @correo, em_password = @password " +
+                            "WHERE em_codigo = @codigo";
+                        Script = new NpgsqlCommand(Comando, Conexion);
+
+                        Script.Parameters.AddWithValue("codigo", Codigo);
+                        Script.Parameters.AddWithValue("rif", RIF);
+                        Script.Parameters.AddWithValue("cedula", Cedula);
+                        Script.Parameters.AddWithValue("nombre1", Nombre1);
+                        Script.Parameters.AddWithValue("nombre2", Nombre2);
+                        Script.Parameters.AddWithValue("apellido1", Apellido1);
+                        Script.Parameters.AddWithValue("apellido2", Apellido2);
+                        Script.Parameters.AddWithValue("tienda", CodigoTienda);
+                        Script.Parameters.AddWithValue("departamento", CodigoDepartamento);
+                        Script.Parameters.AddWithValue("jefe", CodigoJefe);
+                        Script.Parameters.AddWithValue("direccion", CodigoDireccion);
+                        Script.Parameters.AddWithValue("correo", CodigoCorreoElectronico);
+                        Script.Parameters.AddWithValue("password", Password);
+                    }
+
+                    Script.Prepare();
+
+                    Script.ExecuteNonQuery();
                 }
-                else
-                {
-                    string Comando = "UPDATE empleado SET em_rif = @rif, em_cedula = @cedula, em_1er_nombre = @nombre1, em_2do_nombre = @nombre2, " +
-                    "em_1er_apellido = @apellido1, em_2do_apellido = @apellido2, tienda_ti_codigo = @tienda, " +
-                    "departamento_de_codigo = @departamento, empleado_em_codigo = @jefe, lugar_lu_codigo = @direccion, " +
-                    "correo_electronico_ce_codigo = @correo, em_password  = @password" +
-                    "WHERE em_codigo = @codigo";
-                    Script = new NpgsqlCommand(Comando, Conexion);
-
-                    Script.Parameters.AddWithValue("rif", RIF);
-                    Script.Parameters.AddWithValue("cedula", Cedula);
-                    Script.Parameters.AddWithValue("nombre1", Nombre1);
-                    Script.Parameters.AddWithValue("nombre2", Nombre2);
-                    Script.Parameters.AddWithValue("apellido1", Apellido1);
-                    Script.Parameters.AddWithValue("apellido2", Apellido2);
-                    Script.Parameters.AddWithValue("tienda", CodigoTienda);
-                    Script.Parameters.AddWithValue("departamento", CodigoDepartamento);
-                    Script.Parameters.AddWithValue("jefe", CodigoJefe);
-                    Script.Parameters.AddWithValue("direccion", CodigoDireccion);
-                    Script.Parameters.AddWithValue("correo", CodigoCorreoElectronico);
-                    Script.Parameters.AddWithValue("password", Password);
-                }
-
-                Script.Prepare();
-
-                Script.ExecuteNonQuery();
-
             }
             catch (Exception e)
             {
@@ -283,8 +342,9 @@ namespace Ucabmart.Engine
             }
             finally
             {
-                Conexion.Close();
+                CerrarConexion();
             }
+            
         }
 
         public override void Eliminar()
@@ -315,10 +375,6 @@ namespace Ucabmart.Engine
         #endregion
 
         #region Entidades Muchos a Muchos
-        /// <summary>
-        /// Comunicacion con la BD
-        /// </summary>
-        /// <returns>Lista de los beneficios del empleado</returns>
         public List<Beneficio> Beneficios()
         {
             List<Beneficio> beneficios = new List<Beneficio>();
@@ -342,11 +398,7 @@ namespace Ucabmart.Engine
             }
             finally
             {
-                try
-                {
-                    Conexion.Close();
-                }
-                finally { }
+                CerrarConexion();
             }
 
             foreach (int codigo in codigos)
@@ -357,10 +409,72 @@ namespace Ucabmart.Engine
             return beneficios;
         }
 
-        /// <summary>
-        /// Conexion con la BD
-        /// </summary>
-        /// <returns>Lista de horarios del empleado</returns>
+        public List<Rol> Roles()
+        {
+            List<Rol> roles = new List<Rol>();
+            List<int> codigos = new List<int>();
+
+            try
+            {
+                Conexion.Open();
+
+                string Command = "SELECT rol_ro_codigo FROM ro_em WHERE empleado_em_codigo = @codigo";
+                NpgsqlCommand Script = new NpgsqlCommand(Command, Conexion);
+
+                Script.Parameters.AddWithValue("codigo", Codigo);
+
+                Reader = Script.ExecuteReader();
+
+                while (Reader.Read())
+                {
+                    codigos.Add(ReadInt(0));
+                }
+            }
+            finally
+            {
+                CerrarConexion();
+            }
+
+            foreach (int codigo in codigos)
+            {
+                roles.Add(new Rol(codigo));
+            }
+
+            return roles;
+        }
+
+        public List<Permiso> Permisos()
+        {
+            List<Permiso> permisos = new List<Permiso>();
+
+            //Evalua para todos los roles del empleado
+            List<Rol> roles = Roles();
+            foreach (Rol rol in roles)
+            {
+                //Evalua para todos los permisos del rol
+                List<Permiso> permisos1 = rol.Permisos();
+                foreach (Permiso permiso1 in permisos1)
+                {
+                    //Evalua si el rol ya estaba en los permisos agregados
+                    bool isIn = false;
+                    foreach (Permiso permiso in permisos)
+                    {
+                        if (permiso.Codigo == permiso1.Codigo)
+                        {
+                            isIn = true;
+                            break;
+                        }
+                    }
+                    if (!isIn)
+                    {
+                        permisos.Add(permiso1);
+                    }
+                }
+            }
+
+            return permisos;
+        }
+
         public List<Horario> Horarios()
         {
             List<Horario> horarios = new List<Horario>();
@@ -456,7 +570,9 @@ namespace Ucabmart.Engine
 
             if (AbrirConexion())
             {
-                string Command = "SELECT cargo_ca_codigo, sueldo FROM em_ca WHERE empleado_em_codigo = @codigo";
+                string Command = "SELECT cargo_ca_codigo, sueldo, fecha_inicio, fecha_fin " +
+                    "FROM em_ca " +
+                    "WHERE empleado_em_codigo = @codigo";
                 NpgsqlCommand Script = new NpgsqlCommand(Command, Conexion);
 
                 Script.Parameters.AddWithValue("codigo", Codigo);
@@ -487,6 +603,80 @@ namespace Ucabmart.Engine
             }
             return null;
         }
+
+        public Tuple<float, DateTime, DateTime> AtributosCargoActual()
+        {
+            return AtributosCargos()[CargoActual().Codigo];
+        }
+
+        public float SueldoActual()
+        {
+            return AtributosCargoActual().Item1;
+        }
+        #endregion
+
+        #region Otros Metodos
+        public List<int> BuscarEnCargo()
+        {
+            List<int> lista = new List<int>();
+            try
+            {
+                Conexion.Open();
+
+                string Comando = "SELECT * FROM em_ca WHERE empleado_em_codigo = @codigo";
+                Script = new NpgsqlCommand(Comando, Conexion);
+
+                Script.Parameters.AddWithValue("codigo", Codigo);
+                Reader = Script.ExecuteReader();
+
+                while (Reader.Read())
+                {
+                    lista.Add(ReadInt(1));
+                }
+
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Ha ocurrido un error en la base de datos", e);
+            }
+            finally
+            {
+                Conexion.Close();
+            }
+
+            return lista;
+        }
+
+        public string BuscarContrasenaEmpleado(int codigoCorreo)
+        {
+            try
+            {
+                Conexion.Open();
+
+                string Comando = "SELECT em_password FROM empleado WHERE correo_electronico_ce_codigo=@codigoCorreo";
+                Script = new NpgsqlCommand(Comando, Conexion);
+
+                Script.Parameters.AddWithValue("codigoCorreo", codigoCorreo);
+                Reader = Script.ExecuteReader();
+
+                if (Reader.Read())
+                {
+                    return ReadString(0);
+                }
+
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Ha ocurrido un error en la base de datos", e);
+            }
+            finally
+            {
+                Conexion.Close();
+            }
+            return null;
+        }
+
+
         #endregion
     }
 }

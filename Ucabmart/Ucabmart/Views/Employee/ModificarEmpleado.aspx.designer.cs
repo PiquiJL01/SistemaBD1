@@ -321,13 +321,22 @@ namespace Ucabmart.Views.Employee
         protected global::System.Web.UI.WebControls.DropDownList Cargos;
 
         /// <summary>
-        /// Control Departamentos.
+        /// Control Label17.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList Departamentos;
+        protected global::System.Web.UI.WebControls.Label Label17;
+
+        /// <summary>
+        /// Control TextMonto.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextMonto;
 
         /// <summary>
         /// Control Tiendas.
@@ -337,6 +346,15 @@ namespace Ucabmart.Views.Employee
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList Tiendas;
+
+        /// <summary>
+        /// Control Departamentos.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList Departamentos;
 
         /// <summary>
         /// Control Label18.

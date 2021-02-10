@@ -310,7 +310,7 @@ namespace Ucabmart.Views.Employee
 
             MuchosAMuchos Cargo_Emple = new MuchosAMuchos();
 
-            Cargo_Emple.Insertar(empleado, cargo, 4000);
+            Cargo_Emple.Insertar(empleado, cargo, int.Parse(TextMonto.Text) );
 
 
         }

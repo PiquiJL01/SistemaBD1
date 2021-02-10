@@ -88,18 +88,14 @@ namespace Ucabmart.Engine
                     return new Cargo(ReadInt(0), ReadString(1), ReadString(2));
                 }
 
-                Conexion.Close();
             }
             catch (Exception e)
             {
-                try
-                {
-                    Conexion.Close();
-                }
-                catch (Exception f)
-                {
-
-                }
+                throw new Exception("Ha ocurrido un error en la base de datos", e);
+            }
+            finally
+            {
+                Conexion.Close();
             }
 
             return null;

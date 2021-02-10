@@ -17,7 +17,7 @@
         <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="../../Content/css/Tiendas.css" rel="stylesheet" />
+        <link href="../../Content/css/Role.css" rel="stylesheet" />
     </head>
 
       <body id="page-top" class="bg-gradient-primary">
@@ -85,7 +85,7 @@
                   <li class="li-2">
                       <ul class="Ordened">
                           <li class="li-4" >ROLES-UCABMART</li>
-                          <li><img src="../../Content/assets/img/Role/Roles-Icon.png" height="80px"/>  </li>
+                          <li><img src="../../Content/assets/img/Role/Roles-Icon2.png" height="80px"/>  </li>
                       </ul>
                   </li>
                   <li class="li-3"></li>
@@ -103,7 +103,7 @@
             <div class="row" style="padding-left: 150px;">
                     <div class="col-lg-4 col-sm-6 mb-4">
                         <div class="categorias-item">
-                            <a class="categorias-link" href="#">
+                            <a class="categorias-link" href="/Views/Role/AsignarRol.aspx">
                                 <div class="categorias-hover">
                                     <div class="categorias-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>

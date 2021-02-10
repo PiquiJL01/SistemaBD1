@@ -339,7 +339,7 @@ namespace Ucabmart.Engine
         }
 
         public List<Telefono> Leer(Empleado empleado)
-        {
+        { 
             List<Telefono> listaTelefono = new List<Telefono>();
             try
             {
@@ -358,8 +358,6 @@ namespace Ucabmart.Engine
 
                     listaTelefono.Add(telefono);
                 }
-
-                Conexion.Close();
             }
             catch (Exception e)
             {

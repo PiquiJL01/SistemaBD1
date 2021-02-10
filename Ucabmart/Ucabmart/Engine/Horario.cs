@@ -214,5 +214,36 @@ namespace Ucabmart.Engine
             CerrarConexion();
         }
         #endregion
+
+        // devuelve la lista de los codigos de horarios del empleado
+        public List<int> codHorario(Empleado empleado)
+        {
+            List<int> lista = new List<int>();
+            try
+            {
+                Conexion.Open();
+
+                string Comando = "SELECT * FROM em_ho WHERE empleado_em_codigo = @codigo";
+                Script = new NpgsqlCommand(Comando, Conexion);
+
+                Script.Parameters.AddWithValue("codigo", empleado.Codigo);
+                Reader = Script.ExecuteReader();
+
+                while (Reader.Read())
+                {
+                    lista.Add(ReadInt(1));
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Ha ocurrido un error en la base de datos", e);
+            }
+            finally
+            {
+                Conexion.Close();
+            }
+
+            return lista;
+        }
     }
 }

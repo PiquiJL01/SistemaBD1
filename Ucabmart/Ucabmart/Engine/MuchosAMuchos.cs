@@ -11,12 +11,11 @@ namespace Ucabmart.Engine
         #region Atributos para establecer la conexion
         private const string ConnectionString = "Host = labs-dbservices01.ucab.edu.ve; User Id = grupo5bd1; Password = 123456789; Database = grupo5db"; //conexion a la bd del proyecto
         private NpgsqlCommand Script;
+        public NpgsqlDataReader Reader;
         private NpgsqlConnection Conexion = new NpgsqlConnection(ConnectionString);
         #endregion
 
-        public MuchosAMuchos()
-        {
-        }
+        public MuchosAMuchos() { }
 
         #region Insertar
         public void Insertar(Empleado empleado, Horario horario)
@@ -65,50 +64,111 @@ namespace Ucabmart.Engine
 
         public void Insertar(Empleado empleado, Cargo cargo, float sueldo = 0, DateTime fechainicio = new DateTime(), DateTime fechaFin = new DateTime())
         {
-            if (fechainicio.Year == 0001)
+
+            try
             {
-                fechainicio = DateTime.Today;
+                if (fechainicio.Year == 0001)
+                {
+                    fechainicio = DateTime.Today;
+                }
+
+
+                if (AbrirConexion())
+                {
+                    if (fechaFin.Year == 0001)
+                    {
+                        string Comando = "INSERT INTO em_ca (empleado_em_codigo, cargo_ca_codigo, sueldo, fecha_inicio) " +
+                            "VALUES (@empleado, @cargo, @sueldo, @fechainicio)";
+                        Script = new NpgsqlCommand(Comando, Conexion);
+
+                        Script.Parameters.AddWithValue("empleado", empleado.Codigo);
+                        Script.Parameters.AddWithValue("cargo", cargo.Codigo);
+                        Script.Parameters.AddWithValue("sueldo", sueldo);
+                        Script.Parameters.AddWithValue("fechainicio", fechainicio);
+                    }
+                    else
+                    {
+                        string Comando = "INSERT INTO em_ca (empleado_em_codigo, cargo_ca_codigo, sueldo, fecha_inicio, fecha_fin) " +
+                            "VALUES (@empleado, @cargo, @sueldo, @fechainicio, @fechafin)";
+                        Script = new NpgsqlCommand(Comando, Conexion);
+
+                        Script.Parameters.AddWithValue("empleado", empleado.Codigo);
+                        Script.Parameters.AddWithValue("cargo", cargo.Codigo);
+                        Script.Parameters.AddWithValue("sueldo", sueldo);
+                        Script.Parameters.AddWithValue("fechainicio", fechainicio);
+                        Script.Parameters.AddWithValue("fechafin", fechaFin);
+                    }
+
+                    Script.Prepare();
+
+                    Script.ExecuteNonQuery();
+                }
+                
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Ha ocurrido un error en la base de datos", e);
+            }
+            finally
+            {
+                CerrarConexion();
             }
 
 
-            if (AbrirConexion())
+
+        }
+
+        public void Insertar(Rol rol, Permiso permiso)
+        {
+            try
             {
-                if (fechaFin.Year == 0001)
-                {
-                    string Comando = "INSERT INTO em_ca (empleado_em_codigo, cargo_ca_codigo, sueldo, fecha_inicio) " +
-                        "VALUES (@empleado, @cargo, @sueldo, @fechainicio)";
-                    Script = new NpgsqlCommand(Comando, Conexion);
+                Conexion.Open();
 
-                    Script.Parameters.AddWithValue("empleado", empleado.Codigo);
-                    Script.Parameters.AddWithValue("cargo", cargo.Codigo);
-                    Script.Parameters.AddWithValue("sueldo", sueldo);
-                    Script.Parameters.AddWithValue("fechainicio", fechainicio);
-                }
-                else
-                {
-                    string Comando = "INSERT INTO em_ca (empleado_em_codigo, cargo_ca_codigo, sueldo, fecha_inicio, fecha_fin) " +
-                        "VALUES (@empleado, @cargo, @sueldo, @fechainicio, @fechafin)";
-                    Script = new NpgsqlCommand(Comando, Conexion);
+                string Comando = "INSERT INTO pe_ro (permiso_pe_codigo, rol_ro_codigo) VALUES (@permiso, @rol)";
+                Script = new NpgsqlCommand(Comando, Conexion);
 
-                    Script.Parameters.AddWithValue("empleado", empleado.Codigo);
-                    Script.Parameters.AddWithValue("cargo", cargo.Codigo);
-                    Script.Parameters.AddWithValue("sueldo", sueldo);
-                    Script.Parameters.AddWithValue("fechainicio", fechainicio);
-                    Script.Parameters.AddWithValue("fechafin", fechaFin);
-                }
+                Script.Parameters.AddWithValue("rol", rol.Codigo);
+                Script.Parameters.AddWithValue("permiso", permiso.Codigo);
 
                 Script.Prepare();
 
                 Script.ExecuteNonQuery();
             }
-            CerrarConexion();
+            finally
+            {
+                CerrarConexion();
+            }
+        }
+
+        public void Insertar(Empleado empleado, Rol rol)
+        {
+            try
+            {
+                Conexion.Open();
+
+                string Comando = "INSERT INTO ro_em (empleado_em_codigo, rol_ro_codigo) VALUES (@empleado, @rol)";
+                Script = new NpgsqlCommand(Comando, Conexion);
+
+                Script.Parameters.AddWithValue("empleado", empleado.Codigo);
+                Script.Parameters.AddWithValue("rol", rol.Codigo);
+
+                Script.Prepare();
+
+                Script.ExecuteNonQuery();
+            }
+            finally
+            {
+                CerrarConexion();
+            }
         }
 
         /* Modelo para Insertar en BD una entidad Muchos a Muchos
         public void Insertar(Tipo1 tipo1, Tipo2 tipo2)
         {
-            if(AbrirConexion())
+            try
             {
+                Conexion.Open();
+                
                 string Comando = "INSERT INTO tabla (codigo1, codigo2) VALUES (@codigo1, @codigo2)";
                 Script = new NpgsqlCommand(Comando, Conexion);
 
@@ -119,7 +179,10 @@ namespace Ucabmart.Engine
 
                 Script.ExecuteNonQuery();
             }
-            CerrarConexion();
+            finally
+            {
+                CerrarConexion();
+            }
         }
         */
         #endregion
@@ -127,46 +190,65 @@ namespace Ucabmart.Engine
         #region Eliminar
         public void Eliminar(Empleado empleado, Horario horario)
         {
-            if (AbrirConexion())
+            try
             {
-                string Commando = "DELETE FROM em_ho WHERE (empleado_em_codigo = @codigo1) AND (horario_ho_codigo = @codigo2";
-                Script = new NpgsqlCommand(Commando, Conexion);
+                if (AbrirConexion())
+                {
+                    string Commando = "DELETE FROM em_ho WHERE (empleado_em_codigo = @codigo1) AND (horario_ho_codigo = @codigo2)";
+                    Script = new NpgsqlCommand(Commando, Conexion);
 
-                Script.Parameters.AddWithValue("codigo1", empleado.Codigo);
-                Script.Parameters.AddWithValue("codigo2", horario.Codigo);
+                    Script.Parameters.AddWithValue("codigo1", empleado.Codigo);
+                    Script.Parameters.AddWithValue("codigo2", horario.Codigo);
 
-                Script.Prepare();
+                    Script.Prepare();
 
-                Script.ExecuteNonQuery();
+                    Script.ExecuteNonQuery();
+                }
+
+                CerrarConexion();
+            }
+            catch (Exception ex)
+            {
+               
             }
 
-            CerrarConexion();
         }
 
         public void Eliminar(Empleado empleado, Beneficio beneficio)
         {
-            if (AbrirConexion())
+            try
             {
-                string Commando = "DELETE FROM em_be " +
-                    "WHERE (empleado_em_codigo = @codigo1) AND (beneficio_be_codigo = @codigo2)";
-                Script = new NpgsqlCommand(Commando, Conexion);
+                if (AbrirConexion())
+                {
+                    string Commando = "DELETE FROM em_be " +
+                        "WHERE (empleado_em_codigo = @codigo1) AND (beneficio_be_codigo = @codigo2)";
+                    Script = new NpgsqlCommand(Commando, Conexion);
 
-                Script.Parameters.AddWithValue("codigo1", empleado.Codigo);
-                Script.Parameters.AddWithValue("codigo2", beneficio.Codigo);
+                    Script.Parameters.AddWithValue("codigo1", empleado.Codigo);
+                    Script.Parameters.AddWithValue("codigo2", beneficio.Codigo);
 
-                Script.Prepare();
+                    Script.Prepare();
 
-                Script.ExecuteNonQuery();
+                    Script.ExecuteNonQuery();
+                }
             }
-            CerrarConexion();
+            catch (Exception e)
+            {
+                throw new Exception("Ha ocurrido un error en la base de datos", e);
+            }
+            finally
+            {
+                CerrarConexion();
+            }
+            
         }
 
         public void Eliminar(Empleado empleado, Cargo cargo)
         {
             if (AbrirConexion())
             {
-                string Commando = "DELETE FROM em_be " +
-                    "WHERE (empleado_em_codigo = @codigo1) AND (beneficio_be_codigo = @codigo2)";
+                string Commando = "DELETE FROM em_ca " +
+                    "WHERE (empleado_em_codigo = @codigo1) AND (cargo_ca_codigo = @codigo2)";
                 Script = new NpgsqlCommand(Commando, Conexion);
 
                 Script.Parameters.AddWithValue("codigo1", empleado.Codigo);
@@ -176,6 +258,42 @@ namespace Ucabmart.Engine
 
                 Script.ExecuteNonQuery();
             }
+            CerrarConexion();
+        }
+
+        public void Eliminar(Permiso permiso, Rol rol)
+        {
+            if (AbrirConexion())
+            {
+                string Commando = "DELETE FROM pe_ro WHERE (permiso_pe_codigo = @permiso) AND (rol_ro_codigo= @rol)";
+                Script = new NpgsqlCommand(Commando, Conexion);
+
+                Script.Parameters.AddWithValue("permiso", permiso.Codigo);
+                Script.Parameters.AddWithValue("rol", rol.Codigo);
+
+                Script.Prepare();
+
+                Script.ExecuteNonQuery();
+            }
+
+            CerrarConexion();
+        }
+
+        public void Eliminar(Empleado empleado, Rol rol)
+        {
+            if (AbrirConexion())
+            {
+                string Commando = "DELETE FROM ro_em WHERE (empleado_em_codigo = @empleado) AND (rol_ro_codigo = @rol)";
+                Script = new NpgsqlCommand(Commando, Conexion);
+
+                Script.Parameters.AddWithValue("empleado", empleado.Codigo);
+                Script.Parameters.AddWithValue("rol", rol.Codigo);
+
+                Script.Prepare();
+
+                Script.ExecuteNonQuery();
+            }
+
             CerrarConexion();
         }
 
@@ -226,7 +344,7 @@ namespace Ucabmart.Engine
             CerrarConexion();
         }
         #endregion
-
+        
         #region Manejo de Conexion
         private bool AbrirConexion()
         {
