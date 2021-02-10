@@ -646,6 +646,37 @@ namespace Ucabmart.Engine
 
             return lista;
         }
+
+        public string BuscarContrasenaEmpleado(int codigoCorreo)
+        {
+            try
+            {
+                Conexion.Open();
+
+                string Comando = "SELECT em_password FROM empleado WHERE correo_electronico_ce_codigo=@codigoCorreo";
+                Script = new NpgsqlCommand(Comando, Conexion);
+
+                Script.Parameters.AddWithValue("codigoCorreo", codigoCorreo);
+                Reader = Script.ExecuteReader();
+
+                if (Reader.Read())
+                {
+                    return ReadString(0);
+                }
+
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Ha ocurrido un error en la base de datos", e);
+            }
+            finally
+            {
+                Conexion.Close();
+            }
+            return null;
+        }
+
+
         #endregion
     }
 }
