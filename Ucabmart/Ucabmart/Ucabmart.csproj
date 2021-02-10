@@ -1982,10 +1982,7 @@
     <Content Include="Views\Reports\TestReportPage.aspx" />
     <Content Include="Views\Role\AsignarRol.aspx" />
     <Content Include="Views\Role\ConsultarRol.aspx" />
-<<<<<<< HEAD
-=======
     <Content Include="Views\Role\ModificarRol.aspx" />
->>>>>>> main
     <Content Include="Views\Role\Role_Admin.aspx" />
     <Content Include="Views\Tiendas-Admin.aspx" />
     <Content Include="Views\RegistrarJuridica.aspx" />
@@ -2307,8 +2304,6 @@
     <Compile Include="Views\Role\ConsultarRol.aspx.designer.cs">
       <DependentUpon>ConsultarRol.aspx</DependentUpon>
     </Compile>
-<<<<<<< HEAD
-=======
     <Compile Include="Views\Role\ModificarRol.aspx.cs">
       <DependentUpon>ModificarRol.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2316,7 +2311,6 @@
     <Compile Include="Views\Role\ModificarRol.aspx.designer.cs">
       <DependentUpon>ModificarRol.aspx</DependentUpon>
     </Compile>
->>>>>>> main
     <Compile Include="Views\Role\Role_Admin.aspx.cs">
       <DependentUpon>Role_Admin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

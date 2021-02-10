@@ -860,3 +860,4 @@ C:\Users\Jose\Documents\GitHub\SistemaBD1\Ucabmart\Ucabmart\bin\ru\Microsoft.Rep
 C:\Users\Jose\Documents\GitHub\SistemaBD1\Ucabmart\Ucabmart\bin\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\Jose\Documents\GitHub\SistemaBD1\Ucabmart\Ucabmart\bin\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 >>>>>>> main
+C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\obj\Debug\Ucabmart.csprojAssemblyReference.cache
