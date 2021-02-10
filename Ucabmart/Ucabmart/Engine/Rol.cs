@@ -198,6 +198,38 @@ namespace Ucabmart.Engine
 
             return permisos;
         }
+
+        public string BuscarPermiso(int codigoRol)
+        {
+            try
+            {
+                Conexion.Open();
+
+                string Comando = "SELECT permiso_pe_codigo FROM pe_ro WHERE rol_ro_codigo=@codigo";
+                Script = new NpgsqlCommand(Comando, Conexion);
+
+                Script.Parameters.AddWithValue("codigo", codigoRol);
+                Reader = Script.ExecuteReader();
+
+                string nombre = "";
+
+                while (Reader.Read())
+                {
+                    Permiso permiso =new Permiso(ReadInt(0));
+                    nombre +=  permiso.Nombre + ", \n" ;
+                }
+                return nombre;
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Ha ocurrido un error en la base de datos", e);
+            }
+            finally
+            {
+                CerrarConexion();
+            }
+        }
+
         #endregion
     }
 }

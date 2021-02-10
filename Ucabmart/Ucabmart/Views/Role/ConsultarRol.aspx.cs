@@ -36,16 +36,24 @@ namespace Ucabmart.Views.Role
             consultarEmpleado = new Empleado();
             List<Empleado> listaEmpleado = consultarEmpleado.Todos();
 
-            foreach (Empleado item in listaEmpleado)
+            foreach (Empleado empleado in listaEmpleado)
             {
                 tabla += "<tr>";
-                tabla += "<td>" + item.Codigo + "</td>";
-                tabla += "<td>" + item.RIF + "</td>";
-                tabla += "<td>" + item.Cedula + "</td>";
-                tabla += "<td>" + item.Nombre1 + "</td>";
-                tabla += "<td>" + item.Apellido1 + "</td>";
+                tabla += "<td>" + empleado.Codigo + "</td>";
+                tabla += "<td>" + empleado.RIF + "</td>";
+                tabla += "<td>" + empleado.Cedula + "</td>";
+                tabla += "<td>" + empleado.Nombre1 + "</td>";
+                tabla += "<td>" + empleado.Apellido1 + "</td>";
 
+                MuchosAMuchos m_m = new MuchosAMuchos();
+                int codigoRol = m_m.BuscarRol(empleado.Codigo);
+                Rol rol = new Rol(codigoRol);
+
+                tabla += "<td>" + rol.Nombre + "</td>";
                 
+                string nombrePermiso = rol.BuscarPermiso(rol.Codigo);
+
+                tabla += "<td>" + nombrePermiso + "</td>";
 
                 tabla += "</tr>";
             }
