@@ -1938,6 +1938,7 @@
     <Content Include="Views\RegistrarClienteNatural.aspx" />
     <Content Include="Views\RegistroProveedores.aspx" />
     <Content Include="Views\Role\AsignarRol.aspx" />
+    <Content Include="Views\Role\ConsultarRol.aspx" />
     <Content Include="Views\Role\Role_Admin.aspx" />
     <Content Include="Views\Tiendas-Admin.aspx" />
     <Content Include="Views\RegistrarJuridica.aspx" />
@@ -2211,6 +2212,13 @@
     </Compile>
     <Compile Include="Views\Role\AsignarRol.aspx.designer.cs">
       <DependentUpon>AsignarRol.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Role\ConsultarRol.aspx.cs">
+      <DependentUpon>ConsultarRol.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Role\ConsultarRol.aspx.designer.cs">
+      <DependentUpon>ConsultarRol.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Role\Role_Admin.aspx.cs">
       <DependentUpon>Role_Admin.aspx</DependentUpon>
