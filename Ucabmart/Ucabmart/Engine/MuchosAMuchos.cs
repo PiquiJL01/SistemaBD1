@@ -344,7 +344,37 @@ namespace Ucabmart.Engine
             CerrarConexion();
         }
         #endregion
-        
+
+        public int BuscarRol(int codigoEmpleado)
+        {
+            try
+            {
+                Conexion.Open();
+
+                string Comando = "SELECT rol_ro_codigo FROM ro_em WHERE empleado_em_codigo=@codigo";
+                Script = new NpgsqlCommand(Comando, Conexion);
+
+                Script.Parameters.AddWithValue("codigo", codigoEmpleado);
+                Reader = Script.ExecuteReader();
+
+                if (Reader.Read())
+                {
+                    return ReadInt(0);
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Ha ocurrido un error en la base de datos", e);
+            }
+            finally
+            {
+                CerrarConexion();
+            }
+
+            return 0;
+        }
+
+
         #region Manejo de Conexion
         private bool AbrirConexion()
         {
@@ -369,6 +399,24 @@ namespace Ucabmart.Engine
                 Conexion.Close();
             }
             finally { }
+        }
+
+
+        /// <summary>
+        /// Usa el <c>Reader</c> para hacer una lectura
+        /// </summary>
+        /// <param name="posicion">Poscicion en la tabla, inicio en 0</param>
+        /// <returns>Dato de tipo <c>int</c></returns>
+        public int ReadInt(int posicion)
+        {
+            try
+            {
+                return Reader.GetInt32(posicion);
+            }
+            catch (Exception e)
+            {
+                return 0;
+            }
         }
         #endregion
     }
