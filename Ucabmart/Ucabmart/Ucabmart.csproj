@@ -1980,6 +1980,7 @@
     <Content Include="Views\RegistroProveedores.aspx" />
     <Content Include="Views\Reports\AddToReportsPages.txt" />
     <Content Include="Views\Reports\TestReportPage.aspx" />
+    <Content Include="Views\Role\AsignarPermisos.aspx" />
     <Content Include="Views\Role\AsignarRol.aspx" />
     <Content Include="Views\Role\ConsultarRol.aspx" />
     <Content Include="Views\Role\ModificarRol.aspx" />
@@ -2289,6 +2290,13 @@
     </Compile>
     <Compile Include="Views\Reports\TestReportPage.aspx.designer.cs">
       <DependentUpon>TestReportPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Role\AsignarPermisos.aspx.cs">
+      <DependentUpon>AsignarPermisos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Role\AsignarPermisos.aspx.designer.cs">
+      <DependentUpon>AsignarPermisos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Role\AsignarRol.aspx.cs">
       <DependentUpon>AsignarRol.aspx</DependentUpon>
