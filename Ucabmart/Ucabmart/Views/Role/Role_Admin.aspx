@@ -1,6 +1,5 @@
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Role_Admin.aspx.cs" Inherits="Ucabmart.Views.Role.Role_Admin" %>
 
-
 <!DOCTYPE html>
 <html lang="es">
     <head runat="server">
