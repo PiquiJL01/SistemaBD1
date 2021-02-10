@@ -226,6 +226,10 @@
     <Content Include="Content\assets\img\Provider\Update-Provider.jpg" />
     <Content Include="Content\assets\img\Register-Provider-Wallpaper.jpg" />
     <Content Include="Content\assets\img\Register-Provider2.jpeg" />
+    <Content Include="Content\assets\img\Role\Roles-icon.png" />
+    <Content Include="Content\assets\img\Role\Roles-icon2.png" />
+    <Content Include="Content\assets\img\Role\Roles.jpg" />
+    <Content Include="Content\assets\img\Role\top-10-DS-projects.png" />
     <Content Include="Content\assets\img\seguridad.jpg" />
     <Content Include="Content\assets\img\Shop.jpg" />
     <Content Include="Content\assets\img\Store\Icono-Store.png" />
@@ -244,6 +248,8 @@
     <Content Include="Content\assets\mail\contact_me.js" />
     <Content Include="Content\assets\mail\contact_me.php" />
     <Content Include="Content\assets\mail\jqBootstrapValidation.js" />
+    <Content Include="Content\css\ModificarRol.css" />
+    <Content Include="Content\css\AsignarRol.css" />
     <Content Include="Content\css\Clientes.css" />
     <Content Include="Content\css\Productos.css" />
     <Content Include="Content\css\Nomina.css" />
@@ -254,6 +260,7 @@
     <Content Include="Content\css\RegistroCliente.css" />
     <Content Include="Content\css\Check_Products.css" />
     <Content Include="Content\css\RegistroProveedores.css" />
+    <Content Include="Content\css\Role.css" />
     <Content Include="Content\css\Tiendas.css" />
     <Content Include="Content\css\Proveedores.css" />
     <Content Include="Content\css\sb-admin-2.min.css" />
@@ -1955,6 +1962,8 @@
     <Content Include="Views\EliminarProveedor.aspx" />
     <Content Include="Views\Employee\Beneficios.aspx" />
     <Content Include="Views\Employee\ConsultarEmpleado.aspx" />
+    <Content Include="Views\Employee\EliminarEmpleado.aspx" />
+    <Content Include="Views\Employee\ModificarEmpleado.aspx" />
     <Content Include="Views\Employee\RegistrarEmpleado.aspx" />
     <Content Include="Views\IniciarSesion.aspx" />
     <Content Include="Views\Inicio.aspx" />
@@ -1971,6 +1980,10 @@
     <Content Include="Views\RegistroProveedores.aspx" />
     <Content Include="Views\Reports\AddToReportsPages.txt" />
     <Content Include="Views\Reports\TestReportPage.aspx" />
+    <Content Include="Views\Role\AsignarRol.aspx" />
+    <Content Include="Views\Role\ConsultarRol.aspx" />
+    <Content Include="Views\Role\ModificarRol.aspx" />
+    <Content Include="Views\Role\Role_Admin.aspx" />
     <Content Include="Views\Tiendas-Admin.aspx" />
     <Content Include="Views\RegistrarJuridica.aspx" />
     <Content Include="Views\Tiendas.aspx" />
@@ -2125,6 +2138,20 @@
     <Compile Include="Views\Employee\ConsultarEmpleado.aspx.designer.cs">
       <DependentUpon>ConsultarEmpleado.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\Employee\EliminarEmpleado.aspx.cs">
+      <DependentUpon>EliminarEmpleado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Employee\EliminarEmpleado.aspx.designer.cs">
+      <DependentUpon>EliminarEmpleado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Employee\ModificarEmpleado.aspx.cs">
+      <DependentUpon>ModificarEmpleado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Employee\ModificarEmpleado.aspx.designer.cs">
+      <DependentUpon>ModificarEmpleado.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\Employee\RegistrarEmpleado.aspx.cs">
       <DependentUpon>RegistrarEmpleado.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2262,6 +2289,34 @@
     </Compile>
     <Compile Include="Views\Reports\TestReportPage.aspx.designer.cs">
       <DependentUpon>TestReportPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Role\AsignarRol.aspx.cs">
+      <DependentUpon>AsignarRol.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Role\AsignarRol.aspx.designer.cs">
+      <DependentUpon>AsignarRol.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Role\ConsultarRol.aspx.cs">
+      <DependentUpon>ConsultarRol.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Role\ConsultarRol.aspx.designer.cs">
+      <DependentUpon>ConsultarRol.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Role\ModificarRol.aspx.cs">
+      <DependentUpon>ModificarRol.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Role\ModificarRol.aspx.designer.cs">
+      <DependentUpon>ModificarRol.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Role\Role_Admin.aspx.cs">
+      <DependentUpon>Role_Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Role\Role_Admin.aspx.designer.cs">
+      <DependentUpon>Role_Admin.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Tiendas-Admin.aspx.cs">
       <DependentUpon>Tiendas-Admin.aspx</DependentUpon>

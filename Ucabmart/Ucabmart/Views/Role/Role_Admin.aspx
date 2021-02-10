@@ -117,7 +117,7 @@
                     </div>
                     <div class="col-lg-4 col-sm-6 mb-4" style="margin-left: 120px">
                         <div class="categorias-item">
-                            <a class="categorias-link" href="#">
+                            <a class="categorias-link" href="/Views/Role/ConsultarRol.aspx">
                                 <div class="categorias-hover">
                                     <div class="categorias-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
@@ -131,7 +131,7 @@
                     </div>
                     <div class="col-lg-4 col-sm-6 mb-4" style="box-sizing: initial">
                         <div class="categorias-item">
-                            <a class="categorias-link" href="#">
+                            <a class="categorias-link" href="/Views/Role/ModificarRol.aspx">
                                 <div class="categorias-hover">
                                     <div class="categorias-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
@@ -157,6 +157,67 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- Permisos -->
+
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <div class="categorias-item">
+                            <a class="categorias-link" href="#">
+                                <div class="categorias-hover">
+                                    <div class="categorias-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid2" src="../../Content/assets/img/Role/Assign-permisos.jpg" alt="" />
+                            </a>
+                            <div class="categorias-caption" style="margin-right:-68px; background-color:#4e73dfd1">
+                                <div class="categorias-caption-heading">Asignar Permisos</div>
+                                <div class="categorias-caption-subheading text-muted">Permite asignar los permisos asociados al rol...</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4" style="margin-left: 120px">
+                        <div class="categorias-item">
+                            <a class="categorias-link" href="#">
+                                <div class="categorias-hover">
+                                    <div class="categorias-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid2" src="../../Content/assets/img/Role/Query_Permisos.jpg" alt="" />
+                            </a>
+                            <div class="categorias-caption" style="margin-right:-69px; background-color:#4e73dfd1">
+                                <div class="categorias-caption-heading">Consultar Permisos</div>
+                                <div class="categorias-caption-subheading text-muted">Permite consultar los permisos asociados a los roles......</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4" style="box-sizing: initial">
+                        <div class="categorias-item">
+                            <a class="categorias-link" href="/Views/Role/ModificarRol.aspx">
+                                <div class="categorias-hover">
+                                    <div class="categorias-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid2" src="../../Content/assets/img/Role/Update_Permisos.jpg" alt="" />
+                            </a>
+                            <div class="categorias-caption" style="margin-right:-44px; background-color:#4e73dfd1">
+                                <div class="categorias-caption-heading">Modificar Permisos</div>
+                                <div class="categorias-caption-subheading text-muted">Permite cambiar los permisos de los roles......</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4" style="margin-left: 100px">
+                        <div class="categorias-item">
+                            <a class="categorias-link" href="#">
+                                <div class="categorias-hover">
+                                    <div class="categorias-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid2" src="../../Content/assets/img/Role/delete-Permisos.jpg" alt="" />
+                            </a>
+                            <div class="categorias-caption" style="margin-right:-68px; background-color:#4e73dfd1">
+                                <div class="categorias-caption-heading">Eliminar Permisos</div>
+                                <div class="categorias-caption-subheading text-muted">Permite eliminar uno o varios permisos de un rol......</div>
+                            </div>
+                        </div>
+                    </div>
+
+                   
             </div>
           </div>
         </section>
