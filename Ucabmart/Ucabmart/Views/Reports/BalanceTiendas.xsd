@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="BalanceTiendas" targetNamespace="http://tempuri.org/BalanceTiendas.xsd" xmlns:mstns="http://tempuri.org/BalanceTiendas.xsd" xmlns="http://tempuri.org/BalanceTiendas.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="grupo5db" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="grupo5db (Web.config)" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.grupo5db.ConnectionString" Provider="Npgsql" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="BalanceTiendaTableAdapter" GeneratorDataComponentClassName="BalanceTiendaTableAdapter" Name="BalanceTienda" UserDataComponentName="BalanceTiendaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="grupo5db (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT tienda.ti_nombre AS tienda, ganancia.suma AS ganancia, perdida.suma AS perdida, ganancia.suma - perdida.suma AS balance
+FROM     (SELECT tienda_ti_codigo AS tienda, SUM(pe_monto_total) AS suma
+                  FROM      pedido b
+                  WHERE   (cliente_cl_rif IS NOT NULL)
+                  GROUP BY tienda_ti_codigo) ganancia INNER JOIN
+                      (SELECT tienda_ti_codigo AS tienda, SUM(pe_monto_total) AS suma
+                       FROM      pedido c
+                       WHERE   (proveedor_pr_rif IS NOT NULL)
+                       GROUP BY tienda_ti_codigo) perdida ON perdida.tienda = ganancia.tienda INNER JOIN
+                  tienda ON tienda.ti_codigo = ganancia.tienda
+ORDER BY ganancia.tienda</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ganancia" DataSetColumn="ganancia" />
+              <Mapping SourceColumn="perdida" DataSetColumn="perdida" />
+              <Mapping SourceColumn="balance" DataSetColumn="balance" />
+              <Mapping SourceColumn="tienda" DataSetColumn="tienda" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="BalanceTiendas" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="BalanceTiendas" msprop:Generator_UserDSName="BalanceTiendas">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="BalanceTienda" msprop:Generator_TableClassName="BalanceTiendaDataTable" msprop:Generator_TableVarName="tableBalanceTienda" msprop:Generator_TablePropName="BalanceTienda" msprop:Generator_RowDeletingName="BalanceTiendaRowDeleting" msprop:Generator_RowChangingName="BalanceTiendaRowChanging" msprop:Generator_RowEvHandlerName="BalanceTiendaRowChangeEventHandler" msprop:Generator_RowDeletedName="BalanceTiendaRowDeleted" msprop:Generator_UserTableName="BalanceTienda" msprop:Generator_RowChangedName="BalanceTiendaRowChanged" msprop:Generator_RowEvArgName="BalanceTiendaRowChangeEvent" msprop:Generator_RowClassName="BalanceTiendaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ganancia" msprop:Generator_ColumnVarNameInTable="columnganancia" msprop:Generator_ColumnPropNameInRow="ganancia" msprop:Generator_ColumnPropNameInTable="gananciaColumn" msprop:Generator_UserColumnName="ganancia" type="xs:float" minOccurs="0" />
+              <xs:element name="perdida" msprop:Generator_ColumnVarNameInTable="columnperdida" msprop:Generator_ColumnPropNameInRow="perdida" msprop:Generator_ColumnPropNameInTable="perdidaColumn" msprop:Generator_UserColumnName="perdida" type="xs:float" minOccurs="0" />
+              <xs:element name="balance" msprop:Generator_ColumnVarNameInTable="columnbalance" msprop:Generator_ColumnPropNameInRow="balance" msprop:Generator_ColumnPropNameInTable="balanceColumn" msprop:Generator_UserColumnName="balance" type="xs:float" minOccurs="0" />
+              <xs:element name="tienda" msprop:Generator_ColumnVarNameInTable="columntienda" msprop:Generator_ColumnPropNameInRow="tienda" msprop:Generator_ColumnPropNameInTable="tiendaColumn" msprop:Generator_UserColumnName="tienda">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="32672" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

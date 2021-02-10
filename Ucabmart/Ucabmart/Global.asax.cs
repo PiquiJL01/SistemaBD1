@@ -6,6 +6,7 @@ namespace Ucabmart
     {
         protected void Application_Start(object sender, EventArgs e)
         {
+            SqlServerTypes.Utilities.LoadNativeAssemblies(Server.MapPath("~/bin"));
         }
     }
 }
