@@ -2223,6 +2223,16 @@
     <Compile Include="Views\RegistroProveedores.aspx.designer.cs">
       <DependentUpon>RegistroProveedores.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\Reports\BalanceTiendas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BalanceTiendas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\NotiMart.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NotiMart.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Views\Reports\TestDataSet.cs">
       <DependentUpon>TestDataSet.xsd</DependentUpon>
     </Compile>
@@ -2515,6 +2525,28 @@
     <Content Include="Views\Reports\TestDataSet.xsc">
       <DependentUpon>TestDataSet.xsd</DependentUpon>
     </Content>
+    <Content Include="Views\Reports\NotiMart.xsc">
+      <DependentUpon>NotiMart.xsd</DependentUpon>
+    </Content>
+    <Content Include="Views\Reports\BalanceTiendas.xsc">
+      <DependentUpon>BalanceTiendas.xsd</DependentUpon>
+    </Content>
+    <None Include="Views\Reports\BalanceTiendas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BalanceTiendas.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Views\Reports\BalanceTiendas.xss">
+      <DependentUpon>BalanceTiendas.xsd</DependentUpon>
+    </Content>
+    <None Include="Views\Reports\NotiMart.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NotiMart.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Views\Reports\NotiMart.xss">
+      <DependentUpon>NotiMart.xsd</DependentUpon>
+    </Content>
     <None Include="Views\Reports\TestDataSet.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
@@ -2536,6 +2568,8 @@
     <Folder Include="Views\Admin\" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Views\Reports\BalanceTienda.rdlc" />
+    <EmbeddedResource Include="Views\Reports\NotiMart.rdlc" />
     <EmbeddedResource Include="Views\Reports\Report1.rdlc" />
   </ItemGroup>
   <PropertyGroup>

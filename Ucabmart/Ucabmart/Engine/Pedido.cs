@@ -9,13 +9,19 @@ namespace Ucabmart.Engine
         public DateTime Fecha { get; set; }
         public bool EstaAprovado { get; set; }
         public string CodigoCliente { get; set; }
+        public int CodigoTienda { get; set; }
         public bool EsEnLinea { get; set; }
         public int MetodoDePago { get; set; }
         public string Proveedor { get; set; }
         public int Cajero { get; set; }
 
-        public Pedido(string codigo, string cliente, float montoTotal, DateTime fecha, bool estaAprovado, bool esEnLinea,
-            int metodoDePago, string proveedor, int cajero)
+        public Pedido()
+        {
+
+        }
+        
+        private  Pedido(string codigo, string cliente, float montoTotal, DateTime fecha, int tienda, bool estaAprovado, 
+            bool esEnLinea, int metodoDePago, string proveedor, int cajero)
         {
             Codigo = codigo;
             CodigoCliente = cliente;
