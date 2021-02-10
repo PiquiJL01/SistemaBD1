@@ -1970,7 +1970,7 @@
     <Content Include="Views\RegistrarClienteNatural.aspx" />
     <Content Include="Views\RegistroProveedores.aspx" />
     <Content Include="Views\Reports\AddToReportsPages.txt" />
-    <Content Include="Views\Reports\WebForm2.aspx" />
+    <Content Include="Views\Reports\TestReportPage.aspx" />
     <Content Include="Views\Tiendas-Admin.aspx" />
     <Content Include="Views\RegistrarJuridica.aspx" />
     <Content Include="Views\Tiendas.aspx" />
@@ -2241,12 +2241,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TestDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Views\Reports\WebForm2.aspx.cs">
-      <DependentUpon>WebForm2.aspx</DependentUpon>
+    <Compile Include="Views\Reports\TestReportPage.aspx.cs">
+      <DependentUpon>TestReportPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Views\Reports\WebForm2.aspx.designer.cs">
-      <DependentUpon>WebForm2.aspx</DependentUpon>
+    <Compile Include="Views\Reports\TestReportPage.aspx.designer.cs">
+      <DependentUpon>TestReportPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Tiendas-Admin.aspx.cs">
       <DependentUpon>Tiendas-Admin.aspx</DependentUpon>
@@ -2570,7 +2570,7 @@
   <ItemGroup>
     <EmbeddedResource Include="Views\Reports\BalanceTienda.rdlc" />
     <EmbeddedResource Include="Views\Reports\NotiMart.rdlc" />
-    <EmbeddedResource Include="Views\Reports\Report1.rdlc" />
+    <EmbeddedResource Include="Views\Reports\TestReport.rdlc" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

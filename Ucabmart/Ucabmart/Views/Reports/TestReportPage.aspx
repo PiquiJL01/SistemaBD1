@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm2.aspx.cs" Inherits="Ucabmart.Views.Reports.WebForm2" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="TestReportPage.aspx.cs" Inherits="Ucabmart.Views.Reports.WebForm2" %>
 
 <%@ Register assembly="Microsoft.ReportViewer.WebForms" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
 
