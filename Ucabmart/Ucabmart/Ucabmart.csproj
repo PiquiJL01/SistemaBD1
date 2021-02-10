@@ -2007,11 +2007,11 @@
     <Compile Include="Engine\Cheque.cs" />
     <Compile Include="Engine\Clasificacion.cs" />
     <Compile Include="Engine\Cliente.cs" />
+    <Compile Include="Engine\Constantes.cs" />
     <Compile Include="Engine\CorreoElectronico.cs" />
     <Compile Include="Engine\ConexionBD.cs" />
     <Compile Include="Engine\Departamento.cs" />
     <Compile Include="Engine\Descuento.cs" />
-    <Compile Include="Engine\Dominios.cs" />
     <Compile Include="Engine\Efectivo.cs" />
     <Compile Include="Engine\Empleado.cs" />
     <Compile Include="Engine\Estatus.cs" />
@@ -2223,6 +2223,11 @@
     <Compile Include="Views\RegistroProveedores.aspx.designer.cs">
       <DependentUpon>RegistroProveedores.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\Reports\Asistencias.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Asistencias.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Views\Reports\BalanceTiendas.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -2232,6 +2237,16 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>NotiMart.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\OrdenDeCompraCliente.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrdenDeCompraCliente.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\ResumenAsistencias.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ResumenAsistencias.xsd</DependentUpon>
     </Compile>
     <Compile Include="Views\Reports\TestDataSet.cs">
       <DependentUpon>TestDataSet.xsd</DependentUpon>
@@ -2531,6 +2546,17 @@
     <Content Include="Views\Reports\BalanceTiendas.xsc">
       <DependentUpon>BalanceTiendas.xsd</DependentUpon>
     </Content>
+    <Content Include="Views\Reports\Asistencias.xsc">
+      <DependentUpon>Asistencias.xsd</DependentUpon>
+    </Content>
+    <None Include="Views\Reports\Asistencias.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Asistencias.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Views\Reports\Asistencias.xss">
+      <DependentUpon>Asistencias.xsd</DependentUpon>
+    </Content>
     <None Include="Views\Reports\BalanceTiendas.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
@@ -2546,6 +2572,28 @@
     </None>
     <Content Include="Views\Reports\NotiMart.xss">
       <DependentUpon>NotiMart.xsd</DependentUpon>
+    </Content>
+    <Content Include="Views\Reports\ResumenAsistencias.xsc">
+      <DependentUpon>ResumenAsistencias.xsd</DependentUpon>
+    </Content>
+    <Content Include="Views\Reports\OrdenDeCompraCliente.xsc">
+      <DependentUpon>OrdenDeCompraCliente.xsd</DependentUpon>
+    </Content>
+    <None Include="Views\Reports\OrdenDeCompraCliente.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OrdenDeCompraCliente.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Views\Reports\OrdenDeCompraCliente.xss">
+      <DependentUpon>OrdenDeCompraCliente.xsd</DependentUpon>
+    </Content>
+    <None Include="Views\Reports\ResumenAsistencias.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ResumenAsistencias.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Views\Reports\ResumenAsistencias.xss">
+      <DependentUpon>ResumenAsistencias.xsd</DependentUpon>
     </Content>
     <None Include="Views\Reports\TestDataSet.xsd">
       <SubType>Designer</SubType>
@@ -2568,8 +2616,10 @@
     <Folder Include="Views\Admin\" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Views\Reports\Asistencias.rdlc" />
     <EmbeddedResource Include="Views\Reports\BalanceTienda.rdlc" />
     <EmbeddedResource Include="Views\Reports\NotiMart.rdlc" />
+    <EmbeddedResource Include="Views\Reports\ResumenAsistencia.rdlc" />
     <EmbeddedResource Include="Views\Reports\TestReport.rdlc" />
   </ItemGroup>
   <PropertyGroup>

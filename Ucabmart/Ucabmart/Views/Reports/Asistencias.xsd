@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Asistencias" targetNamespace="http://tempuri.org/Asistencias.xsd" xmlns:mstns="http://tempuri.org/Asistencias.xsd" xmlns="http://tempuri.org/Asistencias.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="grupo5db" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="grupo5db (Web.config)" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.grupo5db.ConnectionString" Provider="Npgsql" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AsistenciasTableAdapter" GeneratorDataComponentClassName="AsistenciasTableAdapter" Name="Asistencias" UserDataComponentName="AsistenciasTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="grupo5db (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT asistencia.as_fecha AS fecha, asistencia.as_hora_entrada AS horaentrada, asistencia.as_hora_salida AS horasalida, empleado.em_1er_nombre AS primernombre, empleado.em_2do_nombre AS segundonombre, 
+                  empleado.em_1er_apellido AS primerapellido, empleado.em_2do_apellido AS segundoapellido, departamento.de_nombre AS departamento
+FROM     empleado INNER JOIN
+                  asistencia ON asistencia.empleado_em_codigo = empleado.em_codigo INNER JOIN
+                  departamento ON departamento.de_codigo = empleado.departamento_de_codigo</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="fecha" DataSetColumn="fecha" />
+              <Mapping SourceColumn="horaentrada" DataSetColumn="horaentrada" />
+              <Mapping SourceColumn="horasalida" DataSetColumn="horasalida" />
+              <Mapping SourceColumn="primernombre" DataSetColumn="primernombre" />
+              <Mapping SourceColumn="segundonombre" DataSetColumn="segundonombre" />
+              <Mapping SourceColumn="primerapellido" DataSetColumn="primerapellido" />
+              <Mapping SourceColumn="segundoapellido" DataSetColumn="segundoapellido" />
+              <Mapping SourceColumn="departamento" DataSetColumn="departamento" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="grupo5db (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByEmpleado" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByEmpleado" GeneratorSourceName="FillByEmpleado" GetMethodModifier="Public" GetMethodName="GetDataByEmpleado" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByEmpleado" UserSourceName="FillByEmpleado">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT asistencia.as_fecha AS fecha, asistencia.as_hora_entrada AS horaentrada, asistencia.as_hora_salida AS horasalida, empleado.em_1er_nombre AS primernombre, empleado.em_2do_nombre AS segundonombre, 
+                  empleado.em_1er_apellido AS primerapellido, empleado.em_2do_apellido AS segundoapellido, departamento.de_nombre AS departamento
+FROM     empleado INNER JOIN
+                  asistencia ON asistencia.empleado_em_codigo = empleado.em_codigo INNER JOIN
+                  departamento ON departamento.de_codigo = empleado.departamento_de_codigo
+WHERE  (asistencia.empleado_em_codigo = @empleado)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="empleado" ColumnName="empleado_em_codigo" DataSourceName="grupo5db.&quot;public&quot;.asistencia" DataTypeServer="int4" DbType="Object" Direction="Input" ParameterName="empleado" Precision="0" Scale="0" Size="1024" SourceColumn="empleado_em_codigo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Asistencias" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="Asistencias" msprop:Generator_UserDSName="Asistencias">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Asistencias" msprop:Generator_TableClassName="AsistenciasDataTable" msprop:Generator_TableVarName="tableAsistencias" msprop:Generator_TablePropName="_Asistencias" msprop:Generator_RowDeletingName="AsistenciasRowDeleting" msprop:Generator_RowChangingName="AsistenciasRowChanging" msprop:Generator_RowEvHandlerName="AsistenciasRowChangeEventHandler" msprop:Generator_RowDeletedName="AsistenciasRowDeleted" msprop:Generator_UserTableName="Asistencias" msprop:Generator_RowChangedName="AsistenciasRowChanged" msprop:Generator_RowEvArgName="AsistenciasRowChangeEvent" msprop:Generator_RowClassName="AsistenciasRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="fecha" msprop:Generator_ColumnVarNameInTable="columnfecha" msprop:Generator_ColumnPropNameInRow="fecha" msprop:Generator_ColumnPropNameInTable="fechaColumn" msprop:Generator_UserColumnName="fecha" type="xs:dateTime" />
+              <xs:element name="horaentrada" msprop:Generator_ColumnVarNameInTable="columnhoraentrada" msprop:Generator_ColumnPropNameInRow="horaentrada" msprop:Generator_ColumnPropNameInTable="horaentradaColumn" msprop:Generator_UserColumnName="horaentrada" type="xs:duration" />
+              <xs:element name="horasalida" msprop:Generator_ColumnVarNameInTable="columnhorasalida" msprop:Generator_ColumnPropNameInRow="horasalida" msprop:Generator_ColumnPropNameInTable="horasalidaColumn" msprop:Generator_UserColumnName="horasalida" type="xs:duration" />
+              <xs:element name="primernombre" msprop:Generator_ColumnVarNameInTable="columnprimernombre" msprop:Generator_ColumnPropNameInRow="primernombre" msprop:Generator_ColumnPropNameInTable="primernombreColumn" msprop:Generator_UserColumnName="primernombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="32672" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="segundonombre" msprop:Generator_ColumnVarNameInTable="columnsegundonombre" msprop:Generator_ColumnPropNameInRow="segundonombre" msprop:Generator_ColumnPropNameInTable="segundonombreColumn" msprop:Generator_UserColumnName="segundonombre" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="32672" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="primerapellido" msprop:Generator_ColumnVarNameInTable="columnprimerapellido" msprop:Generator_ColumnPropNameInRow="primerapellido" msprop:Generator_ColumnPropNameInTable="primerapellidoColumn" msprop:Generator_UserColumnName="primerapellido">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="32672" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="segundoapellido" msprop:Generator_ColumnVarNameInTable="columnsegundoapellido" msprop:Generator_ColumnPropNameInRow="segundoapellido" msprop:Generator_ColumnPropNameInTable="segundoapellidoColumn" msprop:Generator_UserColumnName="segundoapellido" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="32672" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="departamento" msprop:Generator_ColumnVarNameInTable="columndepartamento" msprop:Generator_ColumnPropNameInRow="departamento" msprop:Generator_ColumnPropNameInTable="departamentoColumn" msprop:Generator_UserColumnName="departamento">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="32672" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

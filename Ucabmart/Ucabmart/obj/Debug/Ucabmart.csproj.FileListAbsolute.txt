@@ -596,7 +596,6 @@ C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\pt-BR\M
 C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\ru\Microsoft.Data.SqlClient.resources.dll
 C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\zh-Hans\Microsoft.Data.SqlClient.resources.dll
 C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\zh-Hant\Microsoft.Data.SqlClient.resources.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\obj\Debug\Ucabmart.csprojAssemblyReference.cache
 C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\obj\Debug\Ucabmart.csproj.CoreCompileInputs.cache
 C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\obj\Debug\Ucabmart.csproj.CopyComplete
 C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\obj\Debug\Ucabmart.dll
