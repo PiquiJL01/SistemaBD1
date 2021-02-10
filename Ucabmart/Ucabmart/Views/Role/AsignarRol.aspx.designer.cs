@@ -96,6 +96,15 @@ namespace Ucabmart.Views.Role
         protected global::System.Web.UI.WebControls.Button btnBuscar;
 
         /// <summary>
+        /// Control EmplHead.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label EmplHead;
+
+        /// <summary>
         /// Control Nombre.
         /// </summary>
         /// <remarks>
@@ -129,7 +138,7 @@ namespace Ucabmart.Views.Role
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBoxList Permisos;
+        protected global::System.Web.UI.WebControls.Table Permisos;
 
         /// <summary>
         /// Control Asignar.

@@ -30,9 +30,13 @@ namespace Ucabmart.Engine
             }
         }
 
+        public Rol()
+        {
+        }
+
         private Rol(int codigo, string nombre, string descripcion)
         {
-            Codigo = Codigo;
+            Codigo = codigo;
             Nombre = nombre;
             Descripcion = descripcion;
         }

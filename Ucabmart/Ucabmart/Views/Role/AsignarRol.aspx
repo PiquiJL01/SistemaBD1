@@ -118,23 +118,38 @@
 
                                 <br />
 
-                                <div class="form-group">
-                                         <asp:Label ID="Nombre" runat="server" Text="Nombre"></asp:Label>
+                             <%--<EMPLEADO>--%>
+                              <div class="PC">
+                                <asp:Label ID="EmplHead" runat="server" Text="Empleado"></asp:Label>
+                              </div> 
+
+
+                                <div class="form-group" style="margin-bottom:40px; margin-top:20px;">
+                                         <asp:Label ID="Nombre" runat="server" Text="Nombre del Empleado"></asp:Label>
                                         <asp:TextBox ID="TxtNombre" runat="server" type="name" name="name" data-parsley-trigger="change"  
-                                            placeholder="Ingrese el nombre del producto" autocomplete="off" class="form-control">
+                                            placeholder="Nombre del Empleado" autocomplete="off" class="form-control">
                                         </asp:TextBox>
                                 </div>
 
 
                                 <div class="form-group">
-                                    <asp:DropDownList ID="Roles" runat="server" style="padding-bottom: 15px; background-color: #0f136bd6;color: white; width: 520px;" class="input-group-prepend be-addon">
-                                        <asp:ListItem Value="">Rol</asp:ListItem>
+                                    <asp:DropDownList ID="Roles" runat="server" style="padding-bottom: 15px; background-color: #0f136bd6;color: white; width: 550px;" class="input-group-prepend be-addon" OnSelectedIndexChanged="Agregar_Permisos" AutoPostBack="True">
+                                        <asp:ListItem Value="0">Rol</asp:ListItem>
                                    </asp:DropDownList>
                                     
+
+
                                     <div style="margin-top: 20px;">
-                                        <asp:CheckBoxList ID="Permisos" runat="server" style="background-color:#4e73df; color: white; border-radius: 10px; padding: 10px 10px 10px 10px; margin-top: 40px;" class="input-group-prepend be-addon">
+
+                                   <asp:Table id="Permisos" runat="server" CellPadding="10" GridLines="Both" HorizontalAlign="Center" Width="540" style="background-color:cornflowerblue; color: white; border-color:aliceblue" >
+
+                                   </asp:Table>
+
+
+
+<%--                                        <asp:CheckBoxList ID="Permisos" runat="server" style="background-color:#4e73df; color: white; border-radius: 10px; padding: 10px 10px 10px 10px; margin-top: 40px;" class="input-group-prepend be-addon">
                                  
-                                        </asp:CheckBoxList>
+                                        </asp:CheckBoxList>--%>
                                     </div>
 
                                 </div>
