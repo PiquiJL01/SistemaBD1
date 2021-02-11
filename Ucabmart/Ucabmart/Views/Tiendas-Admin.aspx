@@ -159,6 +159,34 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <div class="categorias-item">
+                            <a class="categorias-link" href="/Views/Reports/BalanceTienda.aspx">
+                                <div class="categorias-hover">
+                                    <div class="categorias-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid2" src="../Content/assets/img/Balance.jpeg" alt="" />
+                            </a>
+                            <div class="categorias-caption" style="margin-right:-68px; background-color:#4e73dfd1">
+                                <div class="categorias-caption-heading">Balances</div>
+                                <div class="categorias-caption-subheading text-muted">Permite consultar el balance de las tiendas......</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4" style="margin-left: 120px">
+                        <div class="categorias-item">
+                            <a class="categorias-link" href="/Views/Reports/VentasConcretadas.aspx">
+                                <div class="categorias-hover">
+                                    <div class="categorias-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid2" src="../Content/assets/img/VentasC.jpeg" alt="" />
+                            </a>
+                            <div class="categorias-caption" style="margin-right:-68px; background-color:#4e73dfd1">
+                                <div class="categorias-caption-heading">Ventas Concretas</div>
+                                <div class="categorias-caption-subheading text-muted">Permite consultar las ventas de las tiendas......</div>
+                            </div>
+                        </div>
+                    </div>
             </div>
           </div>
         </section>

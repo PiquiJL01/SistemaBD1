@@ -156,9 +156,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-sm-6 mb-4" style="margin-left: 200px">
+                    <div class="col-lg-4 col-sm-6 mb-4">
                         <div class="categorias-item">
-                            <a class="categorias-link" href="#">
+                            <a class="categorias-link" href="/Views/Reports/Asistencia.aspx">
                                 <div class="categorias-hover">
                                     <div class="categorias-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
@@ -166,7 +166,21 @@
                             </a>
                             <div class="categorias-caption" style="margin-right:-68px; background-color:#4e73dfd1">
                                 <div class="categorias-caption-heading">Registro de Asistencia</div>
-                                <div class="categorias-caption-subheading text-muted">Carga del archivo de Excel......</div>
+                                <div class="categorias-caption-subheading text-muted">Permite observar la asistencia de los empleados..</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4" style="margin-left: 120px">
+                        <div class="categorias-item">
+                            <a class="categorias-link" href="/Views/Reports/Resumen Asistencia.aspx">
+                                <div class="categorias-hover">
+                                    <div class="categorias-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid2" src="../Content/assets/img/ResAs.jpeg" alt="" />
+                            </a>
+                            <div class="categorias-caption" style="margin-right:-68px; background-color:#4e73dfd1">
+                                <div class="categorias-caption-heading">Resumen de Asistencia</div>
+                                <div class="categorias-caption-subheading text-muted">CPer,ite visualizar la estadisticas de los empleados......</div>
                             </div>
                         </div>
                     </div>
