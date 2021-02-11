@@ -91,7 +91,7 @@
           </div>
           
         <!-- Options -->
-           <div class="option">Consultar Producto</div>
+           <div class="option">Consultar Rol</div>
           
           <form id="form1" runat="server">  
               <div class="container">
