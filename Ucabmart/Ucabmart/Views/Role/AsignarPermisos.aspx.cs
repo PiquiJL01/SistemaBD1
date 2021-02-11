@@ -24,11 +24,39 @@ namespace Ucabmart.Views.Role
         protected void btnRegistrar_Click(object sender, EventArgs e)
         {
 
-            //Empleado empleado = new Empleado(int.Parse(BuscarCod.Text));
-            //MuchosAMuchos em_ca = new MuchosAMuchos();
-            //em_ca.Insertar(empleado, new Rol(int.Parse(Roles.SelectedValue)));
+            Rol rol = new Rol(int.Parse(BuscarCod.Text));
+            MuchosAMuchos ro_pe = new MuchosAMuchos();
+            bool Flag = false;
 
-            //Response.Redirect("/Views/Role/Role_Admin.aspx", false);
+
+            foreach (ListItem item in Permisos.Items)
+            {
+               if (item.Selected)
+               {
+                    if (!VerificatePermisos(rol, item))
+                    {
+                        ro_pe.Insertar(rol, new Permiso(int.Parse(item.Value)));
+
+                    }
+                    else {
+
+                        Flag = true;
+                    
+                    }
+
+                }
+            }
+
+            if (!Flag) {
+
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('los permisos han sido asignados exitosamente');" + "window.location ='Role_Admin.aspx';", true);
+
+            }
+            else
+            {
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('Se selecciono un permiso que ya esta asignado al rol');", true);
+            }
+
 
         }
 
@@ -36,12 +64,30 @@ namespace Ucabmart.Views.Role
         protected void btnBuscar_Click(object sender, EventArgs e)
         {
             Rol rol = new Rol(int.Parse(BuscarCod.Text));
-
             TxtNombre.Text =  rol.Nombre;
 
+            this.Agregar_Permisos();
             this.VisibleFields(true);
             this.EnableFields(false);
 
+        }
+
+
+        protected bool VerificatePermisos(Rol rol, ListItem permi)
+        {
+
+            List<Permiso> permisos = rol.Permisos();
+
+            foreach (Permiso permiso in permisos)
+            {
+                if(int.Parse(permi.Value) == permiso.Codigo)
+                {
+                    return true;
+
+                }
+            }
+
+            return false;
         }
 
 
@@ -59,36 +105,29 @@ namespace Ucabmart.Views.Role
             EmplHead.Visible = visible;
             TxtNombre.Visible = visible;
             Asignar.Visible = visible;
+            Permisos.Visible = visible;
 
         }
 
-        protected void Agregar_Roles()
+        protected void Agregar_Permisos()
         {
 
-        }
+            Permisos.Items.Clear();
 
-        protected void Agregar_Permisos(object sender, EventArgs e)
-        {
+            Permiso permiso = new Permiso();
 
-            //Permisos.Items.Clear();
+            List<Permiso> lista = new List<Permiso>();
+            lista = permiso.Todos();
 
-            //if (int.Parse(Roles.SelectedValue) != 0) {
-            //    Rol rol = new Rol(int.Parse(Roles.SelectedValue));
+            foreach (Permiso item in lista)
+            {
+               ListItem listItem = new ListItem(item.Nombre, item.Codigo.ToString());
 
-            //    List<Permiso> lista = new List<Permiso>();
-            //    lista = rol.Permisos();
-
-            //    foreach (Permiso item in lista)
-            //    {
-            //        ListItem listItem = new ListItem(item.Nombre, item.Codigo.ToString());
-
-            //        if (!Permisos.Items.Contains(listItem))
-            //        {
-            //            Permisos.Items.Insert(Permisos.Items.Count, listItem);
-            //        }
-            //    }
-
-            //}
+               if (!Permisos.Items.Contains(listItem))
+               {
+                  Permisos.Items.Insert(Permisos.Items.Count, listItem);
+               }
+            }
 
             this.VisibleFields(true);
 

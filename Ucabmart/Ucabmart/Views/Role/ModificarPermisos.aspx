@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AsignarPermisos.aspx.cs" Inherits="Ucabmart.Views.Role.AsignarPermisos" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ModificarPermisos.aspx.cs" Inherits="Ucabmart.Views.Role.ModificarPermisos" %>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Ucabmart - Asignar Permisos</title>
+        <title>Ucabmart - Modificar Permisos</title>
         <link rel="icon" type="image/x-icon" href="../../Content/assets/img/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
@@ -16,7 +16,7 @@
         <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="../../Content/css/Permisos.css" rel="stylesheet" />
+        <link href="../../Content/css/ModificarPermisos.css" rel="stylesheet" />
     </head>
 
       <body id="page-top" class="bg-gradient-primary">
@@ -100,7 +100,7 @@
                     <div class="col-lg-7">
                         <div class="p-5">
                             <div class="text-center">
-                                <h1 class="h4 text-gray-900 mb-4">Asignar Permisos</h1>
+                                <h1 class="h4 text-gray-900 mb-4">Modificar Permisos</h1>
                             </div>
                             <form id="form1" runat="server">
                                
@@ -108,7 +108,7 @@
                                     <div class="input-group mb-3"><span class="input-group-prepend" style="box-shadow: 1.5px 1px 5px #443939;"><span class="input-group-text"><i class="fa fa-user"></i></span></span> 
 
                                         <asp:TextBox ID="BuscarCod" runat="server" type="text" name="name" data-parsley-trigger="change"  
-                                         placeholder="Ingrese el codigo del Rol..." autocomplete="off" class="form-control" style="padding:10px 50px 10px 50px; text-align: left;">
+                                         placeholder="Ingrese el codigo del rol..." autocomplete="off" class="form-control" style="padding:10px 50px 10px 50px; text-align: left;">
                                         </asp:TextBox>
 
                                         <asp:Button ID="btnBuscar" runat="server" class="btn btn-space btn-primary ml-1" Text="Buscar" OnClick="btnBuscar_Click" Width="87px" />
@@ -120,36 +120,44 @@
 
                              <%--<EMPLEADO>--%>
                               <div class="PC">
-                                <asp:Label ID="EmplHead" runat="server" Text="Rol"></asp:Label>
+                                <asp:Label ID="RolHead" runat="server" Text="Rol"></asp:Label>
                               </div> 
-
 
 
                                 <div class="form-group" style="margin-bottom:40px; margin-top:20px;">
                                          <asp:Label ID="Nombre" runat="server" Text="Nombre del Rol"></asp:Label>
                                         <asp:TextBox ID="TxtNombre" runat="server" type="name" name="name" data-parsley-trigger="change"  
-                                            placeholder="Nombre del Rol" autocomplete="off" class="form-control">
+                                            placeholder="" autocomplete="off" class="form-control">
                                         </asp:TextBox>
                                 </div>
 
 
                                 <div class="form-group">
 
-                                    <div style="margin-top: 20px;">
+                                 <div class="Contacto" style="margin-top: 40px;">
+                                    <asp:Label ID="TitleAsig" runat="server" Text="Selecione el permiso que desea modificar"></asp:Label>
+                                 </div>
 
-                                        <asp:CheckBoxList ID="Permisos" runat="server" style="background-color:#4e73df; color: white; border-radius: 10px; padding: 10px 10px 10px 10px; margin-top: 40px;" class="input-group-prepend be-addon">
-                                 
-                                        </asp:CheckBoxList>
-                                    </div>
+                                    <asp:DropDownList ID="PerAsig" runat="server" style="padding-bottom: 15px; background-color: #0f136bd6;color: white; width: 550px;" class="input-group-prepend be-addon" >
+                                   </asp:DropDownList>
+                                    
+                                 <div class="Contacto" style="margin-top: 40px;">
+                                    <asp:Label ID="TitleCam" runat="server" Text="Selecione el permiso por el cual se va sustituir"></asp:Label>
+                                 </div>
+
+
+                                   <asp:DropDownList ID="CamPer" runat="server" style="padding-bottom: 15px; background-color: #0f136bd6;color: white; width: 550px; margin-top:20px" class="input-group-prepend be-addon">
+                                   </asp:DropDownList>
+
 
                                 </div>
-
+                                <br />
 
                                 <hr>
-                                <asp:Button ID="Asignar" runat="server" class="btn btn-primary btn-user btn-block" Text="Guardar Cambios" OnClick="btnRegistrar_Click"/>
+                                <asp:Button ID="Asignar" runat="server" class="btn btn-primary btn-user btn-block" Text="Guardar Cambios" OnClick="btnModificar_Click"/>
                                           
                             
-                           </form>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -207,5 +215,4 @@
         <script src="../../Content/js/scripts.js"></script>
     </body>
 </html>
-
 

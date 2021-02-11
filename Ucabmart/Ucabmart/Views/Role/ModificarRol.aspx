@@ -100,7 +100,7 @@
                     <div class="col-lg-7">
                         <div class="p-5">
                             <div class="text-center">
-                                <h1 class="h4 text-gray-900 mb-4">Asignar Roles</h1>
+                                <h1 class="h4 text-gray-900 mb-4">Modificar Roles</h1>
                             </div>
                             <form id="form1" runat="server">
                                
@@ -148,7 +148,6 @@
 
 
                                    <asp:DropDownList ID="CamRol" runat="server" style="padding-bottom: 15px; background-color: #0f136bd6;color: white; width: 550px; margin-top:20px" class="input-group-prepend be-addon">
-                                        <asp:ListItem Value="0">Roles Disponibles</asp:ListItem>
                                    </asp:DropDownList>
 
 
