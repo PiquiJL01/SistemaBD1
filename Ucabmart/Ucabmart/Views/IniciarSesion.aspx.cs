@@ -38,8 +38,16 @@ namespace Ucabmart.Views
                     {
                         string loginUsuario = Email.Text;
                         Session["NombreLogin"] = loginUsuario;
-                        
-                        Response.Redirect("/Views/Inicio_Admin.aspx", false);
+                        int codigoEmpleado = buscarEmpleado.BuscarCodigoEmpleado(correo.Codigo);
+                        MuchosAMuchos m_m = new MuchosAMuchos();
+                        int codigoRol = m_m.BuscarRol(codigoEmpleado);
+                        if (codigoRol != 0)
+                        {
+                            Session["Rol"] = codigoRol.ToString();
+                            Response.Redirect("/Views/Inicio_Admin.aspx", false);
+                        }
+                        else
+                            ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('Usted no tiene permisos para acceder al sistema');", true);
                     }
                         else
                         ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('La contraseña es incorrecta');", true);

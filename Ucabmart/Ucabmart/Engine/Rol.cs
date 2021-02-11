@@ -185,16 +185,17 @@ namespace Ucabmart.Engine
 
                 while (Reader.Read())
                 {
-                    codigos.Add(ReadInt(0));
+                    permisos.Add(new Permiso(ReadInt(0)));
+                  //  codigos.Add(ReadInt(0));
                 }
             }
 
             CerrarConexion();
 
-            foreach (int codigo in codigos)
-            {
-                permisos.Add(new Permiso(codigo));
-            }
+            //foreach (int codigo in codigos)
+            //{
+            //    permisos.Add(new Permiso(codigo));
+            //}
 
             return permisos;
         }
