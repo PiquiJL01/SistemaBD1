@@ -1,7 +1,9 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Productos_Admin.aspx.cs" Inherits="Ucabmart.Views.WebForm6" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ReportOrden.aspx.cs" Inherits="Ucabmart.Views.Reports.ReportOrden" %>
 
+<%@ Register assembly="Microsoft.ReportViewer.WebForms" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
 
 <!DOCTYPE html>
+
 <html lang="es">
     <head runat="server">
         <meta charset="utf-8" />
@@ -42,36 +44,6 @@
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/Views/Nomina_Admin.aspx">Nomina</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/Views/Role/Role_Admin.aspx">Roles</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/Views/Inicio_Admin.aspx">Inicio</a></li>
-                    
-                        <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span > <%: nombreUsuario %></span>
-                                <img class="img-profile rounded-circle"
-                                    src="../../Content/assets/img/undraw_profile.svg" style="width:35px;">
-                            </a>
-                            <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Perfil
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Configuración
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Activity Log
-                                </a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Logout
-                                </a>
-                            </div>
-                        </li>
                     </ul>  
                 </div>
             </div>
@@ -100,62 +72,28 @@
       <section class="page-section" id="categorias">
          <div class="container cuadro" style="margin-top: -150px; padding-top: 80px;">
             <div class="row" style="padding-left: 150px;">
-                    <div class="col-lg-4 col-sm-6 mb-4">
-                        <div class="categorias-item">
-                            <a class="categorias-link" href="Product/RegistrarProducto.aspx">
-                                <div class="categorias-hover">
-                                    <div class="categorias-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid2" src="../Content/assets/img/Provider/Add-Provider.jpg" alt="" />
-                            </a>
-                            <div class="categorias-caption" style="margin-right:-68px; background-color:#4e73dfd1">
-                                <div class="categorias-caption-heading">Agregar Producto</div>
-                                <div class="categorias-caption-subheading text-muted">Permite registrar los nuevos productos en el sistema...</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 mb-4" style="margin-left: 120px">
-                        <div class="categorias-item">
-                            <a class="categorias-link" href="Product/ConsultarProducto.aspx">
-                                <div class="categorias-hover">
-                                    <div class="categorias-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid2" src="../Content/assets/img/Provider/Consulting-Provider.jpg" alt="" />
-                            </a>
-                            <div class="categorias-caption" style="margin-right:-69px; background-color:#4e73dfd1">
-                                <div class="categorias-caption-heading">Consultar Producto</div>
-                                <div class="categorias-caption-subheading text-muted">Permite revisar los productos registrados......</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 mb-4" style="box-sizing: initial">
-                        <div class="categorias-item">
-                            <a class="categorias-link" href="Product/ModificarProducto.aspx">
-                                <div class="categorias-hover">
-                                    <div class="categorias-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid2" src="../Content/assets/img/Provider/Update-Provider.jpg" alt="" />
-                            </a>
-                            <div class="categorias-caption" style="margin-right:-44px; background-color:#4e73dfd1">
-                                <div class="categorias-caption-heading">Modificar Producto</div>
-                                <div class="categorias-caption-subheading text-muted">Permite cambiar los datos de los productos......</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 mb-4" style="margin-left: 100px">
-                        <div class="categorias-item">
-                            <a class="categorias-link" href="Product/EliminarProducto.aspx">
-                                <div class="categorias-hover">
-                                    <div class="categorias-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid2" src="../Content/assets/img/Provider/Delete-Provider.jpg" alt="" />
-                            </a>
-                            <div class="categorias-caption" style="margin-right:-68px; background-color:#4e73dfd1">
-                                <div class="categorias-caption-heading">Eliminar Producto</div>
-                                <div class="categorias-caption-subheading text-muted">Permite eliminar los productos con los que ya no cuenta la empresa......</div>
-                            </div>
-                        </div>
-                    </div>
+
+             <form id="form1" runat="server">
+                <div>
+                    <asp:ScriptManager ID="ScriptManager1" runat="server">
+                    </asp:ScriptManager>
+                    <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button" />
+                    <rsweb:ReportViewer ID="ReportViewer1" runat="server" BackColor="" ClientIDMode="AutoID" HighlightBackgroundColor="" InternalBorderColor="204, 204, 204" InternalBorderStyle="Solid" InternalBorderWidth="1px" LinkActiveColor="" LinkActiveHoverColor="" LinkDisabledColor="" PrimaryButtonBackgroundColor="" PrimaryButtonForegroundColor="" PrimaryButtonHoverBackgroundColor="" PrimaryButtonHoverForegroundColor="" SecondaryButtonBackgroundColor="" SecondaryButtonForegroundColor="" SecondaryButtonHoverBackgroundColor="" SecondaryButtonHoverForegroundColor="" SplitterBackColor="" ToolbarDividerColor="" ToolbarForegroundColor="" ToolbarForegroundDisabledColor="" ToolbarHoverBackgroundColor="" ToolbarHoverForegroundColor="" ToolBarItemBorderColor="" ToolBarItemBorderStyle="Solid" ToolBarItemBorderWidth="1px" ToolBarItemHoverBackColor="" ToolBarItemPressedBorderColor="51, 102, 153" ToolBarItemPressedBorderStyle="Solid" ToolBarItemPressedBorderWidth="1px" ToolBarItemPressedHoverBackColor="153, 187, 226">
+                        <LocalReport ReportPath="Views\Reports\TestReport.rdlc">
+                            <DataSources>
+                                <rsweb:ReportDataSource DataSourceId="TestObjectDataSource" Name="Test1" />
+                            </DataSources>
+                        </LocalReport>
+                    </rsweb:ReportViewer>
+                    <asp:ObjectDataSource ID="TestObjectDataSource" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="GetDataByNombre" TypeName="Ucabmart.Views.Reports.TestDataSetTableAdapters.lugarTableAdapter">
+                        <SelectParameters>
+                            <asp:ControlParameter ControlID="TextBox1" ConvertEmptyStringToNull="False" DefaultValue="Libertador" Name="nombre" PropertyName="Text" Type="Object" />
+                        </SelectParameters>
+                    </asp:ObjectDataSource>
+                </div>
+            </form>
+
             </div>
           </div>
         </section>
@@ -211,4 +149,3 @@
         <script src="../../Content/js/scripts.js"></script>
     </body>
 </html>
-
