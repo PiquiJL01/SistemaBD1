@@ -1,289 +1,5 @@
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\SqlServerTypes\x64\msvcr120.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\SqlServerTypes\x64\SqlServerSpatial140.dll
 C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\SqlServerTypes\x86\msvcr120.dll
 C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\SqlServerTypes\x86\SqlServerSpatial140.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Ucabmart.dll.config
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Ucabmart.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Ucabmart.pdb
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\csc.exe
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\csc.exe.config
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\csc.rsp
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\csi.exe
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\csi.exe.config
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\csi.rsp
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\Microsoft.CodeAnalysis.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\Microsoft.CSharp.Core.targets
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\Microsoft.Managed.Core.targets
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\Microsoft.VisualBasic.Core.targets
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\Microsoft.Win32.Primitives.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.AppContext.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.Collections.Immutable.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.Console.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.Diagnostics.StackTrace.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.Globalization.Calendars.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.IO.Compression.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.IO.Compression.ZipFile.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.IO.FileSystem.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.IO.FileSystem.Primitives.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.Net.Http.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.Net.Sockets.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.Reflection.Metadata.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.Security.Cryptography.Algorithms.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.Security.Cryptography.Encoding.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.Security.Cryptography.Primitives.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.Text.Encoding.CodePages.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.Threading.Tasks.Extensions.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.ValueTuple.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.Xml.ReaderWriter.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.Xml.XmlDocument.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.Xml.XPath.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.Xml.XPath.XDocument.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\vbc.exe
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\vbc.exe.config
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\vbc.rsp
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\VBCSCompiler.exe
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.Win32.Primitives.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\netstandard.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.AppContext.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Collections.Concurrent.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Collections.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Collections.NonGeneric.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Collections.Specialized.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.ComponentModel.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.ComponentModel.EventBasedAsync.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.ComponentModel.Primitives.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.ComponentModel.TypeConverter.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Console.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Data.Common.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Diagnostics.Contracts.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Diagnostics.Debug.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Diagnostics.FileVersionInfo.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Diagnostics.Process.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Diagnostics.StackTrace.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Diagnostics.TextWriterTraceListener.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Diagnostics.Tools.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Diagnostics.TraceSource.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Diagnostics.Tracing.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Drawing.Primitives.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Dynamic.Runtime.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Globalization.Calendars.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Globalization.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Globalization.Extensions.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.IO.Compression.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.IO.Compression.ZipFile.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.IO.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.IO.FileSystem.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.IO.FileSystem.DriveInfo.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.IO.FileSystem.Primitives.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.IO.FileSystem.Watcher.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.IO.IsolatedStorage.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.IO.MemoryMappedFiles.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.IO.Pipes.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.IO.UnmanagedMemoryStream.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Linq.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Linq.Expressions.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Linq.Parallel.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Linq.Queryable.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Net.Http.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Net.NameResolution.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Net.NetworkInformation.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Net.Ping.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Net.Primitives.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Net.Requests.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Net.Security.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Net.Sockets.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Net.WebHeaderCollection.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Net.WebSockets.Client.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Net.WebSockets.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.ObjectModel.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Reflection.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Reflection.Extensions.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Reflection.Primitives.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Resources.Reader.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Resources.ResourceManager.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Resources.Writer.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Runtime.CompilerServices.VisualC.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Runtime.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Runtime.Extensions.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Runtime.Handles.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Runtime.InteropServices.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Runtime.InteropServices.RuntimeInformation.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Runtime.Numerics.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Runtime.Serialization.Formatters.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Runtime.Serialization.Json.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Runtime.Serialization.Primitives.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Runtime.Serialization.Xml.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Security.Claims.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Security.Cryptography.Algorithms.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Security.Cryptography.Csp.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Security.Cryptography.Encoding.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Security.Cryptography.Primitives.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Security.Cryptography.X509Certificates.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Security.Principal.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Security.SecureString.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Text.Encoding.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Text.Encoding.Extensions.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Text.RegularExpressions.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Threading.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Threading.Overlapped.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Threading.Tasks.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Threading.Tasks.Parallel.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Threading.Thread.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Threading.ThreadPool.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Threading.Timer.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Xml.ReaderWriter.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Xml.XDocument.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Xml.XmlDocument.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Xml.XmlSerializer.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Xml.XPath.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Xml.XPath.XDocument.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\MessagingToolkit.QRCode.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.Bcl.AsyncInterfaces.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.Data.SqlClient.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.Identity.Client.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.IdentityModel.JsonWebTokens.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.IdentityModel.Logging.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.IdentityModel.Protocols.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.IdentityModel.Tokens.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.ReportViewer.Common.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.ReportViewer.DataVisualization.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.ReportViewer.Design.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.ReportViewer.ProcessingObjectModel.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.ReportViewer.WebDesign.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.ReportViewer.WebForms.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.ReportViewer.WinForms.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.SqlServer.Types.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Newtonsoft.Json.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Npgsql.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Buffers.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.IdentityModel.Tokens.Jwt.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Memory.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Numerics.Vectors.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Runtime.CompilerServices.Unsafe.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Text.Encodings.Web.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Text.Json.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Threading.Channels.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Threading.Tasks.Extensions.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.ValueTuple.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\EnvDTE.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.VisualStudio.Shell.Interop.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.VisualStudio.Shell.Interop.8.0.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\stdole.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.VisualStudio.OLE.Interop.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.VisualStudio.TextManager.Interop.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.MSXML.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.Bcl.AsyncInterfaces.xml
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.Data.SqlClient.pdb
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.Data.SqlClient.xml
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.Identity.Client.xml
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.IdentityModel.JsonWebTokens.xml
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.IdentityModel.Logging.xml
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.IdentityModel.Protocols.xml
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.IdentityModel.Protocols.OpenIdConnect.xml
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.IdentityModel.Tokens.xml
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Newtonsoft.Json.xml
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Npgsql.xml
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Buffers.xml
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.IdentityModel.Tokens.Jwt.xml
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Memory.xml
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Numerics.Vectors.xml
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Runtime.CompilerServices.Unsafe.xml
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Text.Encodings.Web.xml
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Text.Json.xml
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Threading.Channels.xml
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Threading.Tasks.Extensions.xml
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.ValueTuple.xml
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\de\Microsoft.Data.SqlClient.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\es\Microsoft.Data.SqlClient.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\fr\Microsoft.Data.SqlClient.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\it\Microsoft.Data.SqlClient.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\ja\Microsoft.Data.SqlClient.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\ko\Microsoft.Data.SqlClient.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\pt-BR\Microsoft.Data.SqlClient.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\ru\Microsoft.Data.SqlClient.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\zh-Hans\Microsoft.Data.SqlClient.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\zh-Hant\Microsoft.Data.SqlClient.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\de\Microsoft.ReportViewer.Common.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\es\Microsoft.ReportViewer.Common.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\fr\Microsoft.ReportViewer.Common.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\it\Microsoft.ReportViewer.Common.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\ja\Microsoft.ReportViewer.Common.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\ko\Microsoft.ReportViewer.Common.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\pt\Microsoft.ReportViewer.Common.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\ru\Microsoft.ReportViewer.Common.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\de\Microsoft.ReportViewer.DataVisualization.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\es\Microsoft.ReportViewer.DataVisualization.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\it\Microsoft.ReportViewer.DataVisualization.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\de\Microsoft.ReportViewer.Design.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\es\Microsoft.ReportViewer.Design.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\fr\Microsoft.ReportViewer.Design.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\it\Microsoft.ReportViewer.Design.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\ja\Microsoft.ReportViewer.Design.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\ko\Microsoft.ReportViewer.Design.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\pt\Microsoft.ReportViewer.Design.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\ru\Microsoft.ReportViewer.Design.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\de\Microsoft.ReportViewer.WebDesign.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\es\Microsoft.ReportViewer.WebDesign.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\fr\Microsoft.ReportViewer.WebDesign.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\it\Microsoft.ReportViewer.WebDesign.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\ja\Microsoft.ReportViewer.WebDesign.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\ko\Microsoft.ReportViewer.WebDesign.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\pt\Microsoft.ReportViewer.WebDesign.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\ru\Microsoft.ReportViewer.WebDesign.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\zh-CHS\Microsoft.ReportViewer.WebDesign.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\zh-CHT\Microsoft.ReportViewer.WebDesign.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\de\Microsoft.ReportViewer.WebForms.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\es\Microsoft.ReportViewer.WebForms.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\fr\Microsoft.ReportViewer.WebForms.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\it\Microsoft.ReportViewer.WebForms.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\ja\Microsoft.ReportViewer.WebForms.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\ko\Microsoft.ReportViewer.WebForms.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\pt\Microsoft.ReportViewer.WebForms.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\ru\Microsoft.ReportViewer.WebForms.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\zh-CHS\Microsoft.ReportViewer.WebForms.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\zh-CHT\Microsoft.ReportViewer.WebForms.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\de\Microsoft.ReportViewer.WinForms.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\es\Microsoft.ReportViewer.WinForms.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\fr\Microsoft.ReportViewer.WinForms.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\it\Microsoft.ReportViewer.WinForms.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\ja\Microsoft.ReportViewer.WinForms.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\ko\Microsoft.ReportViewer.WinForms.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\pt\Microsoft.ReportViewer.WinForms.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\ru\Microsoft.ReportViewer.WinForms.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\obj\Debug\Ucabmart.csproj.CoreCompileInputs.cache
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\obj\Debug\Ucabmart.csproj.CopyComplete
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\obj\Debug\Ucabmart.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\obj\Debug\Ucabmart.pdb
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\obj\Debug\Ucabmart.csprojAssemblyReference.cache
 C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\obj\Debug\Ucabmart.csprojAssemblyReference.cache
 C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\obj\Debug\RdlCompile.cache
 C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\obj\Debug\RdlCompile.compiled
@@ -575,286 +291,287 @@ C:\Users\Jose\Documents\GitHub\SistemaBD1\Ucabmart\Ucabmart\obj\Debug\Ucabmart.c
 C:\Users\Jose\Documents\GitHub\SistemaBD1\Ucabmart\Ucabmart\obj\Debug\Ucabmart.csproj.CopyComplete
 C:\Users\Jose\Documents\GitHub\SistemaBD1\Ucabmart\Ucabmart\obj\Debug\Ucabmart.dll
 C:\Users\Jose\Documents\GitHub\SistemaBD1\Ucabmart\Ucabmart\obj\Debug\Ucabmart.pdb
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\SqlServerTypes\x64\msvcr120.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\SqlServerTypes\x64\SqlServerSpatial140.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\SqlServerTypes\x86\msvcr120.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\SqlServerTypes\x86\SqlServerSpatial140.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\Ucabmart.dll.config
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\Ucabmart.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\Ucabmart.pdb
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\csc.exe
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\csc.exe.config
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\csc.rsp
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\csi.exe
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\csi.exe.config
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\csi.rsp
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\Microsoft.CodeAnalysis.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\Microsoft.CSharp.Core.targets
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\Microsoft.Managed.Core.targets
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\Microsoft.VisualBasic.Core.targets
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\Microsoft.Win32.Primitives.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.AppContext.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.Collections.Immutable.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.Console.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.Diagnostics.StackTrace.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.Globalization.Calendars.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.IO.Compression.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.IO.Compression.ZipFile.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.IO.FileSystem.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.IO.FileSystem.Primitives.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.Net.Http.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.Net.Sockets.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.Reflection.Metadata.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.Security.Cryptography.Algorithms.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.Security.Cryptography.Encoding.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.Security.Cryptography.Primitives.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.Text.Encoding.CodePages.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.Threading.Tasks.Extensions.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.ValueTuple.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.Xml.ReaderWriter.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.Xml.XmlDocument.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.Xml.XPath.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.Xml.XPath.XDocument.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\vbc.exe
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\vbc.exe.config
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\vbc.rsp
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\VBCSCompiler.exe
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.Win32.Primitives.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\netstandard.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.AppContext.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Collections.Concurrent.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Collections.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Collections.NonGeneric.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Collections.Specialized.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.ComponentModel.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.ComponentModel.EventBasedAsync.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.ComponentModel.Primitives.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.ComponentModel.TypeConverter.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Console.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Data.Common.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Diagnostics.Contracts.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Diagnostics.Debug.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Diagnostics.FileVersionInfo.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Diagnostics.Process.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Diagnostics.StackTrace.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Diagnostics.TextWriterTraceListener.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Diagnostics.Tools.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Diagnostics.TraceSource.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Diagnostics.Tracing.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Drawing.Primitives.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Dynamic.Runtime.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Globalization.Calendars.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Globalization.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Globalization.Extensions.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.IO.Compression.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.IO.Compression.ZipFile.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.IO.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.IO.FileSystem.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.IO.FileSystem.DriveInfo.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.IO.FileSystem.Primitives.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.IO.FileSystem.Watcher.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.IO.IsolatedStorage.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.IO.MemoryMappedFiles.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.IO.Pipes.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.IO.UnmanagedMemoryStream.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Linq.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Linq.Expressions.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Linq.Parallel.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Linq.Queryable.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Net.Http.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Net.NameResolution.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Net.NetworkInformation.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Net.Ping.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Net.Primitives.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Net.Requests.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Net.Security.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Net.Sockets.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Net.WebHeaderCollection.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Net.WebSockets.Client.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Net.WebSockets.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.ObjectModel.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Reflection.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Reflection.Extensions.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Reflection.Primitives.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Resources.Reader.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Resources.ResourceManager.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Resources.Writer.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Runtime.CompilerServices.VisualC.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Runtime.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Runtime.Extensions.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Runtime.Handles.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Runtime.InteropServices.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Runtime.InteropServices.RuntimeInformation.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Runtime.Numerics.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Runtime.Serialization.Formatters.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Runtime.Serialization.Json.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Runtime.Serialization.Primitives.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Runtime.Serialization.Xml.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Security.Claims.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Security.Cryptography.Algorithms.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Security.Cryptography.Csp.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Security.Cryptography.Encoding.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Security.Cryptography.Primitives.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Security.Cryptography.X509Certificates.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Security.Principal.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Security.SecureString.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Text.Encoding.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Text.Encoding.Extensions.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Text.RegularExpressions.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Threading.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Threading.Overlapped.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Threading.Tasks.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Threading.Tasks.Parallel.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Threading.Thread.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Threading.ThreadPool.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Threading.Timer.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Xml.ReaderWriter.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Xml.XDocument.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Xml.XmlDocument.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Xml.XmlSerializer.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Xml.XPath.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Xml.XPath.XDocument.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\MessagingToolkit.QRCode.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.Bcl.AsyncInterfaces.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.Data.SqlClient.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.Identity.Client.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.IdentityModel.JsonWebTokens.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.IdentityModel.Logging.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.IdentityModel.Protocols.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.IdentityModel.Tokens.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.ReportViewer.Common.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.ReportViewer.DataVisualization.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.ReportViewer.Design.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.ReportViewer.ProcessingObjectModel.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.ReportViewer.WebDesign.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.ReportViewer.WebForms.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.ReportViewer.WinForms.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.SqlServer.Types.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\Newtonsoft.Json.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\Npgsql.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Buffers.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.IdentityModel.Tokens.Jwt.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Memory.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Numerics.Vectors.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Runtime.CompilerServices.Unsafe.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Text.Encodings.Web.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Text.Json.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Threading.Channels.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Threading.Tasks.Extensions.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.ValueTuple.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\EnvDTE.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.VisualStudio.Shell.Interop.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.VisualStudio.Shell.Interop.8.0.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\stdole.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.VisualStudio.OLE.Interop.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.VisualStudio.TextManager.Interop.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.MSXML.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.Bcl.AsyncInterfaces.xml
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.Data.SqlClient.pdb
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.Data.SqlClient.xml
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.Identity.Client.xml
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.IdentityModel.JsonWebTokens.xml
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.IdentityModel.Logging.xml
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.IdentityModel.Protocols.xml
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.IdentityModel.Protocols.OpenIdConnect.xml
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.IdentityModel.Tokens.xml
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\Newtonsoft.Json.xml
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\Npgsql.xml
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Buffers.xml
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.IdentityModel.Tokens.Jwt.xml
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Memory.xml
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Numerics.Vectors.xml
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Runtime.CompilerServices.Unsafe.xml
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Text.Encodings.Web.xml
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Text.Json.xml
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Threading.Channels.xml
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.Threading.Tasks.Extensions.xml
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\System.ValueTuple.xml
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\de\Microsoft.Data.SqlClient.resources.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\es\Microsoft.Data.SqlClient.resources.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\fr\Microsoft.Data.SqlClient.resources.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\it\Microsoft.Data.SqlClient.resources.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\ja\Microsoft.Data.SqlClient.resources.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\ko\Microsoft.Data.SqlClient.resources.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\pt-BR\Microsoft.Data.SqlClient.resources.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\ru\Microsoft.Data.SqlClient.resources.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\zh-Hans\Microsoft.Data.SqlClient.resources.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\zh-Hant\Microsoft.Data.SqlClient.resources.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\de\Microsoft.ReportViewer.Common.resources.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\es\Microsoft.ReportViewer.Common.resources.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\fr\Microsoft.ReportViewer.Common.resources.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\it\Microsoft.ReportViewer.Common.resources.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\ja\Microsoft.ReportViewer.Common.resources.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\ko\Microsoft.ReportViewer.Common.resources.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\pt\Microsoft.ReportViewer.Common.resources.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\ru\Microsoft.ReportViewer.Common.resources.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\de\Microsoft.ReportViewer.DataVisualization.resources.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\es\Microsoft.ReportViewer.DataVisualization.resources.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\it\Microsoft.ReportViewer.DataVisualization.resources.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\de\Microsoft.ReportViewer.Design.resources.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\es\Microsoft.ReportViewer.Design.resources.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\fr\Microsoft.ReportViewer.Design.resources.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\it\Microsoft.ReportViewer.Design.resources.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\ja\Microsoft.ReportViewer.Design.resources.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\ko\Microsoft.ReportViewer.Design.resources.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\pt\Microsoft.ReportViewer.Design.resources.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\ru\Microsoft.ReportViewer.Design.resources.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\de\Microsoft.ReportViewer.WebDesign.resources.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\es\Microsoft.ReportViewer.WebDesign.resources.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\fr\Microsoft.ReportViewer.WebDesign.resources.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\it\Microsoft.ReportViewer.WebDesign.resources.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\ja\Microsoft.ReportViewer.WebDesign.resources.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\ko\Microsoft.ReportViewer.WebDesign.resources.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\pt\Microsoft.ReportViewer.WebDesign.resources.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\ru\Microsoft.ReportViewer.WebDesign.resources.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\zh-CHS\Microsoft.ReportViewer.WebDesign.resources.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\zh-CHT\Microsoft.ReportViewer.WebDesign.resources.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\de\Microsoft.ReportViewer.WebForms.resources.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\es\Microsoft.ReportViewer.WebForms.resources.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\fr\Microsoft.ReportViewer.WebForms.resources.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\it\Microsoft.ReportViewer.WebForms.resources.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\ja\Microsoft.ReportViewer.WebForms.resources.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\ko\Microsoft.ReportViewer.WebForms.resources.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\pt\Microsoft.ReportViewer.WebForms.resources.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\ru\Microsoft.ReportViewer.WebForms.resources.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\zh-CHS\Microsoft.ReportViewer.WebForms.resources.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\zh-CHT\Microsoft.ReportViewer.WebForms.resources.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\de\Microsoft.ReportViewer.WinForms.resources.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\es\Microsoft.ReportViewer.WinForms.resources.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\fr\Microsoft.ReportViewer.WinForms.resources.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\it\Microsoft.ReportViewer.WinForms.resources.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\ja\Microsoft.ReportViewer.WinForms.resources.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\ko\Microsoft.ReportViewer.WinForms.resources.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\pt\Microsoft.ReportViewer.WinForms.resources.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\ru\Microsoft.ReportViewer.WinForms.resources.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\bin\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\obj\Debug\Ucabmart.csproj.CoreCompileInputs.cache
-C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\obj\Debug\Ucabmart.csproj.CopyComplete
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.ReportViewer.Common.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\SqlServerTypes\x64\msvcr120.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Ucabmart.dll.config
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Ucabmart.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Ucabmart.pdb
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\csc.exe
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\csc.exe.config
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\csc.rsp
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\csi.exe
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\csi.exe.config
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\csi.rsp
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.AppContext.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.Console.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.IO.Compression.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.Net.Http.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.Net.Sockets.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.ValueTuple.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\vbc.exe
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\vbc.exe.config
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\vbc.rsp
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\VBCSCompiler.exe
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.Win32.Primitives.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\netstandard.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.AppContext.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Collections.Concurrent.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Collections.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Collections.NonGeneric.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Collections.Specialized.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.ComponentModel.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.ComponentModel.EventBasedAsync.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.ComponentModel.Primitives.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.ComponentModel.TypeConverter.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Console.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Data.Common.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Diagnostics.Contracts.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Diagnostics.Debug.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Diagnostics.Process.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Diagnostics.StackTrace.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Diagnostics.TextWriterTraceListener.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Diagnostics.Tools.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Diagnostics.TraceSource.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Diagnostics.Tracing.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Drawing.Primitives.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Dynamic.Runtime.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Globalization.Calendars.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Globalization.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Globalization.Extensions.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.IO.Compression.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.IO.Compression.ZipFile.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.IO.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.IO.FileSystem.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.IO.FileSystem.DriveInfo.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.IO.FileSystem.Primitives.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.IO.FileSystem.Watcher.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.IO.IsolatedStorage.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.IO.MemoryMappedFiles.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.IO.Pipes.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.IO.UnmanagedMemoryStream.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Linq.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Linq.Expressions.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Linq.Parallel.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Linq.Queryable.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Net.Http.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Net.NameResolution.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Net.NetworkInformation.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Net.Ping.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Net.Primitives.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Net.Requests.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Net.Security.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Net.Sockets.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Net.WebHeaderCollection.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Net.WebSockets.Client.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Net.WebSockets.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.ObjectModel.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Reflection.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Reflection.Extensions.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Reflection.Primitives.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Resources.Reader.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Resources.ResourceManager.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Resources.Writer.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Runtime.CompilerServices.VisualC.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Runtime.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Runtime.Extensions.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Runtime.Handles.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Runtime.InteropServices.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Runtime.Numerics.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Runtime.Serialization.Formatters.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Runtime.Serialization.Json.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Runtime.Serialization.Primitives.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Runtime.Serialization.Xml.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Security.Claims.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Security.Cryptography.Algorithms.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Security.Cryptography.Csp.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Security.Cryptography.Encoding.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Security.Cryptography.Primitives.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Security.Principal.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Security.SecureString.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Text.Encoding.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Text.Encoding.Extensions.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Text.RegularExpressions.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Threading.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Threading.Overlapped.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Threading.Tasks.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Threading.Tasks.Parallel.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Threading.Thread.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Threading.ThreadPool.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Threading.Timer.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Xml.ReaderWriter.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Xml.XDocument.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Xml.XmlDocument.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Xml.XmlSerializer.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Xml.XPath.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Xml.XPath.XDocument.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\MessagingToolkit.QRCode.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.Data.SqlClient.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.Identity.Client.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.IdentityModel.Logging.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.ReportViewer.Design.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.ReportViewer.WebDesign.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.ReportViewer.WebForms.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.ReportViewer.WinForms.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.SqlServer.Types.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Newtonsoft.Json.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Npgsql.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Buffers.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Memory.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Numerics.Vectors.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Text.Encodings.Web.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Text.Json.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Threading.Channels.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Threading.Tasks.Extensions.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.ValueTuple.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\EnvDTE.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.VisualStudio.Shell.Interop.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\stdole.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.VisualStudio.OLE.Interop.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.VisualStudio.TextManager.Interop.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.MSXML.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.Data.SqlClient.pdb
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.Data.SqlClient.xml
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.Identity.Client.xml
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.IdentityModel.Logging.xml
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.IdentityModel.Protocols.xml
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.IdentityModel.Protocols.OpenIdConnect.xml
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.IdentityModel.Tokens.xml
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Newtonsoft.Json.xml
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Npgsql.xml
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Buffers.xml
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Memory.xml
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Numerics.Vectors.xml
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Text.Encodings.Web.xml
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Text.Json.xml
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Threading.Channels.xml
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.Threading.Tasks.Extensions.xml
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\System.ValueTuple.xml
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\de\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\es\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\fr\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\it\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\ja\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\ko\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\pt-BR\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\ru\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\zh-Hans\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\de\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\es\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\it\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\de\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\es\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\fr\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\it\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\ja\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\ko\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\pt\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\ru\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\de\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\es\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\fr\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\it\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\ja\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\ko\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\pt\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\ru\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\zh-CHS\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\zh-CHT\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\de\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\es\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\fr\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\it\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\ja\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\ko\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\pt\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\ru\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\zh-CHS\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\zh-CHT\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\obj\Debug\Ucabmart.csprojAssemblyReference.cache
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\obj\Debug\Ucabmart.csproj.CoreCompileInputs.cache
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\obj\Debug\Ucabmart.csproj.CopyComplete
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\obj\Debug\Ucabmart.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\obj\Debug\Ucabmart.pdb

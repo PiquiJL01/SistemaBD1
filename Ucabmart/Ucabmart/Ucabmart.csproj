@@ -1986,8 +1986,10 @@
     <Content Include="Views\Reports\TestReportPage.aspx" />
     <Content Include="Views\Role\AsignarPermisos.aspx" />
     <Content Include="Views\Role\AsignarRol.aspx" />
+    <Content Include="Views\Role\ConsultarPermisos.aspx" />
     <Content Include="Views\Role\ConsultarRol.aspx" />
     <Content Include="Views\Role\CrearRol.aspx" />
+    <Content Include="Views\Role\EliminarPermisosRol.aspx" />
     <Content Include="Views\Role\ModificarPermisos.aspx" />
     <Content Include="Views\Role\EliminarRolEmpleado.aspx" />
     <Content Include="Views\Role\ModificarRol.aspx" />
@@ -2356,6 +2358,13 @@
     <Compile Include="Views\Role\AsignarRol.aspx.designer.cs">
       <DependentUpon>AsignarRol.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\Role\ConsultarPermisos.aspx.cs">
+      <DependentUpon>ConsultarPermisos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Role\ConsultarPermisos.aspx.designer.cs">
+      <DependentUpon>ConsultarPermisos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\Role\ConsultarRol.aspx.cs">
       <DependentUpon>ConsultarRol.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2369,6 +2378,13 @@
     </Compile>
     <Compile Include="Views\Role\CrearRol.aspx.designer.cs">
       <DependentUpon>CrearRol.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Role\EliminarPermisosRol.aspx.cs">
+      <DependentUpon>EliminarPermisosRol.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Role\EliminarPermisosRol.aspx.designer.cs">
+      <DependentUpon>EliminarPermisosRol.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Role\ModificarPermisos.aspx.cs">
       <DependentUpon>ModificarPermisos.aspx</DependentUpon>
