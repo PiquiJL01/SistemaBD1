@@ -36,7 +36,7 @@
                        
                     <ul class="navbar-nav text-uppercase ml-auto">
                         <li class="nav-item"> <a class="nav-item">      </a></li>
-                        <li ID="Li1" class="nav-item" runat="server"><a class="nav-link js-scroll-trigger" href="/Views/Clientes_Admin.aspx">Clientes</a></li>
+                        <li ID="Clientes" class="nav-item" runat="server"><a class="nav-link js-scroll-trigger" href="/Views/Clientes_Admin.aspx">Clientes</a></li>
                         <li ID="Tiendas" class="nav-item" runat="server"><a class="nav-link js-scroll-trigger" href="/Views/Tiendas-Admin.aspx">Tiendas</a></li>
                         <li ID="Productos" class="nav-item" runat="server"><a class="nav-link js-scroll-trigger" href="/Views/Productos_Admin.aspx">Productos</a></li>
                         <li ID="Proveedores" class="nav-item" runat="server"><a class="nav-link js-scroll-trigger" href="/Views/Proveedores.aspx">Proveedores</a></li>
@@ -106,8 +106,7 @@
                 <div>
                     <asp:ScriptManager ID="ScriptManager1" runat="server">
                     </asp:ScriptManager>
-                    <asp:DropDownList ID="DropDownList1" runat="server" ItemType="int" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" DataSourceID="Clientes" DataTextField="cl_rif" DataValueField="cl_rif">
-                    </asp:DropDownList>
+                    
                     <asp:ObjectDataSource ID="Clientes" runat="server" DeleteMethod="Delete" OldValuesParameterFormatString="original_{0}" SelectMethod="GetData" TypeName="Ucabmart.Views.Reports.OrdenDeCompraTableAdapters.clienteTableAdapter" UpdateMethod="Update">
                         <DeleteParameters>
                             <asp:Parameter Name="Original_cl_rif" Type="String" />
