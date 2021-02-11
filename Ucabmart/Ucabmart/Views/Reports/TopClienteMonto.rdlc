@@ -196,15 +196,6 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>TopClienteMonto</DataSetName>
-            <Filters>
-              <Filter>
-                <FilterExpression>=Parameters!NumRows.Value</FilterExpression>
-                <Operator>LessThanOrEqual</Operator>
-                <FilterValues>
-                  <FilterValue DataType="Integer">10</FilterValue>
-                </FilterValues>
-              </Filter>
-            </Filters>
             <Top>0.07056cm</Top>
             <Height>1.2cm</Height>
             <Width>16.55468cm</Width>

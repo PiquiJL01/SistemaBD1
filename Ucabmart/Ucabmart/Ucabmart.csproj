@@ -1981,6 +1981,7 @@
     <Content Include="Views\RegistrarClienteNatural.aspx" />
     <Content Include="Views\RegistroProveedores.aspx" />
     <Content Include="Views\Reports\AddToReportsPages.txt" />
+    <Content Include="Views\Reports\Asistencia.aspx" />
     <Content Include="Views\Reports\ReportOrden.aspx" />
     <Content Include="Views\Reports\TestReportPage.aspx" />
     <Content Include="Views\Role\AsignarPermisos.aspx" />
@@ -2257,6 +2258,13 @@
     <Compile Include="Views\RegistroProveedores.aspx.designer.cs">
       <DependentUpon>RegistroProveedores.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\Reports\Asistencia.aspx.cs">
+      <DependentUpon>Asistencia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Reports\Asistencia.aspx.designer.cs">
+      <DependentUpon>Asistencia.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\Reports\Asistencias.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -2266,6 +2274,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>BalanceTiendas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\Empleados.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Empleados.xsd</DependentUpon>
     </Compile>
     <Compile Include="Views\Reports\MesesProductivos.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -2690,6 +2703,17 @@
     <Content Include="Views\Reports\MesesProductivos.xsc">
       <DependentUpon>MesesProductivos.xsd</DependentUpon>
     </Content>
+    <Content Include="Views\Reports\Empleados.xsc">
+      <DependentUpon>Empleados.xsd</DependentUpon>
+    </Content>
+    <None Include="Views\Reports\Empleados.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Empleados.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Views\Reports\Empleados.xss">
+      <DependentUpon>Empleados.xsd</DependentUpon>
+    </Content>
     <None Include="Views\Reports\MesesProductivos.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
@@ -2799,6 +2823,7 @@
     <EmbeddedResource Include="Views\Reports\NotiMart.rdlc" />
     <EmbeddedResource Include="Views\Reports\OrdenDeCompra.rdlc" />
     <EmbeddedResource Include="Views\Reports\ProductoMasVendidoPorMes.rdlc" />
+    <EmbeddedResource Include="Views\Reports\Report1.rdlc" />
     <EmbeddedResource Include="Views\Reports\ResumenAsistencia.rdlc" />
     <EmbeddedResource Include="Views\Reports\TestReport.rdlc" />
     <EmbeddedResource Include="Views\Reports\TopClienteMonto.rdlc" />
