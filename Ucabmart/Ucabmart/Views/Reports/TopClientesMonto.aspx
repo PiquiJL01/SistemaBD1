@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Asistencia.aspx.cs" Inherits="Ucabmart.Views.Reports.Asistencia" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="TopClientesMonto.aspx.cs" Inherits="Ucabmart.Views.Reports.TopClientesMonto" %>
 
 <%@ Register assembly="Microsoft.ReportViewer.WebForms" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
 
@@ -74,30 +74,23 @@
 
              <form id="form1" runat="server">
                 <div>
+                    <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
                     <asp:ScriptManager ID="ScriptManager1" runat="server">
                     </asp:ScriptManager>
-                    <asp:DropDownList ID="DropDownList1" runat="server" ItemType="int" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" DataSourceID="Empleado" DataTextField="em_codigo" DataValueField="em_codigo">
-                    </asp:DropDownList>
-                    <asp:ObjectDataSource ID="Empleado" runat="server" DeleteMethod="Delete" OldValuesParameterFormatString="original_{0}" SelectMethod="GetData" TypeName="Ucabmart.Views.Reports.ResumenAsistenciasTableAdapters.empleadoTableAdapter" UpdateMethod="Update">
-                        <DeleteParameters>
-                            <asp:Parameter Name="Original_em_codigo" Type="Int32" />
-                        </DeleteParameters>
-                        <UpdateParameters>
-                            <asp:Parameter Name="Original_em_codigo" Type="Int32" />
-                        </UpdateParameters>
+                    <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                    <asp:ObjectDataSource ID="ObjectDataSource" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="GetDataByFechas" TypeName="Ucabmart.Views.Reports.TopClientesMontosTableAdapters.topingresosporclientesTableAdapter">
+                        <SelectParameters>
+                            <asp:ControlParameter ControlID="TextBox1" DefaultValue="2020/12/01" Name="fechainicio" PropertyName="Text" Type="Object" />
+                            <asp:ControlParameter ControlID="TextBox2" DefaultValue="2020/12/31" Name="fechafin" PropertyName="Text" Type="Object" />
+                        </SelectParameters>
                     </asp:ObjectDataSource>
-                    <rsweb:ReportViewer ID="ReportViewer1" runat="server" BackColor="" ClientIDMode="AutoID" HighlightBackgroundColor="" InternalBorderColor="204, 204, 204" InternalBorderStyle="Solid" InternalBorderWidth="1px" LinkActiveColor="" LinkActiveHoverColor="" LinkDisabledColor="" PrimaryButtonBackgroundColor="" PrimaryButtonForegroundColor="" PrimaryButtonHoverBackgroundColor="" PrimaryButtonHoverForegroundColor="" SecondaryButtonBackgroundColor="" SecondaryButtonForegroundColor="" SecondaryButtonHoverBackgroundColor="" SecondaryButtonHoverForegroundColor="" SplitterBackColor="" ToolbarDividerColor="" ToolbarForegroundColor="" ToolbarForegroundDisabledColor="" ToolbarHoverBackgroundColor="" ToolbarHoverForegroundColor="" ToolBarItemBorderColor="" ToolBarItemBorderStyle="Solid" ToolBarItemBorderWidth="1px" ToolBarItemHoverBackColor="" ToolBarItemPressedBorderColor="51, 102, 153" ToolBarItemPressedBorderStyle="Solid" ToolBarItemPressedBorderWidth="1px" ToolBarItemPressedHoverBackColor="153, 187, 226" style="margin-left: 0px" Width="868px">
-                        <LocalReport ReportPath="Views\Reports\Asistencias.rdlc">
+                    <rsweb:ReportViewer ID="ReportViewer1" runat="server" BackColor="" ClientIDMode="AutoID" HighlightBackgroundColor="" InternalBorderColor="204, 204, 204" InternalBorderStyle="Solid" InternalBorderWidth="1px" LinkActiveColor="" LinkActiveHoverColor="" LinkDisabledColor="" PrimaryButtonBackgroundColor="" PrimaryButtonForegroundColor="" PrimaryButtonHoverBackgroundColor="" PrimaryButtonHoverForegroundColor="" SecondaryButtonBackgroundColor="" SecondaryButtonForegroundColor="" SecondaryButtonHoverBackgroundColor="" SecondaryButtonHoverForegroundColor="" SplitterBackColor="" ToolbarDividerColor="" ToolbarForegroundColor="" ToolbarForegroundDisabledColor="" ToolbarHoverBackgroundColor="" ToolbarHoverForegroundColor="" ToolBarItemBorderColor="" ToolBarItemBorderStyle="Solid" ToolBarItemBorderWidth="1px" ToolBarItemHoverBackColor="" ToolBarItemPressedBorderColor="51, 102, 153" ToolBarItemPressedBorderStyle="Solid" ToolBarItemPressedBorderWidth="1px" ToolBarItemPressedHoverBackColor="153, 187, 226" Width="971px">
+                        <LocalReport ReportPath="Views\Reports\TopClienteMonto.rdlc">
                             <DataSources>
-                                <rsweb:ReportDataSource DataSourceId="ObjectDataSource" Name="Asistencias" />
+                                <rsweb:ReportDataSource DataSourceId="ObjectDataSource" Name="TopClienteMonto" />
                             </DataSources>
                         </LocalReport>
                     </rsweb:ReportViewer>
-                    <asp:ObjectDataSource ID="ObjectDataSource" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="GetDataByEmpleado" TypeName="Ucabmart.Views.Reports.AsistenciasTableAdapters.AsistenciasTableAdapter">
-                        <SelectParameters>
-                            <asp:ControlParameter ControlID="DropDownList1" Name="empleado" PropertyName="SelectedValue" Type="Object" />
-                        </SelectParameters>
-                    </asp:ObjectDataSource>
                 </div>
             </form>
 

@@ -11,7 +11,7 @@ namespace Ucabmart.Views.Reports
 {
 
 
-    public partial class Asistencia
+    public partial class TopClientesVentas1
     {
 
         /// <summary>

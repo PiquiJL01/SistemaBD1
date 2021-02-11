@@ -11,7 +11,7 @@ namespace Ucabmart.Views.Reports
 {
 
 
-    public partial class Asistencia
+    public partial class Resumen_Asistencia
     {
 
         /// <summary>
@@ -42,13 +42,13 @@ namespace Ucabmart.Views.Reports
         protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
 
         /// <summary>
-        /// Empleado control.
+        /// Empleados control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ObjectDataSource Empleado;
+        protected global::System.Web.UI.WebControls.ObjectDataSource Empleados;
 
         /// <summary>
         /// ReportViewer1 control.

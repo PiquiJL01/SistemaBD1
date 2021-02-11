@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Asistencia.aspx.cs" Inherits="Ucabmart.Views.Reports.Asistencia" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MesesProductivos.aspx.cs" Inherits="Ucabmart.Views.Reports.MesesProductivos1" %>
 
 <%@ Register assembly="Microsoft.ReportViewer.WebForms" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
 
@@ -76,26 +76,17 @@
                 <div>
                     <asp:ScriptManager ID="ScriptManager1" runat="server">
                     </asp:ScriptManager>
-                    <asp:DropDownList ID="DropDownList1" runat="server" ItemType="int" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" DataSourceID="Empleado" DataTextField="em_codigo" DataValueField="em_codigo">
-                    </asp:DropDownList>
-                    <asp:ObjectDataSource ID="Empleado" runat="server" DeleteMethod="Delete" OldValuesParameterFormatString="original_{0}" SelectMethod="GetData" TypeName="Ucabmart.Views.Reports.ResumenAsistenciasTableAdapters.empleadoTableAdapter" UpdateMethod="Update">
-                        <DeleteParameters>
-                            <asp:Parameter Name="Original_em_codigo" Type="Int32" />
-                        </DeleteParameters>
-                        <UpdateParameters>
-                            <asp:Parameter Name="Original_em_codigo" Type="Int32" />
-                        </UpdateParameters>
-                    </asp:ObjectDataSource>
+                    <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
                     <rsweb:ReportViewer ID="ReportViewer1" runat="server" BackColor="" ClientIDMode="AutoID" HighlightBackgroundColor="" InternalBorderColor="204, 204, 204" InternalBorderStyle="Solid" InternalBorderWidth="1px" LinkActiveColor="" LinkActiveHoverColor="" LinkDisabledColor="" PrimaryButtonBackgroundColor="" PrimaryButtonForegroundColor="" PrimaryButtonHoverBackgroundColor="" PrimaryButtonHoverForegroundColor="" SecondaryButtonBackgroundColor="" SecondaryButtonForegroundColor="" SecondaryButtonHoverBackgroundColor="" SecondaryButtonHoverForegroundColor="" SplitterBackColor="" ToolbarDividerColor="" ToolbarForegroundColor="" ToolbarForegroundDisabledColor="" ToolbarHoverBackgroundColor="" ToolbarHoverForegroundColor="" ToolBarItemBorderColor="" ToolBarItemBorderStyle="Solid" ToolBarItemBorderWidth="1px" ToolBarItemHoverBackColor="" ToolBarItemPressedBorderColor="51, 102, 153" ToolBarItemPressedBorderStyle="Solid" ToolBarItemPressedBorderWidth="1px" ToolBarItemPressedHoverBackColor="153, 187, 226" style="margin-left: 0px" Width="868px">
-                        <LocalReport ReportPath="Views\Reports\Asistencias.rdlc">
+                        <LocalReport ReportPath="Views\Reports\MesesProductivo.rdlc">
                             <DataSources>
-                                <rsweb:ReportDataSource DataSourceId="ObjectDataSource" Name="Asistencias" />
+                                <rsweb:ReportDataSource DataSourceId="AsistenciaSource" Name="Asistencias" />
                             </DataSources>
                         </LocalReport>
                     </rsweb:ReportViewer>
-                    <asp:ObjectDataSource ID="ObjectDataSource" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="GetDataByEmpleado" TypeName="Ucabmart.Views.Reports.AsistenciasTableAdapters.AsistenciasTableAdapter">
+                    <asp:ObjectDataSource ID="MesesProductivoDataSource" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="GetDataByYear" TypeName="Ucabmart.Views.Reports.MesesProductivosTableAdapters.DataTable1TableAdapter">
                         <SelectParameters>
-                            <asp:ControlParameter ControlID="DropDownList1" Name="empleado" PropertyName="SelectedValue" Type="Object" />
+                            <asp:ControlParameter ControlID="TextBox1" DefaultValue="2021" Name="year" PropertyName="Text" Type="String" />
                         </SelectParameters>
                     </asp:ObjectDataSource>
                 </div>
@@ -156,3 +147,4 @@
         <script src="../../Content/js/scripts.js"></script>
     </body>
 </html>
+

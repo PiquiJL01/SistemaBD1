@@ -1152,6 +1152,8 @@ WHERE  (cliente.tienda_ti_codigo = @tienda)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             global::Npgsql.NpgsqlParameter param = new global::Npgsql.NpgsqlParameter();
             param.ParameterName = "tienda";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.NpgsqlDbType = global::NpgsqlTypes.NpgsqlDbType.Integer;
             param.Size = 1024;
             param.IsNullable = true;
             param.SourceColumn = "tienda_ti_codigo";
@@ -1186,13 +1188,13 @@ WHERE  (cliente.tienda_ti_codigo = @tienda)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillByTienda(TopClientesVentas.numerodecomprasporclienteDataTable dataTable, object tienda) {
+        public virtual int FillByTienda(TopClientesVentas.numerodecomprasporclienteDataTable dataTable, global::System.Nullable<int> tienda) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
-            if ((tienda == null)) {
-                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            if ((tienda.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(tienda.Value));
             }
             else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((object)(tienda));
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1205,13 +1207,13 @@ WHERE  (cliente.tienda_ti_codigo = @tienda)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual TopClientesVentas.numerodecomprasporclienteDataTable GetDataByTienda(object tienda) {
+        public virtual TopClientesVentas.numerodecomprasporclienteDataTable GetDataByTienda(global::System.Nullable<int> tienda) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
-            if ((tienda == null)) {
-                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            if ((tienda.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(tienda.Value));
             }
             else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((object)(tienda));
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             TopClientesVentas.numerodecomprasporclienteDataTable dataTable = new TopClientesVentas.numerodecomprasporclienteDataTable();
             this.Adapter.Fill(dataTable);

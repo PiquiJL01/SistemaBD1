@@ -1982,8 +1982,18 @@
     <Content Include="Views\RegistroProveedores.aspx" />
     <Content Include="Views\Reports\AddToReportsPages.txt" />
     <Content Include="Views\Reports\Asistencia.aspx" />
+    <Content Include="Views\Reports\BalanceTienda.aspx" />
+    <Content Include="Views\Reports\MesesProductivos.aspx" />
+    <Content Include="Views\Reports\NotiMart.aspx" />
+    <Content Include="Views\Reports\OrdenDeCompraClientes.aspx" />
+    <Content Include="Views\Reports\OrdenDeCompraProveedores.aspx" />
+    <Content Include="Views\Reports\ProductoMasVendidoPorMes.aspx" />
     <Content Include="Views\Reports\ReportOrden.aspx" />
+    <Content Include="Views\Reports\Resumen Asistencia.aspx" />
     <Content Include="Views\Reports\TestReportPage.aspx" />
+    <Content Include="Views\Reports\TopClientesMonto.aspx" />
+    <Content Include="Views\Reports\TopClientesVentas.aspx" />
+    <Content Include="Views\Reports\VentasConcretadas.aspx" />
     <Content Include="Views\Role\AsignarPermisos.aspx" />
     <Content Include="Views\Role\AsignarRol.aspx" />
     <Content Include="Views\Role\ConsultarPermisos.aspx" />
@@ -2272,30 +2282,67 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Asistencias.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Views\Reports\BalanceTienda.aspx.cs">
+      <DependentUpon>BalanceTienda.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Reports\BalanceTienda.aspx.designer.cs">
+      <DependentUpon>BalanceTienda.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\Reports\BalanceTiendas.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>BalanceTiendas.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Views\Reports\Empleados.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Empleados.xsd</DependentUpon>
+    <Compile Include="Views\Reports\MesesProductivos.aspx.cs">
+      <DependentUpon>MesesProductivos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Reports\MesesProductivos.aspx.designer.cs">
+      <DependentUpon>MesesProductivos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Reports\MesesProductivos.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>MesesProductivos.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Views\Reports\NotiMart.aspx.cs">
+      <DependentUpon>NotiMart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Reports\NotiMart.aspx.designer.cs">
+      <DependentUpon>NotiMart.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\Reports\NotiMart.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>NotiMart.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Views\Reports\OrdenDeCompraClientes.aspx.cs">
+      <DependentUpon>OrdenDeCompraClientes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Reports\OrdenDeCompraClientes.aspx.designer.cs">
+      <DependentUpon>OrdenDeCompraClientes.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\Reports\OrdenDeCompra.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>OrdenDeCompra.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\OrdenDeCompraProveedores.aspx.cs">
+      <DependentUpon>OrdenDeCompraProveedores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Reports\OrdenDeCompraProveedores.aspx.designer.cs">
+      <DependentUpon>OrdenDeCompraProveedores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\ProductoMasVendidoPorMes.aspx.cs">
+      <DependentUpon>ProductoMasVendidoPorMes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Reports\ProductoMasVendidoPorMes.aspx.designer.cs">
+      <DependentUpon>ProductoMasVendidoPorMes.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Reports\ProductoMasVendidoPorMes.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -2308,6 +2355,13 @@
     </Compile>
     <Compile Include="Views\Reports\ReportOrden.aspx.designer.cs">
       <DependentUpon>ReportOrden.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\Resumen Asistencia.aspx.cs">
+      <DependentUpon>Resumen Asistencia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Reports\Resumen Asistencia.aspx.designer.cs">
+      <DependentUpon>Resumen Asistencia.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Reports\ResumenAsistencias.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -2329,15 +2383,36 @@
     <Compile Include="Views\Reports\TestReportPage.aspx.designer.cs">
       <DependentUpon>TestReportPage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\Reports\TopClientesMonto.aspx.cs">
+      <DependentUpon>TopClientesMonto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Reports\TopClientesMonto.aspx.designer.cs">
+      <DependentUpon>TopClientesMonto.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\Reports\TopClientesMontos.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>TopClientesMontos.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Views\Reports\TopClientesVentas.aspx.cs">
+      <DependentUpon>TopClientesVentas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Reports\TopClientesVentas.aspx.designer.cs">
+      <DependentUpon>TopClientesVentas.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\Reports\TopClientesVentas.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>TopClientesVentas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\VentasConcretadas.aspx.cs">
+      <DependentUpon>VentasConcretadas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Reports\VentasConcretadas.aspx.designer.cs">
+      <DependentUpon>VentasConcretadas.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Reports\VentasConcretadas.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -2718,17 +2793,6 @@
     </Content>
     <Content Include="Views\Reports\MesesProductivos.xsc">
       <DependentUpon>MesesProductivos.xsd</DependentUpon>
-    </Content>
-    <Content Include="Views\Reports\Empleados.xsc">
-      <DependentUpon>Empleados.xsd</DependentUpon>
-    </Content>
-    <None Include="Views\Reports\Empleados.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Empleados.Designer.cs</LastGenOutput>
-    </None>
-    <Content Include="Views\Reports\Empleados.xss">
-      <DependentUpon>Empleados.xsd</DependentUpon>
     </Content>
     <None Include="Views\Reports\MesesProductivos.xsd">
       <SubType>Designer</SubType>

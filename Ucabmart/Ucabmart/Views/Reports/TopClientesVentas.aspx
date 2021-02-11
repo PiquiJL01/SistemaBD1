@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Asistencia.aspx.cs" Inherits="Ucabmart.Views.Reports.Asistencia" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="TopClientesVentas.aspx.cs" Inherits="Ucabmart.Views.Reports.TopClientesVentas1" %>
 
 <%@ Register assembly="Microsoft.ReportViewer.WebForms" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
 
@@ -76,26 +76,20 @@
                 <div>
                     <asp:ScriptManager ID="ScriptManager1" runat="server">
                     </asp:ScriptManager>
-                    <asp:DropDownList ID="DropDownList1" runat="server" ItemType="int" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" DataSourceID="Empleado" DataTextField="em_codigo" DataValueField="em_codigo">
+                    <asp:DropDownList ID="DropDownList1" runat="server" ItemType="int" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" DataSourceID="Empleado" DataTextField="ti_codigo" DataValueField="ti_codigo">
                     </asp:DropDownList>
-                    <asp:ObjectDataSource ID="Empleado" runat="server" DeleteMethod="Delete" OldValuesParameterFormatString="original_{0}" SelectMethod="GetData" TypeName="Ucabmart.Views.Reports.ResumenAsistenciasTableAdapters.empleadoTableAdapter" UpdateMethod="Update">
-                        <DeleteParameters>
-                            <asp:Parameter Name="Original_em_codigo" Type="Int32" />
-                        </DeleteParameters>
-                        <UpdateParameters>
-                            <asp:Parameter Name="Original_em_codigo" Type="Int32" />
-                        </UpdateParameters>
+                    <asp:ObjectDataSource ID="Empleado" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="GetData" TypeName="Ucabmart.Views.Reports.TopClientesVentasTableAdapters.tiendaTableAdapter">
                     </asp:ObjectDataSource>
                     <rsweb:ReportViewer ID="ReportViewer1" runat="server" BackColor="" ClientIDMode="AutoID" HighlightBackgroundColor="" InternalBorderColor="204, 204, 204" InternalBorderStyle="Solid" InternalBorderWidth="1px" LinkActiveColor="" LinkActiveHoverColor="" LinkDisabledColor="" PrimaryButtonBackgroundColor="" PrimaryButtonForegroundColor="" PrimaryButtonHoverBackgroundColor="" PrimaryButtonHoverForegroundColor="" SecondaryButtonBackgroundColor="" SecondaryButtonForegroundColor="" SecondaryButtonHoverBackgroundColor="" SecondaryButtonHoverForegroundColor="" SplitterBackColor="" ToolbarDividerColor="" ToolbarForegroundColor="" ToolbarForegroundDisabledColor="" ToolbarHoverBackgroundColor="" ToolbarHoverForegroundColor="" ToolBarItemBorderColor="" ToolBarItemBorderStyle="Solid" ToolBarItemBorderWidth="1px" ToolBarItemHoverBackColor="" ToolBarItemPressedBorderColor="51, 102, 153" ToolBarItemPressedBorderStyle="Solid" ToolBarItemPressedBorderWidth="1px" ToolBarItemPressedHoverBackColor="153, 187, 226" style="margin-left: 0px" Width="868px">
-                        <LocalReport ReportPath="Views\Reports\Asistencias.rdlc">
+                        <LocalReport ReportPath="Views\Reports\TopVentasClientes.rdlc">
                             <DataSources>
-                                <rsweb:ReportDataSource DataSourceId="ObjectDataSource" Name="Asistencias" />
+                                <rsweb:ReportDataSource DataSourceId="ObjectDataSource" Name="TopVentasClientes" />
                             </DataSources>
                         </LocalReport>
                     </rsweb:ReportViewer>
-                    <asp:ObjectDataSource ID="ObjectDataSource" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="GetDataByEmpleado" TypeName="Ucabmart.Views.Reports.AsistenciasTableAdapters.AsistenciasTableAdapter">
+                    <asp:ObjectDataSource ID="ObjectDataSource" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="GetDataByTienda" TypeName="Ucabmart.Views.Reports.TopClientesVentasTableAdapters.numerodecomprasporclienteTableAdapter">
                         <SelectParameters>
-                            <asp:ControlParameter ControlID="DropDownList1" Name="empleado" PropertyName="SelectedValue" Type="Object" />
+                            <asp:ControlParameter ControlID="DropDownList1" Name="tienda" PropertyName="SelectedValue" Type="Int32" />
                         </SelectParameters>
                     </asp:ObjectDataSource>
                 </div>

@@ -2001,6 +2001,8 @@ WHERE  (pe_pr.pedido_pe_codigo = @pedido)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             global::Npgsql.NpgsqlParameter param = new global::Npgsql.NpgsqlParameter();
             param.ParameterName = "pedido";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.NpgsqlDbType = global::NpgsqlTypes.NpgsqlDbType.Integer;
             param.Size = 1024;
             param.IsNullable = true;
             param.SourceColumn = "pedido_pe_codigo";
@@ -2035,14 +2037,9 @@ WHERE  (pe_pr.pedido_pe_codigo = @pedido)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillByPedido(OrdenDeCompra.OrdenDeCompraDataTable dataTable, object pedido) {
+        public virtual int FillByPedido(OrdenDeCompra.OrdenDeCompraDataTable dataTable, int pedido) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
-            if ((pedido == null)) {
-                throw new global::System.ArgumentNullException("pedido");
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((object)(pedido));
-            }
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(pedido));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -2054,14 +2051,9 @@ WHERE  (pe_pr.pedido_pe_codigo = @pedido)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual OrdenDeCompra.OrdenDeCompraDataTable GetDataByPedido(object pedido) {
+        public virtual OrdenDeCompra.OrdenDeCompraDataTable GetDataByPedido(int pedido) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
-            if ((pedido == null)) {
-                throw new global::System.ArgumentNullException("pedido");
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((object)(pedido));
-            }
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(pedido));
             OrdenDeCompra.OrdenDeCompraDataTable dataTable = new OrdenDeCompra.OrdenDeCompraDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -2808,6 +2800,8 @@ WHERE  (pe_pr.pedido_pe_codigo = @pedido)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             global::Npgsql.NpgsqlParameter param = new global::Npgsql.NpgsqlParameter();
             param.ParameterName = "cliente";
+            param.DbType = global::System.Data.DbType.String;
+            param.NpgsqlDbType = global::NpgsqlTypes.NpgsqlDbType.Text;
             param.Size = 32672;
             param.IsNullable = true;
             param.SourceColumn = "cliente_cl_rif";
@@ -2816,10 +2810,12 @@ WHERE  (pe_pr.pedido_pe_codigo = @pedido)";
             this._commandCollection[2].Connection = this.Connection;
             this._commandCollection[2].CommandText = "SELECT pe_pr.pedido_pe_codigo AS CodigoPedido\r\nFROM     pe_pr INNER JOIN\r\n       " +
                 "           pedido ON pedido.pe_codigo = pe_pr.pedido_pe_codigo\r\nWHERE  (pedido.p" +
-                "roveedor_pr_rif = @cliente)";
+                "roveedor_pr_rif = @proveedor)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             param = new global::Npgsql.NpgsqlParameter();
-            param.ParameterName = "cliente";
+            param.ParameterName = "proveedor";
+            param.DbType = global::System.Data.DbType.String;
+            param.NpgsqlDbType = global::NpgsqlTypes.NpgsqlDbType.Text;
             param.Size = 32672;
             param.IsNullable = true;
             param.SourceColumn = "proveedor_pr_rif";
@@ -2854,13 +2850,13 @@ WHERE  (pe_pr.pedido_pe_codigo = @pedido)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillByCliente(OrdenDeCompra.CodigoPedidoDataTable dataTable, object cliente) {
+        public virtual int FillByCliente(OrdenDeCompra.CodigoPedidoDataTable dataTable, string cliente) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
             if ((cliente == null)) {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((object)(cliente));
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(cliente));
             }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -2873,13 +2869,13 @@ WHERE  (pe_pr.pedido_pe_codigo = @pedido)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual OrdenDeCompra.CodigoPedidoDataTable GetDataByCliente(object cliente) {
+        public virtual OrdenDeCompra.CodigoPedidoDataTable GetDataByCliente(string cliente) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
             if ((cliente == null)) {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((object)(cliente));
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(cliente));
             }
             OrdenDeCompra.CodigoPedidoDataTable dataTable = new OrdenDeCompra.CodigoPedidoDataTable();
             this.Adapter.Fill(dataTable);
@@ -2890,13 +2886,13 @@ WHERE  (pe_pr.pedido_pe_codigo = @pedido)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillByProveedor(OrdenDeCompra.CodigoPedidoDataTable dataTable, object cliente) {
+        public virtual int FillByProveedor(OrdenDeCompra.CodigoPedidoDataTable dataTable, string proveedor) {
             this.Adapter.SelectCommand = this.CommandCollection[2];
-            if ((cliente == null)) {
+            if ((proveedor == null)) {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((object)(cliente));
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(proveedor));
             }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -2909,13 +2905,13 @@ WHERE  (pe_pr.pedido_pe_codigo = @pedido)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual OrdenDeCompra.CodigoPedidoDataTable GetDataByProveedor(object cliente) {
+        public virtual OrdenDeCompra.CodigoPedidoDataTable GetDataByProveedor(string proveedor) {
             this.Adapter.SelectCommand = this.CommandCollection[2];
-            if ((cliente == null)) {
+            if ((proveedor == null)) {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((object)(cliente));
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(proveedor));
             }
             OrdenDeCompra.CodigoPedidoDataTable dataTable = new OrdenDeCompra.CodigoPedidoDataTable();
             this.Adapter.Fill(dataTable);

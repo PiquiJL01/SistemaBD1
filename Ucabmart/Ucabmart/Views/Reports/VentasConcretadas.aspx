@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Asistencia.aspx.cs" Inherits="Ucabmart.Views.Reports.Asistencia" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="VentasConcretadas.aspx.cs" Inherits="Ucabmart.Views.Reports.VentasConcretadas1" %>
 
 <%@ Register assembly="Microsoft.ReportViewer.WebForms" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
 
@@ -87,15 +87,15 @@
                         </UpdateParameters>
                     </asp:ObjectDataSource>
                     <rsweb:ReportViewer ID="ReportViewer1" runat="server" BackColor="" ClientIDMode="AutoID" HighlightBackgroundColor="" InternalBorderColor="204, 204, 204" InternalBorderStyle="Solid" InternalBorderWidth="1px" LinkActiveColor="" LinkActiveHoverColor="" LinkDisabledColor="" PrimaryButtonBackgroundColor="" PrimaryButtonForegroundColor="" PrimaryButtonHoverBackgroundColor="" PrimaryButtonHoverForegroundColor="" SecondaryButtonBackgroundColor="" SecondaryButtonForegroundColor="" SecondaryButtonHoverBackgroundColor="" SecondaryButtonHoverForegroundColor="" SplitterBackColor="" ToolbarDividerColor="" ToolbarForegroundColor="" ToolbarForegroundDisabledColor="" ToolbarHoverBackgroundColor="" ToolbarHoverForegroundColor="" ToolBarItemBorderColor="" ToolBarItemBorderStyle="Solid" ToolBarItemBorderWidth="1px" ToolBarItemHoverBackColor="" ToolBarItemPressedBorderColor="51, 102, 153" ToolBarItemPressedBorderStyle="Solid" ToolBarItemPressedBorderWidth="1px" ToolBarItemPressedHoverBackColor="153, 187, 226" style="margin-left: 0px" Width="868px">
-                        <LocalReport ReportPath="Views\Reports\Asistencias.rdlc">
+                        <LocalReport ReportPath="Views\Reports\VentasConcretadas.rdlc">
                             <DataSources>
-                                <rsweb:ReportDataSource DataSourceId="ObjectDataSource" Name="Asistencias" />
+                                <rsweb:ReportDataSource DataSourceId="ObjectDataSource" Name="VentasConcretadas" />
                             </DataSources>
                         </LocalReport>
                     </rsweb:ReportViewer>
                     <asp:ObjectDataSource ID="ObjectDataSource" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="GetDataByEmpleado" TypeName="Ucabmart.Views.Reports.AsistenciasTableAdapters.AsistenciasTableAdapter">
                         <SelectParameters>
-                            <asp:ControlParameter ControlID="DropDownList1" Name="empleado" PropertyName="SelectedValue" Type="Object" />
+                            <asp:ControlParameter ControlID="DropDownList1" Name="empleado" PropertyName="SelectedValue" Type="Int32" />
                         </SelectParameters>
                     </asp:ObjectDataSource>
                 </div>
@@ -156,3 +156,4 @@
         <script src="../../Content/js/scripts.js"></script>
     </body>
 </html>
+

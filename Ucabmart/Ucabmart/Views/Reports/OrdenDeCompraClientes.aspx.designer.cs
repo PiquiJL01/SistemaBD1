@@ -11,7 +11,7 @@ namespace Ucabmart.Views.Reports
 {
 
 
-    public partial class Asistencia
+    public partial class OrdenDeCompra1
     {
 
         /// <summary>
@@ -42,13 +42,31 @@ namespace Ucabmart.Views.Reports
         protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
 
         /// <summary>
-        /// Empleado control.
+        /// Clientes control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ObjectDataSource Empleado;
+        protected global::System.Web.UI.WebControls.ObjectDataSource Clientes;
+
+        /// <summary>
+        /// DropDownList2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList2;
+
+        /// <summary>
+        /// Ordenes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ObjectDataSource Ordenes;
 
         /// <summary>
         /// ReportViewer1 control.
@@ -60,12 +78,12 @@ namespace Ucabmart.Views.Reports
         protected global::Microsoft.Reporting.WebForms.ReportViewer ReportViewer1;
 
         /// <summary>
-        /// ObjectDataSource control.
+        /// AsistenciaSource control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ObjectDataSource ObjectDataSource;
+        protected global::System.Web.UI.WebControls.ObjectDataSource AsistenciaSource;
     }
 }

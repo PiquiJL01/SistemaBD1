@@ -11,7 +11,7 @@ namespace Ucabmart.Views.Reports
 {
 
 
-    public partial class Asistencia
+    public partial class VentasConcretadas1
     {
 
         /// <summary>

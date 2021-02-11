@@ -779,6 +779,8 @@ namespace Ucabmart.Views.Reports.TestDataSetTableAdapters {
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             global::Npgsql.NpgsqlParameter param = new global::Npgsql.NpgsqlParameter();
             param.ParameterName = "nombre";
+            param.DbType = global::System.Data.DbType.String;
+            param.NpgsqlDbType = global::NpgsqlTypes.NpgsqlDbType.Text;
             param.Size = 32672;
             param.IsNullable = true;
             param.SourceColumn = "Nombre";
@@ -813,13 +815,13 @@ namespace Ucabmart.Views.Reports.TestDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillByNombre(TestDataSet.lugarDataTable dataTable, object nombre) {
+        public virtual int FillByNombre(TestDataSet.lugarDataTable dataTable, string nombre) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
             if ((nombre == null)) {
                 throw new global::System.ArgumentNullException("nombre");
             }
             else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((object)(nombre));
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(nombre));
             }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -832,13 +834,13 @@ namespace Ucabmart.Views.Reports.TestDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual TestDataSet.lugarDataTable GetDataByNombre(object nombre) {
+        public virtual TestDataSet.lugarDataTable GetDataByNombre(string nombre) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
             if ((nombre == null)) {
                 throw new global::System.ArgumentNullException("nombre");
             }
             else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((object)(nombre));
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(nombre));
             }
             TestDataSet.lugarDataTable dataTable = new TestDataSet.lugarDataTable();
             this.Adapter.Fill(dataTable);
