@@ -151,7 +151,7 @@
                                 <img class="img-fluid2" src="../../Content/assets/img/Provider/Delete-Provider.jpg" alt="" />
                             </a>
                             <div class="categorias-caption" style="margin-right:-68px; background-color:#4e73dfd1">
-                                <div class="categorias-caption-heading">Eliminar Rol del Empleado</div>
+                                <div class="categorias-caption-heading">Eliminar Rol</div>
                                 <div class="categorias-caption-subheading text-muted">Permite eliminar los roles de los usuarios......</div>
                             </div>
                         </div>
