@@ -248,6 +248,8 @@
     <Content Include="Content\assets\mail\contact_me.js" />
     <Content Include="Content\assets\mail\contact_me.php" />
     <Content Include="Content\assets\mail\jqBootstrapValidation.js" />
+    <Content Include="Content\css\ModificarPermisos.css" />
+    <Content Include="Content\css\Permisos.css" />
     <Content Include="Content\css\ModificarRol.css" />
     <Content Include="Content\css\AsignarRol.css" />
     <Content Include="Content\css\Clientes.css" />
@@ -1984,6 +1986,8 @@
     <Content Include="Views\Role\AsignarPermisos.aspx" />
     <Content Include="Views\Role\AsignarRol.aspx" />
     <Content Include="Views\Role\ConsultarRol.aspx" />
+    <Content Include="Views\Role\CrearRol.aspx" />
+    <Content Include="Views\Role\ModificarPermisos.aspx" />
     <Content Include="Views\Role\EliminarRolEmpleado.aspx" />
     <Content Include="Views\Role\ModificarRol.aspx" />
     <Content Include="Views\Role\Role_Admin.aspx" />
@@ -2345,6 +2349,20 @@
     </Compile>
     <Compile Include="Views\Role\ConsultarRol.aspx.designer.cs">
       <DependentUpon>ConsultarRol.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Role\CrearRol.aspx.cs">
+      <DependentUpon>CrearRol.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Role\CrearRol.aspx.designer.cs">
+      <DependentUpon>CrearRol.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Role\ModificarPermisos.aspx.cs">
+      <DependentUpon>ModificarPermisos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Role\ModificarPermisos.aspx.designer.cs">
+      <DependentUpon>ModificarPermisos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Role\EliminarRolEmpleado.aspx.cs">
       <DependentUpon>EliminarRolEmpleado.aspx</DependentUpon>

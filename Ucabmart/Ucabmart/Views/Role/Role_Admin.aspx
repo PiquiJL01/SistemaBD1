@@ -161,7 +161,7 @@
 
                     <div class="col-lg-4 col-sm-6 mb-4">
                         <div class="categorias-item">
-                            <a class="categorias-link" href="#">
+                            <a class="categorias-link" href="/Views/Role/AsignarPermisos.aspx">
                                 <div class="categorias-hover">
                                     <div class="categorias-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
@@ -189,7 +189,7 @@
                     </div>
                     <div class="col-lg-4 col-sm-6 mb-4" style="box-sizing: initial">
                         <div class="categorias-item">
-                            <a class="categorias-link" href="/Views/Role/ModificarRol.aspx">
+                            <a class="categorias-link" href="/Views/Role/ModificarPermisos.aspx">
                                 <div class="categorias-hover">
                                     <div class="categorias-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
@@ -215,7 +215,20 @@
                             </div>
                         </div>
                     </div>
-
+                    <div class="col-lg-4 col-sm-6 mb-4" style="box-sizing: initial">
+                        <div class="categorias-item">
+                            <a class="categorias-link" href="/Views/Role/CrearRol.aspx">
+                                <div class="categorias-hover">
+                                    <div class="categorias-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid2" src="../../Content/assets/img/Role/Ambito-digital.jpg" alt="" />
+                            </a>
+                            <div class="categorias-caption" style="margin-right:-44px; background-color:#4e73dfd1">
+                                <div class="categorias-caption-heading">Crear Rol</div>
+                                <div class="categorias-caption-subheading text-muted">Permite crear nuevos roles para los empleados......</div>
+                            </div>
+                        </div>
+                    </div>
                    
             </div>
           </div>

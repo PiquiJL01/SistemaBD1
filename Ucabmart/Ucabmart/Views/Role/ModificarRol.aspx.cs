@@ -86,9 +86,18 @@ namespace Ucabmart.Views.Role
 
         protected void Roles_Asignados(Empleado empleado)
         {
-     
+            RolAsig.Items.Clear();
             List<Rol> lista = new List<Rol>();
             lista = empleado.Roles();
+
+            ListItem Title = new ListItem("Roles Asignados", "0");
+
+            if (!RolAsig.Items.Contains(Title))
+            {
+
+                RolAsig.Items.Insert(RolAsig.Items.Count, Title);
+
+            }
 
             foreach (Rol item in lista)
             {
@@ -103,10 +112,20 @@ namespace Ucabmart.Views.Role
 
         protected void Agregar_Roles()
         {
+            CamRol.Items.Clear();
             Rol rol = new Rol();
 
             List<Rol> lista = new List<Rol>();
             lista = rol.Todos();
+
+            ListItem Title = new ListItem("Roles Disponibles", "0");
+
+            if (!CamRol.Items.Contains(Title))
+            {
+
+                CamRol.Items.Insert(CamRol.Items.Count, Title);
+
+            }
 
             foreach (Rol item in lista)
             {
