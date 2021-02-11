@@ -1981,6 +1981,7 @@
     <Content Include="Views\RegistrarClienteNatural.aspx" />
     <Content Include="Views\RegistroProveedores.aspx" />
     <Content Include="Views\Reports\AddToReportsPages.txt" />
+    <Content Include="Views\Reports\ReportOrden.aspx" />
     <Content Include="Views\Reports\TestReportPage.aspx" />
     <Content Include="Views\Role\AsignarPermisos.aspx" />
     <Content Include="Views\Role\AsignarRol.aspx" />
@@ -2287,6 +2288,13 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ProductoMasVendidoPorMes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\ReportOrden.aspx.cs">
+      <DependentUpon>ReportOrden.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Reports\ReportOrden.aspx.designer.cs">
+      <DependentUpon>ReportOrden.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Reports\ResumenAsistencias.Designer.cs">
       <AutoGen>True</AutoGen>
