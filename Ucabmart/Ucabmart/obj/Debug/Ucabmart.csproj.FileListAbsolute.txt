@@ -1,9 +1,5 @@
 C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\SqlServerTypes\x86\msvcr120.dll
 C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\SqlServerTypes\x86\SqlServerSpatial140.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\zh-CHT\Microsoft.ReportViewer.WebDesign.resources.dll
 C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\obj\Debug\Ucabmart.csprojAssemblyReference.cache
 C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\obj\Debug\RdlCompile.cache
 C:\Users\inmun\source\repos\joseyepes96\SistemaBD1\Ucabmart\Ucabmart\obj\Debug\RdlCompile.compiled
@@ -295,6 +291,7 @@ C:\Users\Jose\Documents\GitHub\SistemaBD1\Ucabmart\Ucabmart\obj\Debug\Ucabmart.c
 C:\Users\Jose\Documents\GitHub\SistemaBD1\Ucabmart\Ucabmart\obj\Debug\Ucabmart.csproj.CopyComplete
 C:\Users\Jose\Documents\GitHub\SistemaBD1\Ucabmart\Ucabmart\obj\Debug\Ucabmart.dll
 C:\Users\Jose\Documents\GitHub\SistemaBD1\Ucabmart\Ucabmart\obj\Debug\Ucabmart.pdb
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.ReportViewer.Common.dll
 C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\SqlServerTypes\x64\msvcr120.dll
 C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\SqlServerTypes\x64\SqlServerSpatial140.dll
 C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Ucabmart.dll.config
@@ -311,6 +308,7 @@ C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin
 C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
 C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\Microsoft.CodeAnalysis.dll
 C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
 C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\Microsoft.CSharp.Core.targets
 C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
 C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
@@ -453,7 +451,6 @@ C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin
 C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.IdentityModel.Protocols.dll
 C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.IdentityModel.Tokens.dll
-C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.ReportViewer.Common.dll
 C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.ReportViewer.DataVisualization.dll
 C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.ReportViewer.Design.dll
 C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\Microsoft.ReportViewer.ProcessingObjectModel.dll
@@ -522,6 +519,7 @@ C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin
 C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\pt\Microsoft.ReportViewer.Common.resources.dll
 C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\ru\Microsoft.ReportViewer.Common.resources.dll
 C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
 C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\de\Microsoft.ReportViewer.DataVisualization.resources.dll
 C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\es\Microsoft.ReportViewer.DataVisualization.resources.dll
 C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
@@ -531,6 +529,7 @@ C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin
 C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
 C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
 C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
 C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\de\Microsoft.ReportViewer.Design.resources.dll
 C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\es\Microsoft.ReportViewer.Design.resources.dll
 C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\fr\Microsoft.ReportViewer.Design.resources.dll
@@ -550,6 +549,7 @@ C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin
 C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\pt\Microsoft.ReportViewer.WebDesign.resources.dll
 C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\ru\Microsoft.ReportViewer.WebDesign.resources.dll
 C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\zh-CHS\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\zh-CHT\Microsoft.ReportViewer.WebDesign.resources.dll
 C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\de\Microsoft.ReportViewer.WebForms.resources.dll
 C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\es\Microsoft.ReportViewer.WebForms.resources.dll
 C:\Users\Jose Yepes\Documents\Ucab\6º Semestre\SistemaBD1\Ucabmart\Ucabmart\bin\fr\Microsoft.ReportViewer.WebForms.resources.dll

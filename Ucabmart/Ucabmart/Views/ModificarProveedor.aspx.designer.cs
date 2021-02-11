@@ -7,13 +7,65 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace Ucabmart.Views
-{
-
-
-    public partial class ModificarProveedor
-    {
-
+namespace Ucabmart.Views {
+    
+    
+    public partial class ModificarProveedor {
+        
+        /// <summary>
+        /// Control Clientes.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Clientes;
+        
+        /// <summary>
+        /// Control Tiendas.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Tiendas;
+        
+        /// <summary>
+        /// Control Productos.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Productos;
+        
+        /// <summary>
+        /// Control Proveedores.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Proveedores;
+        
+        /// <summary>
+        /// Control Nomina.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Nomina;
+        
+        /// <summary>
+        /// Control RolesA.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl RolesA;
+        
         /// <summary>
         /// Control form1.
         /// </summary>
@@ -22,7 +74,7 @@ namespace Ucabmart.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-
+        
         /// <summary>
         /// Control BuscarRif.
         /// </summary>
@@ -31,7 +83,7 @@ namespace Ucabmart.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox BuscarRif;
-
+        
         /// <summary>
         /// Control btnBuscar.
         /// </summary>
@@ -40,7 +92,7 @@ namespace Ucabmart.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnBuscar;
-
+        
         /// <summary>
         /// Control Label6.
         /// </summary>
@@ -49,7 +101,7 @@ namespace Ucabmart.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label6;
-
+        
         /// <summary>
         /// Control Label7.
         /// </summary>
@@ -58,7 +110,7 @@ namespace Ucabmart.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label7;
-
+        
         /// <summary>
         /// Control DenominacionComercial.
         /// </summary>
@@ -67,7 +119,7 @@ namespace Ucabmart.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label DenominacionComercial;
-
+        
         /// <summary>
         /// Control txtDenoComercial.
         /// </summary>
@@ -76,7 +128,7 @@ namespace Ucabmart.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtDenoComercial;
-
+        
         /// <summary>
         /// Control RazónSocial.
         /// </summary>
@@ -85,7 +137,7 @@ namespace Ucabmart.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label RazónSocial;
-
+        
         /// <summary>
         /// Control txtRazonSocial.
         /// </summary>
@@ -94,7 +146,7 @@ namespace Ucabmart.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtRazonSocial;
-
+        
         /// <summary>
         /// Control Label9.
         /// </summary>
@@ -103,7 +155,7 @@ namespace Ucabmart.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label9;
-
+        
         /// <summary>
         /// Control lblRif.
         /// </summary>
@@ -112,7 +164,7 @@ namespace Ucabmart.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblRif;
-
+        
         /// <summary>
         /// Control dplRif.
         /// </summary>
@@ -121,7 +173,7 @@ namespace Ucabmart.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList dplRif;
-
+        
         /// <summary>
         /// Control txtRif.
         /// </summary>
@@ -130,7 +182,7 @@ namespace Ucabmart.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtRif;
-
+        
         /// <summary>
         /// Control Label14.
         /// </summary>
@@ -139,7 +191,7 @@ namespace Ucabmart.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label14;
-
+        
         /// <summary>
         /// Control txtCorreo.
         /// </summary>
@@ -148,7 +200,7 @@ namespace Ucabmart.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtCorreo;
-
+        
         /// <summary>
         /// Control PginaWeb.
         /// </summary>
@@ -157,7 +209,7 @@ namespace Ucabmart.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label PginaWeb;
-
+        
         /// <summary>
         /// Control txtPaginaWeb.
         /// </summary>
@@ -166,7 +218,7 @@ namespace Ucabmart.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtPaginaWeb;
-
+        
         /// <summary>
         /// Control Label11.
         /// </summary>
@@ -175,7 +227,7 @@ namespace Ucabmart.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label11;
-
+        
         /// <summary>
         /// Control Telefonos.
         /// </summary>
@@ -184,7 +236,7 @@ namespace Ucabmart.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Telefonos;
-
+        
         /// <summary>
         /// Control CodigoPais1.
         /// </summary>
@@ -193,7 +245,7 @@ namespace Ucabmart.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList CodigoPais1;
-
+        
         /// <summary>
         /// Control TipoTelf.
         /// </summary>
@@ -202,7 +254,7 @@ namespace Ucabmart.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList TipoTelf;
-
+        
         /// <summary>
         /// Control CodAre.
         /// </summary>
@@ -211,7 +263,7 @@ namespace Ucabmart.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox CodAre;
-
+        
         /// <summary>
         /// Control txtTelefono1.
         /// </summary>
@@ -220,7 +272,7 @@ namespace Ucabmart.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtTelefono1;
-
+        
         /// <summary>
         /// Control CodigoPais2.
         /// </summary>
@@ -229,7 +281,7 @@ namespace Ucabmart.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList CodigoPais2;
-
+        
         /// <summary>
         /// Control TipoTelf2.
         /// </summary>
@@ -238,7 +290,7 @@ namespace Ucabmart.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList TipoTelf2;
-
+        
         /// <summary>
         /// Control CodAre2.
         /// </summary>
@@ -247,7 +299,7 @@ namespace Ucabmart.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox CodAre2;
-
+        
         /// <summary>
         /// Control txtTelefono2.
         /// </summary>
@@ -256,7 +308,7 @@ namespace Ucabmart.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtTelefono2;
-
+        
         /// <summary>
         /// Control Label12.
         /// </summary>
@@ -265,7 +317,7 @@ namespace Ucabmart.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label12;
-
+        
         /// <summary>
         /// Control Label18.
         /// </summary>
@@ -274,7 +326,7 @@ namespace Ucabmart.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label18;
-
+        
         /// <summary>
         /// Control Label13.
         /// </summary>
@@ -283,7 +335,7 @@ namespace Ucabmart.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label13;
-
+        
         /// <summary>
         /// Control dplEstado.
         /// </summary>
@@ -292,7 +344,7 @@ namespace Ucabmart.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList dplEstado;
-
+        
         /// <summary>
         /// Control Label15.
         /// </summary>
@@ -301,7 +353,7 @@ namespace Ucabmart.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label15;
-
+        
         /// <summary>
         /// Control dplMunicipio.
         /// </summary>
@@ -310,7 +362,7 @@ namespace Ucabmart.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList dplMunicipio;
-
+        
         /// <summary>
         /// Control Label16.
         /// </summary>
@@ -319,7 +371,7 @@ namespace Ucabmart.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label16;
-
+        
         /// <summary>
         /// Control dplParroquia.
         /// </summary>
@@ -328,7 +380,7 @@ namespace Ucabmart.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList dplParroquia;
-
+        
         /// <summary>
         /// Control Label19.
         /// </summary>
@@ -337,7 +389,7 @@ namespace Ucabmart.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label19;
-
+        
         /// <summary>
         /// Control Label20.
         /// </summary>
@@ -346,7 +398,7 @@ namespace Ucabmart.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label20;
-
+        
         /// <summary>
         /// Control dplEstado2.
         /// </summary>
@@ -355,7 +407,7 @@ namespace Ucabmart.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList dplEstado2;
-
+        
         /// <summary>
         /// Control Label21.
         /// </summary>
@@ -364,7 +416,7 @@ namespace Ucabmart.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label21;
-
+        
         /// <summary>
         /// Control dplMunicipio2.
         /// </summary>
@@ -373,7 +425,7 @@ namespace Ucabmart.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList dplMunicipio2;
-
+        
         /// <summary>
         /// Control Label22.
         /// </summary>
@@ -382,7 +434,7 @@ namespace Ucabmart.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label22;
-
+        
         /// <summary>
         /// Control dplParroquia2.
         /// </summary>
@@ -391,7 +443,7 @@ namespace Ucabmart.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList dplParroquia2;
-
+        
         /// <summary>
         /// Control Label17.
         /// </summary>
@@ -400,7 +452,7 @@ namespace Ucabmart.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label17;
-
+        
         /// <summary>
         /// Control Label23.
         /// </summary>
@@ -409,7 +461,7 @@ namespace Ucabmart.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label23;
-
+        
         /// <summary>
         /// Control lblCedula.
         /// </summary>
@@ -418,7 +470,7 @@ namespace Ucabmart.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblCedula;
-
+        
         /// <summary>
         /// Control dplCedula.
         /// </summary>
@@ -427,7 +479,7 @@ namespace Ucabmart.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList dplCedula;
-
+        
         /// <summary>
         /// Control txtCedula.
         /// </summary>
@@ -436,7 +488,7 @@ namespace Ucabmart.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtCedula;
-
+        
         /// <summary>
         /// Control Nombre.
         /// </summary>
@@ -445,7 +497,7 @@ namespace Ucabmart.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Nombre;
-
+        
         /// <summary>
         /// Control Nombre1.
         /// </summary>
@@ -454,7 +506,7 @@ namespace Ucabmart.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox Nombre1;
-
+        
         /// <summary>
         /// Control Nombre2.
         /// </summary>
@@ -463,7 +515,7 @@ namespace Ucabmart.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox Nombre2;
-
+        
         /// <summary>
         /// Control Apellido.
         /// </summary>
@@ -472,7 +524,7 @@ namespace Ucabmart.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Apellido;
-
+        
         /// <summary>
         /// Control Apellido1.
         /// </summary>
@@ -481,7 +533,7 @@ namespace Ucabmart.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox Apellido1;
-
+        
         /// <summary>
         /// Control Apellido2.
         /// </summary>
@@ -490,7 +542,7 @@ namespace Ucabmart.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox Apellido2;
-
+        
         /// <summary>
         /// Control Label24.
         /// </summary>
@@ -499,7 +551,7 @@ namespace Ucabmart.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label24;
-
+        
         /// <summary>
         /// Control CodigoPais3.
         /// </summary>
@@ -508,7 +560,7 @@ namespace Ucabmart.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList CodigoPais3;
-
+        
         /// <summary>
         /// Control TipoTelf3.
         /// </summary>
@@ -517,7 +569,7 @@ namespace Ucabmart.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList TipoTelf3;
-
+        
         /// <summary>
         /// Control CodAre3.
         /// </summary>
@@ -526,7 +578,7 @@ namespace Ucabmart.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox CodAre3;
-
+        
         /// <summary>
         /// Control txtTelefono3.
         /// </summary>
@@ -535,7 +587,7 @@ namespace Ucabmart.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtTelefono3;
-
+        
         /// <summary>
         /// Control CodigoPais4.
         /// </summary>
@@ -544,7 +596,7 @@ namespace Ucabmart.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList CodigoPais4;
-
+        
         /// <summary>
         /// Control TipoTelf4.
         /// </summary>
@@ -553,7 +605,7 @@ namespace Ucabmart.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList TipoTelf4;
-
+        
         /// <summary>
         /// Control CodAre4.
         /// </summary>
@@ -562,7 +614,7 @@ namespace Ucabmart.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox CodAre4;
-
+        
         /// <summary>
         /// Control txtTelefono4.
         /// </summary>
@@ -571,7 +623,7 @@ namespace Ucabmart.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtTelefono4;
-
+        
         /// <summary>
         /// Control btnModificar.
         /// </summary>
@@ -580,7 +632,7 @@ namespace Ucabmart.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnModificar;
-
+        
         /// <summary>
         /// Control imgCtrl.
         /// </summary>
@@ -589,7 +641,7 @@ namespace Ucabmart.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlImage imgCtrl;
-
+        
         /// <summary>
         /// Control Label1.
         /// </summary>
@@ -598,7 +650,7 @@ namespace Ucabmart.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label1;
-
+        
         /// <summary>
         /// Control Label2.
         /// </summary>
@@ -607,7 +659,7 @@ namespace Ucabmart.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label2;
-
+        
         /// <summary>
         /// Control Label3.
         /// </summary>
@@ -616,7 +668,7 @@ namespace Ucabmart.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label3;
-
+        
         /// <summary>
         /// Control Label4.
         /// </summary>
@@ -625,7 +677,7 @@ namespace Ucabmart.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label4;
-
+        
         /// <summary>
         /// Control Label5.
         /// </summary>
