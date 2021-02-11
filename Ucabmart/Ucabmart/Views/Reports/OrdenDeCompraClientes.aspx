@@ -35,15 +35,45 @@
                    <!-- Topbar Search -->
                        
                     <ul class="navbar-nav text-uppercase ml-auto">
-                        <li class="nav-item"> <a class="nav-item">      </a>     </li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/Views/Clientes_Admin.aspx">Clientes</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/Views/Tiendas-Admin.aspx">Tiendas</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/Views/Productos_Admin.aspx">Productos</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/Views/Proveedores.aspx">Proveedores</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/Views/Nomina_Admin.aspx">Nomina</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/Views/Role/Role_Admin.aspx">Roles</a></li>
+                        <li class="nav-item"> <a class="nav-item">      </a></li>
+                        <li ID="Li1" class="nav-item" runat="server"><a class="nav-link js-scroll-trigger" href="/Views/Clientes_Admin.aspx">Clientes</a></li>
+                        <li ID="Tiendas" class="nav-item" runat="server"><a class="nav-link js-scroll-trigger" href="/Views/Tiendas-Admin.aspx">Tiendas</a></li>
+                        <li ID="Productos" class="nav-item" runat="server"><a class="nav-link js-scroll-trigger" href="/Views/Productos_Admin.aspx">Productos</a></li>
+                        <li ID="Proveedores" class="nav-item" runat="server"><a class="nav-link js-scroll-trigger" href="/Views/Proveedores.aspx">Proveedores</a></li>
+                        <li ID="Nomina" class="nav-item" runat="server"><a class="nav-link js-scroll-trigger" href="/Views/Nomina_Admin.aspx">Nomina</a></li>
+                        <li ID="RolesA" class="nav-item" runat="server"><a class="nav-link js-scroll-trigger" href="/Views/Role/Role_Admin.aspx">Roles</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/Views/Inicio_Admin.aspx">Inicio</a></li>
-                    </ul>  
+                    
+                         <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span > <%: nombreUsuario %></span>
+                                <img class="img-profile rounded-circle"
+                                    src="../../Content/assets/img/undraw_profile.svg" style="width:35px;">
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Perfil
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Configuración
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Activity Log
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Logout
+                                </a>
+                            </div>
+                        </li>
+                    </ul>   
                 </div>
             </div>
         </nav>
@@ -54,7 +84,7 @@
                   <li class="li-1"></li>
                   <li class="li-2">
                       <ul class="Ordened">
-                          <li class="li-4" >PRODUCTOS-UCABMART</li>
+                          <li class="li-4" >CLIENTES-UCABMART</li>
                           <li><img src="../Content/assets/img/Product/Product-Icon.png" height="80px"/>  </li>
                       </ul>
                   </li>
