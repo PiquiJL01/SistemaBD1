@@ -1979,7 +1979,6 @@
     <Content Include="Views\RegistrarClienteNatural.aspx" />
     <Content Include="Views\RegistroProveedores.aspx" />
     <Content Include="Views\Reports\AddToReportsPages.txt" />
-    <Content Include="Views\Reports\Asistencia.aspx" />
     <Content Include="Views\Reports\TestReportPage.aspx" />
     <Content Include="Views\Role\AsignarPermisos.aspx" />
     <Content Include="Views\Role\AsignarRol.aspx" />
@@ -2252,13 +2251,6 @@
     </Compile>
     <Compile Include="Views\RegistroProveedores.aspx.designer.cs">
       <DependentUpon>RegistroProveedores.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Reports\Asistencia.aspx.cs">
-      <DependentUpon>Asistencia.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\Reports\Asistencia.aspx.designer.cs">
-      <DependentUpon>Asistencia.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Reports\Asistencias.Designer.cs">
       <AutoGen>True</AutoGen>
