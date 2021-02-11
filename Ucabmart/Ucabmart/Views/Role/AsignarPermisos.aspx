@@ -1,8 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AsignarPermisos.aspx.cs" Inherits="Ucabmart.Views.Role.AsignarPermisos" %>
 
 <!DOCTYPE html>
-
-<!DOCTYPE html>
 <html lang="es">
     <head runat="server">
         <meta charset="utf-8" />
@@ -18,7 +16,7 @@
         <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="../../Content/css/AsignarRol.css" rel="stylesheet" />
+        <link href="../../Content/css/Permisos.css" rel="stylesheet" />
     </head>
 
       <body id="page-top" class="bg-gradient-primary">
@@ -102,7 +100,7 @@
                     <div class="col-lg-7">
                         <div class="p-5">
                             <div class="text-center">
-                                <h1 class="h4 text-gray-900 mb-4">Asignar Roles</h1>
+                                <h1 class="h4 text-gray-900 mb-4">Asignar Permisos</h1>
                             </div>
                             <form id="form1" runat="server">
                                
@@ -122,24 +120,20 @@
 
                              <%--<EMPLEADO>--%>
                               <div class="PC">
-                                <asp:Label ID="EmplHead" runat="server" Text="Empleado"></asp:Label>
+                                <asp:Label ID="EmplHead" runat="server" Text="Rol"></asp:Label>
                               </div> 
 
 
+
                                 <div class="form-group" style="margin-bottom:40px; margin-top:20px;">
-                                         <asp:Label ID="Nombre" runat="server" Text="Nombre del Empleado"></asp:Label>
+                                         <asp:Label ID="Nombre" runat="server" Text="Nombre del Rol"></asp:Label>
                                         <asp:TextBox ID="TxtNombre" runat="server" type="name" name="name" data-parsley-trigger="change"  
                                             placeholder="Nombre del Rol" autocomplete="off" class="form-control">
                                         </asp:TextBox>
                                 </div>
 
 
-<%--                                <div class="form-group">
-                                    <asp:DropDownList ID="Roles" runat="server" style="padding-bottom: 15px; background-color: #0f136bd6;color: white; width: 550px;" class="input-group-prepend be-addon" OnSelectedIndexChanged="Agregar_Permisos" AutoPostBack="True">
-                                        <asp:ListItem Value="0">Rol</asp:ListItem>
-                                   </asp:DropDownList>--%>
-                                    
-
+                                <div class="form-group">
 
                                     <div style="margin-top: 20px;">
 
@@ -155,7 +149,7 @@
                                 <asp:Button ID="Asignar" runat="server" class="btn btn-primary btn-user btn-block" Text="Guardar Cambios" OnClick="btnRegistrar_Click"/>
                                           
                             
-                            </form>
+                           </form>
                         </div>
                     </div>
                 </div>

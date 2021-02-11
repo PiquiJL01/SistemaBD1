@@ -248,6 +248,8 @@
     <Content Include="Content\assets\mail\contact_me.js" />
     <Content Include="Content\assets\mail\contact_me.php" />
     <Content Include="Content\assets\mail\jqBootstrapValidation.js" />
+    <Content Include="Content\css\ModificarPermisos.css" />
+    <Content Include="Content\css\Permisos.css" />
     <Content Include="Content\css\ModificarRol.css" />
     <Content Include="Content\css\AsignarRol.css" />
     <Content Include="Content\css\Clientes.css" />
@@ -1983,7 +1985,8 @@
     <Content Include="Views\Role\AsignarPermisos.aspx" />
     <Content Include="Views\Role\AsignarRol.aspx" />
     <Content Include="Views\Role\ConsultarRol.aspx" />
-    <Content Include="Views\Role\EliminarPermisosRol.aspx" />
+    <Content Include="Views\Role\CrearRol.aspx" />
+    <Content Include="Views\Role\ModificarPermisos.aspx" />
     <Content Include="Views\Role\EliminarRolEmpleado.aspx" />
     <Content Include="Views\Role\ModificarRol.aspx" />
     <Content Include="Views\Role\Role_Admin.aspx" />
@@ -2263,6 +2266,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BalanceTiendas.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Views\Reports\MesesProductivos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MesesProductivos.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Views\Reports\NotiMart.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -2272,6 +2280,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>OrdenDeCompra.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\ProductoMasVendidoPorMes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProductoMasVendidoPorMes.xsd</DependentUpon>
     </Compile>
     <Compile Include="Views\Reports\ResumenAsistencias.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -2292,6 +2305,21 @@
     </Compile>
     <Compile Include="Views\Reports\TestReportPage.aspx.designer.cs">
       <DependentUpon>TestReportPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\TopClientesMontos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TopClientesMontos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\TopClientesVentas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TopClientesVentas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\VentasConcretadas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VentasConcretadas.xsd</DependentUpon>
     </Compile>
     <Compile Include="Views\Role\AsignarPermisos.aspx.cs">
       <DependentUpon>AsignarPermisos.aspx</DependentUpon>
@@ -2314,12 +2342,19 @@
     <Compile Include="Views\Role\ConsultarRol.aspx.designer.cs">
       <DependentUpon>ConsultarRol.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Views\Role\EliminarPermisosRol.aspx.cs">
-      <DependentUpon>EliminarPermisosRol.aspx</DependentUpon>
+    <Compile Include="Views\Role\CrearRol.aspx.cs">
+      <DependentUpon>CrearRol.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Views\Role\EliminarPermisosRol.aspx.designer.cs">
-      <DependentUpon>EliminarPermisosRol.aspx</DependentUpon>
+    <Compile Include="Views\Role\CrearRol.aspx.designer.cs">
+      <DependentUpon>CrearRol.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Role\ModificarPermisos.aspx.cs">
+      <DependentUpon>ModificarPermisos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Role\ModificarPermisos.aspx.designer.cs">
+      <DependentUpon>ModificarPermisos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Role\EliminarRolEmpleado.aspx.cs">
       <DependentUpon>EliminarRolEmpleado.aspx</DependentUpon>
@@ -2644,6 +2679,17 @@
     <Content Include="Views\Reports\BalanceTiendas.xss">
       <DependentUpon>BalanceTiendas.xsd</DependentUpon>
     </Content>
+    <Content Include="Views\Reports\MesesProductivos.xsc">
+      <DependentUpon>MesesProductivos.xsd</DependentUpon>
+    </Content>
+    <None Include="Views\Reports\MesesProductivos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MesesProductivos.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Views\Reports\MesesProductivos.xss">
+      <DependentUpon>MesesProductivos.xsd</DependentUpon>
+    </Content>
     <None Include="Views\Reports\NotiMart.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
@@ -2666,6 +2712,17 @@
     <Content Include="Views\Reports\OrdenDeCompra.xss">
       <DependentUpon>OrdenDeCompra.xsd</DependentUpon>
     </Content>
+    <Content Include="Views\Reports\ProductoMasVendidoPorMes.xsc">
+      <DependentUpon>ProductoMasVendidoPorMes.xsd</DependentUpon>
+    </Content>
+    <None Include="Views\Reports\ProductoMasVendidoPorMes.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProductoMasVendidoPorMes.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Views\Reports\ProductoMasVendidoPorMes.xss">
+      <DependentUpon>ProductoMasVendidoPorMes.xsd</DependentUpon>
+    </Content>
     <None Include="Views\Reports\ResumenAsistencias.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
@@ -2682,6 +2739,39 @@
     <Content Include="Views\Reports\TestDataSet.xss">
       <DependentUpon>TestDataSet.xsd</DependentUpon>
     </Content>
+    <Content Include="Views\Reports\TopClientesVentas.xsc">
+      <DependentUpon>TopClientesVentas.xsd</DependentUpon>
+    </Content>
+    <Content Include="Views\Reports\TopClientesMontos.xsc">
+      <DependentUpon>TopClientesMontos.xsd</DependentUpon>
+    </Content>
+    <None Include="Views\Reports\TopClientesMontos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TopClientesMontos.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Views\Reports\TopClientesMontos.xss">
+      <DependentUpon>TopClientesMontos.xsd</DependentUpon>
+    </Content>
+    <None Include="Views\Reports\TopClientesVentas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TopClientesVentas.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Views\Reports\TopClientesVentas.xss">
+      <DependentUpon>TopClientesVentas.xsd</DependentUpon>
+    </Content>
+    <Content Include="Views\Reports\VentasConcretadas.xsc">
+      <DependentUpon>VentasConcretadas.xsd</DependentUpon>
+    </Content>
+    <None Include="Views\Reports\VentasConcretadas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VentasConcretadas.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Views\Reports\VentasConcretadas.xss">
+      <DependentUpon>VentasConcretadas.xsd</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -2697,10 +2787,15 @@
   <ItemGroup>
     <EmbeddedResource Include="Views\Reports\Asistencias.rdlc" />
     <EmbeddedResource Include="Views\Reports\BalanceTienda.rdlc" />
+    <EmbeddedResource Include="Views\Reports\MesesProductivo.rdlc" />
     <EmbeddedResource Include="Views\Reports\NotiMart.rdlc" />
     <EmbeddedResource Include="Views\Reports\OrdenDeCompra.rdlc" />
+    <EmbeddedResource Include="Views\Reports\ProductoMasVendidoPorMes.rdlc" />
     <EmbeddedResource Include="Views\Reports\ResumenAsistencia.rdlc" />
     <EmbeddedResource Include="Views\Reports\TestReport.rdlc" />
+    <EmbeddedResource Include="Views\Reports\TopClienteMonto.rdlc" />
+    <EmbeddedResource Include="Views\Reports\TopVentasClientes.rdlc" />
+    <EmbeddedResource Include="Views\Reports\VentasConcretadas.rdlc" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
