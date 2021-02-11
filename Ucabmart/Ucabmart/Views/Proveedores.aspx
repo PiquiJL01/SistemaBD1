@@ -158,6 +158,20 @@
                             </div>
                         </div>
                     </div>
+                 <div class="col-lg-4 col-sm-6 mb-4" style="margin-left: 120px">
+                        <div class="categorias-item">
+                            <a class="categorias-link" href="Reports/OrdenDeCompraProveedores.aspx">
+                                <div class="categorias-hover">
+                                    <div class="categorias-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid2" src="../Content/assets/img/Provider/Consulting-Provider.jpg" alt="" />
+                            </a>
+                            <div class="categorias-caption" style="margin-right:-69px; background-color:#4e73dfd1">
+                                <div class="categorias-caption-heading">Orden de Compra </div>
+                                <div class="categorias-caption-subheading text-muted">Permite revisar los proveedores registrados......</div>
+                            </div>
+                        </div>
+                    </div>
             </div>
           </div>
         </section>
